@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    <meta name="author" content="INSPIRO" />    
+    <meta name="description" content="Themeforest Template Polo, html template">
+    <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/images/favicon22.png">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Document title -->
+    <title>SIPK3</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="<?php echo base_url()?>assets/css/plugins.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/css/plugins.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/css/custom.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="<?php echo base_url()?>assets/js_new/sweetalert/dist/sweetalert2.all.min.js"></script>
+    <link href='<?php echo base_url()?>assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="flash-data" data-flashdata="<?=$this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif;?>
+
+    <section class="parallax fullscreen" style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
+
+        <div class="container container-fullscreen text-center">
+            <div class="text-middle">
+                <h1 class="text-uppercase text-lg text-light">Halo K3!</h1>
+                <h3 class="lead text-light">Sistem Informasi Pelaporan K3 (SIPK3)</h3>
+                <a class="btn btn-light btn-outline" href="#modalShop" data-lightbox="inline">Masuk</a>
+                <a class="btn btn-light btn-outline" href="#modalRegis" data-lightbox="inline">Daftar</a>
+            </div>
+        </div>
+    </section>
+    <!-- end: SECTION IMAGE FULLSCREEN -->
+
+    <div id="modalShop" class="modal no-padding" data-delay="2000" style="max-width: 700px;">
+        <div class="widget widget-form p-cb text-center">
+            <img src="<?php echo base_url()?>assets/images/favicon22.png" class="feature-icon text-center">
+            <p align="center"><h3>Selamat Datang Di Pelaporan K3</h3></p>
+             <p align="center"><h4>Silahkan Masuk</h4></p>
+
+            <form action="<?php echo base_url(). 'index.php/Home/login_check'; ?>" method="post" name="login">
+                <div class="form-group mb-3 text-left">
+                    <label for="email"><b />Username</label>
+                    <input type="text" name="username" class="form-control" id="email" placeholder="Masukkan Username" required>
+                </div>
+                <div class="form-group mb-3 text-left">
+                    <label for="password"><b />Password</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password" required>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-success"data-toggle="modal"
+
+                    data-target="#Berhasil Masuk">Masuk</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+                                    <div id="modalRegis" class="modal no-padding" data-delay="2000" style="max-width: 700px;">
+                                        <div class="widget widget-form p-cb">
+                                            <p class="text-center"><h3>Form Pendaftaran</h3></p>
+                                                <form action="<?php echo base_url(). 'index.php/Home/register_pengguna'; ?>" method="post" name="daftar">
+                                                    <div class="form-group row">
+                                                        <label for="perusahaan" class="col-2 col-form-label">Nama Perusahaan</label>
+                                                        <div class="col-10">
+                                                        <input class="form-control" type="text" value="" id="nama_perusahaan"  name="nama_perusahaan" placeholder="Masukkan Nama Perusahaan" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="alamat" class="col-2 col-form-label">Alamat Perusahaan</label>
+                                                         <div class="col-10">
+                                                        <textarea type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukkan Alamat" required> </textarea>
+                                                    </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="perusahaan" class="col-2 col-form-label">Nomor Induk Berusaha (NIB)</label>
+                                                        <div class="col-10">
+                                                        <input class="form-control" type="number" value="" id="nib"  name="nomor_induk" placeholder="Masukkan Nomor Induk Berusaha" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="perusahaan" class="col-2 col-form-label">Jumlah Karyawan</label>
+                                                        <div class="col-10">
+                                                        <input class="form-control" type="number" value="" id="nama_perusahaan"  name="jumlah_karyawan" placeholder="Masukkan Nama Perusahaan" required>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <div class="form-group row">
+                                                        <label for="name" class="col-2 col-form-label">Nama Tempat Usaha</label>
+                                                        <div class="col-10">
+                                                        <input type="text" name="nama_tempat_usaha" class="form-control" id="name" placeholder="Masukkan Nama Tempat Usaha" required>
+                                                    </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="name_instansi" class="col-2 col-form-label">Nama Penanggung Jawab</label>
+                                                        <div class="col-10">
+                                                        <input type="text" name="nama_penanggung_jawab" class="form-control" id="name_instansi" placeholder="Masukkan Nama Instansi"  value="" required>
+                                                    </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="nomor_penanggung_jawab" class="col-2 col-form-label">Nomor Telepon Penanggung Jawab</label>
+                                                        <div class="col-10">
+                                                        <input type="number" name="nomor_penanggung_jawab" class="form-control" id="nomortelepon" placeholder="Masukkan Nomor Telepon" required>
+                                                    </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="email" class="col-2 col-form-label" >Email Penanggung Jawab</label>
+                                                        <div class="col-10">
+                                                        <input type="email" name="email_penanggung_jawab" value="" class="form-control" id="email" placeholder="Masukkan Email" required>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group row">
+                                                        <label for="jenis_usaha" class="col-2 col-form-label">Jenis Usaha</label>
+                                                        <div class="col-10">
+                                                        <input type="text" name="jenis_usaha" class="form-control" id="jenis_usaha" placeholder="Masukkan Jenis usaha" value="" required>
+                                                    </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="nomor_p2k3" class="col-2 col-form-label">Nomor P2K3</label>
+                                                        <div class="col-10">
+                                                        <input type="number" name="nomor_p2k3" class="form-control" id="nomor_p2k3" placeholder="Masukkan Nomor P2K3" value="" required>
+                                                    </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="tanggal_pengesahan" class="col-2 col-form-label">Tanggal Pengesahan P2K3</label>
+                                                        <div class="col-10">
+                                                        <input type="date" name="tanggal_p2k3" class="form-control" id="tanggal_p2k3" placeholder="Masukkan Tanggal Pengesahan P2K3" value="" required>
+                                                    </div>
+                                                    </div>
+
+
+                                                    <div class="form-group row">
+                                                        <label for="name" class="col-2 col-form-label">Username</label>
+                                                        <div class="col-10">
+                                                        <input type="text" name="username" class="form-control" id="name" placeholder="Masukkan Username" value="" required>
+                                                    </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="password" class="col-2 col-form-label">Password</label>
+                                                        <div class="col-10">
+                                                        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password" value="" required>
+                                                    </div>
+                                                    </div>
+                                
+                                                    <div class="form-group row">
+                                                        <label for="jenis_usaha" class="col-2 col-form-label">Captcha</label>
+                                                        
+                                                        <div class="col-10">
+                                                        <?php echo $image_captcha;?>
+                                                        <input type="text" name="captcha" id="captcha" class="form-control" placeholder="Masukkan Captca" required>
+                                                    </div>
+                                                </div>
+                                                    <div class="col-md-12 text-center">
+                                                        <button type="submit" class="btn btn-primary">Daftar</button>
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <p class="text-center">
+                                                            <a href="#" class="btn btn-danger" type="button"> Batal</a>
+                                                        </p>
+                                                    </div>
+                                                </form>
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </body>
+                                <script>
+
+                                    $(document).ready( function () {
+
+                                        const flashData = $('.flash-data').data('flashdata');
+
+                                        if(flashData){
+
+                                            Swal.fire(
+
+                                                'Berhasil',
+
+                                                flashData,
+
+                                                'success'
+
+                                                );
+
+                                        }
+
+                                    });
+
+                                    $(document).ready( function () {
+
+                                        $('.tombol-keluar').on('click', function (e) {
+
+            //mengcancel a hrefnya dulu
+
+            e.preventDefault();
+
+            const href = $(this).attr('href');
+
+            Swal.fire({
+
+                icon: 'error',
+
+                title: 'Apakah anda yakin ?',
+
+                text: "",
+
+                type: 'warning',
+
+                showCancelButton: true,
+
+                confirmButtonColor: '#3085d6',
+
+                cancelButtonColor: '#d33',
+
+                confirmButtonText: 'Keluar'
+
+            }).then((result) => {
+
+                if (result.value) {
+
+                    document.location.href = href;
+
+                }
+
+            })
+
+        });
+
+                                    });
+
+                                </script>
