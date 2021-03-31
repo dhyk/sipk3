@@ -16,7 +16,7 @@
  									<div class="col-md-12">
 
  										<!-- <form class="form-horizontal" enctype="multipart/form-data" action="<?php //echo base_url().'index.php/Admin/tambahberita'; ?>" method="post"> -->
-										 <form action="<?php echo base_url().'index.php/K3lisrik/simpan_ijin_petir';?>" method="post" >
+										 <form action="<?php echo base_url().'index.php/K3listrik/simpan_ijin_petir';?>" method="post" >
 
  											<div class="form-group">
  												<label class="col-md-2 control-label">Nomor Sertifikat</label>
@@ -65,7 +65,7 @@
  												<div class="col-sm-offset-10 col-sm-12">
  													<button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
  													<?php //echo form_close(); ?>
- 													<a href="<?php echo site_url()?>Admin/k3_listrik"><button type="button" class="btn btn-danger">Kembali</button></a>
+ 													<a href="<?php echo site_url()?>K3listrik"><button type="button" class="btn btn-danger">Kembali</button></a>
 
  													
  												</div>

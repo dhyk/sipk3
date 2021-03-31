@@ -156,18 +156,20 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        <?php 
+                                                        $i=1;
+                                                        foreach ($data_ijin_listrik as $key){ ?>
                                                             <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
+                                                                <th scope="row"><?php echo $i;?></th>
+                                                                <td><?php echo $key->sertifikat;?></td>
+                                                                <td><?php echo $key->tanggal_terbit;?></td>
+                                                                <td><?php echo $key->masa_berlaku;?></td>
                                                                 <td>
-                                                                    <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                                                    <a href=""><i class="ion-edit"></i>Edit</a>
-                                                                    <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                                                    
+                                                                    <a href="<?php echo base_url().'index.php/K3listrik/hapus_ijin_listrik?id='.$key->id_ijin_listrik;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                 </td>
-                                                               
-                                                            </tr>
+                                                               <?php $i++;
+                                                             } ?>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -197,18 +199,21 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                            <?php 
+                                                            $i=1;
+                                                            foreach ($data_ijin_petir as $key){ ?>
                                                             <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
+                                                                <th scope="row"><?php echo $i;?></th>
+                                                                <td><?php echo $key->sertifikat;?></td>
+                                                                <td><?php echo $key->tanggal_terbit;?></td>
+                                                                <td><?php echo $key->masa_berlaku;?></td>
                                                                 <td>
-                                                                    <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                                                    <a href=""><i class="ion-edit"></i>Edit</a>
-                                                                    <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                                                    <a href="<?php echo base_url().'index.php/K3listrik/hapus_ijin_petir?id='.$key->id_ijin_petir;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                 </td>
-                                                               
+                                                               <?php $i++;
+                                                             } ?>
                                                             </tr>
+                                                        
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -222,13 +227,14 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="card-box table-responsive">
-                                                <h4 class="m-t-0 header-title"><b>daftar AK3 Listrik</b></h4> 
+                                                <h4 class="m-t-0 header-title"><b>Daftar AK3 Listrik</b></h4> 
 
                                                  <div class="table-responsive">
                                                     <table class="table m-0">
                                                         <a href="<?=site_url ()?>K3listrik/tambah_ak3_listrik">
                                                         <button class="btn btn-info">Tambah Data</button></a> 
                                                         <thead>
+                                                        
                                                             <tr>
                                                                 <th>#</th>
                                                                 <th>Nama</th>
@@ -239,18 +245,21 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        <?php 
+                                                        
+                                                        $i=1;
+                                                        foreach($data_ak3 as $key){ ?>
                                                             <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
+                                                                <th scope="row"><?php echo $i; ?></th>
+                                                                <td><?php echo $key->nama; ?></td>
+                                                                <td><?php echo $key->sertifikat; ?></td>
+                                                                <td><?php echo $key->tanggal_terbit; ?></td>
+                                                                <td><?php echo $key->masa_berlaku; ?></td>
                                                                 <td> 
-                                                                    <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                                                    <a href=""><i class="ion-edit"></i>Edit</a>
-                                                                    <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                                                    <a href="<?php echo base_url().'index.php/K3listrik/hapus_ak3?id='.$key->id_ak3_listrik;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                 </td>
-                                                               
+                                                                <?php $i++;
+                                                             } ?>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -271,6 +280,7 @@
                                                         <a href="<?=site_url ()?>K3listrik/tambah_teknisi">
                                                         <button class="btn btn-info">Tambah Data</button></a> 
                                                         <thead>
+                                                       
                                                             <tr>
                                                                 <th>#</th>
                                                                 <th>Nama</th>
@@ -281,18 +291,21 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        <?php 
+                                                        
+                                                        $i=1;
+                                                        foreach($data_teknisi as $key){ ?>
                                                             <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
+                                                                <th scope="row"><?php echo $i; ?></th>
+                                                                <td><?php echo $key->nama; ?></td>
+                                                                <td><?php echo $key->sertifikat; ?></td>
+                                                                <td><?php echo $key->tanggal_terbit; ?></td>
+                                                                <td><?php echo $key->masa_berlaku; ?></td>
                                                                 <td> 
-                                                                    <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                                                    <a href=""><i class="ion-edit"></i>Edit</a>
-                                                                    <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                                                    <a href="<?php echo base_url().'index.php/K3listrik/hapus_teknisi?id='.$key->id_teknisi;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                 </td>
-                                                               
+                                                                <?php $i++;
+                                                             } ?>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -314,6 +327,7 @@
                                                         <a href="<?=site_url ()?>K3listrik/tambah_rekaman_pemeriksaan_listrik">
                                                         <button class="btn btn-info">Tambah Data</button></a> 
                                                         <thead>
+                                                       
                                                             <tr>
                                                                 <th>#</th>
                                                                 <th>Tanggal Pemeriksaan</th>
@@ -322,16 +336,19 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        <?php 
+                                                        
+                                                        $i=1;
+                                                        foreach($data_pemeriksaan_listrik as $key){ ?>
                                                             <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
+                                                                <th scope="row"><?php echo $i; ?></th>
+                                                                <td><?php echo $key->tanggal_pemeriksaan; ?></td>
+                                                                <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_listrik/".$key->sertifikat; ?>">Lihat Laporan</a></td>
                                                                 <td> 
-                                                                    <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                                                    <a href=""><i class="ion-edit"></i>Edit</a>
-                                                                    <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                                                    <a href="<?php echo base_url().'index.php/K3listrik/hapus_pemeriksaan_listrik?id='.$key->id_pemeriksaan;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                 </td>
-                                                               
+                                                                <?php $i++;
+                                                             } ?>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -361,17 +378,20 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        <?php 
+                                                        
+                                                        $i=1;
+                                                        foreach($data_pemeriksaan_petir as $key){ ?>
                                                             <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Table cell</td>
-                                                                <td>Table cell</td>
+                                                                <th scope="row"><?php echo $i; ?></th>
+                                                                <td><?php echo $key->tanggal_pemeriksaan; ?></td>
+                                                                <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_listrik/".$key->sertifikat; ?>">Lihat Sertifikat</a></td>
                                                                 <td> 
-                                                                    <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                                                    <a href=""><i class="ion-edit"></i>Edit</a>
-                                                                    <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                                                    <a href="<?php echo base_url().'index.php/K3listrik/hapus_pemeriksaan_petir?id='.$key->id_pemeriksaan;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                 </td>
-                                                               
-                                                            </tr>
+                                                                <?php $i++;
+                                                             } ?>
+                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>

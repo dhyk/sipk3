@@ -17,7 +17,7 @@
 
  										<!-- <form class="form-horizontal" enctype="multipart/form-data" action="<?php //echo base_url().'index.php/Admin/tambahberita'; ?>" method="post"> -->
  											<?php //echo form_open_multipart('index.php/Admin/aksi_upload_sertifikat_standard');?>
-											 <form action="<?php echo base_url().'index.php/K3lisrik/simpan_ak3_listrik';?>" method="post" >
+											 <form action="<?php echo base_url().'index.php/K3listrik/simpan_ak3_listrik';?>" method="post" >
  											<div class="form-group">
  												<label class="col-md-2 control-label">Nama AK3 Listrik </label>
  												<div class="col-md-10">
@@ -72,7 +72,7 @@
  												<div class="col-sm-offset-10 col-sm-12">
  													<button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
  													<?php //echo form_close(); ?>
- 													<a href="<?php echo site_url()?>Admin/k3_listrik"><button type="button" class="btn btn-danger">Kembali</button></a>
+ 													<a href="<?php echo site_url()?>K3listrik"><button type="button" class="btn btn-danger">Kembali</button></a>
 
  													
  												</div>

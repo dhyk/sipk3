@@ -32,6 +32,12 @@ class K3mekanik extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/k3_mekanik',
       'footer' => 'Admin/Layouts_admin/footer',
+      'data_alat_angkat'=> $this->M_mekanik->lihat_angkat($this->session->userdata('id_user'))->result(),
+      'data_bejana'=> $this->M_mekanik->lihat_bejana($this->session->userdata('id_user'))->result(),
+      'data_elevator'=> $this->M_mekanik->lihat_elevator($this->session->userdata('id_user'))->result(),
+      'data_ketel'=> $this->M_mekanik->lihat_ketel($this->session->userdata('id_user'))->result(),
+      'data_ukur'=> $this->M_mekanik->lihat_ukur($this->session->userdata('id_user'))->result(),
+      'data_mesin'=> $this->M_mekanik->lihat_mesin($this->session->userdata('id_user'))->result(),
         // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
         // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
         // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
@@ -200,7 +206,7 @@ class K3mekanik extends CI_Controller {
    
 }
 
- public function simpan_bejana($data){
+ public function simpan_bejana(){
   $config['upload_path']          = './upload/upload_berkas_mekanik';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
@@ -228,6 +234,7 @@ class K3mekanik extends CI_Controller {
       'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
       'file' => $berkas
     );
+    var_dump($data);
     $this->M_mekanik->simpan_bejana($data);
     $this->session->set_flashdata('flash','disimpan');
     redirect('index.php/K3mekanik');
@@ -235,7 +242,7 @@ class K3mekanik extends CI_Controller {
   }
 }
 
-public function simpan_elevator($data){
+public function simpan_elevator(){
   $config['upload_path']          = './upload/upload_berkas_mekanik';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
@@ -271,7 +278,7 @@ public function simpan_elevator($data){
   }
 }
 
-public function simpan_ketel($data){
+public function simpan_ketel(){
   $config['upload_path']          = './upload/upload_berkas_mekanik';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
@@ -307,7 +314,7 @@ public function simpan_ketel($data){
   }
 }
 
-public function simpan_ukur($data){
+public function simpan_ukur(){
   $config['upload_path']          = './upload/upload_berkas_mekanik';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
@@ -342,7 +349,7 @@ public function simpan_ukur($data){
   } 
 }
 
-public function simpan_mesin($data){
+public function simpan_mesin(){
   $config['upload_path']          = './upload/upload_berkas_mekanik';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;

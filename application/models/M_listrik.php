@@ -36,7 +36,7 @@ return $query;
 
  function lihat_ijin_petir($id){
 	$this->db->select('*');
-	$this->db->from('listrik_ijin_listrik');
+	$this->db->from('listrik_ijin_petir');
 $this->db->where('id_user',$id);
 $query = $this->db->get();
 
@@ -84,7 +84,7 @@ return $query;
 	}
   
 	 function simpan_ijin_petir($data){
-        $this->db->insert('listrik_ijin_listrik', $data);
+        $this->db->insert('listrik_ijin_petir', $data);
 	}
   
 	 function simpan_pemeriksaan_listrik($data){
@@ -118,7 +118,7 @@ return $query;
   
 	 function hapus_ijin_petir($data){
 		$this->db->where('id_ijin_petir', $data);
-        $this->db->delete('listrik_ijin_listrik');
+        $this->db->delete('listrik_ijin_petir');
 	}
   
 	 function hapus_pemeriksaan_listrik($data){

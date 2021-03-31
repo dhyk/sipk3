@@ -158,7 +158,7 @@ class K3listrik extends CI_Controller {
       'sidebar'=>'Admin/Layouts_admin/sidebar',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/Kebakaran/tambah_rekaman_pemeriksaan_petir',
+      'content' => 'Admin/K3_Listrik/tambah_rekaman_pemeriksaan_petir',
       'footer' => 'Admin/Layouts_admin/footer',
     ];
 
@@ -297,30 +297,53 @@ $this->session->set_flashdata('flash','disimpan');
   //-------------------------------------------------------------
 
   public function hapus_k3listrik(){
+    $this->M_listrik->hapus_k3listrik($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/K3listrik');
 
   }
   
   public function hapus_ak3_listrik(){
+    $this->M_listrik->hapus_ak3listrik($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/K3listrik');
   
   }
   
   public function hapus_ijin_listrik(){
+    $this->M_listrik->hapus_ijin_listrik($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/K3listrik');
   
   }
   
   public function hapus_ijin_petir(){
+    $this->M_listrik->hapus_ijin_listrik($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/K3listrik');
   
   }
   
   public function hapus_pemeriksaan_listrik(){
+    $this->M_listrik->hapus_pemeriksaan_listrik($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/K3listrik');
   
   }
   
   public function hapus_pemeriksaan_petir(){
+    $this->M_listrik->hapus_pemeriksaan_petir($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/K3listrik');
+  
   
   }
   
   public function hapus_teknisi(){
+    $this->M_listrik->hapus_teknisi($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/K3listrik');
+  
     
   }
 
