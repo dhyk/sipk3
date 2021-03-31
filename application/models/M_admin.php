@@ -241,6 +241,24 @@ function lihat_ahlik3($id){
 
 	}
 
+	function lihat_pertanyaan($id){
+		$this->db->select('*');
+		$this->db->from('pertanyaan');
+		$this->db->where('id_user',$id);
+		$query = $this->db->get();
+
+		return $query;
+	}
+
+	function lihat_hasil_pertanyaan($id){
+		$this->db->select('*');
+		$this->db->from('pertanyaan');
+		$this->db->where('id_pertanyaan',$id);
+		$query = $this->db->get();
+
+		return $query;
+	}
+
 
 	
 }

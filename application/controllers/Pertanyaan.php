@@ -8,9 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Pertanyaan extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
-		$this->load->model('M_home');
+	
     $this->load->model('M_admin');
-    $this->load->model('M_kebakaran');
+   
     $this->load->helper('url');
   }
 
@@ -34,10 +34,12 @@ $data=array(
     'p15'=> $this->input->get('p15'),
     'p16'=> $this->input->get('p16'),
     'p17'=> $this->input->get('p17'),
-    
+    'id_user'=> $this->session->userdata('id_user')
 );
 
-$this->session->set_userdata('p', $data);
+$this->M_admin->simpan_pertanyaan($data);
+redirect('index.php/Admin/pertanyaan');
+//$this->session->set_userdata('p', $data);
 
 //redirect('index.php/Pertanyaan/hasil_pertanyaan');
 }
@@ -48,6 +50,9 @@ public function hasil_pertanyaan(){
   }
    // echo 'masuk halaman admin';
 
+   $hasil=$this->M_admin->lihat_hasil_pertanyaan($this->input->get('id'))->result();
+  
+   $this->session->set_userdata('p',$hasil[0]);
   $data = [
         
     'sidebar'=>'Admin/Layouts_admin/sidebar',

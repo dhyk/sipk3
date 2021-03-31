@@ -138,47 +138,27 @@
                                     </li>
 
                                      <li class="menu-title">Form Laporan</li>
-                                    
-                                    <?php 
-                                   
-                                    if($this->session->userdata('p')->p1=='positif'){?>
+
                                      <li>
                                         <a href="<?php echo site_url()?>Kebakaran" class="waves-effect"><i class="ion-android-earth "></i><span> Kebakaran </span></a>
                                     </li>
-                                        <?php } ?>
-                                        <?php 
-                                   
-                                   if($this->session->userdata('p')->p3=='positif'){?>
+
                                     <li>
                                         <a href="<?php echo site_url()?>K3listrik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Listrik </span></a>
                                     </li>
-                                    <?php } ?>
-                                    <?php 
-                                   
-                                   if(($this->session->userdata('p')->p4=='positif')||($this->session->userdata('p')->p5=='positif')
-                                   ||($this->session->userdata('p')->p6=='positif')||($this->session->userdata('p')->p7=='positif')
-                                   ||($this->session->userdata('p')->p8=='positif')||($this->session->userdata('p')->p9=='positif')){?>
+
                                     <li>
                                         <a href="<?php echo site_url()?>K3mekanik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Mekanik </span></a>
                                     </li>
-                                    <?php } ?>
-                                    <?php 
-                                   
-                                   if(($this->session->userdata('p')->p10=='positif')||($this->session->userdata('p')->p11=='positif')
-                                   ||($this->session->userdata('p')->p12=='positif')||($this->session->userdata('p')->p13=='positif')
-                                   ||($this->session->userdata('p')->p14=='positif')){?>
-                                    
+
                                     <li>
                                         <a href="<?php echo site_url()?>K3lingker" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Lingker </span></a>
                                     </li>
-                                    <?php } ?>
-                                    <?php 
-                                   
-                                   if($this->session->userdata('p')->p15=='positif'){?>
+
                                     <li>
                                         <a href="<?php echo site_url()?>P3K" class="waves-effect"><i class="ion-android-earth "></i><span> P3K </span></a>
                                     </li>
-                                    <?php } ?>
+
                              <!-- <li>
                                 <a href="dashboard_2.html" class="waves-effect"><i class="ion-android-friends "></i><span> User </span></a>
                             </li> -->

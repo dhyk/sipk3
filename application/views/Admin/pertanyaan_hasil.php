@@ -16,6 +16,10 @@
                                 <h4 class="m-t-0 header-title"><b>Hasil Laporan</b></h4>
                                 <p>
                                         Silahkan mengisi form-form lanjutan yang berada di menu sebelah kiri.
+                                        <?php 
+                                                                 
+                                                                
+                                                                ?>
                             </p>
                             </div>
                         </div>

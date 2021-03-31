@@ -58,7 +58,7 @@ class Admin extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/pertanyaan',
       'footer' => 'Admin/Layouts_admin/footer',
-    ];
+       ];
 
     $this->load->view('template', $data);
 
@@ -79,6 +79,8 @@ class Admin extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/laporan',
       'footer' => 'Admin/Layouts_admin/footer',
+      'data_laporan'=>$this->M_admin->lihat_pertanyaan($this->session->userdata('id_user'))->result(),
+   
     ];
 
     $this->load->view('template', $data);
