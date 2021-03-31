@@ -33,7 +33,7 @@
                                                                 </thead>
                                                                 <tbody>
                                                                 <?php 
-                                                                var_dump($this->session->userdata('p')->p1);
+                                                               // var_dump($this->session->userdata('p')->p1);
                                                                 $i=1;
                                                                 foreach($data_laporan as $key){
                                                                 ?>
