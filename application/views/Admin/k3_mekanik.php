@@ -97,9 +97,10 @@
                                             
                                                             <a href="<?php echo base_url().'index.php/K3mekanik/hapus_bejana?id='.$key->id_bejana;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                         </td>
-                                                        <?php $i++;
-                                                             } ?>
+                   
                                                     </tr>
+                                                    <?php $i++;
+                                                             } ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -132,22 +133,28 @@
                                                </tr>
                                            </thead>
                                            <tbody>
+                                           <?php 
+                                                        
+                                             $i=1;
+                                               foreach($data_ketel as $key){ ?>
                                                <tr>
                                                    <th scope="row">1</th>
-                                                   <td>Table cell</td>
-                                                   <td>Table cell</td>
-                                                   <td>Table cell</td>
-                                                   <td>Table cell</td>
-                                                   <td>Table cell</td>
-                                                   <td>Table cell</td>
-                                                   <td>Table cell</td>
-                                                   <td>Table cell</td>
+                                                   <td><?php echo $key->nomor; ?></td>
+                                                   <td><?php echo $key->jenis; ?></td>
+                                                   <td><?php echo $key->kapasitas; ?></td>
+                                                   <td><?php echo $key->sertifikat; ?></td>
+                                                   <td><?php echo $key->tanggal; ?></td>
+                                                   <td><?php echo $key->masa; ?></td>
+                                                   <td><?php echo $key->tanggal_rekam; ?></td>
+                                                   <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_mekanik".$key->file; ?>">Lihat Laporan</a></td>
                                                    <td>
-                                                       <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                                       <a href=""><i class="ion-edit"></i>Edit</a>
-                                                       <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                    
+                                                       <a href="<?php echo base_url().'index.php/K3mekanik/hapus_ketel?id='.$key->id_ketel;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                    </td>
+                                                  
                                                </tr>
+                                               <?php $i++;
+                                                             } ?>
                                            </tbody>
                                        </table>
                                    </div>

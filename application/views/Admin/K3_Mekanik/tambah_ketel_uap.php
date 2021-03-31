@@ -29,9 +29,10 @@
  												<div class="col-md-10">
  													<select class="form-control" name="jenis">
                                                 	<option>-Pilih Jenis Pipa-</option>
-                                                	<option>-Pipa Api-</option>
-                                                	<option>-Pipa Air-</option>
+                                                	<option>Pipa Api</option>
+                                                	<option>Pipa Air</option>
                                             		</select>
+													<br>
  												</div>
  											</div>
 
