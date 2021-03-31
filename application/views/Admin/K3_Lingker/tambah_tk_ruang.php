@@ -16,7 +16,7 @@
  									<div class="col-md-12">
 
  										<!-- <form class="form-horizontal" enctype="multipart/form-data" action="<?php //echo base_url().'index.php/Admin/tambahberita'; ?>" method="post"> -->
- 											<?php echo form_open_multipart('index.php/Admin/aksi_upload_sertifikat_standard');?>
+ 											<?php echo form_open_multipart('index.php/K3lingker/simpan_ruang');?>
  											<div class="form-group">
  												<label class="col-md-2 control-label">Nama Petugas</label>
  												<div class="col-md-10">
@@ -27,7 +27,7 @@
  											<div class="form-group">
  												<label class="col-md-2 control-label">Kompetensi & Kewenangan</label>
  												<div class="col-md-10">
- 													<select class="form-control">
+ 													<select class="form-control" name="jenjang">
 		                                                <option>Petugas Madya</option>
 		                                                <option>Petugas Utama</option>
                                             		</select>
@@ -62,7 +62,7 @@
  												<div class="col-sm-offset-10 col-sm-12">
  													<button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
  													<?php //echo form_close(); ?>
- 													<a href="<?php echo site_url()?>Admin/k3_mekanik"><button type="button" class="btn btn-danger">Kembali</button></a>
+ 													<a href="<?php echo site_url()?>K3lingker"><button type="button" class="btn btn-danger">Kembali</button></a>
 
  													
  												</div>

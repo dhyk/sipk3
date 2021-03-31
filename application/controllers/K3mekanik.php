@@ -383,31 +383,43 @@ public function simpan_mesin($data){
 
 public function hapus_angkat(){
   $this->M_mekanik->hapus_angkat($this->input->get('id'));
+  $this->session->set_flashdata('flash','Berhasil dihapus');
+  redirect('index.php/K3lingker');
     
   }
   
   public function hapus_bejana(){
   $this->M_mekanik->hapus_bejana($this->input->get('id'));
+  $this->session->set_flashdata('flash','Berhasil dihapus');
+  redirect('index.php/K3lingker');
       
   }
   
   public function hapus_elevator(){
   $this->M_mekanik->hapus_elevator($this->input->get('id'));
+  $this->session->set_flashdata('flash','Berhasil dihapus');
+  redirect('index.php/K3lingker');
    
   }
   
   public function hapus_ketel(){
   $this->M_mekanik->hapus_ketel($this->input->get('id'));
+  $this->session->set_flashdata('flash','Berhasil dihapus');
+  redirect('index.php/K3lingker');
    
   }
   
   public function hapus_ukur(){
   $this->M_mekanik->hapus_ukur($this->input->get('id'));
+  $this->session->set_flashdata('flash','Berhasil dihapus');
+  redirect('index.php/K3lingker');
    
   }
   
   public function hapus_mesin(){
   $this->M_mekanik->hapus_mesin($this->input->get('id'));
+  $this->session->set_flashdata('flash','Berhasil dihapus');
+  redirect('index.php/K3lingker');
   
   }
   
