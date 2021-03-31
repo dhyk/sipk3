@@ -29,6 +29,7 @@ class Kebakaran extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/kebakaran',
       'footer' => 'Admin/Layouts_admin/footer',
+      'data_kebakaran' => $this->M_kebakaran->lihat_data_kebakaran($id)->result(),
       'data_ak3' => $this->M_kebakaran->lihat_kebakaran_ak3($id)->result(),
       'data_alarm' => $this->M_kebakaran->lihat_kebakaran_alarm($id)->result(),
       'data_apar' => $this->M_kebakaran->lihat_kebakaran_apar($id)->result(),
