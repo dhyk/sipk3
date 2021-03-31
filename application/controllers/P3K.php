@@ -30,6 +30,9 @@ class P3K extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/p3k',
       'footer' => 'Admin/Layouts_admin/footer',
+      
+      'data_p3k'=>$this->M_p3k->lihat_p3k($this->session->userdata('id_user'))->result(),
+      'data_petugas'=>$this->M_p3k->lihat_p3k_petugas($this->session->userdata('id_user'))->result(),
         // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
         // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
         // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
@@ -54,8 +57,6 @@ class P3K extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/P3K/tambah_petugas',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_p3k'=>$this->M_p3k->lihat_p3k($this->session->userdata('id_user')),
-      'data_petugas'=>$this->M_p3k->lihat_p3k_petugas($this->session->userdata('id_user')),
     ];
 
     $this->load->view('template', $data);

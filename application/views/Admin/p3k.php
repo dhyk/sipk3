@@ -168,19 +168,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                   
+                                    <?php $i=1;foreach($data_petugas as $key){ ?>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
-                                        <td>Table cell</td>
+                                        <th scope="row"><?php echo $i;?></th>
+                                        <td><?php echo $key->nama;?></td>
+                                        <td><?php echo $key->nomor;?></td>
+                                        <td><?php echo $key->tanggal;?></td>
+                                        <td><?php echo $key->masa;?></td>
                                         <td>
-                                            <a href="" ><i class="ion-eye"></i>Lihat</a>
-                                            <a href=""><i class="ion-edit"></i>Edit</a>
-                                            <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                           
+                                            <a href="<?php echo base_url().'index.php/P3K/hapus_p3k_petugas?id='.$key->id_petugas;?>"><i class="ion-trash-a"></i>Hapus</a>
                                         </td>
 
                                     </tr>
+                                    <?php $i++;
+                                    }?>
                                 </tbody>
                             </table>
                         </div>
