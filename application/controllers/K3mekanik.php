@@ -201,22 +201,181 @@ class K3mekanik extends CI_Controller {
 }
 
  public function simpan_bejana($data){
+  $config['upload_path']          = './upload/upload_berkas_mekanik';
+  $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+  $config['max_size']             = 10000;
+  $config['max_width']            = 3000;
+  $config['max_height']           = 3000;
+
   
+  $this->upload->initialize($config);
+
+  if ( ! $this->upload->do_upload('berkas')){
+    $error = array('error' => $this->upload->display_errors());
+    $this->session->set_flashdata('flash','Gagal');
+    redirect('index.php/K3mekanik');
+  }else{
+    $data = array('upload_data' => $this->upload->data());
+    $berkas=$this->upload->data('file_name');
+    
+    $data= array(
+      'id_user' => $this->session->userdata('id_user'),
+      'nomor' => $this->input->post('nomor'),
+      'fungsi' => $this->input->post('fungsi'),
+      'sertifikat' => $this->input->post('nomor_izin'),
+      'tanggal' => $this->input->post('tanggal'),
+      'masa' => $this->input->post('masa_berlaku'),
+      'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
+      'file' => $berkas
+    );
+    $this->M_mekanik->simpan_bejana($data);
+    $this->session->set_flashdata('flash','disimpan');
+    redirect('index.php/K3mekanik');
+
+  }
 }
 
 public function simpan_elevator($data){
+  $config['upload_path']          = './upload/upload_berkas_mekanik';
+  $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+  $config['max_size']             = 10000;
+  $config['max_width']            = 3000;
+  $config['max_height']           = 3000;
+
+  
+  $this->upload->initialize($config);
+
+  if ( ! $this->upload->do_upload('berkas')){
+    $error = array('error' => $this->upload->display_errors());
+    $this->session->set_flashdata('flash','Gagal');
+    redirect('index.php/K3mekanik');
+  }else{
+    $data = array('upload_data' => $this->upload->data());
+    $berkas=$this->upload->data('file_name');
+    
+    $data= array(
+      'id_user' => $this->session->userdata('id_user'),
+      'nomor' => $this->input->post('nomor'),
+      'jenis' => $this->input->post('jenis'),
+      'kapasitas' => $this->input->post('kapasitas'),
+      'sertifikat' => $this->input->post('nomor_izin'),
+      'tanggal' => $this->input->post('tanggal'),
+      'masa' => $this->input->post('masa_berlaku'),
+      'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
+      'file' => $berkas
+    );
+    $this->M_mekanik->simpan_elevator($data);
+    $this->session->set_flashdata('flash','disimpan');
+    redirect('index.php/K3mekanik');
+
+  }
 }
 
 public function simpan_ketel($data){
-   
+  $config['upload_path']          = './upload/upload_berkas_mekanik';
+  $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+  $config['max_size']             = 10000;
+  $config['max_width']            = 3000;
+  $config['max_height']           = 3000;
+
+  
+  $this->upload->initialize($config);
+
+  if ( ! $this->upload->do_upload('berkas')){
+    $error = array('error' => $this->upload->display_errors());
+    $this->session->set_flashdata('flash','Gagal');
+    redirect('index.php/K3mekanik');
+  }else{
+    $data = array('upload_data' => $this->upload->data());
+    $berkas=$this->upload->data('file_name');
+    
+    $data= array(
+      'id_user' => $this->session->userdata('id_user'),
+      'nomor' => $this->input->post('nomor'),
+      'jenis' => $this->input->post('jenis'),
+      'kapasitas' => $this->input->post('kapasitas'),
+      'sertifikat' => $this->input->post('nomor_izin'),
+      'tanggal' => $this->input->post('tanggal'),
+      'masa' => $this->input->post('masa_berlaku'),
+      'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
+      'file' => $berkas
+    );
+    $this->M_mekanik->simpan_ketel($data);
+    $this->session->set_flashdata('flash','disimpan');
+    redirect('index.php/K3mekanik');
+
+  }
 }
 
 public function simpan_ukur($data){
+  $config['upload_path']          = './upload/upload_berkas_mekanik';
+  $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+  $config['max_size']             = 10000;
+  $config['max_width']            = 3000;
+  $config['max_height']           = 3000;
+
+  
+  $this->upload->initialize($config);
+
+  if ( ! $this->upload->do_upload('berkas')){
+    $error = array('error' => $this->upload->display_errors());
+    $this->session->set_flashdata('flash','Gagal');
+    redirect('index.php/K3mekanik');
+  }else{
+    $data = array('upload_data' => $this->upload->data());
+    $berkas=$this->upload->data('file_name');
     
+    $data= array(
+      'id_user' => $this->session->userdata('id_user'),
+      'nomor' => $this->input->post('nomor'),
+      'jenis' => $this->input->post('jenis'),
+      'sertifikat' => $this->input->post('nomor_izin'),
+      'tanggal' => $this->input->post('tanggal'),
+      'masa' => $this->input->post('masa_berlaku'),
+      'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
+      'file' => $berkas
+    );
+    $this->M_mekanik->simpan_bejana($data);
+    $this->session->set_flashdata('flash','disimpan');
+    redirect('index.php/K3mekanik');
+
+  } 
 }
 
 public function simpan_mesin($data){
+  $config['upload_path']          = './upload/upload_berkas_mekanik';
+  $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+  $config['max_size']             = 10000;
+  $config['max_width']            = 3000;
+  $config['max_height']           = 3000;
+
+  
+  $this->upload->initialize($config);
+
+  if ( ! $this->upload->do_upload('berkas')){
+    $error = array('error' => $this->upload->display_errors());
+    $this->session->set_flashdata('flash','Gagal');
+    redirect('index.php/K3mekanik');
+  }else{
+    $data = array('upload_data' => $this->upload->data());
+    $berkas=$this->upload->data('file_name');
     
+    $data= array(
+      'id_user' => $this->session->userdata('id_user'),
+      'nama' => $this->input->post('nama'),
+      'nomor' => $this->input->post('nomor'),
+      'fungsi' => $this->input->post('fungsi'),
+      'sertifikat' => $this->input->post('nomor_izin'),
+      'tanggal' => $this->input->post('tanggal'),
+      'masa' => $this->input->post('masa_berlaku'),
+      'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
+      'file' => $berkas
+    );
+    $this->M_mekanik->simpan_mesin($data);
+    $this->session->set_flashdata('flash','disimpan');
+    redirect('index.php/K3mekanik');
+
+  }  
 }
 
 //-------------------------------------------------------------
