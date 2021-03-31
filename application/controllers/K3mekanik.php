@@ -11,7 +11,7 @@ class K3mekanik extends CI_Controller {
     $this->load->model('M_admin');
     $this->load->model('M_kebakaran');
     // $this->load->model('M_listrik');
-    // $this->load->model('M_mekanik');
+    $this->load->model('M_mekanik');
     $this->load->helper('url');
   }
 
@@ -163,7 +163,7 @@ class K3mekanik extends CI_Controller {
   }
 //-------------------------------------------------------------
   public function simpan_angkat(){
-    $config['upload_path']          = './upload/upload_berkas_kebakaran';
+    $config['upload_path']          = './upload/upload_berkas_mekanik';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
   $config['max_width']            = 3000;
