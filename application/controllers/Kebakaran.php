@@ -210,7 +210,7 @@ public function simpan_kebakaran_utama(){
   
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 
@@ -290,7 +290,7 @@ public function simpan_kebakaran_alarm(){
 
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 
@@ -322,7 +322,7 @@ public function simpan_kebakaran_apar(){
   
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 
@@ -368,7 +368,7 @@ public function simpan_kebakaran_hydrant(){
   
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 
@@ -398,7 +398,7 @@ public function simpan_kebakaran_hydrant(){
 public function simpan_kebakaran_instalasi(){
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 
@@ -429,7 +429,7 @@ public function simpan_kebakaran_instalasi(){
 public function simpan_kebakaran_penanggulangan(){
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 
@@ -462,7 +462,7 @@ public function simpan_kebakaran_petugas(){
 
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 
@@ -496,7 +496,7 @@ public function simpan_kebakaran_sprinkler(){
   
   $config['upload_path']          = './upload/upload_berkas_kebakaran';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
-  $config['max_size']             = 2000;
+  $config['max_size']             = 10000;
   $config['max_width']            = 3000;
   $config['max_height']           = 3000;
 

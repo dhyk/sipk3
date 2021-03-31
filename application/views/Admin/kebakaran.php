@@ -104,7 +104,7 @@
                                             <label class="col-md-2 control-label">Masukkan File</label>
                                             <div class="col-md-10">
                                               <input type="file" name="berkas_penanggulangan" required id="filer_input2" multiple="multiple">
-                                              <span class="help-block"><small>Prosedur Penanggulangan Kebakaran</small></span>
+                                              <span class="help-block"><small>Prosedur Penanggulangan Kebakaran (Max 2MB)</small></span>
                                             </div>
                                     </div>
 
@@ -112,7 +112,7 @@
                                         <label class="col-md-2 control-label">Masukkan File</label>
                                         <div class="col-md-10">
                                             <input type="file" name="berkas_kerja" required id="filer_input2" multiple="multiple">
-                                            <span class="help-block"><small>Prosedur Kerja untuk Mencegah Kebakaran</small></span>                   
+                                            <span class="help-block"><small>Prosedur Kerja untuk Mencegah Kebakaran (Max 2MB)</small></span>                   
                                         </div>
                                     </div>
 
@@ -120,7 +120,7 @@
                                         <label class="col-md-2 control-label">Masukkan File</label>
                                         <div class="col-md-10">
                                             <input type="file" name="berkas_regu" required id="filer_input2" multiple="multiple">
-                                            <span class="help-block"><small>Regu penanggulangan kebakaran</small></span>
+                                            <span class="help-block"><small>Regu penanggulangan kebakaran (Max 2MB)</small></span>
                                         </div>
 
                                     </div>
@@ -362,7 +362,10 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                     <?php   foreach($data_gladi as $key){ ?>
+                                                        <?php 
+                                                        
+                                                        $i=1;
+                                                        foreach($data_gladi as $key){ ?>
                                                  <tr>
                                                             <th scope="row"><?php echo $i; ?></th>
                                                             <td><?php echo $key->nama; ?></td>
@@ -372,7 +375,9 @@
                                                             <td>
                                                                <a href="<?php echo base_url()."index.php/Kebakaran/hapus_kebakaran_gladi?id=".$key->id_gladi;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                             </td>
-                                                           <?php $i++;
+
+                                                            <?php $i++;
+                                                            
                                                                 } ?>
                                                         </tbody>
                                                     </table>
@@ -402,11 +407,11 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                       <?php foreach($data_apar as $key){ ?>
+                                                       <?php  $i= 1; foreach($data_apar as $key){ ?>
                                                  <tr>
                                                             <th scope="row"><?php echo $i; ?></th>
                                                             <td><?php echo $key->tanggal_periksa; ?></td>
-                                                            <td><?php echo $key->file; ?></td>
+                                                            <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_kebakaran/".$key->file; ?>">Lihat Laporan</a></td>
                                                            <td>
                                                                <a href="<?php echo base_url()."index.php/Kebakaran/hapus_kebakaran_apar?id=".$key->id_apar; ?>"><i class="ion-trash-a"></i>Hapus</a>
                                                             </td>
@@ -440,11 +445,11 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                        <?php foreach($data_alarm as $key){ ?>
+                                                        <?php $i=1; foreach($data_alarm as $key){ ?>
                                                  <tr>
                                                             <th scope="row"><?php echo $i; ?></th>
                                                             <td><?php echo $key->tanggal_periksa; ?></td>
-                                                            <td><?php echo $key->file; ?></td>
+                                                            <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_kebakaran/".$key->file; ?>">Lihat Laporan</a></td>
                                                           
                                                             <td>
                                                                <a href="<?php echo base_url()."index.php/Kebakaran/hapus_kebakaran_alarm?id=".$key->id_alarm; ?>"><i class="ion-trash-a"></i>Hapus</a>
@@ -479,11 +484,11 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                        <?php foreach($data_hydrant as $key){ ?>
+                                                        <?php $i= 1; foreach($data_hydrant as $key){ ?>
                                                  <tr>
                                                             <th scope="row"><?php echo $i; ?></th>
                                                             <td><?php echo $key->tanggal_periksa; ?></td>
-                                                            <td><?php echo $key->file; ?></td>
+                                                            <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_kebakaran/".$key->file; ?>">Lihat Laporan</a></td>
                                                           
                                                             <td>
                                                                <a href="<?php echo base_url()."index.php/Kebakaran/hapus_kebakaran_hydrant?id=".$key->id_hydrant; ?>"><i class="ion-trash-a"></i>Hapus</a>
@@ -518,11 +523,13 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                        <?php foreach($data_sprinkler as $key){ ?>
+                                                        <?php 
+                                                        $i=1; 
+                                                        foreach($data_sprinkler as $key){ ?>
                                                  <tr>
                                                             <th scope="row"><?php echo $i; ?></th>
                                                             <td><?php echo $key->tanggal_periksa; ?></td>
-                                                            <td><?php echo $key->file; ?></td>
+                                                            <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_kebakaran/".$key->file; ?>">Lihat Laporan</a></td>
                                                           
                                                             <td>
                                                                <a href="<?php echo base_url()."index.php/Kebakaran/hapus_kebakaran_sprinkler?id=".$key->id_sprinkler; ?>"><i class="ion-trash-a"></i>Hapus</a>

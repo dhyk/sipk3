@@ -30,7 +30,7 @@
  													<div class="col-md-10">
  														<div class="input-group">
  															<input type="file" class="filestyle" data-buttonname="btn-primary" name="berkas" required>
- 															<span class="help-block"><small>Sertifikat kursus teknis penanggulangan kebakaran tingkat dasar I</small></span>
+ 															<span class="help-block"><small>Sertifikat kursus teknis penanggulangan kebakaran tingkat dasar I (Max 2MB)</small></span>
  														</div>
  													</div>
  												</div>
