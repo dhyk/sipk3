@@ -34,6 +34,7 @@ $data=array(
     'p15'=> $this->input->get('p15'),
     'p16'=> $this->input->get('p16'),
     'p17'=> $this->input->get('p17'),
+    
 );
 
 $this->session->set_userdata('p', $data);

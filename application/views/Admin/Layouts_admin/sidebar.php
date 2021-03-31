@@ -144,19 +144,19 @@
                                     </li>
 
                                     <li>
-                                        <a href="<?php echo site_url()?>Admin/k3_listrik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Listrik </span></a>
+                                        <a href="<?php echo site_url()?>K3listrik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Listrik </span></a>
                                     </li>
 
                                     <li>
-                                        <a href="<?php echo site_url()?>Admin/k3_mekanik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Mekanik </span></a>
+                                        <a href="<?php echo site_url()?>K3mekanik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Mekanik </span></a>
                                     </li>
 
                                     <li>
-                                        <a href="<?php echo site_url()?>Admin/k3_lingker" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Lingker </span></a>
+                                        <a href="<?php echo site_url()?>K3lingker" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Lingker </span></a>
                                     </li>
 
                                     <li>
-                                        <a href="<?php echo site_url()?>Admin/p3k" class="waves-effect"><i class="ion-android-earth "></i><span> P3K </span></a>
+                                        <a href="<?php echo site_url()?>P3K" class="waves-effect"><i class="ion-android-earth "></i><span> P3K </span></a>
                                     </li>
 
                              <!-- <li>
