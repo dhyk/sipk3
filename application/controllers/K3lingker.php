@@ -8,7 +8,6 @@ class K3lingker extends CI_Controller {
 		parent::__construct();		
 		$this->load->model('M_home');
     $this->load->model('M_admin');
-    $this->load->model('M_kebakaran');
     $this->load->model('M_lingker');
     $this->load->helper('url');
   }
@@ -30,6 +29,13 @@ class K3lingker extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/k3_lingker',
       'footer' => 'Admin/Layouts_admin/footer',
+      'data_ak3'=> $this->M_lingker->lihat_k3($this->session->userdata('id_user'))->result(),
+      'data_juru'=> $this->M_lingker->lihat_jurulas($this->session->userdata('id_user'))->result(),
+      'data_higiene'=> $this->M_lingker->lihat_higiene($this->session->userdata('id_user'))->result(),
+      'data_ketinggian'=> $this->M_lingker->lihat_ketinggian($this->session->userdata('id_user'))->result(),
+      'data_pemeriksaan'=> $this->M_lingker->lihat_pemeriksaan($this->session->userdata('id_user'))->result(),
+      'data_rekaman'=> $this->M_lingker->lihat_rekaman($this->session->userdata('id_user'))->result(),
+      'data_tk_ruang'=> $this->M_lingker->lihat_ruang($this->session->userdata('id_user'))->result(),
         // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
         // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
         // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
@@ -190,7 +196,7 @@ class K3lingker extends CI_Controller {
         'tanggal_terbit' => $this->input->post('tanggal'),
         'masa_berlaku' => $this->input->post('masa_berlaku'),
       );
-      $this->M_mekanik->simpan_jurulas($data);
+      $this->M_lingker->simpan_jurulas($data);
       $this->session->set_flashdata('flash','disimpan');
       redirect('index.php/K3lingker');
     
@@ -220,7 +226,7 @@ public function simpan_higiene($data){
       'tanggal' => $this->input->post('tanggal'),
       'file' => $berkas
     );
-    $this->M_mekanik->simpan_higiene($data);
+    $this->M_lingker->simpan_higiene($data);
     $this->session->set_flashdata('flash','disimpan');
     redirect('index.php/K3lingker');
 
@@ -237,7 +243,7 @@ public function simpan_k3($data){
     'tanggal_terbit' => $this->input->post('tanggal'),
     'masa_berlaku' => $this->input->post('masa_berlaku'),
   );
-  $this->M_mekanik->simpan_k3($data);
+  $this->M_lingker->simpan_k3($data);
   $this->session->set_flashdata('flash','disimpan');
   redirect('index.php/K3lingker');
 }
@@ -251,7 +257,7 @@ public function simpan_ketinggian($data){
     'tanggal_terbit' => $this->input->post('tanggal_terbit'),
     'masa_berlaku' => $this->input->post('masa_berlaku'),
   );
-  $this->M_mekanik->simpan_ketinggian($data);
+  $this->M_lingker->simpan_ketinggian($data);
   $this->session->set_flashdata('flash','disimpan');
   redirect('index.php/K3lingker');
 }
@@ -282,7 +288,7 @@ public function simpan_pemeriksaan($data){
       'tanggal' => $this->input->post('tanggal'),
       'file' => $berkas
     );
-    $this->M_mekanik->simpan_pemeriksaan($data);
+    $this->M_lingker->simpan_pemeriksaan($data);
     $this->session->set_flashdata('flash','disimpan');
     redirect('index.php/K3lingker');
 
@@ -313,7 +319,7 @@ public function simpan_rekaman($data){
       'tanggal' => $this->input->post('tanggal'),
       'file' => $berkas
     );
-    $this->M_mekanik->simpan_rekaman($data);
+    $this->M_lingker->simpan_rekaman($data);
     $this->session->set_flashdata('flash','disimpan');
     redirect('index.php/K3lingker');
 
@@ -329,7 +335,7 @@ public function simpan_ruang($data){
     'tanggal_terbit' => $this->input->post('tanggal'),
     'masa_berlaku' => $this->input->post('masa_berlaku'),
   );
-  $this->M_mekanik->simpan_ruang($data);
+  $this->M_lingker->simpan_ruang($data);
   $this->session->set_flashdata('flash','disimpan');
   redirect('index.php/K3lingker');
 }
