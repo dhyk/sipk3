@@ -136,7 +136,10 @@
                                     <li>
                                         <a href="<?php echo site_url()?>Admin/laporan" class="waves-effect"><i class=" mdi mdi-buffer  "></i><span> Laporan </span></a>
                                     </li>
-
+                                    <?php 
+                                   
+                                   if($this->session->userdata('p')!=null){?>
+                                    <li>
                                      <li class="menu-title">Form Laporan</li>
                                     
                                     <?php 
@@ -178,6 +181,7 @@
                                     <li>
                                         <a href="<?php echo site_url()?>P3K" class="waves-effect"><i class="ion-android-earth "></i><span> P3K </span></a>
                                     </li>
+                                    <?php } ?>
                                     <?php } ?>
                              <!-- <li>
                                 <a href="dashboard_2.html" class="waves-effect"><i class="ion-android-friends "></i><span> User </span></a>
