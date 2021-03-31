@@ -14,7 +14,7 @@
                         <div class="col-md-12">
                             <div class="card-box">
                                 <h4 class="m-t-0 header-title"><b>Laporan</b></h4>
-                                <form id="basic-form" action="#">
+                                <form id="basic-form" action="<?php echo base_url().'index.php/Pertanyaan/simpan_pertanyaan';?>">
                                     <div>
 
                                     <h3>Pertanyaan</h3>
