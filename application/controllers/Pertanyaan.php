@@ -41,7 +41,7 @@ $this->M_admin->simpan_pertanyaan($data);
 redirect('index.php/Admin/pertanyaan');
 //$this->session->set_userdata('p', $data);
 
-//redirect('index.php/Pertanyaan/hasil_pertanyaan');
+redirect('index.php/Pertanyaan/hasil_pertanyaan');
 }
 
 public function hasil_pertanyaan(){
