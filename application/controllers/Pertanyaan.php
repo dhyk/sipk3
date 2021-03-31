@@ -16,7 +16,6 @@ class Pertanyaan extends CI_Controller {
 
 public function simpan_pertanyaan(){
 
-echo "masuuk";
 $data=array(
     'p1'=>$this->input->get('p1'),
     'p2'=>$this->input->get('p2'),
@@ -37,7 +36,9 @@ $data=array(
     'p17'=> $this->input->get('p17'),
 );
 
-redirect('index.php/Pertanyaan/hasil_pertanyaan');
+$this->session->set_userdata('p', $data);
+
+//redirect('index.php/Pertanyaan/hasil_pertanyaan');
 }
 
 public function hasil_pertanyaan(){

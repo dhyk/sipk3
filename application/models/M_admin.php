@@ -235,6 +235,12 @@ function lihat_ahlik3($id){
 		$this->db->update($table,$data);
 	}
 
+	function simpan_pertanyaan($data2){
+
+		$this->db->insert('pertanyaan',$data2);
+
+	}
+
 
 	
 }
