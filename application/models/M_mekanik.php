@@ -19,7 +19,7 @@ return $query;
 
  function lihat_bejana($id){
 	$this->db->select('*');
-	$this->db->from('lihat_mekanik_bejana');
+	$this->db->from('tb_mekanik_bejana');
 $this->db->where('id_user',$id);
 $query = $this->db->get();
 

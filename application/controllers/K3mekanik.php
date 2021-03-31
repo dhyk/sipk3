@@ -335,7 +335,7 @@ public function simpan_ukur($data){
       'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
       'file' => $berkas
     );
-    $this->M_mekanik->simpan_bejana($data);
+    $this->M_mekanik->simpan_ukur($data);
     $this->session->set_flashdata('flash','disimpan');
     redirect('index.php/K3mekanik');
 
