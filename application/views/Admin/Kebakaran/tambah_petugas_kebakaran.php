@@ -1,4 +1,7 @@
  <body class="fixed-left">
+ <div class="flash-data" data-flashdata="<?=$this->session->flashdata('flash'); ?>"></div>
+    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php endif;?>
 
  	<!-- Begin page -->
  	<div id="wrapper">
@@ -74,7 +77,7 @@
  												<div class="col-sm-offset-10 col-sm-12">
  													<button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
  													<?php //echo form_close(); ?>
- 													<a href="<?php echo site_url()?>Kebakaran"><button type="button" class="btn btn-danger">Kembali</button></a>
+ 													<a href="<?php echo site_url()?>Kebakaran/#9"><button type="button" class="btn btn-danger">Kembali</button></a>
 
  													
  												</div>
@@ -88,3 +91,69 @@
  					</div>
  				</div>
  			</body>
+
+			 <script>
+
+    $(document).ready( function () {
+
+        const flashData = $('.flash-data').data('flashdata');
+
+        if(flashData){
+
+            Swal.fire(
+
+                'Berhasil',
+
+                flashData,
+
+                'success'
+
+                );
+
+        }
+
+    });
+
+    $(document).ready( function () {
+
+        $('.tombol-keluar').on('click', function (e) {
+
+            //mengcancel a hrefnya dulu
+
+            e.preventDefault();
+
+            const href = $(this).attr('href');
+
+            Swal.fire({
+
+                icon: 'error',
+
+                title: 'Apakah anda yakin ?',
+
+                text: "",
+
+                type: 'warning',
+
+                showCancelButton: true,
+
+                confirmButtonColor: '#3085d6',
+
+                cancelButtonColor: '#d33',
+
+                confirmButtonText: 'Keluar'
+
+            }).then((result) => {
+
+                if (result.value) {
+
+                    document.location.href = href;
+
+                }
+
+            })
+
+        });
+
+    });
+
+</script>
