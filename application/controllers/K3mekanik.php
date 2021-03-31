@@ -161,6 +161,98 @@ class K3mekanik extends CI_Controller {
 
     $this->load->view('template', $data);
   }
+//-------------------------------------------------------------
+  public function simpan_angkat(){
+    $config['upload_path']          = './upload/upload_berkas_kebakaran';
+  $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+  $config['max_size']             = 10000;
+  $config['max_width']            = 3000;
+  $config['max_height']           = 3000;
+
+  
+  $this->upload->initialize($config);
+
+  if ( ! $this->upload->do_upload('berkas')){
+    $error = array('error' => $this->upload->display_errors());
+    $this->session->set_flashdata('flash','Gagal');
+    redirect('index.php/K3mekanik');
+  }else{
+    $data = array('upload_data' => $this->upload->data());
+    $berkas=$this->upload->data('file_name');
+    
+    $data= array(
+      'id_user' => $this->session->userdata('id_user'),
+      'nomor' => $this->input->post('nomor'),
+      'jenis' => $this->input->post('jenis'),
+      'kapasitas' => $this->input->post('kapasitas'),
+      'sertifikat' => $this->input->post('nomor_izin'),
+      'tanggal' => $this->input->post('tanggal'),
+      'masa' => $this->input->post('masa_berlaku'),
+      'tanggal_rekam' => $this->input->post('tanggal_pengujian'),
+      'file' => $berkas
+    );
+    $this->M_mekanik->simpan_angkat($data);
+    $this->session->set_flashdata('flash','disimpan');
+    redirect('index.php/K3mekanik');
+
+  }
+
+   
+}
+
+ public function simpan_bejana($data){
+  
+}
+
+public function simpan_elevator($data){
+}
+
+public function simpan_ketel($data){
+   
+}
+
+public function simpan_ukur($data){
+    
+}
+
+public function simpan_mesin($data){
+    
+}
+
+//-------------------------------------------------------------
+
+
+public function hapus_angkat(){
+  $this->M_mekanik->hapus_angkat($this->input->get('id'));
+    
+  }
+  
+  public function hapus_bejana(){
+  $this->M_mekanik->hapus_bejana($this->input->get('id'));
+      
+  }
+  
+  public function hapus_elevator(){
+  $this->M_mekanik->hapus_elevator($this->input->get('id'));
+   
+  }
+  
+  public function hapus_ketel(){
+  $this->M_mekanik->hapus_ketel($this->input->get('id'));
+   
+  }
+  
+  public function hapus_ukur(){
+  $this->M_mekanik->hapus_ukur($this->input->get('id'));
+   
+  }
+  
+  public function hapus_mesin(){
+  $this->M_mekanik->hapus_mesin($this->input->get('id'));
+  
+  }
+  
+
 
 }
 

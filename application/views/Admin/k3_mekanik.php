@@ -158,7 +158,7 @@
 
                                                     <div class="table-responsive">
                                                     <table class="table m-0">
-                                                        <a href="<?=site_url ()?>Admin/tambah_sertifikat_produk">
+                                                        <a href="<?=site_url ()?>K3_Mekanik/tambah_alat_angkat">
                                                         <button class="btn btn-info">Tambah Data</button></a> 
                                                         <thead>
                                                             <tr>
