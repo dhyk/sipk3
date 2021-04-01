@@ -139,6 +139,10 @@
                                     <li>
                                         <a href="<?php echo site_url()?>P2covid/pertanyaan_covid" class="waves-effect"><i class=" glyphicon glyphicon-list-alt"></i><span> P2 COVID </span></a>
                                     </li>
+
+                                    <li>
+                                        <a href="<?php echo site_url()?>Kecelakaan" class="waves-effect"><i class=" ion ion-clipboard "></i><span> Laporan Kecelakaan </span></a>
+                                    </li>
                                     <?php 
                                    
                                    if($this->session->userdata('p')!=null){?>
@@ -154,19 +158,14 @@
                                         <?php } ?>
                                         <?php
                                         
-                                    if($this->session->userdata('p')->p4=='positif'){?>
+                                    if($this->session->userdata('p')->p3=='positif'){?>
                                        <li>
                                         <a href="<?php echo site_url()?>K3listrik" class="waves-effect"><i class="mdi mdi-ev-station "></i><span> K3 Listrik </span></a>
                                        </li>
                                        <?php } ?>
                                        <?php
                                    
-                                   if($this->session->userdata('p')->p3=='positif'){?>
-                                    <li>
-                                        <a href="<?php echo site_url()?>K3listrik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Listrik </span></a>
-                                    </li>
-                                    <?php } ?>
-                                    <?php 
+                                   
                                    
                                    if(($this->session->userdata('p')->p4=='positif')||($this->session->userdata('p')->p5=='positif')
                                    ||($this->session->userdata('p')->p6=='positif')||($this->session->userdata('p')->p7=='positif')
@@ -189,7 +188,7 @@
                                    
                                    if($this->session->userdata('p')->p1=='positif'){?>
                                     <li>
-                                        <a href="<?php echo site_url()?>P3K" class="waves-effect"><i class=" mdi mdi-hospital "></i><span> P3K </span></a>
+                                        <a href="<?php echo site_url()?>P3K" class="waves-effect"><i class=" ion ion-medkit  "></i><span> P3K </span></a>
                                     </li>
                                     <?php } ?>
                                     <?php } ?>
@@ -209,6 +208,12 @@
                     </div>
                     <!-- Sidebar -->
                     <div class="clearfix"></div>
+
+                    <div class="help-box">
+                        <h5 class="text-muted m-t-0">Butuh bantuan ?</h5>
+                        <p class=""><span class="text-custom">Email:</span> <br/> Sisub_it@gmail.com</p>
+                        <p class="m-b-0"><span class="text-custom">WA:</span> <br/> (+62) 82193827332</p>
+                    </div>
 
                 </div>
                 <!-- Sidebar -left -->

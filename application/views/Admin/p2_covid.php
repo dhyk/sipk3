@@ -323,7 +323,7 @@
                                             <tr>
                                             <td rowspan="3" >12
                                                 </td>
-                                                <td rowspan="3">MPenilaian Evaluasi terhadap : <br> <br> 
+                                                <td rowspan="3">Penilaian Evaluasi terhadap : <br> <br> 
                                                     a.Kinerja tim Covid-19 perusahaan
                                                     <br> <br> 
                                                     b.Tingkat pengetahuan dan perilaku pekerja
