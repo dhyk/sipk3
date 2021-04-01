@@ -35,13 +35,19 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Sumber bahaya instalasi listrik</label>
                                         <div class="col-md-10">
-                                        <input type="text" class="form-control" required name="bahaya">   
+                                        <select class="form-control" required name="bahaya" value="<?php if($data_k3listrik!=null){ echo $data_k3listrik[0]->sumber_bahaya;}?>">
+                                                <option>Pembangkit Listrik</option>
+                                                <option>Transmisi Listrik</option>
+                                                <option>Distribusi Listrik</option>
+                                                <option>Pemanfaatan Listrik</option>
+                                           </select>   
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Standar instalasi listrik</label>
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" required name="standar">
+                                            <span class="help-block"><small>Tuliskan Nama standar dan Nomor/Kodenya. Misalnya SNI - 04-2000</small></span>
                                         </div>
                                     </div>
 

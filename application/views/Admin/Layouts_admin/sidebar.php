@@ -131,25 +131,35 @@
                                     </li>
 
                                     <li>
-                                        <a href="<?php echo site_url()?>Admin/informasi_umum" class="waves-effect"><i class="ion-android-earth "></i><span> Informasi umum K3 </span></a>
+                                        <a href="<?php echo site_url()?>Admin/informasi_umum" class="waves-effect"><i class="ion-android-earth"></i><span> Informasi umum K3 </span></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo site_url()?>Admin/laporan" class="waves-effect"><i class=" mdi mdi-buffer  "></i><span> Laporan </span></a>
+                                        <a href="<?php echo site_url()?>Admin/laporan" class="waves-effect"><i class=" mdi mdi-buffer"></i><span> Laporan </span></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo site_url()?>P2covid/pertanyaan_covid" class="waves-effect"><i class=" glyphicon glyphicon-list-alt"></i><span> P2 COVID </span></a>
                                     </li>
                                     <?php 
                                    
                                    if($this->session->userdata('p')!=null){?>
-                                    <li>
+                                    
                                      <li class="menu-title">Form Laporan</li>
                                     
                                     <?php 
                                    
                                     if($this->session->userdata('p')->p1=='positif'){?>
                                      <li>
-                                        <a href="<?php echo site_url()?>Kebakaran" class="waves-effect"><i class="ion-android-earth "></i><span> Kebakaran </span></a>
+                                        <a href="<?php echo site_url()?>Kebakaran" class="waves-effect"><i class="mdi mdi-fire"></i><span> Kebakaran </span></a>
                                     </li>
                                         <?php } ?>
-                                        <?php 
+                                        <?php
+                                        
+                                    if($this->session->userdata('p')->p4=='positif'){?>
+                                       <li>
+                                        <a href="<?php echo site_url()?>K3listrik" class="waves-effect"><i class="mdi mdi-ev-station "></i><span> K3 Listrik </span></a>
+                                       </li>
+                                       <?php } ?>
+                                       <?php
                                    
                                    if($this->session->userdata('p')->p3=='positif'){?>
                                     <li>
@@ -162,7 +172,7 @@
                                    ||($this->session->userdata('p')->p6=='positif')||($this->session->userdata('p')->p7=='positif')
                                    ||($this->session->userdata('p')->p8=='positif')||($this->session->userdata('p')->p9=='positif')){?>
                                     <li>
-                                        <a href="<?php echo site_url()?>K3mekanik" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Mekanik </span></a>
+                                        <a href="<?php echo site_url()?>K3mekanik" class="waves-effect"><i class="mdi mdi-engine-outline"></i><span> K3 Mekanik </span></a>
                                     </li>
                                     <?php } ?>
                                     <?php 
@@ -172,14 +182,14 @@
                                    ||($this->session->userdata('p')->p14=='positif')){?>
                                     
                                     <li>
-                                        <a href="<?php echo site_url()?>K3lingker" class="waves-effect"><i class="ion-android-earth "></i><span> K3 Lingker </span></a>
+                                        <a href="<?php echo site_url()?>K3lingker" class="waves-effect"><i class="mdi mdi-worker "></i><span> K3 Lingker </span></a>
                                     </li>
                                     <?php } ?>
                                     <?php 
                                    
-                                   if($this->session->userdata('p')->p15=='positif'){?>
+                                   if($this->session->userdata('p')->p1=='positif'){?>
                                     <li>
-                                        <a href="<?php echo site_url()?>P3K" class="waves-effect"><i class="ion-android-earth "></i><span> P3K </span></a>
+                                        <a href="<?php echo site_url()?>P3K" class="waves-effect"><i class=" mdi mdi-hospital "></i><span> P3K </span></a>
                                     </li>
                                     <?php } ?>
                                     <?php } ?>

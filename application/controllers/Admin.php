@@ -37,6 +37,7 @@ class Admin extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/dashboard',
       'footer' => 'Admin/Layouts_admin/footer',
+      
     ];
 
     $this->load->view('template', $data);

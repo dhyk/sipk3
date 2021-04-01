@@ -95,7 +95,11 @@
                                     <h3>Pertanyaan</h3>
                                     <section>
                                         <div class="form-group clearfix">
-                                            <label class="col-lg-12 control-label ">Apakah menggunakan mesin tenaga & produksi ?</label>
+                                            <label class="col-lg-12 control-label ">Apakah menggunakan mesin tenaga & produksi ?
+                                                <span class="help-block">
+                                                    <small>Tuliskan Nama standar dan Nomor/Kodenya. Misalnya SNI - 04-2000(Misalnya : penggerak mula, mesin perkakas, mesin produksi, tanur (furnace), mesin transmisi tenaga)</small>
+                                                </span>
+                                            </label>
 
                                             <div class="radio radio-success">
                                                 <input type="radio" class="form-control required" name="p6" id="posp6" value="positif" required>
@@ -110,7 +114,11 @@
                                     <h3>Pertanyaan</h3>
                                      <section>
                                         <div class="form-group clearfix">
-                                            <label class="col-lg-12 control-label ">Apakah menggunakan peralatan angkat dan angkut ?</label>
+                                            <label class="col-lg-12 control-label ">Apakah menggunakan peralatan angkat dan angkut ?
+                                            <span class="help-block">
+                                                <small>(Misalnya : crane, belt conveyor, gondola)</small>
+                                            </span>
+                                            </label>
 
                                             <div class="radio radio-success">
                                                 <input type="radio" class="form-control required" name="p7" id="posp7" value="positif" required>

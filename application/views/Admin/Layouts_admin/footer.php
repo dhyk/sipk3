@@ -1,5 +1,5 @@
   <footer class="footer text-right">
-     &copy;2021 TIM IT SISUB - PT. SURVEYOR INDONESIA CABANG SURABAYA
+     &copy;2021 TIM IT SISUB
  </footer>
 
 
