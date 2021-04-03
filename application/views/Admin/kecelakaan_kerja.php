@@ -14,7 +14,7 @@
                         <div class="col-md-12">
                             <div class="card-box">
                                 <h4 class="m-t-0 header-title"><b>Laporan Kecelakaan</b></h4>
-                                <a href="<?=site_url ()?>Kecelakaan/tambah_laporan">            
+                                <a href="<?=site_url ()?>Laporan/tambah_laporan">            
                                     <button class="btn btn-info">Buat Laporan Baru</button> </a>
                                          <br>
                                          <br>

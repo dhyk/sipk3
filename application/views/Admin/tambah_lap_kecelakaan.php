@@ -132,7 +132,7 @@
                                             <div class="form-group clearfix">
                                                 <div class="col-md-12 text-right ">
                                                     <input type="submit" class="btn btn-success" value="Simpan">
-                                                    <a href="<?php echo site_url() ?>Kecelakaan"><button type="button" class="btn btn-danger">Kembali</button></a>
+                                                    <a href="<?php echo site_url() ?>Laporan/"><button type="button" class="btn btn-danger">Kembali</button></a>
                                                 </div>
                                             </div>
                                         </div>
