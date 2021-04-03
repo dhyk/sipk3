@@ -22,7 +22,7 @@ class Kebakaran extends CI_Controller
       redirect('index.php/Home');
     }
     // echo 'masuk halaman admin';
-
+    $flag= $this->input->get('edit');
     $id = $this->session->userdata('id_user');
     $data = [
 
@@ -32,6 +32,7 @@ class Kebakaran extends CI_Controller
       'content' => 'Admin/Kebakaran/a_pencegahan_dan _penanggulangan_kebakaran',
       'footer' => 'Admin/Layouts_admin/footer',
       'data_kebakaran' => $this->M_kebakaran->lihat_data_kebakaran($id)->result(),
+      'edit' => $flag
       ];
 
     // var_dump($data);

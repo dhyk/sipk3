@@ -14,21 +14,21 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Jumlah karyawan di tempat kerja</label>
                                         <div class="col-md-10">
-                                            <input type="number" class="form-control" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_karyawan;}?>" required name=jumlah_karyawan>
+                                            <input type="number" class="form-control" <?php if($edit!='1') echo 'readonly=""'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_karyawan;}?>" required name=jumlah_karyawan>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Jumlah unit kerja di tempat kerja</label>
                                         <div class="col-md-10">
-                                            <input type="number" class="form-control" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_unit;}?>" required name="jumlah_unit">
+                                            <input type="number" class="form-control" <?php if($edit!='1') echo 'readonly=""'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_unit;}?>" required name="jumlah_unit">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Sumber potensi bahaya kebakaran</label>
                                         <div class="col-md-10">
-                                            <select class="form-control" required name="sumber_potensi" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->sumber_potensi;}?>">
+                                            <select class="form-control" <?php if($edit!='1') echo 'disabled'; ?> required name="sumber_potensi" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->sumber_potensi;}?>">
                                                             <option>Bahan Kimia Berbahaya</option>
                                                             <option>Limbah B3</option>
                                                             <option>Peralatan Listrik</option>
@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Klasifikasi tingkat potensi bahaya kebakaran</label>
                                         <div class="col-md-10">
-                                            <select class="form-control" required name="klasifikasi_potensi" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->klasifikasi_potensi;}?>">
+                                            <select class="form-control" required name="klasifikasi_potensi" <?php if($edit!='1') echo 'disabled'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->klasifikasi_potensi;}?>">
                                                             <option>Ringan</option>
                                                             <option>Sedang I</option>
                                                             <option>Sedang II</option>
@@ -58,7 +58,7 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Asal sumber potensi bahaya kebakaran</label>
                                         <div class="col-md-10">
-                                            <select class="form-control" required name="asal_sumber" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->asal_sumber;}?>">
+                                            <select class="form-control" required name="asal_sumber" <?php if($edit!='1') echo 'disabled'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->asal_sumber;}?>">
                                                 <option>Internal</option>
                                                 <option>Eksternal</option>            
                                             </select>
@@ -68,7 +68,7 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Sistem pencegahan kebakaran</label>
                                         <div class="col-md-10">
-                                            <select class="form-control" required name="sistem_pencegahan" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->sistem_pencegahan;}?>">
+                                            <select class="form-control" required name="sistem_pencegahan" <?php if($edit!='1') echo 'disabled'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->sistem_pencegahan;}?>">
                                                 <option>Pemasangan APAR</option>
                                                 <option>Pemasangan Alarm</option>
                                                 <option>Pemasangan Sprinkler</option>
@@ -81,21 +81,21 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Jumlah Petugas Kebakaran </label>
                                         <div class="col-md-10">
-                                            <input type="number" class="form-control" required name="jumlah_petugas" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_petugas;}?>">
+                                            <input type="number" class="form-control"  <?php if($edit!='1') echo 'readonly=""'; ?> required name="jumlah_petugas" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_petugas;}?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Jumlah koordinator unit penanggulangan kebakaran </label>
                                         <div class="col-md-10">
-                                            <input type="number" class="form-control"required name="jumlah_koordinator" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_koordinator;}?>">
+                                            <input type="number" class="form-control" <?php if($edit!='1') echo 'readonly=""'; ?> required name="jumlah_koordinator" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->jumlah_koordinator;}?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Masukkan File</label>
                                         <div class="col-md-10">
-                                              <input type="file" name="berkas_penanggulangan" required id="filer_input2" multiple="multiple"
+                                              <input type="file" name="berkas_penanggulangan" <?php if($edit!='1') echo 'disabled'; ?> required id="filer_input2" multiple="multiple"
                                               value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_penanggulangan;}?>">
                                               <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_penanggulangan;?>">>>lihat dokumen disini<<</a></small></span>
                                               <span class="help-block"><small>Prosedur Penanggulangan Kebakaran (Max 2MB)</small></span>
@@ -105,7 +105,7 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Masukkan File</label>
                                         <div class="col-md-10">
-                                            <input type="file" name="berkas_kerja" required id="filer_input2" multiple="multiple"
+                                            <input type="file" name="berkas_kerja" <?php if($edit!='1') echo 'disabled'; ?> required id="filer_input2" multiple="multiple"
                                             value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
                                             <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
                                             <span class="help-block"><small>Prosedur Kerja untuk Mencegah Kebakaran (Max 2MB)</small></span>                   
@@ -115,7 +115,7 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Masukkan File</label>
                                         <div class="col-md-10">
-                                            <input type="file" name="berkas_regu" required id="filer_input2" multiple="multiple"
+                                            <input type="file" name="berkas_regu" <?php if($edit!='1') echo 'disabled'; ?> required id="filer_input2" multiple="multiple"
                                             value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_regu;}?>">
                                             <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_regu;?>">>>lihat dokumen disini<<</a></small></span>
                                             <span class="help-block"><small>Regu penanggulangan kebakaran (Max 2MB)</small></span>
@@ -125,6 +125,7 @@
 
                                     <div class="col-sm-offset-10 col-sm-12">
                                                     <button type="submit" class="btn btn-success waves-effect waves-light">Simpan</button>
+                                                    <a href="<?php echo base_url().'index.php/Kebakaran?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a>
                                                     <?php //echo form_close(); ?>
                                     </div>
             </div>    
