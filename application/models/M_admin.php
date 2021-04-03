@@ -235,8 +235,9 @@ function lihat_ahlik3($id){
 		$this->db->update($table,$data);
 	}
 
-	function simpan_pertanyaan($data2){
-
+	function simpan_pertanyaan($data2,$iduser){
+		$this->db->where('id_user', $iduser);
+		$this->db->delete('pertanyaan');
 		$this->db->insert('pertanyaan',$data2);
 
 	}

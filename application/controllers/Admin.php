@@ -67,7 +67,8 @@ class Admin extends CI_Controller {
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-
+    $flag=$this->input->get('edit');
+    if($this->session->userdata('p')==null) $flag=1;
     $this->menu_assesmen();
 
     $data = [
@@ -77,7 +78,7 @@ class Admin extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/assesment_k3',
       'footer' => 'Admin/Layouts_admin/footer',
-      
+      'edit' => $flag,
    
     ];
 
