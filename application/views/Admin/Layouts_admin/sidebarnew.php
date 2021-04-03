@@ -148,19 +148,6 @@
 
                         <li class="menu-title">Form Laporan</li>
 
-                        <li>
-                            <a href="<?php echo site_url() ?>K3mekanik" class="waves-effect"><i class="mdi mdi-engine-outline"></i><span> K3 Mekanik </span></a>
-                        </li>
-
-
-                        <li>
-                            <a href="<?php echo site_url() ?>K3lingker" class="waves-effect"><i class="mdi mdi-worker "></i><span> K3 Lingker </span></a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo site_url() ?>P3K" class="waves-effect"><i class=" ion ion-medkit  "></i><span> P3K </span></a>
-                        </li>
-
                         <!-- -------------------------------------------------------------------------------- -->
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
@@ -277,28 +264,33 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik" class="sidebar-link">
-                                        <span class="hide-menu">K3 Instalasi Kelistrikan</span>
+                                    <a href="<?php echo site_url() ?>K3mekanik/bejana" class="sidebar-link">
+                                        <span class="hide-menu">Bejana Bertekanan dan Tangki Timbun</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/izin_listrik" class="sidebar-link">
-                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Listrik</span>
+                                    <a href="<?php echo site_url() ?>K3mekanik/ketel" class="sidebar-link">
+                                        <span class="hide-menu">Ketel Uap</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/izin_petir" class="sidebar-link">
-                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Penyalur Petir</span>
+                                    <a href="<?php echo site_url() ?>K3mekanik/tenaga" class="sidebar-link">
+                                        <span class="hide-menu">Mesin Tenaga dan Produksi</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/ak3" class="sidebar-link">
-                                        <span class="hide-menu">Daftar AK3 Listrik</span>
+                                    <a href="<?php echo site_url() ?>K3mekanik/elevator" class="sidebar-link">
+                                        <span class="hide-menu">Elevator dan Eskalator</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_listrik" class="sidebar-link">
-                                        <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Listrik</span>
+                                    <a href="<?php echo site_url() ?>K3mekanik/alatukur" class="sidebar-link">
+                                        <span class="hide-menu">Alat Ukur</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3mekanik/alatangkat" class="sidebar-link">
+                                        <span class="hide-menu">Alat Angkat dan Angkut</span>
                                     </a>
                                 </li>
 
@@ -313,38 +305,38 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik" class="sidebar-link">
-                                        <span class="hide-menu">K3 Instalasi Kelistrikan</span>
+                                    <a href="<?php echo site_url() ?>K3lingker/jurulas" class="sidebar-link">
+                                        <span class="hide-menu">Juru Las</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/izin_listrik" class="sidebar-link">
-                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Listrik</span>
+                                    <a href="<?php echo site_url() ?>K3lingker/ketinggian" class="sidebar-link">
+                                        <span class="hide-menu">Tenaga Kerja di Ketinggian</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/izin_petir" class="sidebar-link">
-                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Penyalur Petir</span>
+                                    <a href="<?php echo site_url() ?>K3lingker/ruang" class="sidebar-link">
+                                        <span class="hide-menu">Tenaga Kerja di Ruang Terbatas</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/ak3" class="sidebar-link">
-                                        <span class="hide-menu">Daftar AK3 Listrik</span>
+                                    <a href="<?php echo site_url() ?>K3lingker/ak3" class="sidebar-link">
+                                        <span class="hide-menu">Ahli K3 Lingkungan Kerja</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_listrik" class="sidebar-link">
-                                        <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Listrik</span>
+                                    <a href="<?php echo site_url() ?>K3lingker/rekaman" class="sidebar-link">
+                                        <span class="hide-menu">Rekaman Pengukuran dan Pengendalian Lingkungan Kerja</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_petir" class="sidebar-link">
-                                        <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Penyalur Petir</span>
+                                    <a href="<?php echo site_url() ?>K3lingker/higiene" class="sidebar-link">
+                                        <span class="hide-menu">Rekaman Penerapan Higiene dan Sanitasi</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/teknisi" class="sidebar-link">
-                                        <span class="hide-menu">Daftar Teknisi Kelistrikan</span>
+                                    <a href="<?php echo site_url() ?>K3lingker/pemeriksaan" class="sidebar-link">
+                                        <span class="hide-menu">Rekaman Pemeriksaan dan atau Pengujian</span>
                                     </a>
                                 </li>
 
@@ -360,13 +352,13 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik" class="sidebar-link">
-                                        <span class="hide-menu">K3 Instalasi Kelistrikan</span>
+                                    <a href="<?php echo site_url() ?>P3K" class="sidebar-link">
+                                        <span class="hide-menu">P3K</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/izin_listrik" class="sidebar-link">
-                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Listrik</span>
+                                    <a href="<?php echo site_url() ?>P3K/petugas" class="sidebar-link">
+                                        <span class="hide-menu">Petugas P3K</span>
                                     </a>
                                 </li>
 

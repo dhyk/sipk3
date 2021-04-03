@@ -10,43 +10,130 @@ class K3mekanik extends CI_Controller {
 		$this->load->model('M_home');
     $this->load->model('M_admin');
     $this->load->model('M_kebakaran');
-    // $this->load->model('M_listrik');
     $this->load->model('M_mekanik');
     $this->load->helper('url');
   }
 
-  public function index()
+  public function bejana()
   {
-		//$data['pemesanan'] = $this->m_data->tampil_data()->result();
-		//$this->load->view('Admin/dashboard',$data);
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-     // echo 'masuk halaman admin';
+  
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/k3_mekanik',
+      'content' => 'Admin/k3_mekanik/a_bejana',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_alat_angkat'=> $this->M_mekanik->lihat_angkat($this->session->userdata('id_user'))->result(),
-      'data_bejana'=> $this->M_mekanik->lihat_bejana($this->session->userdata('id_user'))->result(),
-      'data_elevator'=> $this->M_mekanik->lihat_elevator($this->session->userdata('id_user'))->result(),
-      'data_ketel'=> $this->M_mekanik->lihat_ketel($this->session->userdata('id_user'))->result(),
-      'data_ukur'=> $this->M_mekanik->lihat_ukur($this->session->userdata('id_user'))->result(),
-      'data_mesin'=> $this->M_mekanik->lihat_mesin($this->session->userdata('id_user'))->result(),
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
+     'data_bejana'=> $this->M_mekanik->lihat_bejana($this->session->userdata('id_user'))->result(),
+     
     ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
     $this->load->view('template', $data);
 
   }
+
+  public function ketel()
+  {
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_mekanik/b_ketel',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_ketel'=> $this->M_mekanik->lihat_ketel($this->session->userdata('id_user'))->result(),
+      
+    ];
+    $this->load->view('template', $data);
+
+  }
+
+  public function tenaga()
+  {
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_mekanik/c_tenaga',
+      'footer' => 'Admin/Layouts_admin/footer',
+     'data_mesin'=> $this->M_mekanik->lihat_mesin($this->session->userdata('id_user'))->result(),
+     
+    ];
+    $this->load->view('template', $data);
+
+  }
+
+  public function elevator()
+  {
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_mekanik/d_elevator',
+      'footer' => 'Admin/Layouts_admin/footer',
+     'data_elevator'=> $this->M_mekanik->lihat_elevator($this->session->userdata('id_user'))->result(),
+     
+    ];
+    $this->load->view('template', $data);
+
+  }
+
+  public function alatukur()
+  {
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_mekanik/e_alatukur',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_ukur'=> $this->M_mekanik->lihat_ukur($this->session->userdata('id_user'))->result(),
+      
+    ];
+    $this->load->view('template', $data);
+
+  }
+
+  public function alatangkat()
+  {
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_mekanik/f_alatangkut',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_alat_angkat'=> $this->M_mekanik->lihat_angkat($this->session->userdata('id_user'))->result(),
+      
+     
+    ];
+    $this->load->view('template', $data);
+
+  }
+
+
+
+
+
+
   public function tambah_mesin()
   {
     if($this->session->userdata('level')!='2'){
