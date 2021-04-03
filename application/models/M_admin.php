@@ -271,6 +271,14 @@ function lihat_ahlik3($id){
 	
 			return $query;
 		}
+		
+		function updateuser($data,$iduser){
+			
+			$where=array('id_tb_user' => $iduser);
+			$this->db->where($where);
+			$this->db->update('tb_user', $data);
+			
+		}
 
 
 	

@@ -39,7 +39,6 @@ class Admin extends CI_Controller {
       
     ];
 
-   // var_dump($this->session->userdata('p'));
     $this->load->view('template', $data);
 
   }
@@ -116,17 +115,27 @@ class Admin extends CI_Controller {
 
     if ( ! $this->upload->do_upload('berkas')){
       $error = array('error' => $this->upload->display_errors());
-     redirect('index.php/Admin/informasi_umum');
+    redirect('index.php/Admin/informasi_umum');
     }else{
       $data = array('upload_data' => $this->upload->data());
 
-      $berkas=$this->upload->data('file_name');
-     $id_user=$this->session->userdata('id_user');
-     $this->M_admin->savesmk3($berkas,$id_user);
-      $this->session->set_flashdata('flash','disimpan');
-      redirect('index.php/Admin/informasi_umum');
-
+    $berkas=$this->upload->data('file_name');
+    $id_user=$this->session->userdata('id_user');
+    $this->M_admin->savesmk3($berkas,$id_user);
     }
+
+    $data2= array(
+      'nama_perusahaan' => $this->input->post('nama'),
+      'alamat' => $this->input->post('alamat'),
+      'nib' => $this->input->post('nomor_izin'),
+      'jumlah_karyawan' => $this->input->post('karyawan'),
+      'no_p2k3' => $this->input->post('nomor_sah'),
+      'tanggal_p2k3' => $this->input->post('tanggal_sah'),
+    );
+   
+    $this->M_admin->updateuser($data2,$this->session->userdata('id_user'));
+    $this->session->set_flashdata('flash','Data berhasil disimpan');
+    redirect('index.php/Admin/informasi_umum');
   }
 
 
@@ -154,6 +163,10 @@ public function informasi_umum()
     redirect('index.php/Home');
   }
 
+  
+  $flag=$this->input->get('edit');
+  //var_dump($this->input->get('edit'));
+
   $data = [
     'sidebar'=>'Admin/Layouts_admin/sidebarnew',
     'akun' => $this->session->userdata('username'),
@@ -166,10 +179,10 @@ public function informasi_umum()
     'data_produk' => $this->M_admin->lihat_sertfikat_produk($this->session->userdata('id_user'))->result(), // ambil data dari db sertifikat produk
     'data_izin' => $this->M_admin->lihat_izin_usaha($this->session->userdata('id_user'))->result(), // ambil data dari db izin usaha
     'data_ahli' => $this->M_admin->lihat_ahlik3($this->session->userdata('id_user'))->result(), // ambil data dari db ahlik3umum
-
+    'edit' => $flag,
   ];
 
-  $this->load->view('template', $data);
+ $this->load->view('template', $data);
 
 }
 
@@ -215,7 +228,7 @@ public function aksi_upload_sertifikat_standard(){
     $foto=$this->upload->data('file_name');
   
     $this->M_admin->save_sertifikat_standard($nama,$tanggal,$masa,$foto,$id);
-    $this->session->set_flashdata('flash','disimpan');
+    $this->session->set_flashdata('flash','Data berhasil disimpan');
 
     $this->informasi_umum();
   }
@@ -243,7 +256,7 @@ public function tambah_sertifikat_produk()
 ];
 
 $this->load->view('template', $data);
-// echo "masuk";
+
 }
 
 public function aksi_tambah_sertifikat_produk(){
@@ -260,7 +273,7 @@ public function aksi_tambah_sertifikat_produk(){
 
   public function hapus_sertifikat_produk(){
    $this->M_admin->hapus_sertifikat_produk($this->input->get('id'));
-   // echo "hapuuss";
+ 
    $this->informasi_umum();
   }
 
@@ -298,7 +311,7 @@ public function aksi_tambah_izin_berusaha(){
 
   public function hapus_izin_berusaha(){
     $this->M_admin->hapus_izin_berusaha($this->input->get('id'));
-   // echo "hapuuss";
+
    $this->informasi_umum();
   }
 
