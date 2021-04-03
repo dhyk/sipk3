@@ -34,7 +34,7 @@
                                                     dicantumkan kedalam PP/ PKB </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="1" id="a1" value="100" required>
+                                                    <input type="radio" name="p1" id="a1" value="100" required>
                                                     <label for="radio4"></label>
                                                     </div>
                                                     </td>
@@ -45,7 +45,7 @@
                                                     (belum dimasukan kedalam PP/ PKB) </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                        <input type="radio" name="1" id="b1" value="600" required>
+                                                        <input type="radio" name="p1" id="b1" value="600" required>
                                                         <label for="radio4"></label>
                                                     </div>
                                                 </td>
@@ -60,7 +60,7 @@
                                                 <td>Kepada seluruh pekerja </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="2" id="a2" value="100" required>
+                                                    <input type="radio" name="p2" id="a2" value="100" required>
                                                     <label for="radio4"></label>
                                                     </div>
                                                     </td>
@@ -69,7 +69,7 @@
                                                 <td>Belum kepada seluruh pekerja </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                        <input type="radio" name="2" id="b2" value="60" required>
+                                                        <input type="radio" name="p2" id="b2" value="60" required>
                                                         <label for="radio4"></label>
                                                     </div>
                                                 </td>
@@ -101,7 +101,7 @@
                                                     3.c </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="1" id="a3" value="100" required>
+                                                    <input type="radio" name="p3" id="a3" value="100" required>
                                                     <label for="radio4"></label>
                                                     </div>
                                                     </td>
@@ -111,7 +111,7 @@
                                                     atau poin 3.a dan 3.c.</td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                        <input type="radio" name="1" id="b3" value="60" required>
+                                                        <input type="radio" name="p3" id="b3" value="60" required>
                                                         <label for="radio4"></label>
                                                     </div>
                                                 </td>
@@ -121,7 +121,7 @@
                                                     3.a, 3.b atau 3.c. </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                        <input type="radio" name="1" id="c34" value="30" required>
+                                                        <input type="radio" name="3" id="c34" value="30" required>
                                                         <label for="radio4"></label>
                                                     </div>
                                                 </td>
@@ -138,7 +138,7 @@
                                                 <td>Melaksanakan poin 4.a dan 4.b  </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="1" id="radio4" value="100" required>
+                                                    <input type="radio" name="4" id="radio4" value="100" required>
                                                     <label for="radio4"></label>
                                                     </div>
                                                     </td>
@@ -147,7 +147,7 @@
                                                 <td>Melaksanakan poin 4.a saja </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                        <input type="radio" name="1" id="radio4" value="60" required>
+                                                        <input type="radio" name="4" id="radio4" value="60" required>
                                                         <label for="radio4"></label>
                                                     </div>
                                                 </td>

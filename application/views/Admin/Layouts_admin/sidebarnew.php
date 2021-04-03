@@ -154,7 +154,7 @@
                         </li>
                         <!-- -------------------------------------------------------------------------------- -->
 
-                        
+
                         <li>
                             <a href="<?php echo site_url() ?>P2covid/pertanyaan_covid" class="waves-effect"><i class=" glyphicon glyphicon-list-alt"></i><span> P2 COVID </span></a>
                         </li>
@@ -163,10 +163,13 @@
                             <a href="<?php echo site_url() ?>Kecelakaan" class="waves-effect"><i class=" ion ion-clipboard "></i><span> Laporan Kecelakaan </span></a>
                         </li>
 
-
+                        <?php 
+                       
+                        if($this->session->userdata('p')!=null){?>
                         <li class="menu-title">Form Lanjutan Asessmen Mandiri</li>
 
                         <!-- -------------------------------------------------------------------------------- -->
+                        <?php if($this->session->userdata('p')[0]->p1=='1'){?>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-fire"></i>
@@ -226,8 +229,15 @@
 
                             </ul>
                         </li>
+                        <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
+                        <?php if($this->session->userdata('p')[0]->p2=='1'){?>
+                        <li>
+                            <a href="https://jatim.chemsi.id/" class="waves-effect" target="_blank"><i class=" ion ion-earth "></i><span> Jatim Chemsi </span></a>
+                        </li>
+                           <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
+                        <?php if($this->session->userdata('p')[0]->p3=='1'){?>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-ev-station"></i>
@@ -273,96 +283,131 @@
 
                             </ul>
                         </li>
+                        <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
                         <!-- -------------------------------------------------------------------------------- -->
+                        <?php if(($this->session->userdata('p')[0]->p4=='1')||($this->session->userdata('p')[0]->p5=='1')||($this->session->userdata('p')[0]->p9=='1')
+                        ||($this->session->userdata('p')[0]->p6=='1')||($this->session->userdata('p')[0]->p7=='1')||($this->session->userdata('p')[0]->p8=='1')){?>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-engine-outline"></i>
                                 <span class="hide-menu">K3 Mekanik </span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                
+                            <?php if($this->session->userdata('p')[0]->p4=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3mekanik/bejana" class="sidebar-link">
                                         <span class="hide-menu">Bejana Bertekanan dan Tangki Timbun</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p5=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3mekanik/ketel" class="sidebar-link">
                                         <span class="hide-menu">Ketel Uap</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p6=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3mekanik/tenaga" class="sidebar-link">
                                         <span class="hide-menu">Mesin Tenaga dan Produksi</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p8=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3mekanik/elevator" class="sidebar-link">
                                         <span class="hide-menu">Elevator dan Eskalator</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p9=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3mekanik/alatukur" class="sidebar-link">
                                         <span class="hide-menu">Alat Ukur</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p7=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3mekanik/alatangkat" class="sidebar-link">
                                         <span class="hide-menu">Alat Angkat dan Angkut</span>
                                     </a>
                                 </li>
+                                <?php } ?>
 
                             </ul>
                         </li>
+                        <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
                         <!-- -------------------------------------------------------------------------------- -->
+                        <?php if(($this->session->userdata('p')[0]->p10=='1')||($this->session->userdata('p')[0]->p11=='1')
+                        ||($this->session->userdata('p')[0]->p12=='1')||($this->session->userdata('p')[0]->p13=='1')||($this->session->userdata('p')[0]->p14=='1')){?>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-worker"></i>
                                 <span class="hide-menu">K3 Lingk. Kerja </span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <?php if($this->session->userdata('p')[0]->p10=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3lingker/jurulas" class="sidebar-link">
                                         <span class="hide-menu">Juru Las</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p11=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3lingker/ketinggian" class="sidebar-link">
                                         <span class="hide-menu">Tenaga Kerja di Ketinggian</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p12=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3lingker/ruang" class="sidebar-link">
                                         <span class="hide-menu">Tenaga Kerja di Ruang Terbatas</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p13=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3lingker/ak3" class="sidebar-link">
                                         <span class="hide-menu">Ahli K3 Lingkungan Kerja</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p13=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3lingker/rekaman" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pengukuran dan Pengendalian Lingkungan Kerja</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p13=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3lingker/higiene" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Penerapan Higiene dan Sanitasi</span>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                <?php if($this->session->userdata('p')[0]->p14=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>K3lingker/pemeriksaan" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan dan atau Pengujian</span>
                                     </a>
                                 </li>
+                                <?php } ?>
 
 
                             </ul>
                         </li>
+                        <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
                         <!-- -------------------------------------------------------------------------------- -->
+                        <?php if($this->session->userdata('p')[0]->p15=='1'){?>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="ion ion-medkit"></i>
@@ -383,7 +428,9 @@
 
                             </ul>
                         </li>
+                        <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
+                        <?php } ?>
                     </ul>
                 </div>
                 <!-- Sidebar -->

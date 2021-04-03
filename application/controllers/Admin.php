@@ -27,6 +27,8 @@ class Admin extends CI_Controller {
       redirect('index.php/Home');
     }
 
+    $this->menu_assesmen();
+
     $data = [
            
       'sidebar'=>'Admin/Layouts_admin/sidebarnew',
@@ -37,6 +39,7 @@ class Admin extends CI_Controller {
       
     ];
 
+   // var_dump($this->session->userdata('p'));
     $this->load->view('template', $data);
 
   }
@@ -66,6 +69,8 @@ class Admin extends CI_Controller {
       redirect('index.php/Home');
     }
 
+    $this->menu_assesmen();
+
     $data = [
            
       'sidebar'=>'Admin/Layouts_admin/sidebarnew',
@@ -73,18 +78,25 @@ class Admin extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/assesment_k3',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_laporan'=>$this->M_admin->lihat_pertanyaan($this->session->userdata('id_user'))->result(),
+      
    
     ];
 
     $this->load->view('template', $data);
 
   }
+
+  public function menu_assesmen(){
+    $p=$this->M_admin->lihat_pertanyaan($this->session->userdata('id_user'))->result();
+    $this->session->set_userdata('p',$p);
+  }
  
    public function logout(){
 
     $this->session->unset_userdata('username');
     $this->session->unset_userdata('level');
+    $this->session->unset_userdata('id_user');
+    $this->session->unset_userdata('p');
      
     redirect('index.php/Home');
   }
