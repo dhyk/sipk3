@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kecelakaan extends CI_Controller {
+class Laporan extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 	
@@ -19,7 +19,7 @@ public function index()
 
  $data = [
 
-  'sidebar'=>'Admin/Layouts_admin/sidebar',
+  'sidebar'=>'Admin/Layouts_admin/sidebarnew',
   'akun' => $this->session->userdata('username'),
   'level' => $this->session->userdata('level'),
   'content' => 'Admin/kecelakaan_kerja',
@@ -37,7 +37,7 @@ public function tambah_laporan()
 
    $data = [
 
-    'sidebar'=>'Admin/Layouts_admin/sidebar',
+    'sidebar'=>'Admin/Layouts_admin/sidebarnew',
     'akun' => $this->session->userdata('username'),
     'level' => $this->session->userdata('level'),
     'content' => 'Admin/tambah_lap_kecelakaan',

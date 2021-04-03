@@ -21,7 +21,7 @@ class K3lingker extends CI_Controller {
     
     $data = [
            
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/k3_lingker',

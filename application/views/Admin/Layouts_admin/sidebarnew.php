@@ -134,7 +134,7 @@
                         <!-- -------------------------------------------------------------------------------- -->
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                                <i data-feather="file-text" class="ion-android-earth"></i>
+                                <i data-feather="file-text" class="mdi mdi-city"></i>
                                 <span class="hide-menu">Informasi Umum</span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -154,14 +154,36 @@
                         </li>
                         <!-- -------------------------------------------------------------------------------- -->
 
+                          <!-- -------------------------------------------------------------------------------- -->
+                          
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="file-text" class="ion ion-clipboard"></i>
+                                <span class="hide-menu">Laporan</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Laporan/p2k3" class="sidebar-link">
+                                        <span class="hide-menu">Laporan P2K3</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Laporan" class="sidebar-link">
+                                        <span class="hide-menu">Laporan Kecelakaan Kerja</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                      
+                        <!-- -------------------------------------------------------------------------------- -->
 
                         <li>
-                            <a href="<?php echo site_url() ?>P2covid/pertanyaan_covid" class="waves-effect"><i class=" glyphicon glyphicon-list-alt"></i><span> P2 COVID </span></a>
+                            <a href="<?php echo site_url() ?>P2covid/pertanyaan_covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> P2 COVID </span></a>
                         </li>
 
-                        <li>
-                            <a href="<?php echo site_url() ?>Kecelakaan" class="waves-effect"><i class=" ion ion-clipboard "></i><span> Laporan Kecelakaan </span></a>
-                        </li>
+                        
 
                         <?php 
                        

@@ -271,7 +271,7 @@ class Kebakaran extends CI_Controller
     $data = [
 
 
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_ak3_spesialis',
@@ -290,7 +290,7 @@ class Kebakaran extends CI_Controller
     $data = [
 
 
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_izin_instalasi_pemadam',
@@ -307,7 +307,7 @@ class Kebakaran extends CI_Controller
     }
 
     $data = [
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_koordinator',
@@ -324,7 +324,7 @@ class Kebakaran extends CI_Controller
     }
 
     $data = [
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_rekaman_apar',
@@ -341,7 +341,7 @@ class Kebakaran extends CI_Controller
     }
 
     $data = [
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_rekaman_instalasi_alarm',
@@ -358,7 +358,7 @@ class Kebakaran extends CI_Controller
     }
 
     $data = [
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_rekaman_instalasi_fire',
@@ -375,7 +375,7 @@ class Kebakaran extends CI_Controller
     }
 
     $data = [
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_rekaman_instalasi_sprinkler',
@@ -392,7 +392,7 @@ class Kebakaran extends CI_Controller
     }
 
     $data = [
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_rekaman_latihan',
