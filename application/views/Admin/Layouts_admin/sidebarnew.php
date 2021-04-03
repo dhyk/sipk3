@@ -221,11 +221,11 @@
 
                             </ul>
                         </li>
-                    <!-- -------------------------------------------------------------------------------- -->
-                     <!-- -------------------------------------------------------------------------------- -->
-                     <li class="sidebar-item">
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                                <i data-feather="file-text" class="mdi mdi-ev-station" ></i>
+                                <i data-feather="file-text" class="mdi mdi-ev-station"></i>
                                 <span class="hide-menu">K3 Listrik </span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -264,11 +264,116 @@
                                         <span class="hide-menu">Daftar Teknisi Kelistrikan</span>
                                     </a>
                                 </li>
-                                
+
 
                             </ul>
                         </li>
-                    <!-- -------------------------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="file-text" class="mdi mdi-engine-outline"></i>
+                                <span class="hide-menu">K3 Mekanik </span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik" class="sidebar-link">
+                                        <span class="hide-menu">K3 Instalasi Kelistrikan</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/izin_listrik" class="sidebar-link">
+                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Listrik</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/izin_petir" class="sidebar-link">
+                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Penyalur Petir</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/ak3" class="sidebar-link">
+                                        <span class="hide-menu">Daftar AK3 Listrik</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_listrik" class="sidebar-link">
+                                        <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Listrik</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="file-text" class="mdi mdi-worker"></i>
+                                <span class="hide-menu">K3 Lingkungan Kerja </span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik" class="sidebar-link">
+                                        <span class="hide-menu">K3 Instalasi Kelistrikan</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/izin_listrik" class="sidebar-link">
+                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Listrik</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/izin_petir" class="sidebar-link">
+                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Penyalur Petir</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/ak3" class="sidebar-link">
+                                        <span class="hide-menu">Daftar AK3 Listrik</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_listrik" class="sidebar-link">
+                                        <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Listrik</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_petir" class="sidebar-link">
+                                        <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Penyalur Petir</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/teknisi" class="sidebar-link">
+                                        <span class="hide-menu">Daftar Teknisi Kelistrikan</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="file-text" class="ion ion-medkit"></i>
+                                <span class="hide-menu">P3K</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik" class="sidebar-link">
+                                        <span class="hide-menu">K3 Instalasi Kelistrikan</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>K3listrik/izin_listrik" class="sidebar-link">
+                                        <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Listrik</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <!-- -------------------------------------------------------------------------------- -->
                     </ul>
                 </div>
                 <!-- Sidebar -->
