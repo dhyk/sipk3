@@ -5,10 +5,11 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
+    <br />
     <div class="card-box">
-        <h4 class="header-title m-t-0 m-b-30">Pencegahan dan Penanggulangan Kebakaran <span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small> </span></h4>
-        <div class="col-md-12">
-            <?php echo form_open_multipart('index.php/Kebakaran/simpan_kebakaran_utama');?>
+        <h4 class="header-title m-t-0 m-b-30">Pencegahan dan Penanggulangan Kebakaran <span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small></span></h4>
+        <div class="card-box ">
+        <?php echo form_open_multipart('index.php/Kebakaran/simpan_kebakaran_utama');?>
             <div class="form-horizontal">
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Jumlah karyawan di tempat kerja</label>
