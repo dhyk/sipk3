@@ -259,6 +259,10 @@ function lihat_ahlik3($id){
 		return $query;
 	}
 
+	function simpan_p2covid($data){
+		$this->db->insert('p2covid', $data);
+		}
+
 
 	
 }
