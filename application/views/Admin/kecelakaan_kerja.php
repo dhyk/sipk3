@@ -28,7 +28,17 @@
                                             <th>Jenis Kecelakaan</th>
                                             <th>Jumlah Korban</th>
                                             <th>Usia Korban</th>
-                                            <th>Kategori Dampak Kecelakaan</th>
+
+                                            <th colspan="3">Kategori Dampak Kecelakaan
+                                            <tr>
+                                            <td>Ringan</td>
+                                                <td>Ringan</td>
+                                                <td>Ringan</td>
+                                            
+                                            </tr>
+                                            </th>
+                                            
+                                            
                                             <th>Bagian Tubuh yang Cedera</th>
                                             <th>Unsafe Action</th>
                                             <th>Unsafe Condition</th>

@@ -14,7 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  			'img_path' => './captcha',
  			'img_url' => base_url('captcha'),
  			'img_width' => '150',
- 			'img_height' => '30',
+ 			'img_height' => '60',
+			 'font_path' => FCPATH . 'captcha/font/captcha4.ttf',
  			'expiration' => 7200
  		);
  		$cap = create_captcha($options);

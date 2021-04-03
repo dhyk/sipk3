@@ -71,7 +71,7 @@ if ( ! function_exists('create_captcha'))
 			'font_path'	=> '',
 			'expiration'	=> 7200,
 			'word_length'	=> 8,
-			'font_size'	=> 16,
+			'font_size'	=> 100,
 			'img_id'	=> '',
 			'pool'		=> '23456789ABCDEFGHJKLMNPQRSTUVWXYZ',
 			'colors'	=> array(
@@ -280,16 +280,18 @@ if ( ! function_exists('create_captcha'))
 		//  Write the text
 		// -----------------------------------
 
-		$use_font = ($font_path !== '' && file_exists($font_path) && function_exists('imagettftext'));
+		$use_font = ($font_path !== '' && file_exists($font_path) && function_exists('imagettftext')) ?  TRUE : FALSE;
 		if ($use_font === FALSE)
 		{
-			($font_size > 5) && $font_size = 5;
+			//($font_size > 5) && $font_size = 5;
+			$font_size = 5;
 			$x = mt_rand(0, $img_width / ($length / 3));
 			$y = 0;
 		}
 		else
 		{
-			($font_size > 30) && $font_size = 30;
+			//($font_size > 30) && $font_size = 30;
+			$font_size = 100;
 			$x = mt_rand(0, $img_width / ($length / 1.5));
 			$y = $font_size + 2;
 		}

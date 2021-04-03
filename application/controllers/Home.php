@@ -35,7 +35,8 @@ class Home extends CI_Controller {
          'img_path' => './captcha/',
          'img_url' => base_url().'captcha/',
          'img_width' => '200',
-         'img_height' => 30,
+         'img_height' => '60',
+         'font_path' => FCPATH . 'captcha/font/captcha4.ttf',
          'border' => 0,
          'expiration' => 3600
      );
