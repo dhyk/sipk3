@@ -60,7 +60,7 @@
                                                 <td>Kepada seluruh pekerja </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="1" id="a2" value="100" required>
+                                                    <input type="radio" name="2" id="a2" value="100" required>
                                                     <label for="radio4"></label>
                                                     </div>
                                                     </td>
@@ -69,7 +69,7 @@
                                                 <td>Belum kepada seluruh pekerja </td>
                                                 <td>
                                                     <div class="radio radio-success">
-                                                        <input type="radio" name="1" id="b2" value="60" required>
+                                                        <input type="radio" name="2" id="b2" value="60" required>
                                                         <label for="radio4"></label>
                                                     </div>
                                                 </td>

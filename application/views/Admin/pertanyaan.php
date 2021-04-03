@@ -239,7 +239,6 @@
                                      <section>
                                         <div class="form-group clearfix">
                                             <label class="col-lg-12 control-label ">Apakah ada fasilitas pertolongan pertama pada kecelakaan P3K?</label>
-
                                             <div class="radio radio-success">
                                                 <input type="radio" class="form-control required" name="p15" id="posp15" value="positif" required>
                                                 <label  class="col-lg-12" for="posp15">Ada</label>

@@ -57,7 +57,7 @@ class Admin extends CI_Controller {
       'sidebar'=>'Admin/Layouts_admin/sidebar',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/pertanyaan',
+      'content' => 'Admin/assesment_k3',
       'footer' => 'Admin/Layouts_admin/footer',
        ];
 
