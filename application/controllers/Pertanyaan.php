@@ -37,7 +37,7 @@ $data=array(
     'id_user'=> $this->session->userdata('id_user')
 );
 
-$this->M_admin->simpan_pertanyaan($data);
+$this->M_admin->simpan_pertanyaan($data,$this->session->userdata('id_user'));
 redirect('index.php/Admin/laporan');
 
 }
