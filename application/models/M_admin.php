@@ -280,6 +280,23 @@ function lihat_ahlik3($id){
 			
 		}
 
+		function lihat_data_laporan_p2k3($id){
+			$this->db->select('*');
+			$this->db->from('tb_laporan_p2k3');
+			$this->db->where('id_user',$id);
+			$query = $this->db->get();
+	
+			return $query;
+		}
+		function simpan_laporan_p2k3($data){
+			$this->db->insert('tb_laporan_p2k3', $data);
+		}
+
+		function hapus_laporan_p2k3($data){
+			$this->db->where('id_laporan', $data);
+			$this->db->delete('tb_laporan_p2k3');
+		}
+
 
 	
 }

@@ -91,6 +91,7 @@ public function simpan_kecelakaan()
   'level' => $this->session->userdata('level'),
   'content' => 'Admin/laporan_p2k3',
   'footer' => 'Admin/Layouts_admin/footer',
+  'data_laporan_p2k3' => $this->M_admin->lihat_data_laporan_p2k3($this->session->userdata('id_user'))->result(),
 ];
 
 $this->load->view('template', $data);
@@ -114,6 +115,43 @@ public function tambah_laporan_p2k3()
   $this->load->view('template', $data);
 }
 
+public function simpan_laporan_p2k3()
+  {
+
+    $config['upload_path']          = './upload/upload_berkas_laporan_p2k3';
+    $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+    $config['max_size']             = 10000;
+    $config['max_width']            = 3000;
+    $config['max_height']           = 3000;
+
+
+    $this->upload->initialize($config);
+
+    if (!$this->upload->do_upload('berkas')) {
+      $error = array('error' => $this->upload->display_errors());
+      $this->session->set_flashdata('flash', 'Gagal');
+      redirect('index.php/Laporan/laporan_p2k3');
+    } else {
+      $data = array('upload_data' => $this->upload->data());
+      $berkas = $this->upload->data('file_name');
+
+    $data = array(
+      'nama' => $this->input->post('nama'),
+      'tanggal_laporan' => $this->input->post('tanggal'),
+      'file' => $berkas,
+      'id_user' => $this->session->userdata('id_user')
+    );
+    $this->M_admin->simpan_laporan_p2k3($data);
+    $this->session->set_flashdata('flash', 'disimpan');
+    redirect('index.php/Laporan/laporan_p2k3');
+  }
+  }
+  public function hapus_laporan_p2k3()
+  {
+    $this->M_admin->hapus_laporan_p2k3($this->input->get('id'));
+    $this->session->set_flashdata('flash', 'Berhasil dihapus');
+    redirect('index.php/Laporan/laporan_p23');
+  }
 
 }
 ?>

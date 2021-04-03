@@ -19,7 +19,7 @@
  									<div class="col-md-12">
 
  										<!-- <form class="form-horizontal" enctype="multipart/form-data" action="<?php //echo base_url().'index.php/Admin/tambahberita'; ?>" method="post"> -->
- 											<?php echo form_open_multipart('index.php/Kebakaran/simpan_kebakaran_petugas');?>
+ 											<?php echo form_open_multipart('index.php/Laporan/simpan_laporan_p2k3');?>
  											<div class="form-group">
  												<label class="col-md-2 control-label">Nama Petugas</label>
  												<div class="col-md-10">
@@ -47,7 +47,7 @@
 		                                                  <div class="col-md-10">
 		                                                  <div class="input-group"> 
 		                                                  	<input type="date" class="form-control" placeholder="mm/dd/yyyy" id="datepicker" name="tanggal" required>
-		                                                     <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
+		                                                     <span class="input-group-addon bg-custom b-0"></span>
 		                                                   </div>
 		                                                   <br><!-- input-group -->
 		                                                   </div>

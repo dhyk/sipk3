@@ -11,7 +11,7 @@
         <div class="card-box table-responsive">
                 <div class="table-responsive">
                         <table class="table m-0">
-                                <a href="<?=site_url ()?>Admin/tambah_lap_p2k3"><button class="btn btn-info">Tambah Data</button></a> 
+                                <a href="<?=site_url ()?>Laporan/tambah_laporan_p2k3"><button class="btn btn-info">Tambah Data</button></a> 
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -24,7 +24,7 @@
                                 <tbody>
                                     <?php 
                                     $i=1;
-                                    foreach($data_petugas as $key){ ?>
+                                    foreach($data_laporan_p2k3 as $key){ ?>
                                     <tr>
                                         <th scope="row"><?php echo $i; ?></th>
                                         <td><?php echo $key->nama; ?></td>
