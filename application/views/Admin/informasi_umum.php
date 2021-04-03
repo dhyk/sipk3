@@ -12,83 +12,82 @@
 
 
                         <div class="col-md-12">
-                            <div class="card-box">
+                           
                                 <h4 class="header-title m-t-0 m-b-30">Informasi Umum K3</h4>
 
                                 <div class="col-md-12">
-                                    <form class="form-horizontal">
+                                <?php echo form_open_multipart('index.php/Admin/aksi_upload_smk3'); ?>
+                                    <div class="form-horizontal">
 
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nama Perusahaan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" readonly="" value="<?php echo $informasi_umum[0]->nama_perusahaan; ?>">
+                                                <input type="text" class="form-control" name="nama" value="<?php echo $informasi_umum[0]->nama_perusahaan; ?>"
+                                                <?php if($edit!='1') echo 'readonly=""'; ?> required >
 
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Alamat Perusahaan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" readonly="" value="<?php echo $informasi_umum[0]->alamat; ?>">
+                                                <input type="text" class="form-control" name="alamat" required value="<?php echo $informasi_umum[0]->alamat; ?>" <?php if($edit!='1') echo 'readonly=""'; ?>>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nomor Izin Berusaha</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" readonly="" value="<?php echo $informasi_umum[0]->nib; ?>">
+                                                <input type="text" class="form-control" name="nomor_izin" required <?php if($edit!='1') echo 'readonly=""'; ?> value="<?php echo $informasi_umum[0]->nib; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Jumlah Karyawan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" readonly="" value="<?php echo $informasi_umum[0]->jumlah_karyawan; ?>">
+                                                <input type="number" class="form-control" name="karyawan" required <?php if($edit!='1') echo 'readonly=""'; ?> value="<?php echo $informasi_umum[0]->jumlah_karyawan; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nomor Pengesahaan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" readonly="" value="<?php echo $informasi_umum[0]->no_p2k3; ?>">
+                                                <input type="text" class="form-control" name="nomor_sah" required <?php if($edit!='1') echo 'readonly=""'; ?> value="<?php echo $informasi_umum[0]->no_p2k3; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Tanggal Pengesahan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" readonly="" value="<?php echo $informasi_umum[0]->tanggal_p2k3; ?>">
+                                                <input type="date" class="form-control" name="tanggal_sah" required <?php if($edit!='1') echo 'readonly=""'; ?> value="<?php echo $informasi_umum[0]->tanggal_p2k3; ?>">
                                             </div>
                                         </div>
-                                    </form>
-                                    <?php echo form_open_multipart('index.php/Admin/aksi_upload_smk3'); ?>
-
-                                    <div class="form-group">
-                                        <label class="col-md-2 control-label">Dokumen K3 Terakhir </label>
-                                        <div class="col-md-10"><a href="<?php echo base_url() . 'upload/upload_smk3/' . $sertifikat_smk[0]->file_sertifikat; ?>" target="blank_"> >>klik disini<< </a>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Dokumen K3 Terakhir </label>
+                                            <div class="col-md-10"><a href="<?php echo base_url() . 'upload/upload_smk3/' . $sertifikat_smk[0]->file_sertifikat; ?>" target="blank_"> >>klik disini<< </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <br />
-                                    <div class="form-group">
-                                        <div class="p-20">
+                                        <br />
+                                        <div class="form-group">
+                                            <div class="p-20">
                                             <!-- <div class="form-group clearfix"> -->
-
+                                            <?php if($edit=='1'){ ?>
                                             <label class="col-md-2 control-label">Upload Dokumen K3</label>
-                                            <div class="col-md-10">
-                                                <input type="file" name="berkas" id="filer_input2" multiple="multiple">
+                                                <div class="col-md-10">
+                                           
+                                                <input type="file" required name="berkas" id="filer_input2" multiple="multiple">
+                                            
                                                 <br />
-                                            </div>
+                                                </div>
+                                            <?php } ?>
                                             <!-- </div> -->
 
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-sm-offset-10 col-sm-12">
-                                        <button type="submit" class="btn btn-success waves-effect waves-light">Simpan</button>
-                                        <?php //echo form_close(); 
-                                        ?>
-
-
+                                        <div class="col-sm-offset-10 col-sm-12">
+                                            <button type="submit" class="btn btn-success waves-effect waves-light">Simpan</button>
+                                            <a href="<?php echo base_url().'index.php/Admin/informasi_umum?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a>
+                                        </div>
+                                                        
 
                                     </div>
-                                    </form>
-
-                                </div>
+                                </form> 
                                 <br>
                                 <br />
                                 <br />
@@ -302,7 +301,7 @@
                                 </div>
 
 
-                            </div>
+                            
                         </div>
 
                     </div>

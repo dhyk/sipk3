@@ -60,6 +60,15 @@
 
 <body class="fixed-left">
 
+<!--Untuk sweet alert-->
+
+<div class="flash-data" data-flashdata="<?=$this->session->flashdata('flash'); ?>"></div>
+
+<?php if ($this->session->flashdata('flash')) : ?>
+
+<?php endif;?>
+
+<!-- end of sweetalert -->
 
     <!-- Begin page -->
     <div id="wrapper">
@@ -104,7 +113,7 @@
 
                             <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
                                 <li>
-                                    <h5>Hi, ADMIN</h5>
+                                    <h5>Hi, <?php echo $akun; ?></h5>
                                 </li>
                                 <!-- <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li> -->
                                 <li><a href="<?php echo base_url() . 'index.php/Admin/logout'; ?>"><i class="ti-power-off m-r-5"></i> Logout</a></li>
