@@ -167,10 +167,8 @@ class K3listrik extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+          
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Listrik/tambah_teknisi',
@@ -187,10 +185,7 @@ class K3listrik extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Listrik/tambah_ak3_listrik',
@@ -207,10 +202,8 @@ class K3listrik extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Listrik/tambah_kelayakan_listrik',
@@ -227,9 +220,6 @@ class K3listrik extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
       'sidebar'=>'Admin/Layouts_admin/sidebar',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
@@ -247,10 +237,8 @@ class K3listrik extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Listrik/tambah_rekaman_pemeriksaan_listrik',
@@ -267,10 +255,8 @@ class K3listrik extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Listrik/tambah_rekaman_pemeriksaan_petir',

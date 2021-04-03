@@ -194,10 +194,9 @@ class K3lingker extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
+           
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Lingker/tambah_juru_las',
@@ -214,10 +213,9 @@ class K3lingker extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
+          
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Lingker/tambah_ak3_lingker',
@@ -234,10 +232,8 @@ class K3lingker extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+       
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Lingker/tambah_pemeriksaan',
@@ -254,10 +250,8 @@ class K3lingker extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+         
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Lingker/tambah_pengukuran_lingker',
@@ -274,10 +268,7 @@ class K3lingker extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Lingker/tambah_rekaman_penerapan_higiene',
@@ -294,10 +285,8 @@ class K3lingker extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Lingker/tambah_tenaga_kerja',
@@ -314,10 +303,8 @@ class K3lingker extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Lingker/tambah_tk_ruang',

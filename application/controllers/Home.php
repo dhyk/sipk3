@@ -10,23 +10,7 @@ class Home extends CI_Controller {
         $this->load->helper(array('captcha','url'));
     }
 
-    // public function index(){
-    //   $data = [
-    //         // 'username'= $session_data'username',
-    //         // 'level'= $session_data'level',
-    //         // 'head' => 'layouts/head',
-    //         'header'=>'layouts/header',
-    //         'content' => 'home',
-    //         'footer'=> 'layouts/footer',
-    //         // 'akun' => $this->session->userdata('username'),
-    //         // 'image_captcha' =>$cap['image'],
-    //         // 'word' =>$x['word']  = $cap['word'],
-    //         // 'berita' => $this->M_home->ambil_berita()->result(),
-    //         // 'terbaru' => $this->M_home->ambil_berita_terbaru()->result()
-    //     ];
-    //      $this->load->view('template', $data);
-
-    // }
+    
 
     public function index(){ 
 

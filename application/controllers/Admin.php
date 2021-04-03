@@ -14,12 +14,11 @@ class Admin extends CI_Controller {
 
   public function index()
   {
-		//$data['pemesanan'] = $this->m_data->tampil_data()->result();
-		//$this->load->view('Admin/dashboard',$data);
+		
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-     // echo 'masuk halaman admin';
+    
   }
 
   public function dashboard()
@@ -29,9 +28,7 @@ class Admin extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
+           
       'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
@@ -51,13 +48,11 @@ class Admin extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+        
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/pertanyaan',
+      'content' => 'Admin/assesment_k3',
       'footer' => 'Admin/Layouts_admin/footer',
        ];
 
@@ -72,10 +67,8 @@ class Admin extends CI_Controller {
     }
 
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/laporan',
@@ -88,14 +81,11 @@ class Admin extends CI_Controller {
 
   }
  
-  
-
-
-  public function logout(){
+   public function logout(){
 
     $this->session->unset_userdata('username');
     $this->session->unset_userdata('level');
-        //var_dump($this->session->userdata('email'));
+     
     redirect('index.php/Home');
   }
 
@@ -114,152 +104,25 @@ class Admin extends CI_Controller {
 
     if ( ! $this->upload->do_upload('berkas')){
       $error = array('error' => $this->upload->display_errors());
-   // var_dump($error) ;
-      redirect('index.php/Admin/informasi_umum');
+     redirect('index.php/Admin/informasi_umum');
     }else{
       $data = array('upload_data' => $this->upload->data());
 
       $berkas=$this->upload->data('file_name');
-    //echo $foto.' judul: '.$judul.' keterangan: '.$keterangan;
-      $id_user=$this->session->userdata('id_user');
-     //var_dump($this->session->userdata('id_user'));
-      $this->M_admin->savesmk3($berkas,$id_user);
+     $id_user=$this->session->userdata('id_user');
+     $this->M_admin->savesmk3($berkas,$id_user);
       $this->session->set_flashdata('flash','disimpan');
       redirect('index.php/Admin/informasi_umum');
 
-      //$this->load->view('Admin/Upload', $data);
     }
   }
 
-  public function kebakaran()
-  {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    } 
 
-    $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
-      'akun' => $this->session->userdata('username'),
-      'level' => $this->session->userdata('level'),
-      'content' => 'Admin/kebakaran',
-      'footer' => 'Admin/Layouts_admin/footer',
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
-    ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
-    $this->load->view('template', $data);
-
-  }
-
-  public function k3_listrik()
-  {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
-
-    $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
-      'akun' => $this->session->userdata('username'),
-      'level' => $this->session->userdata('level'),
-      'content' => 'Admin/k3_listrik',
-      'footer' => 'Admin/Layouts_admin/footer',
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
-    ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
-    $this->load->view('template', $data);
-
-  }
-
-  public function k3_mekanik()
-  {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
-
-    $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
-      'akun' => $this->session->userdata('username'),
-      'level' => $this->session->userdata('level'),
-      'content' => 'Admin/k3_mekanik',
-      'footer' => 'Admin/Layouts_admin/footer',
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
-    ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
-    $this->load->view('template', $data);
-
-  }
-
-  public function k3_lingker()
-  {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
-    $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
-      'akun' => $this->session->userdata('username'),
-      'level' => $this->session->userdata('level'),
-      'content' => 'Admin/k3_lingker',
-      'footer' => 'Admin/Layouts_admin/footer',
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
-    ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
-    $this->load->view('template', $data);
-
-  }
-
-  public function p3k()
-  {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
-    $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
-      'akun' => $this->session->userdata('username'),
-      'level' => $this->session->userdata('level'),
-      'content' => 'Admin/p3k',
-      'footer' => 'Admin/Layouts_admin/footer',
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
-    ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
-    $this->load->view('template', $data);
-
-  }
 
   public function sertfikat_standard()
   {
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
+         
       'sidebar'=>'Admin/Layouts_admin/sidebar',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
@@ -267,13 +130,10 @@ class Admin extends CI_Controller {
       'footer' => 'Admin/Layouts_admin/footer',
       'data_sertifikat_standard' => $this->M_admin->lihat_sertifikat_standard()->result()
     ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
+ 
     $this->load->view('template', $data);
 
   }
-
-
-
 
 
 public function informasi_umum()
@@ -283,7 +143,7 @@ public function informasi_umum()
   }
 
   $data = [
-    'sidebar'=>'Admin/Layouts_admin/sidebar',
+    'sidebar'=>'Admin/Layouts_admin/sidebarnew',
     'akun' => $this->session->userdata('username'),
     'level' => $this->session->userdata('level'),
     'content' => 'Admin/informasi_umum',
@@ -296,8 +156,7 @@ public function informasi_umum()
     'data_ahli' => $this->M_admin->lihat_ahlik3($this->session->userdata('id_user'))->result(), // ambil data dari db ahlik3umum
 
   ];
- 
-  // var_dump($data);
+
   $this->load->view('template', $data);
 
 }
@@ -309,7 +168,7 @@ public function tambah_sertifikat_standard()
   }
 
   $data = [
-    'sidebar'=>'Admin/Layouts_admin/sidebar',
+    'sidebar'=>'Admin/Layouts_admin/sidebarnew',
     'akun' => $this->session->userdata('username'),
     'level' => $this->session->userdata('level'),
     'content' => 'Admin/tambah_sertifikat_standard',
@@ -364,7 +223,7 @@ public function tambah_sertifikat_produk()
 
  $data = [
 
-  'sidebar'=>'Admin/Layouts_admin/sidebar',
+  'sidebar'=>'Admin/Layouts_admin/sidebarnew',
   'akun' => $this->session->userdata('username'),
   'level' => $this->session->userdata('level'),
   'content' => 'Admin/tambah_sertifikat_produk',
@@ -401,7 +260,7 @@ public function tambah_izin_berusaha()
     }
 
  $data = [
-  'sidebar'=>'Admin/Layouts_admin/sidebar',
+  'sidebar'=>'Admin/Layouts_admin/sidebarnew',
   'akun' => $this->session->userdata('username'),
   'level' => $this->session->userdata('level'),
   'content' => 'Admin/tambah_izin_berusaha',
@@ -412,8 +271,7 @@ $this->load->view('template', $data);
 }
 
 public function aksi_tambah_izin_berusaha(){
-  
-  //echo "haha";
+
   $nama = $this->input->post('nama');
   $nomor = $this->input->post('nomor');
   $tanggal = $this->input->post('terbit');
@@ -440,10 +298,8 @@ public function aksi_tambah_izin_berusaha(){
       }
   
    $data = [
-              // 'username'= $session_data'username',
-              // 'level'= $session_data'level',
-  
-    'sidebar'=>'Admin/Layouts_admin/sidebar',
+             
+    'sidebar'=>'Admin/Layouts_admin/sidebarnew',
     'akun' => $this->session->userdata('username'),
     'level' => $this->session->userdata('level'),
     'content' => 'Admin/tambah_daftar_k3_umum',
@@ -455,7 +311,6 @@ public function aksi_tambah_izin_berusaha(){
   
   public function aksi_tambah_ahlik3(){
   
-    //echo "haha";
     $nama = $this->input->post('nama');
     $nomor = $this->input->post('nomor');
     $tanggal = $this->input->post('tanggal');
@@ -470,7 +325,6 @@ public function aksi_tambah_izin_berusaha(){
   
     public function hapus_ahlik3(){
       $this->M_admin->hapus_ahlik3($this->input->get('id'));
-     // echo "hapuuss";
      $this->informasi_umum();
     }
 
