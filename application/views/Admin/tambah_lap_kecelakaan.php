@@ -14,7 +14,7 @@
                             <h4 class="m-t-0 header-title"><b>Tambah data</b></h4>
                             <div class="row">
                                 <div class="col-md-12">
-                                            <form class="form-horizontal" action="<?php echo form_open_multipart('index.php/K3lingker/simpan_k3');?>
+                                            <form class="form-horizontal" action="<?php echo form_open_multipart('index.php/K3lingker/simpan_kecelakaan');?>">
                                                 <div class="form-group">
                                                     <label for="waktu" class="col-md-2 control-label">Waktu Kejadian :</label>
                                                     <div class="col-md-10">
@@ -101,22 +101,22 @@
                                                     <label class="col-md-2 control-label">Sumber Bahaya Potensial</label>
                                                     <div class="col-md-10">
                                                         <div class="checkbox checkbox-pink">
-                                                            <input type="checkbox"name="hobbies[]" id="hobby1"
+                                                            <input type="checkbox"name="peralatan" id="hobby1"
                                                                         value="peralatan/pemesianan" data-parsley-mincheck="2">
                                                             <label for="peralatan"> Peralatan / Pemesinan </label>
                                                         </div>
                                                         <div class="checkbox checkbox-pink">
-                                                            <input type="checkbox" name="hobbies[]" id="hobby2"
+                                                            <input type="checkbox" name="metode" id="hobby2"
                                                                         value="metode kerja">
                                                             <label for="metode"> Metode Kerja </label>
                                                         </div>
                                                         <div class="checkbox checkbox-pink">
-                                                            <input type="checkbox" name="hobbies[]" id="hobby3"
+                                                            <input type="checkbox" name="lingkungan" id="hobby3"
                                                                         value="lingkungan kerja">
-                                                            <label for="lingkungan"> Lingkungan Kerja </label>
+                                                            <label for="lingkungan kerja"> Lingkungan Kerja </label>
                                                         </div>
                                                         <div class="checkbox checkbox-pink">
-                                                            <input type="checkbox" name="hobbies[]" id="hobby4"
+                                                            <input type="checkbox" name="proses" id="hobby4"
                                                                         value="proses">
                                                             <label for="proses"> Proses </label>
                                                         </div>

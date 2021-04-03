@@ -47,5 +47,36 @@ public function tambah_laporan()
   $this->load->view('template', $data);
 }
 
+public function simpan_kecelakaan()
+  {
+    $data = array(
+      'waktu' => $this->input->post('waktu'),
+      'stasiun' => $this->input->post('stasiun'),
+      'jenis' => $this->input->post('jenis'),
+      'jumlah' => $this->input->post('jumlah'),
+      'usia' => $this->input->post('usia'),
+      'jk' => $this->input->post('gender'),
+      'kategori' => $this->input->post('kategori'),
+      'bagian' => $this->input->post('bagian'),
+      'k_unsafe_action' => $this->input->post('unsafe_action'),
+      'k_unsafe_condition' => $this->input->post('unsafe_condition'),
+      'sumber' => $this->input->post('peralatan/pemesinan').'<br>'
+      .$this->input->post('metode kerja').'<br>'
+      .$this->input->post('lingkungan kerja').'<br>'
+      .$this->input->post('proses'),
+      'pengendalian' => $this->input->post('pengendalian'),
+      'id_user' => $this->session->userdata('id_user'),
+    );
+    $this->M_kebakaran->simpan_kecelakaan($data);
+    $this->session->set_flashdata('flash', 'disimpan');
+    redirect('index.php/Kecelakaan');
+  }
+  public function hapus_kecelakaan()
+  {
+    $this->M_kebakaran->hapus_kecelakaan($this->input->get('id'));
+    $this->session->set_flashdata('flash', 'Berhasil dihapus');
+    redirect('index.php/Kebakaran');
+  }
+
 }
 ?>
