@@ -18,33 +18,40 @@
                                     <button class="btn btn-info">Buat Laporan Baru</button> </a>
                                          <br>
                                          <br>
-
+                                         <div class="table-responsive">
                             <table id="datatable-buttons-fixed-col" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>Waktu Kejadian</th>
-                                            <th>Statisun</th>
-                                            <th>Jenis Kecelakaan</th>
-                                            <th>Jumlah Korban</th>
-                                            <th>Usia Korban</th>
-
-                                            <th colspan="3">Kategori Dampak Kecelakaan
-                                            <tr>
-                                            <td>Ringan</td>
-                                                <td>Ringan</td>
-                                                <td>Ringan</td>
+                                        
+                                            <th rowspan="2">No</th>
+                                            <th rowspan="2">Waktu Kejadian</th>
+                                            <th rowspan="2">Statisun</th>
+                                            <th rowspan="2">Jenis Kecelakaan</th>
+                                            <th rowspan="2">Jumlah Korban</th>
+                                            <th rowspan="2">Usia Korban</th>
                                             
-                                            </tr>
+                                            <th colspan="5" >
+                                            Kategori Dampak Kecelakaan
                                             </th>
                                             
-                                            
-                                            <th>Bagian Tubuh yang Cedera</th>
-                                            <th>Unsafe Action</th>
-                                            <th>Unsafe Condition</th>
-                                            <th>Sumber bahaya potensial</th>
-                                            <th>Pengendalian Terhadap sumber bahaya</th>
+                                            <th rowspan="2">Bagian Tubuh yang Cedera</th>
+                                            <th colspan="2">Kronologi Singkat</th>
+                                        
+                                            <th colspan="4">Sumber bahaya potensial</th>
+                                            <th rowspan="2">Pengendalian Terhadap sumber bahaya</th>
                                         </tr>
+                                        <tr>
+                                            <th>Ringan</th>
+                                            <th>Sedang</th>
+                                            <th>Berat</th>
+                                            <th>Cacat</th>
+                                            <th>Fatality</th>
+                                            <th >Unsafe Action</th>
+                                            <th >Unsafe Condition</th>
+                                            <th>Peralatan/ Permesinan</th>
+                                            <th>Metode Kerja</th>
+                                            <th >Lingkungan Kerja</th>
+                                            <th >Proses</th>                                        </tr>
                                         </thead>
 
 
@@ -62,11 +69,18 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
 
                                         </tbody>
                                     </table>
-                            </div>
+                            </div></div>
                         </div>
                     </div>
                 </div>
