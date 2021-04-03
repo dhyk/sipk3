@@ -501,11 +501,11 @@
 
                             </div>
                             <div class="form-group m-b-0">
-                                <div class="col-sm-offset-11 col-sm-12">
+                                <div class="col-sm-offset-10 col-sm-12">
                                     <button type="submit" class="btn btn-info waves-effect waves-light">Kirim</button>
                                     <?php echo form_close(); 
                                     ?>
-                                    <!-- <a href="<?php echo site_url() ?>P2covid/pertanyaan_covid"><button type="button" class="btn btn-danger">Reset</button></a> -->
+                                    <a href="<?php echo site_url() ?>P2covid"><button type="button" class="btn btn-danger">Kembali</button></a>
                                 </div>
                             </div>
                         </div>

@@ -263,6 +263,15 @@ function lihat_ahlik3($id){
 		$this->db->insert('p2covid', $data);
 		}
 
+		function lihat_data_p2covid($id){
+			$this->db->select('*');
+			$this->db->from('p2_covid');
+			$this->db->where('id_user',$id);
+			$query = $this->db->get();
+	
+			return $query;
+		}
+
 
 	
 }

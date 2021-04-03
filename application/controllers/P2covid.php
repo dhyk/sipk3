@@ -27,6 +27,7 @@ class P2covid extends CI_Controller {
     'level' => $this->session->userdata('level'),
     'content' => 'Admin/v_p2_covid',
     'footer' => 'Admin/Layouts_admin/footer',
+    'data_p2covid' => $this->M_admin->lihat_data_p2covid($this->session->userdata('id_user'))->result(),
   ];
   
   $this->load->view('template', $data);

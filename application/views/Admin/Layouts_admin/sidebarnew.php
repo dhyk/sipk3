@@ -163,7 +163,7 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Laporan/p2k3" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>Laporan/laporan_p2k3" class="sidebar-link">
                                         <span class="hide-menu">Laporan P2K3</span>
                                     </a>
                                 </li>
@@ -180,7 +180,7 @@
                         <!-- -------------------------------------------------------------------------------- -->
 
                         <li>
-                            <a href="<?php echo site_url() ?>P2covid/pertanyaan_covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> P2 COVID </span></a>
+                            <a href="<?php echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> P2 COVID </span></a>
                         </li>
 
                         
