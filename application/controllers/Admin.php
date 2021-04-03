@@ -32,7 +32,7 @@ class Admin extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
             // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/dashboard',

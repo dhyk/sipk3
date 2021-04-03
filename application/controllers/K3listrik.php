@@ -14,37 +14,152 @@ class K3listrik extends CI_Controller {
 
   public function index()
   {
-		//$data['pemesanan'] = $this->m_data->tampil_data()->result();
-		//$this->load->view('Admin/dashboard',$data);
+
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-     // echo 'masuk halaman admin';
+  
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/k3_listrik',
+      'content' => 'Admin/K3_Listrik/a_k3listrik',
       'footer' => 'Admin/Layouts_admin/footer',
       'data_k3listrik'=> $this->M_listrik->lihat_k3listrik($this->session->userdata('id_user'))->result(),
-      'data_ak3'=> $this->M_listrik->lihat_ak3_listrik($this->session->userdata('id_user'))->result(),
+     
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function izin_listrik()
+  {
+
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_Listrik/b_izin_listrik',
+      'footer' => 'Admin/Layouts_admin/footer',
       'data_ijin_listrik'=> $this->M_listrik->lihat_ijin_listrik($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function izin_petir()
+  {
+
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_Listrik/c_izin_petir',
+      'footer' => 'Admin/Layouts_admin/footer',
       'data_ijin_petir'=> $this->M_listrik->lihat_ijin_petir($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function ak3()
+  {
+
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/k3_Listrik/d_ak3',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_ak3'=> $this->M_listrik->lihat_ak3_listrik($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function pemeriksaan_listrik()
+  {
+
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Listrik/e_pemeriksaan_listrik',
+      'footer' => 'Admin/Layouts_admin/footer',
       'data_pemeriksaan_listrik'=> $this->M_listrik->lihat_pemeriksaan_listrik($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function pemeriksaan_petir()
+  {
+
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Listrik/f_pemeriksaan_petir',
+      'footer' => 'Admin/Layouts_admin/footer',
       'data_pemeriksaan_petir'=> $this->M_listrik->lihat_pemeriksaan_petir($this->session->userdata('id_user'))->result(),
-      'data_teknisi'=> $this->M_listrik->lihat_teknisi($this->session->userdata('id_user'))->result(),
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
+     
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function teknisi()
+  {
+
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Listrik/g_teknisi',
+      'footer' => 'Admin/Layouts_admin/footer',
+       'data_teknisi'=> $this->M_listrik->lihat_teknisi($this->session->userdata('id_user'))->result(),
 
     ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
-    $this->load->view('template', $data);
 
+    $this->load->view('template', $data);
   }
+
+
   public function tambah_teknisi()
   {
     if($this->session->userdata('level')!='2'){
