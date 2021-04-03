@@ -19,7 +19,7 @@
                             <div class="col-md-12">
                             <?php echo form_open_multipart('index.php/Kebakaran/simpan_kebakaran_utama');?>
                                 <!-- <form class="form-horizontal"  enctype="multipart/index.php/Kebakaran/simpan_kebakaran_utama" method="post" > -->
-<div class="form-horizontal">
+                                <div class="form-horizontal">
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Jumlah karyawan di tempat kerja</label>
                                         <div class="col-md-10">
