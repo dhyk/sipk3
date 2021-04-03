@@ -144,7 +144,7 @@ class K3mekanik extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Mekanik/tambah_mesin',
@@ -164,7 +164,7 @@ class K3mekanik extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Mekanik/tambah_bejana',
@@ -185,7 +185,7 @@ class K3mekanik extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Mekanik/tambah_alat_angkat',
@@ -205,7 +205,7 @@ class K3mekanik extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Mekanik/tambah_alat_ukur',
@@ -225,7 +225,7 @@ class K3mekanik extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Mekanik/tambah_elevator_eskalator',
@@ -245,7 +245,7 @@ class K3mekanik extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Mekanik/tambah_ketel_uap',

@@ -14,16 +14,13 @@ class K3lingker extends CI_Controller {
 
   public function index()
   {
-		//$data['pemesanan'] = $this->m_data->tampil_data()->result();
-		//$this->load->view('Admin/dashboard',$data);
+	
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-     // echo 'masuk halaman admin';
+    
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
+           
       'sidebar'=>'Admin/Layouts_admin/sidebar',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
@@ -36,15 +33,160 @@ class K3lingker extends CI_Controller {
       'data_pemeriksaan'=> $this->M_lingker->lihat_pemeriksaan($this->session->userdata('id_user'))->result(),
       'data_rekaman'=> $this->M_lingker->lihat_rekaman($this->session->userdata('id_user'))->result(),
       'data_tk_ruang'=> $this->M_lingker->lihat_ruang($this->session->userdata('id_user'))->result(),
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
+       
     ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
-    $this->load->view('template', $data);
+   $this->load->view('template', $data);
 
   }
+
+  public function jurulas()
+  {
+	
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+    
+    $data = [
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Lingker/a_jurulas',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_juru'=> $this->M_lingker->lihat_jurulas($this->session->userdata('id_user'))->result(),
+      
+    ];
+   $this->load->view('template', $data);
+
+  }
+
+  public function ketinggian()
+  {
+	
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+    
+    $data = [
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Lingker/b_ketinggian',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_ketinggian'=> $this->M_lingker->lihat_ketinggian($this->session->userdata('id_user'))->result(),
+      
+    ];
+   $this->load->view('template', $data);
+
+  }
+
+  public function ruang()
+  {
+	
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+    
+    $data = [
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Lingker/c_ruang',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_tk_ruang'=> $this->M_lingker->lihat_ruang($this->session->userdata('id_user'))->result(),
+       
+    ];
+   $this->load->view('template', $data);
+
+  }
+
+  public function ak3()
+  {
+	
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+    
+    $data = [
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Lingker/d_ak3',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_ak3'=> $this->M_lingker->lihat_k3($this->session->userdata('id_user'))->result(),
+      
+    ];
+   $this->load->view('template', $data);
+
+  }
+
+  public function rekaman()
+  {
+	
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+    
+    $data = [
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Lingker/e_rekaman',
+      'footer' => 'Admin/Layouts_admin/footer',
+     'data_rekaman'=> $this->M_lingker->lihat_rekaman($this->session->userdata('id_user'))->result(),
+      
+    ];
+   $this->load->view('template', $data);
+
+  }
+
+  public function higiene()
+  {
+	
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+    
+    $data = [
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Lingker/f_higiene',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_higiene'=> $this->M_lingker->lihat_higiene($this->session->userdata('id_user'))->result(),
+      
+    ];
+   $this->load->view('template', $data);
+
+  }
+
+  public function pemeriksaan()
+  {
+	
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+    
+    $data = [
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/K3_Lingker/g_pemeriksaan',
+      'footer' => 'Admin/Layouts_admin/footer',
+     'data_pemeriksaan'=> $this->M_lingker->lihat_pemeriksaan($this->session->userdata('id_user'))->result(),
+      
+    ];
+   $this->load->view('template', $data);
+
+  }
+
+
   public function tambah_juru_las()
   {
     if($this->session->userdata('level')!='2'){

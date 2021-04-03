@@ -15,33 +15,51 @@ class P3K extends CI_Controller {
 
   public function index()
   {
-		//$data['pemesanan'] = $this->m_data->tampil_data()->result();
-		//$this->load->view('Admin/dashboard',$data);
+		
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-     // echo 'masuk halaman admin';
+   
     $data = [
-            // 'username'= $session_data'username',
-            // 'level'= $session_data'level',
-            // 'head' => 'layouts/head',
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+         
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/p3k',
+      'content' => 'Admin/P3K/a_P3K',
       'footer' => 'Admin/Layouts_admin/footer',
-      
-      'data_p3k'=>$this->M_p3k->lihat_p3k($this->session->userdata('id_user'))->result(),
       'data_petugas'=>$this->M_p3k->lihat_p3k_petugas($this->session->userdata('id_user'))->result(),
-        // 'data_sertifikat_standard' => $this->M_admin->lihat_sertfikat_standard()->result(),
-        // 'data_sertifikat_produk' => $this->M_admin->lihat_sertfikat_produk()->result(),
-        // 'data_izin_usaha' => $this->M_admin->lihat_izin_usaha()->result(),
-
+     
     ];
-   // var_dump( $this->M_admin->lihat_berita()->result());
+  
     $this->load->view('template', $data);
 
   }
+
+
+  
+  public function petugas()
+  {
+		
+    if($this->session->userdata('level')!='2'){
+      redirect('index.php/Home');
+    }
+   
+    $data = [
+         
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/P3K/b_petugas',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_petugas'=>$this->M_p3k->lihat_p3k_petugas($this->session->userdata('id_user'))->result(),
+     
+    ];
+  
+    $this->load->view('template', $data);
+
+  }
+
+
   public function tambah_petugas()
   {
     if($this->session->userdata('level')!='2'){

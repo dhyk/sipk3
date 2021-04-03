@@ -9,7 +9,7 @@
                             <div class="card-box">
                                 <h4 class="header-title m-t-0 m-b-30">K3 Instalasi Kelistrikan<span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small></span></h4>
                                 <div class="card-box table-responsive">
-                                    <div class="table-responsive">
+                                   
                                         <form class="form-horizontal" method="post" action="<?php echo base_url() . 'index.php/K3listrik/simpan_k3listrik'; ?>">
 
                                             <div class="form-group clearfix">
@@ -88,7 +88,7 @@
                                         </form>
 
 
-                                    </div>
+                                  
 
                                 </div>
                             </div>
