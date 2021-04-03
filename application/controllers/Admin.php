@@ -71,7 +71,7 @@ class Admin extends CI_Controller {
       'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/laporan',
+      'content' => 'Admin/assesment_k3',
       'footer' => 'Admin/Layouts_admin/footer',
       'data_laporan'=>$this->M_admin->lihat_pertanyaan($this->session->userdata('id_user'))->result(),
    

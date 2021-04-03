@@ -131,12 +131,30 @@
                             <a href="<?= site_url() ?>Admin/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
                         </li>
 
-                        <li>
-                            <a href="<?php echo site_url() ?>Admin/informasi_umum" class="waves-effect"><i class="ion-android-earth"></i><span> Informasi umum K3 </span></a>
+                        <!-- -------------------------------------------------------------------------------- -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="file-text" class="ion-android-earth"></i>
+                                <span class="hide-menu">Informasi Umum</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Admin/informasi_umum" class="sidebar-link">
+                                        <span class="hide-menu">Informasi Umum K3</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Admin/laporan" class="sidebar-link">
+                                        <span class="hide-menu">Assesmen Mandiri</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
                         </li>
-                        <li>
-                            <a href="<?php echo site_url() ?>Admin/laporan" class="waves-effect"><i class=" mdi mdi-buffer"></i><span> Laporan </span></a>
-                        </li>
+                        <!-- -------------------------------------------------------------------------------- -->
+
+                        
                         <li>
                             <a href="<?php echo site_url() ?>P2covid/pertanyaan_covid" class="waves-effect"><i class=" glyphicon glyphicon-list-alt"></i><span> P2 COVID </span></a>
                         </li>
@@ -146,13 +164,13 @@
                         </li>
 
 
-                        <li class="menu-title">Form Laporan</li>
+                        <li class="menu-title">Form Lanjutan Asessmen Mandiri</li>
 
                         <!-- -------------------------------------------------------------------------------- -->
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-fire"></i>
-                                <span class="hide-menu">Kebakaran </span>
+                                <span class="hide-menu">Kebakaran </span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
@@ -213,7 +231,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-ev-station"></i>
-                                <span class="hide-menu">K3 Listrik </span>
+                                <span class="hide-menu">K3 Listrik </span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
@@ -260,7 +278,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-engine-outline"></i>
-                                <span class="hide-menu">K3 Mekanik </span>
+                                <span class="hide-menu">K3 Mekanik </span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
@@ -301,7 +319,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-worker"></i>
-                                <span class="hide-menu">K3 Lingkungan Kerja </span>
+                                <span class="hide-menu">K3 Lingk. Kerja </span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
@@ -348,7 +366,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="ion ion-medkit"></i>
-                                <span class="hide-menu">P3K</span>
+                                <span class="hide-menu">P3K</span><span class="menu-arrow"></span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">

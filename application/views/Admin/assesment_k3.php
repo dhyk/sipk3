@@ -14,6 +14,7 @@
                         <div class="col-md-8">
                             <div class="card-box">
                                 <h4 class="m-t-0 header-title"><b>Assesmen Mandiri Informasi Umum K3</b></h4>
+                                <form id="basic-form" action="<?php echo base_url().'index.php/Pertanyaan/simpan_pertanyaan';?>" method="post">
                                 <table class="tablesaw m-t-20 table m-b-0" data-tablesaw-mode="stack">
                                         <thead>
                                             <tr>
@@ -323,8 +324,8 @@
                             <div class="form-group m-b-0">
  								<div class="col-sm-offset-10 col-sm-12">
  									<button type="submit" class="btn btn-info waves-effect waves-light">Kirim</button>
- 									<?php //echo form_close(); ?>
- 									<a href="<?php echo site_url()?>P2covid/pertanyaan_covid"><button type="button" class="btn btn-danger">Reset</button></a>
+</form>
+ 									<a href="<?php echo site_url()?>Admin/laporan"><button type="button" class="btn btn-danger">Reset</button></a>
  								</div>
  							</div>
                         </div>
