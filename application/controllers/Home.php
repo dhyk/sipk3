@@ -127,6 +127,10 @@ public function register_pengguna(){
                 redirect('index.php/Disnaker/dashboard','refresh');
                 echo "admin";
             }
+            else if($level== '3'){
+                redirect('index.php/Pemerintah/dashboard','refresh');
+                echo "admin";
+            }
             else{
                 // echo "user";
                 //var_dump($this->session->userdata('id_user'));

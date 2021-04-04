@@ -7,7 +7,7 @@
         <div class="container">
 
             <div class="row">
-
+<br>
                 <div class="col-lg-4 col-md-6">
                     <div class="card-box widget-box-two widget-two-primary">
                         <i class="mdi mdi-chart-areaspline widget-two-icon"></i>
@@ -43,110 +43,6 @@
 
             </div>
             <!-- end row -->
-            <div class="col-md-12">
-                <br />
-                <div class="card-box">
-                    <h4 class="header-title m-t-0 m-b-30">Daftar Sertifikat izin peralatan dan instalasi perusahaan yang kadaluwarsa</h4>
-                    <div class="card-box table-responsive">
-                        <div class="table-responsive">
-                            <table class="table m-0">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nama Perusahann</th>
-                                        <th>Jenis Kadaluwarsa</th>
-                                        <th>Tanggal Kadaluwarsa</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <th></th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <br />
-                <div class="card-box">
-                    <h4 class="header-title m-t-0 m-b-30">Daftar sertifikat personel yang kadaluwarsa</h4>
-                    <div class="card-box table-responsive">
-                        <div class="table-responsive">
-                            <table class="table m-0">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nama Perusahann</th>
-                                        <th>Jenis Kadaluwarsa</th>
-                                        <th>Tanggal Kadaluwarsa</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <th></th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <br />
-                <div class="card-box">
-                    <h4 class="header-title m-t-0 m-b-30">Daftar Laporan Kecelakaan Kerja</h4>
-                    <div class="card-box table-responsive">
-                        <div class="table-responsive">
-                            <table class="table m-0">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nama Perusahann</th>
-                                        <th>Jenis Kecelakaan</th>
-                                        <th>File</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <th></th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
         </div> <!-- container -->

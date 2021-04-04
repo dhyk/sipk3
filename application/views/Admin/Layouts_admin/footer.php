@@ -2,7 +2,10 @@
      &copy;2021 TIM IT SISUB
  </footer>
 
-
+ <a class="act-btn" href="http://wa.me/+62897779400" target="blank_">
+        <i class="icon-message-circle"></i>
+        
+    </a>
 
  <script>
     var resizefunc = [];

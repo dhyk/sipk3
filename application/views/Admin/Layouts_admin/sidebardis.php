@@ -139,26 +139,48 @@
                         <li>
                             <a href="<?= site_url() ?>Disnaker/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
                         </li>
+                        <li>
+                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_alat" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar Sertifikat izin peralatan dan instalasi perusahaan yang kadaluwarsa </span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_personel" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar sertifikat personel yang kadaluwarsa</span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_kecelakaan" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar Laporan Kecelakaan Kerja</span></a>
+                        </li>
 
                         <!-- -------------------------------------------------------------------------------- -->
-        
-                        <!-- -------------------------------------------------------------------------------- -->
-                      
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="file-text" class="ion ion-clipboard"></i>
+                                <span class="hide-menu">Daftar belum update laporan K3 yang dipersyaratkan peraturan</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Disnaker/laporan_p2k3" class="sidebar-link">
+                                        <span class="hide-menu">Laporan P2K3</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Disnaker/laporan_pemeriksaan" class="sidebar-link">
+                                        <span class="hide-menu">Laporan pemeriksaan & pengujian peralatan & instalasi</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Disnaker/laporan_kecelakaan" class="sidebar-link">
+                                        <span class="hide-menu">Laporan Penyelidikan Kecelakaan Kerja</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
                         <!-- -------------------------------------------------------------------------------- -->
 
-                        <li>
-                            <a href="<?php //echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> Daftar Sertifikasi izin peralatan dan instalasi perusahaan yang kadaluwarsa </span></a>
-                        </li>
-                        <li>
-                            <a href="<?php //echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> Daftar sertifikat personel yang kadaluwarsa </span></a>
-                        </li>
-                        <li>
-                            <a href="<?php //echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> Daftar Laporan Kecelakaan Kerja </span></a>
-                        </li>
 
                         
-
-                       
+                    </ul>
+                </div>
                 <!-- Sidebar -->
                 <div class="clearfix"></div>
 
