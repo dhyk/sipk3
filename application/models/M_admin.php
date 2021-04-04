@@ -261,7 +261,8 @@ function lihat_ahlik3($id){
 	}
 
 	function simpan_p2covid($data){
-		$this->db->insert('p2covid', $data);
+		var_dump($data);
+		$this->db->insert('p2_covid', $data);
 		}
 
 		function lihat_data_p2covid($id){

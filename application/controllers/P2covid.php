@@ -192,27 +192,28 @@ public function simpan_covid()
         'p11' => $this->input->post("p11"),
         'p12' => $this->input->post("p12"),
         'p13' => $this->input->post("p13"),
-        'p1' => $b_p1,
-        'p2' => $b_p2,
-        'p3' => $b_p3,
-        'p4' => $b_p4,
-        'p5' => $b_p5,
-        'p6' => $b_p6,
-        'p7' => $b_p7,
-        'p8' => $b_p8,
-        'p9' => $b_p9,
-        'p10' => $b_p10,
-        'p11' => $b_p11,
-        'p12' => $b_p12,
-        'p13' => $b_p13,
+        'file_p1' => $b_p1,
+        'file_p2' => $b_p2,
+        'file_p3' => $b_p3,
+        'file_p4' => $b_p4,
+        'file_p5' => $b_p5,
+        'file_p6' => $b_p6,
+        'file_p7' => $b_p7,
+        'file_p8' => $b_p8,
+        'file_p9' => $b_p9,
+        'file_p10' => $b_p10,
+        'file_p11' => $b_p11,
+        'file_p12' => $b_p12,
+        'file_p13' => $b_p13,
         'id_user' => $this->session->userdata('id_user'),
       );
-      $this->M_admin->simpan_covid($data);
+      
+     $this->M_admin->simpan_p2covid($data);
       $this->session->set_flashdata('flash', 'disimpan');
       redirect('index.php/P2covid');
     } else {
       echo "eror";
-      redirect('index.php/P2covid');
+     redirect('index.php/P2covid');
     }
   }
 
