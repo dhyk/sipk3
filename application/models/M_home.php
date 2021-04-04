@@ -43,7 +43,7 @@ function get_id_user($username){
 
 
 	function register($data){
-var_dump($data);
+//var_dump($data);
 		$this->db->insert('tb_user',$data);
 	}
 

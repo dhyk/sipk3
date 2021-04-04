@@ -39,7 +39,7 @@ class Home extends CI_Controller {
 
        if($this->session->userdata('level')=='1'){
             //if admin
-        redirect('Admin/dashboard','refresh');
+        redirect('Disnaker','refresh');
     }
 
     $this->session->set_userdata('mycaptcha',$cap['word']);
@@ -124,7 +124,7 @@ public function register_pengguna(){
             $this->session->set_userdata('level',$level); //simpan session
 
             if($level== '1'){
-                //redirect('Admin/dashboard','refresh');
+                redirect('index.php/Disnaker/dashboard','refresh');
                 echo "admin";
             }
             else{
