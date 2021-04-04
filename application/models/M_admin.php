@@ -299,6 +299,21 @@ function lihat_ahlik3($id){
 			$this->db->delete('tb_laporan_p2k3');
 		}
 
+		function simpan_laporan_kecelakaan($data){
+			$this->db->insert('tb_kecelakaan', $data);
+		}
+		function lihat_data_kecelakaan($id){
+			$this->db->select('*');
+			$this->db->from('tb_kecelakaan');
+			$this->db->where('id_user',$id);
+			$query = $this->db->get();
+	
+			return $query;
+		}
+		function hapus_laporan_kecelakaan($data){
+			$this->db->where('id_kecelakaan', $data);
+			$this->db->delete('tb_kecelakaan');
+		}
 
 	
 }

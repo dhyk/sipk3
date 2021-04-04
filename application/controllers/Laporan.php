@@ -17,13 +17,19 @@ public function index()
     redirect('index.php/Home');
   }
 
- $data = [
+  $isi=$this->M_admin->lihat_data_kecelakaan($this->session->userdata('id_user'))->result();
+  $sumber=explode(';',$isi[0]->sumber);
+ 
+  $data = [
 
   'sidebar'=>'Admin/Layouts_admin/sidebarnew',
   'akun' => $this->session->userdata('username'),
   'level' => $this->session->userdata('level'),
   'content' => 'Admin/kecelakaan_kerja',
   'footer' => 'Admin/Layouts_admin/footer',
+  'data_kecelakaan' => $isi ,
+  'sumber'=>$sumber,
+ 
 ];
 
 $this->load->view('template', $data);
@@ -60,22 +66,23 @@ public function simpan_kecelakaan()
       'bagian' => $this->input->post('bagian'),
       'k_unsafe_action' => $this->input->post('unsafe_action'),
       'k_unsafe_condition' => $this->input->post('unsafe_condition'),
-      'sumber' => $this->input->post('peralatan/pemesinan').'<br>'
-      .$this->input->post('metode kerja').'<br>'
-      .$this->input->post('lingkungan kerja').'<br>'
+      'sumber' => $this->input->post('peralatan/pemesinan').';'
+      .$this->input->post('metode kerja').';'
+      .$this->input->post('lingkungan kerja').';'
       .$this->input->post('proses'),
       'pengendalian' => $this->input->post('pengendalian'),
       'id_user' => $this->session->userdata('id_user'),
     );
-    $this->M_kebakaran->simpan_kecelakaan($data);
+    $this->M_admin->simpan_laporan_kecelakaan($data);
     $this->session->set_flashdata('flash', 'disimpan');
-    redirect('index.php/Kecelakaan');
+    redirect('index.php/Laporan');
   }
+
   public function hapus_kecelakaan()
   {
-    $this->M_kebakaran->hapus_kecelakaan($this->input->get('id'));
+    $this->M_admin->hapus_laporan_kecelakaan($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Laporan');
   }
 
   public function laporan_p2k3()
@@ -150,7 +157,7 @@ public function simpan_laporan_p2k3()
   {
     $this->M_admin->hapus_laporan_p2k3($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Laporan/laporan_p23');
+    redirect('index.php/Laporan/laporan_p2k3');
   }
 
 }
