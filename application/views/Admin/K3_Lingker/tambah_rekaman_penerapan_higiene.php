@@ -16,7 +16,7 @@
  									<div class="col-md-12">
 
  										<!-- <form class="form-horizontal" enctype="multipart/form-data" action="<?php //echo base_url().'index.php/Admin/tambahberita'; ?>" method="post"> -->
- 											<?php echo form_open_multipart('index.php/Admin/simpan_higiene');?>
+ 											<?php echo form_open_multipart('index.php/K3lingker/simpan_higiene');?>
 
  											<div class="form-group">
  												<label class="col-md-2 control-label">Tanggal</label>
@@ -46,7 +46,7 @@
  												<div class="col-sm-offset-10 col-sm-12">
  													<button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
  													<?php //echo form_close(); ?>
- 													<a href="<?php echo site_url()?>K3lingker"><button type="button" class="btn btn-danger">Kembali</button></a>
+ 													<a href="<?php echo site_url()?>K3lingker/higiene"><button type="button" class="btn btn-danger">Kembali</button></a>
 
  													
  												</div>

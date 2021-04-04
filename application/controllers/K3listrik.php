@@ -223,7 +223,7 @@ class K3listrik extends CI_Controller {
     }
 
     $data = [
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Listrik/tambah_kelayakan_petir',
@@ -296,7 +296,7 @@ $this->session->set_flashdata('flash','disimpan');
       );
       $this->M_listrik->simpan_ak3_listrik($data);
       $this->session->set_flashdata('flash','disimpan');
-          redirect('index.php/K3listrik');
+          redirect('index.php/K3listrik/ak3');
 
   }
 
@@ -310,7 +310,7 @@ $this->session->set_flashdata('flash','disimpan');
     );
     $this->M_listrik->simpan_ijin_listrik($data);
     $this->session->set_flashdata('flash','disimpan');
-        redirect('index.php/K3listrik');
+        redirect('index.php/K3listrik/izin_listrik');
   }
 
   public function simpan_ijin_petir(){
@@ -323,7 +323,7 @@ $this->session->set_flashdata('flash','disimpan');
     );
     $this->M_listrik->simpan_ijin_petir($data);
     $this->session->set_flashdata('flash','disimpan');
-        redirect('index.php/K3listrik');
+        redirect('index.php/K3listrik/izin_petir');
   }
 
   public function simpan_pemeriksaan_listrik(){
@@ -351,7 +351,7 @@ $this->session->set_flashdata('flash','disimpan');
     );
     $this->M_listrik->simpan_pemeriksaan_listrik($data);
     $this->session->set_flashdata('flash','disimpan');
-        redirect('index.php/K3listrik');
+        redirect('index.php/K3listrik/pemeriksaan_listrik');
   }
 }
 
@@ -380,7 +380,7 @@ $this->session->set_flashdata('flash','disimpan');
     );
     $this->M_listrik->simpan_pemeriksaan_petir($data);
     $this->session->set_flashdata('flash','disimpan');
-        redirect('index.php/K3listrik');
+        redirect('index.php/K3listrik/pemeriksaan_petir');
   }
 }
 
@@ -394,7 +394,7 @@ $this->session->set_flashdata('flash','disimpan');
     );
     $this->M_listrik->simpan_teknisi($data);
     $this->session->set_flashdata('flash','disimpan');
-        redirect('index.php/K3listrik');
+        redirect('index.php/K3listrik/teknisi');
 
   }
 
@@ -407,38 +407,38 @@ $this->session->set_flashdata('flash','disimpan');
 
   }
   
-  public function hapus_ak3_listrik(){
-    $this->M_listrik->hapus_ak3listrik($this->input->get('id'));
+  public function hapus_ak3(){
+    $this->M_listrik->hapus_ak3_listrik($this->input->get('id'));
     $this->session->set_flashdata('flash','Berhasil dihapus');
-    redirect('index.php/K3listrik');
+    redirect('index.php/K3listrik/ak3');
   
   }
   
   public function hapus_ijin_listrik(){
     $this->M_listrik->hapus_ijin_listrik($this->input->get('id'));
     $this->session->set_flashdata('flash','Berhasil dihapus');
-    redirect('index.php/K3listrik');
+    redirect('index.php/K3listrik/izin_listrik');
   
   }
   
   public function hapus_ijin_petir(){
-    $this->M_listrik->hapus_ijin_listrik($this->input->get('id'));
+    $this->M_listrik->hapus_ijin_petir($this->input->get('id'));
     $this->session->set_flashdata('flash','Berhasil dihapus');
-    redirect('index.php/K3listrik');
+    redirect('index.php/K3listrik/izin_petir');
   
   }
   
   public function hapus_pemeriksaan_listrik(){
     $this->M_listrik->hapus_pemeriksaan_listrik($this->input->get('id'));
     $this->session->set_flashdata('flash','Berhasil dihapus');
-    redirect('index.php/K3listrik');
+    redirect('index.php/K3listrik/pemeriksaan_listrik');
   
   }
   
   public function hapus_pemeriksaan_petir(){
     $this->M_listrik->hapus_pemeriksaan_petir($this->input->get('id'));
     $this->session->set_flashdata('flash','Berhasil dihapus');
-    redirect('index.php/K3listrik');
+    redirect('index.php/K3listrik/pemeriksaan_petir');
   
   
   }
@@ -446,7 +446,7 @@ $this->session->set_flashdata('flash','disimpan');
   public function hapus_teknisi(){
     $this->M_listrik->hapus_teknisi($this->input->get('id'));
     $this->session->set_flashdata('flash','Berhasil dihapus');
-    redirect('index.php/K3listrik');
+    redirect('index.php/K3listrik/teknisi');
   
     
   }

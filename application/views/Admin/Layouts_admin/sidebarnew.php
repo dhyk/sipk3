@@ -239,7 +239,7 @@
                                 </li>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>Kebakaran/alarm" class="sidebar-link">
-                                        <span class="hide-menu">Rekaman Pemeriksaan Ibstalasi Alarm</span>
+                                        <span class="hide-menu">Rekaman Pemeriksaan Instalasi Alarm</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">

@@ -3,7 +3,7 @@ const flashData = $('.flash-data').data('flashdata');
 if(flashData){
 	Swal.fire({
 		  title: 'Sukses',
-		  text : 'Data Produk berhasil ' + flashData,
+		  text : 'Data berhasil ' + flashData,
 		  type : 'success'
 		})}
 	;

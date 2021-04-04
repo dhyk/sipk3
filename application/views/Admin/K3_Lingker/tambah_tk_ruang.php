@@ -20,7 +20,7 @@
  											<div class="form-group">
  												<label class="col-md-2 control-label">Nama Petugas</label>
  												<div class="col-md-10">
- 													<input type="number" class="form-control" placeholder="Masukkan Nama Juru Las" name="nama" required><br><?//php echo form_error('judul'); ?>
+ 													<input type="text" class="form-control" placeholder="Masukkan Nama Juru Las" name="nama" required><br><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
 
@@ -62,7 +62,7 @@
  												<div class="col-sm-offset-10 col-sm-12">
  													<button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
  													<?php //echo form_close(); ?>
- 													<a href="<?php echo site_url()?>K3lingker"><button type="button" class="btn btn-danger">Kembali</button></a>
+ 													<a href="<?php echo site_url()?>K3lingker/ruang"><button type="button" class="btn btn-danger">Kembali</button></a>
 
  													
  												</div>

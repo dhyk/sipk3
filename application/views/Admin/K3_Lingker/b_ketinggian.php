@@ -33,7 +33,7 @@
                                                           <tr>
                                                               <th scope="row"><?php echo $i; ?></th>
                                                               <td><?php echo $key->nama; ?></td>
-                                                              <td><?php echo $key->kompentensi; ?></td>
+                                                              <td><?php echo $key->kompetensi; ?></td>
                                                               <td><?php echo $key->sertifikat; ?></td>
                                                               <td><?php echo $key->tanggal_terbit; ?></td>
                                                               <td><?php echo $key->masa_berlaku; ?></td>

@@ -109,7 +109,7 @@ return $query;
         $this->db->delete('lingker_jurulas');  
 	}
   
-	 function hapus_higien($data){
+	 function hapus_higiene($data){
 		$this->db->where('id_higiene', $data);
         $this->db->delete('lingker_higiene');
 	}

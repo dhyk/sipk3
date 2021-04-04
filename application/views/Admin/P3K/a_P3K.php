@@ -27,7 +27,7 @@
                                         <label class="col-md-2 control-label">Jumlah Shift Kerja</label>
                                         <div class="col-md-10">
                                             <div class="col-md-10">
-                                             <input type="text" class="form-control" placeholder="Masukkan Jumlah Shift" name="shift" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->jumlah_shift;?>">
+                                             <input type="number" class="form-control" placeholder="Masukkan Jumlah Shift" name="shift" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->jumlah_shift;?>">
                                          </div>
                                      </div>
                                  </div>
@@ -36,7 +36,7 @@
                                     <label class="col-md-2 control-label">Jumlah Tenaga Kerja Setiap Shift </label>
                                     <div class="col-md-10">
                                         <div class="col-md-10">
-                                         <input type="text" class="form-control" placeholder="Masukkan Jumlah Tenaga Kerja Setiap Shift" name="tenaga" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->tenaga_kerja;?>">
+                                         <input type="number" class="form-control" placeholder="Masukkan Jumlah Tenaga Kerja Setiap Shift" name="tenaga" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->tenaga_kerja;?>">
                                      </div>
                                  </div>
                              </div>
@@ -45,7 +45,7 @@
                                 <label class="col-md-2 control-label">Jumlah Petugas P3K </label>
                                 <div class="col-md-10">
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" placeholder="Masukkan Jumlah Petugas P3K" name="petugas" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->jumlah_petugas;?>">
+                                        <input type="number" class="form-control" placeholder="Masukkan Jumlah Petugas P3K" name="petugas" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->jumlah_petugas;?>">
                                     </div>
                                     <div class="col-md-2">
                                         <label class="col-md-2 control-label">Orang</label>
@@ -57,7 +57,7 @@
                                 <label class="col-md-2 control-label">Jumlah Unit Kerja </label>
                                 <div class="col-md-10">
                                     <div class="col-md-8">
-                                     <input type="text" class="form-control" placeholder="Masukkan Jumlah Unit Kerja" name="unit" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->jumlah_unit;?>">
+                                     <input type="number" class="form-control" placeholder="Masukkan Jumlah Unit Kerja" name="unit" <?php if($edit!='1') echo 'readonly=""'; ?> required value="<?php if($data_p3k!=null)echo $data_p3k[0]->jumlah_unit;?>">
                                  </div>
                                  <div class="col-md-2">
                                     <label class="col-md-2 control-label">Unit </label>

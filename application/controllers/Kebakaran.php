@@ -77,7 +77,7 @@ class Kebakaran extends CI_Controller
 
     $data = [
 
-      'sidebar' => 'Admin/Layouts_admin/sidebar',
+      'sidebar' => 'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/tambah_petugas_kebakaran',
@@ -499,7 +499,7 @@ class Kebakaran extends CI_Controller
     );
     $this->M_kebakaran->simpan_kebakaran_ak3($data);
     $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/ak3');
   }
 
   public function simpan_kebakaran_alarm()
@@ -529,7 +529,7 @@ class Kebakaran extends CI_Controller
       );
       $this->M_kebakaran->simpan_kebakaran_alarm($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-      redirect('index.php/Kebakaran');
+      redirect('index.php/Kebakaran/alarm');
     }
   }
 
@@ -560,7 +560,7 @@ class Kebakaran extends CI_Controller
       );
       $this->M_kebakaran->simpan_kebakaran_apar($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-      redirect('index.php/Kebakaran');
+      redirect('index.php/Kebakaran/apar');
     }
   }
 
@@ -575,7 +575,7 @@ class Kebakaran extends CI_Controller
     );
     $this->M_kebakaran->simpan_kebakaran_gladi($data);
     $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/gladi');
   }
 
   public function simpan_kebakaran_hydrant()
@@ -605,7 +605,7 @@ class Kebakaran extends CI_Controller
       );
       $this->M_kebakaran->simpan_kebakaran_hydrant($data);
       $this->session->set_flashdata('flash', 'disimpan');
-      redirect('index.php/Kebakaran');
+      redirect('index.php/Kebakaran/hydrant');
     }
   }
 
@@ -636,7 +636,7 @@ class Kebakaran extends CI_Controller
       );
       $this->M_kebakaran->simpan_kebakaran_instalasi($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-      redirect('index.php/Kebakaran');
+      redirect('index.php/Kebakaran/instalasi');
     }
   }
 
@@ -668,7 +668,7 @@ class Kebakaran extends CI_Controller
       );
       $this->M_kebakaran->simpan_kebakaran_penanggulangan($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-      redirect('index.php/Kebakaran');
+      redirect('index.php/Kebakaran/koordinator');
     }
   }
 
@@ -701,7 +701,7 @@ class Kebakaran extends CI_Controller
       );
       $this->M_kebakaran->simpan_kebakaran_petugas($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-      redirect('index.php/Kebakaran');
+      redirect('index.php/Kebakaran/petugas');
     }
   }
 
@@ -732,7 +732,7 @@ class Kebakaran extends CI_Controller
       );
       $this->M_kebakaran->simpan_kebakaran_sprinkler($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-      redirect('index.php/Kebakaran');
+      redirect('index.php/Kebakaran/sprinkler');
     }
   }
 
@@ -740,62 +740,62 @@ class Kebakaran extends CI_Controller
   {
     $this->M_kebakaran->hapus_kebakaran_ak3($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/ak3');
   }
 
   public function hapus_kebakaran_alarm()
   {
     $this->M_kebakaran->hapus_kebakaran_alarm($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/alarm');
   }
 
   public function hapus_kebakaran_apar()
   {
     $this->M_kebakaran->hapus_kebakaran_apar($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/apar');
   }
 
   public function hapus_kebakaran_gladi()
   {
     $this->M_kebakaran->hapus_kebakaran_gladi($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/gladi');
   }
 
   public function hapus_kebakaran_hydrant()
   {
     $this->M_kebakaran->hapus_kebakaran_hydrant($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/hydrant');
   }
 
   public function hapus_kebakaran_instalasi()
   {
     $this->M_kebakaran->hapus_kebakaran_instalasi($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/instalasi');
   }
 
   public function hapus_kebakaran_penanggulangan()
   {
     $this->M_kebakaran->hapus_kebakaran_penanggulangan($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/koordinator');
   }
 
   public function hapus_kebakaran_petugas()
   {
     $this->M_kebakaran->hapus_kebakaran_petugas($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/petugas');
   }
 
   public function hapus_kebakaran_sprinkler()
   {
     $this->M_kebakaran->hapus_kebakaran_sprinkler($this->input->get('id'));
     $this->session->set_flashdata('flash', 'Berhasil dihapus');
-    redirect('index.php/Kebakaran');
+    redirect('index.php/Kebakaran/sprinkler');
   }
 }

@@ -14,23 +14,25 @@ class Disnaker extends CI_Controller {
 
   public function dashboard()
   {
-		//echo "admiinnnn";
     if($this->session->userdata('level')!='1'){
       redirect('index.php/Home');
     }
 
+
     $data = [
-        
-      'sidebar'=>'Admin/Disnaker/sidebarnew',
+           
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/dashboard0',
-      'footer' => 'Admin/Disnaker/footer',
-       ];
+      'footer' => 'Admin/Layouts_admin/footer',
+      
+    ];
 
     $this->load->view('template', $data);
-    
+
   }
+
 
 
 }

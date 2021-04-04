@@ -1,3 +1,4 @@
+<?php error_reporting(0); ini_set('display_errors', 0);?>
 <body class="fixed-left">
     <div id="wrapper">
         <div class="content-page">
@@ -186,7 +187,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">Masukkan File</label>
+                                        <label class="col-md-2 control-label">Prosedur Penanggulangan Kebakaran</label>
                                         <div class="col-md-10">
                                             <input type="file" name="berkas_penanggulangan" <?php if ($edit != '1') echo 'disabled'; ?> required id="filer_input2" multiple="multiple" value="<?php if ($data_kebakaran != null) {
                                                                                                                                                                                                 echo base_url() . 'upload/upload_berkas_kebakaran/' . $data_kebakaran[0]->file_penanggulangan;
@@ -194,12 +195,12 @@
                                              <?php if ($data_kebakaran != null){?>
                                                 <span class="help-block"><small><a target="_blank" href="<?php echo base_url() . 'upload/upload_berkas_kebakaran/' . $data_kebakaran[0]->file_penanggulangan; ?>">>>lihat dokumen disini<<</a></small></span>
                                                 <?php }?> 
-                                                <span class="help-block"><small>Prosedur Penanggulangan Kebakaran (Max 2MB)</small></span>
+                                                <span class="help-block"><small>Masukkan File (Max 2MB)</small></span>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">Masukkan File</label>
+                                        <label class="col-md-2 control-label">Prosedur Kerja untuk Mencegah Kebakaran</label>
                                         <div class="col-md-10">
                                             <input type="file" name="berkas_kerja" <?php if ($edit != '1') echo 'disabled'; ?> required id="filer_input2" multiple="multiple" value="<?php if ($data_kebakaran != null) {
                                                                                                                                                                                         echo base_url() . 'upload/upload_berkas_kebakaran/' . $data_kebakaran[0]->file_kerja;
@@ -207,12 +208,12 @@
                                              <?php if ($data_kebakaran != null){?>
                                                 <span class="help-block"><small><a target="_blank" href="<?php echo base_url() . 'upload/upload_berkas_kebakaran/' . $data_kebakaran[0]->file_kerja; ?>">>>lihat dokumen disini<<</a></small></span>
                                                 <?php }?> 
-                                                <span class="help-block"><small>Prosedur Kerja untuk Mencegah Kebakaran (Max 2MB)</small></span>
+                                                <span class="help-block"><small>Masukkan File (Max 2MB)</small></span>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">Masukkan File</label>
+                                        <label class="col-md-2 control-label">Regu penanggulangan kebakaran</label>
                                         <div class="col-md-10">
                                             <input type="file" name="berkas_regu" <?php if ($edit != '1') echo 'disabled'; ?> required id="filer_input2" multiple="multiple" value="<?php if ($data_kebakaran != null) {
                                                                                                                                                                                         echo base_url() . 'upload/upload_berkas_kebakaran/' . $data_kebakaran[0]->file_regu;
@@ -220,7 +221,7 @@
                                            <?php if ($data_kebakaran != null){?>
                                            <span class="help-block"><small><a target="_blank" href="<?php echo base_url() . 'upload/upload_berkas_kebakaran/' . $data_kebakaran[0]->file_regu; ?>">>>lihat dokumen disini<<</a></small></span>
                                            <?php }?> 
-                                           <span class="help-block"><small>Regu penanggulangan kebakaran (Max 2MB)</small></span>
+                                           <span class="help-block"><small>Masukkan File (Max 2MB)</small></span>
                                         </div>
 
 
