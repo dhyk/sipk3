@@ -74,7 +74,7 @@ class P3K extends CI_Controller {
             // 'username'= $session_data'username',
             // 'level'= $session_data'level',
 
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/P3K/tambah_petugas',
@@ -114,7 +114,7 @@ class P3K extends CI_Controller {
       );
       $this->M_p3k->simpan_p3k_petugas($data);
       $this->session->set_flashdata('flash','disimpan');
-      redirect('index.php/P3K');
+      redirect('index.php/P3K/petugas');
   } 
 
   
@@ -124,7 +124,9 @@ class P3K extends CI_Controller {
   }
 
   public function hapus_p3k_petugas(){
-
+    $this->M_p3k->hapus_p3k_petugas($this->input->get('id'));
+    $this->session->set_flashdata('flash','Berhasil dihapus');
+    redirect('index.php/P3K/petugas');
 
   } 
 }

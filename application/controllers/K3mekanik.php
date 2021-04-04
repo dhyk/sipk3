@@ -78,7 +78,7 @@ class K3mekanik extends CI_Controller {
     }
   
     $data = [
-      'sidebar'=>'Admin/Layouts_admin/sidebar',
+      'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/k3_mekanik/d_elevator',
@@ -286,7 +286,7 @@ class K3mekanik extends CI_Controller {
     );
     $this->M_mekanik->simpan_angkat($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3mekanik');
+    redirect('index.php/K3mekanik/alatangkat');
 
   }
 
@@ -324,7 +324,7 @@ class K3mekanik extends CI_Controller {
     var_dump($data);
     $this->M_mekanik->simpan_bejana($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3mekanik');
+    redirect('index.php/K3mekanik/bejana');
 
   }
 }
@@ -360,7 +360,7 @@ public function simpan_elevator(){
     );
     $this->M_mekanik->simpan_elevator($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3mekanik');
+    redirect('index.php/K3mekanik/elevator');
 
   }
 }
@@ -396,7 +396,7 @@ public function simpan_ketel(){
     );
     $this->M_mekanik->simpan_ketel($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3mekanik');
+    redirect('index.php/K3mekanik/ketel');
 
   }
 }
@@ -431,7 +431,7 @@ public function simpan_ukur(){
     );
     $this->M_mekanik->simpan_ukur($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3mekanik');
+    redirect('index.php/K3mekanik/alatukur');
 
   } 
 }
@@ -467,7 +467,7 @@ public function simpan_mesin(){
     );
     $this->M_mekanik->simpan_mesin($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3mekanik');
+    redirect('index.php/K3mekanik/tenaga');
 
   }  
 }
@@ -478,42 +478,42 @@ public function simpan_mesin(){
 public function hapus_angkat(){
   $this->M_mekanik->hapus_angkat($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3mekanik/alatangkat');
     
   }
   
   public function hapus_bejana(){
   $this->M_mekanik->hapus_bejana($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3mekanik/bejana');
       
   }
   
   public function hapus_elevator(){
   $this->M_mekanik->hapus_elevator($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3mekanik/elevator');
    
   }
   
   public function hapus_ketel(){
   $this->M_mekanik->hapus_ketel($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3mekanik/ketel');
    
   }
   
   public function hapus_ukur(){
   $this->M_mekanik->hapus_ukur($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3mekanik/alatukur');
    
   }
   
   public function hapus_mesin(){
   $this->M_mekanik->hapus_mesin($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3mekanik/tenaga');
   
   }
   

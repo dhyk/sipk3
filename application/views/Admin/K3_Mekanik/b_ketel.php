@@ -42,7 +42,7 @@
                                                    <td><?php echo $key->tanggal; ?></td>
                                                    <td><?php echo $key->masa; ?></td>
                                                    <td><?php echo $key->tanggal_rekam; ?></td>
-                                                   <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_mekanik".$key->file; ?>">Lihat Laporan</a></td>
+                                                   <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_mekanik/".$key->file; ?>">Lihat Laporan</a></td>
                                                    <td>
                                     
                                                        <a href="<?php echo base_url().'index.php/K3mekanik/hapus_ketel?id='.$key->id_ketel;?>"><i class="ion-trash-a"></i>Hapus</a>

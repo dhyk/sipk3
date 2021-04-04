@@ -68,7 +68,7 @@
  												<div class="col-sm-offset-10 col-sm-12">
  													<button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
  													<?php //echo form_close(); ?>
- 													<a href="<?php echo site_url()?>K3lingker"><button type="button" class="btn btn-danger">Kembali</button></a>
+ 													<a href="<?php echo site_url()?>K3lingker/pemeriksaan"><button type="button" class="btn btn-danger">Kembali</button></a>
  												</div>
  											</div>
  										</form>

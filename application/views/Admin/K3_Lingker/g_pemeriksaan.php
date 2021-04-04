@@ -38,7 +38,7 @@
                                                                 <td><?php echo $key->lembaga; ?></td>
                                                                 <td><a target="_blank" href="<?php echo base_url()."upload/upload_berkas_lingker/".$key->file; ?>">Lihat Laporan</a></td>
                                                                 <td> 
-                                                                    <a href="<?php echo base_url().'index.php/K3listrik/hapus_pemeriksaan?id='.$key->id_pemeriksaan;?>"><i class="ion-trash-a"></i>Hapus</a>
+                                                                    <a href="<?php echo base_url().'index.php/K3lingker/hapus_pemeriksaan?id='.$key->id_pemeriksaan;?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                 </td>
                                                             </tr>
                                                                 <?php $i++;

@@ -129,7 +129,7 @@ return $query;
 	}
   
 	 function hapus_pemeriksaan_petir($data){
-		$this->db->where('id_ppemeriksaan', $data);
+		$this->db->where('id_pemeriksaan', $data);
         $this->db->delete('listrik_pemeriksaan_petir');
 	}
   

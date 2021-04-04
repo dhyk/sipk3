@@ -218,7 +218,7 @@ class K3lingker extends CI_Controller {
       'sidebar'=>'Admin/Layouts_admin/sidebarnew',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'Admin/K3_Lingker/tambah_ak3_lingker',
+      'content' => 'Admin/K3_Lingker/tambah_k3',
       'footer' => 'Admin/Layouts_admin/footer',
     ];
 
@@ -261,7 +261,7 @@ class K3lingker extends CI_Controller {
     $this->load->view('template', $data);
   }
 
-  public function tambah_rekaman_penerapan_higiene()
+  public function tambah_penerapan_higiene()
   {
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
@@ -327,11 +327,11 @@ class K3lingker extends CI_Controller {
       );
       $this->M_lingker->simpan_jurulas($data);
       $this->session->set_flashdata('flash','disimpan');
-      redirect('index.php/K3lingker');
+      redirect('index.php/K3lingker/jurulas');
     
 }
 
-public function simpan_higiene($data){
+public function simpan_higiene(){
   $config['upload_path']          = './upload/upload_berkas_lingker';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
@@ -357,13 +357,13 @@ public function simpan_higiene($data){
     );
     $this->M_lingker->simpan_higiene($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3lingker');
+    redirect('index.php/K3lingker/higiene');
 
   }
 
 }
 
-public function simpan_k3($data){
+public function simpan_k3(){
   $data= array(
     'id_user' => $this->session->userdata('id_user'),
     'nama' => $this->input->post('nama'),
@@ -374,10 +374,10 @@ public function simpan_k3($data){
   );
   $this->M_lingker->simpan_k3($data);
   $this->session->set_flashdata('flash','disimpan');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/ak3');
 }
 
-public function simpan_ketinggian($data){
+public function simpan_ketinggian(){
   $data= array(
     'id_user' => $this->session->userdata('id_user'),
     'nama' => $this->input->post('nama'),
@@ -388,10 +388,10 @@ public function simpan_ketinggian($data){
   );
   $this->M_lingker->simpan_ketinggian($data);
   $this->session->set_flashdata('flash','disimpan');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/ketinggian');
 }
 
-public function simpan_pemeriksaan($data){
+public function simpan_pemeriksaan(){
   $config['upload_path']          = './upload/upload_berkas_lingker';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
@@ -419,12 +419,12 @@ public function simpan_pemeriksaan($data){
     );
     $this->M_lingker->simpan_pemeriksaan($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3lingker');
+    redirect('index.php/K3lingker/pemeriksaan');
 
   }
 }
 
-public function simpan_rekaman($data){
+public function simpan_rekaman(){
   $config['upload_path']          = './upload/upload_berkas_lingker';
   $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
   $config['max_size']             = 10000;
@@ -450,12 +450,12 @@ public function simpan_rekaman($data){
     );
     $this->M_lingker->simpan_rekaman($data);
     $this->session->set_flashdata('flash','disimpan');
-    redirect('index.php/K3lingker');
+    redirect('index.php/K3lingker/rekaman');
 
   }
 }
 
-public function simpan_ruang($data){
+public function simpan_ruang(){
   $data= array(
     'id_user' => $this->session->userdata('id_user'),
     'nama' => $this->input->post('nama'),
@@ -466,52 +466,52 @@ public function simpan_ruang($data){
   );
   $this->M_lingker->simpan_ruang($data);
   $this->session->set_flashdata('flash','disimpan');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/ruang');
 }
 
 //-------------------------------------------------------------
 
 
-public function hapus_jurulas($data){
+public function hapus_jurulas(){
     $this->M_lingker->hapus_jurulas($this->input->get('id'));
     $this->session->set_flashdata('flash','Berhasil dihapus');
-    redirect('index.php/K3lingker');
+    redirect('index.php/K3lingker/jurulas');
 }
 
-public function hapus_higien($data){
+public function hapus_higiene(){
   $this->M_lingker->hapus_higiene($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/higiene');
 }
 
-public function hapus_k3($data){
+public function hapus_k3(){
   $this->M_lingker->hapus_k3($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/ak3');
 }
 
-public function hapus_ketinggian($data){
+public function hapus_ketinggian(){
   $this->M_lingker->hapus_ketinggian($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/ketinggian');
 }
 
-public function hapus_pemeriksaan($data){
+public function hapus_pemeriksaan(){
   $this->M_lingker->hapus_pemeriksaan($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/pemeriksaan');
 }
 
-public function hapus_rekaman($data){
+public function hapus_rekaman(){
   $this->M_lingker->hapus_rekaman($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/rekaman');
 }
 
-public function hapus_ruang($data){
+public function hapus_ruang(){
   $this->M_lingker->hapus_ruang($this->input->get('id'));
   $this->session->set_flashdata('flash','Berhasil dihapus');
-  redirect('index.php/K3lingker');
+  redirect('index.php/K3lingker/ruang');
 }
 
 }

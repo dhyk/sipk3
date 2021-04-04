@@ -38,6 +38,8 @@ $data=array(
 );
 
 $this->M_admin->simpan_pertanyaan($data,$this->session->userdata('id_user'));
+$this->session->set_flashdata('flash','disimpan');
+
 redirect('index.php/Admin/laporan');
 
 }

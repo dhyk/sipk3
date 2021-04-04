@@ -14,10 +14,10 @@ class Disnaker extends CI_Controller {
 
   public function dashboard()
   {
-		//echo "admiinnnn";
     if($this->session->userdata('level')!='1'){
       redirect('index.php/Home');
     }
+
 
     $data = [
         
@@ -29,7 +29,7 @@ class Disnaker extends CI_Controller {
        ];
 
     $this->load->view('template', $data);
-    
+
   }
 
   public function daftar_sertifikat_alat()
@@ -157,6 +157,7 @@ class Disnaker extends CI_Controller {
 
     $this->load->view('template', $data);
   }
+
 
 
 }

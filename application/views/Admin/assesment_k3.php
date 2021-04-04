@@ -29,13 +29,14 @@
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
                                                     
-                                                    <input type="radio" name="p1" id="a1" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p1=='1') echo "checked";?>>
+                                                    <input type="radio" name="p1" id="a1" value="1" required <?php if($edit!='1') echo 'disabled'; ?> 
+                                                    <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p1=='1') echo "checked";}?>>
                                                     <label for="radio4">Ada</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p1" id="b1" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p1=='0') echo "checked";?>>
+                                                    <input type="radio" name="p1" id="b1" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p1=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak ada</label>
                                                     </div>
                                                 </td>
@@ -46,13 +47,13 @@
                                             <td>Apakah menggunakan, menyimpan atau memproduksi bahan kimia berbahaya ? </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p2" id="a2" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p2=='1') echo "checked";?>>
+                                                    <input type="radio" name="p2" id="a2" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p2=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p2" id="b2" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p2=='0') echo "checked";?>>
+                                                    <input type="radio" name="p2" id="b2" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p2=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -63,13 +64,13 @@
                                             <td>Apakah menggunakan instalasi listrik ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p3" id="a3" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p3=='1') echo "checked";?>>
+                                                    <input type="radio" name="p3" id="a3" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p3=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p3" id="b3" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p3=='0') echo "checked";?>>
+                                                    <input type="radio" name="p3" id="b3" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p3=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -80,13 +81,13 @@
                                             <td>Apakah menggunakan bejana bertekanan atau tangki timbun ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p4" id="a4" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p4=='1') echo "checked";?>>
+                                                    <input type="radio" name="p4" id="a4" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p4=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p4" id="b4" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p4=='0') echo "checked";?>>
+                                                    <input type="radio" name="p4" id="b4" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p4=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -97,13 +98,13 @@
                                             <td>Apakah menggunakan ketel uap ?</td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p5" id="a5" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p5=='1') echo "checked";?>>
+                                                    <input type="radio" name="p5" id="a5" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p5=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p5" id="b5" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p5=='0') echo "checked";?>>
+                                                    <input type="radio" name="p5" id="b5" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p5=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -117,13 +118,13 @@
                                                 </span></td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p6" id="a6" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p6=='1') echo "checked";?>>
+                                                    <input type="radio" name="p6" id="a6" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p6=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p6" id="b6" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p6=='0') echo "checked";?>>
+                                                    <input type="radio" name="p6" id="b6" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p6=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -136,13 +137,13 @@
                                                 </span></td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p7" id="a7" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p7=='1') echo "checked";?>>
+                                                    <input type="radio" name="p7" id="a7" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p7=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p7" id="b7" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p7=='0') echo "checked";?>>
+                                                    <input type="radio" name="p7" id="b7" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p7=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -153,13 +154,13 @@
                                             <td>Apakah menggunakan elevator atau eskalator ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p8" id="a8" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p8=='1') echo "checked";?>>
+                                                    <input type="radio" name="p8" id="a8" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p8=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p8" id="b8" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p8=='0') echo "checked";?>>
+                                                    <input type="radio" name="p8" id="b8" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p8=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -170,13 +171,13 @@
                                             <td>Apakah menggunakan peralatan ukur ?</td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p9" id="a9" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p9=='1') echo "checked";?>>
+                                                    <input type="radio" name="p9" id="a9" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p9=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p9" id="b9" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p9=='0') echo "checked";?>>
+                                                    <input type="radio" name="p9" id="b9" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p9=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -187,13 +188,13 @@
                                             <td>Apakah ada atau akan ada pekerjaan pengelasan ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p10" id="a10" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p10=='1') echo "checked";?>>
+                                                    <input type="radio" name="p10" id="a10" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p10=='1') echo "checked";}?>>
                                                     <label for="radio4">Ada</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p10" id="b10" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p10=='0') echo "checked";?>>
+                                                    <input type="radio" name="p10" id="b10" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p10=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak ada</label>
                                                     </div>
                                                 </td>
@@ -204,13 +205,13 @@
                                             <td>Apakah ada atau akan ada pekerjaan di ketinggian ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p11" id="a11" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p11=='1') echo "checked";?>>
+                                                    <input type="radio" name="p11" id="a11" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p11=='1') echo "checked";}?>>
                                                     <label for="radio4">Ada</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p11" id="b11" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p11=='0') echo "checked";?>>
+                                                    <input type="radio" name="p11" id="b11" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p11=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak Ada</label>
                                                     </div>
                                                 </td>
@@ -221,13 +222,13 @@
                                             <td>Apakah ada atau akan ada pekerjaan di ruang terbatas ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p12" id="a12" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p12=='1') echo "checked";?>>
+                                                    <input type="radio" name="p12" id="a12" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p12=='1') echo "checked";}?>>
                                                     <label for="radio4">Ada</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p12" id="b12" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p12=='0') echo "checked";?>>
+                                                    <input type="radio" name="p12" id="b12" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p12=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak ada</label>
                                                     </div>
                                                 </td>
@@ -238,13 +239,13 @@
                                             <td>Apakah dilakukan pengukuran dan pengendalian lingkungan kerja ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p13" id="a13" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p13=='1') echo "checked";?>>
+                                                    <input type="radio" name="p13" id="a13" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p13=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p13" id="b13" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p13=='0') echo "checked";?>>
+                                                    <input type="radio" name="p13" id="b13" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p13=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak ada</label>
                                                     </div>
                                                 </td>
@@ -255,13 +256,13 @@
                                             <td>Apakah dilakukan pemeriksaan dan/atau pengujian lingkungan kerja ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p14" id="a14" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p14=='1') echo "checked";?>>
+                                                    <input type="radio" name="p14" id="a14" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p14=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p14" id="b14" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p14=='0') echo "checked";?>>
+                                                    <input type="radio" name="p14" id="b14" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p14=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -272,13 +273,13 @@
                                             <td>Apakah ada fasilitas pertolongan pertama pada kecelakaan P3K?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p15" id="a15" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p15=='1') echo "checked";?>>
+                                                    <input type="radio" name="p15" id="a15" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p15=='1') echo "checked";}?>>
                                                     <label for="radio4">Ada</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p15" id="b15" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p15=='0') echo "checked";?>>
+                                                    <input type="radio" name="p15" id="b15" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p15=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak ada</label>
                                                     </div>
                                                 </td>
@@ -289,13 +290,13 @@
                                             <td>Apakah melakukan pemantauan kesehatan tenaga kerja tahun ini ?</td>
                                                 <td class="text-left">
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p16" id="a16" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p16=='1') echo "checked";?>>
+                                                    <input type="radio" name="p16" id="a16" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p16=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p16" id="b16" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p16=='0') echo "checked";?>>
+                                                    <input type="radio" name="p16" id="b16" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p16=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
@@ -306,13 +307,13 @@
                                             <td>Apakah memiliki sertifikat SMK3 ?</td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p17" id="a17" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p17=='1') echo "checked";?>>
+                                                    <input type="radio" name="p17" id="a17" value="1" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p17=='1') echo "checked";}?>>
                                                     <label for="radio4">Ya</label>
                                                     </div>
                                                 </td>
                                                 <td class="text-left"> 
                                                     <div class="radio radio-success">
-                                                    <input type="radio" name="p17" id="b17" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')[0]->p17=='0') echo "checked";?>>
+                                                    <input type="radio" name="p17" id="b17" value="0" required <?php if($edit!='1') echo 'disabled'; ?> <?php if($this->session->userdata('p')!=null){if($this->session->userdata('p')[0]->p17=='0') echo "checked";}?>>
                                                     <label for="radio4">Tidak</label>
                                                     </div>
                                                 </td>
