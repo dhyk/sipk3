@@ -19,7 +19,11 @@ class P3K extends CI_Controller {
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-   
+
+    $isi=$this->M_p3k->lihat_p3k($this->session->userdata('id_user'))->result();
+    
+    $flag= $this->input->get('edit');
+    if($isi==null)$flag=1;
     $data = [
          
       'sidebar'=>'Admin/Layouts_admin/sidebarnew',
@@ -27,8 +31,8 @@ class P3K extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/P3K/a_P3K',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_petugas'=>$this->M_p3k->lihat_p3k_petugas($this->session->userdata('id_user'))->result(),
-     
+      'data_p3k'=>$this->M_p3k->lihat_p3k($this->session->userdata('id_user'))->result(),
+      'edit' => $flag
     ];
   
     $this->load->view('template', $data);
@@ -94,7 +98,7 @@ class P3K extends CI_Controller {
 'jumlah_p3kc'=>$this->input->post('p3kc'),
 
     );
-    $this->M_p3k->simpan_p3k($data);
+    $this->M_p3k->simpan_p3k($data,$this->session->userdata('id_user'));
     $this->session->set_flashdata('flash','disimpan');
     redirect('index.php/P3K');
 

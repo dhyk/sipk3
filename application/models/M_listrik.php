@@ -71,7 +71,9 @@ return $query;
  }
 //-----------------------------------------------------------
 
-	 function simpan_k3listrik($data){
+	 function simpan_k3listrik($data,$id){
+		$this->db->where('id_user', $id);
+		$this->db->delete('k3listrik');
 		$this->db->insert('k3listrik', $data);
 	}
   

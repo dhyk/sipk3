@@ -6,7 +6,9 @@ class M_kebakaran extends CI_Model {
    // parent::__construct();
   //}
 
-	function simpan_kebakaran_utama($data){
+	function simpan_kebakaran_utama($data,$id){
+		$this->db->where('id_user', $id);
+		$this->db->delete('tb_kebakaran');
 	$this->db->insert('tb_kebakaran', $data);
 	}
 

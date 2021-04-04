@@ -24,6 +24,12 @@ class Kebakaran extends CI_Controller
     // echo 'masuk halaman admin';
     $flag= $this->input->get('edit');
     $id = $this->session->userdata('id_user');
+    $isi = $this->M_kebakaran->lihat_data_kebakaran($id)->result();
+    if($isi==null)$flag=1;
+    //------------------
+    $sumber_potensi=explode(";",$isi[0]->sumber_potensi);
+    $sistem_pencegahan=explode(";",$isi[0]->sistem_pencegahan);
+    
     $data = [
 
       'sidebar' => 'Admin/Layouts_admin/sidebarnew',
@@ -31,12 +37,14 @@ class Kebakaran extends CI_Controller
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Kebakaran/a_pencegahan_dan _penanggulangan_kebakaran',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_kebakaran' => $this->M_kebakaran->lihat_data_kebakaran($id)->result(),
-      'edit' => $flag
+      'data_kebakaran' => $isi,
+      'edit' => $flag,
+      'sumber' =>$sumber_potensi,
+      'sistem' =>$sistem_pencegahan,
       ];
 
-    // var_dump($data);
-    $this->load->view('template', $data);
+      $this->load->view('template', $data);
+
   }
 
   public function petugas()
@@ -447,13 +455,23 @@ class Kebakaran extends CI_Controller
 
     if (($penanggulangan != null) && ($kerja != null) && ($regu != null)) {
 
+      $sumber_potensi=$this->input->post("sumber_potensi1").';'.$this->input->post("sumber_potensi2").';'.
+      $this->input->post("sumber_potensi3").';'.$this->input->post("sumber_potensi4").';'.
+      $this->input->post("sumber_potensi5").';'.$this->input->post("sumber_potensi6").';'.
+      $this->input->post("sumber_potensi7").';'.$this->input->post("sumber_potensi8").';'.
+      $this->input->post("sumber_potensi9");
+
+      $sistem_pencegahan=$this->input->post("sistem_pencegahan1").';'.$this->input->post("sistem_pencegahan2").';'.
+      $this->input->post("sistem_pencegahan3").';'.$this->input->post("sistem_pencegahan4").';'.$this->input->post("sistem_pencegahan5");
+
       $data = array(
         'jumlah_karyawan' => $this->input->post("jumlah_karyawan"),
         'jumlah_unit' => $this->input->post("jumlah_unit"),
-        'sumber_potensi' => $this->input->post("sumber_potensi"),
+        'sumber_potensi' => $sumber_potensi,
         'asal_sumber' => $this->input->post("klasifikasi_potensi"),
         'asal_sumber' => $this->input->post("asal_sumber"),
-        'sistem_pencegahan' => $this->input->post("sistem_pencegahan"),
+        'sistem_pencegahan' => $sistem_pencegahan,
+        'klasifikasi' =>$this->input->post("klasifikasi_potensi"),
         'jumlah_petugas' => $this->input->post("jumlah_petugas"),
         'jumlah_koordinator' => $this->input->post("jumlah_koordinator"),
         'id_user' => $this->session->userdata('id_user'),
@@ -461,8 +479,8 @@ class Kebakaran extends CI_Controller
         'file_regu' => $regu,
         'file_kerja' => $kerja,
       );
-      $this->M_kebakaran->simpan_kebakaran_utama($data);
-      $this->session->set_flashdata('flash', 'disimpan');
+      $this->M_kebakaran->simpan_kebakaran_utama($data,$this->session->userdata('id_user'));
+      $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Kebakaran');
     } else {
       echo "eror";
@@ -480,7 +498,7 @@ class Kebakaran extends CI_Controller
       'id_user' => $this->session->userdata('id_user'),
     );
     $this->M_kebakaran->simpan_kebakaran_ak3($data);
-    $this->session->set_flashdata('flash', 'disimpan');
+    $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
     redirect('index.php/Kebakaran');
   }
 
@@ -510,7 +528,7 @@ class Kebakaran extends CI_Controller
         'id_user' => $this->session->userdata('id_user'),
       );
       $this->M_kebakaran->simpan_kebakaran_alarm($data);
-      $this->session->set_flashdata('flash', 'disimpan');
+      $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Kebakaran');
     }
   }
@@ -541,7 +559,7 @@ class Kebakaran extends CI_Controller
         'id_user' => $this->session->userdata('id_user'),
       );
       $this->M_kebakaran->simpan_kebakaran_apar($data);
-      $this->session->set_flashdata('flash', 'disimpan');
+      $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Kebakaran');
     }
   }
@@ -556,7 +574,7 @@ class Kebakaran extends CI_Controller
       'id_user' => $this->session->userdata('id_user'),
     );
     $this->M_kebakaran->simpan_kebakaran_gladi($data);
-    $this->session->set_flashdata('flash', 'disimpan');
+    $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
     redirect('index.php/Kebakaran');
   }
 
@@ -617,7 +635,7 @@ class Kebakaran extends CI_Controller
         'id_user' => $this->session->userdata('id_user'),
       );
       $this->M_kebakaran->simpan_kebakaran_instalasi($data);
-      $this->session->set_flashdata('flash', 'disimpan');
+      $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Kebakaran');
     }
   }
@@ -649,7 +667,7 @@ class Kebakaran extends CI_Controller
         'id_user' => $this->session->userdata('id_user'),
       );
       $this->M_kebakaran->simpan_kebakaran_penanggulangan($data);
-      $this->session->set_flashdata('flash', 'disimpan');
+      $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Kebakaran');
     }
   }
@@ -682,7 +700,7 @@ class Kebakaran extends CI_Controller
         'id_user' => $this->session->userdata('id_user'),
       );
       $this->M_kebakaran->simpan_kebakaran_petugas($data);
-      $this->session->set_flashdata('flash', 'disimpan');
+      $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Kebakaran');
     }
   }
@@ -713,7 +731,7 @@ class Kebakaran extends CI_Controller
         'id_user' => $this->session->userdata('id_user'),
       );
       $this->M_kebakaran->simpan_kebakaran_sprinkler($data);
-      $this->session->set_flashdata('flash', 'disimpan');
+      $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Kebakaran');
     }
   }

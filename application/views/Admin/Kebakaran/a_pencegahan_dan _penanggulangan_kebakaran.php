@@ -8,7 +8,7 @@
     <br />
     <div class="card-box">
         <h4 class="header-title m-t-0 m-b-30">Pencegahan dan Penanggulangan Kebakaran <span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small></span></h4>
-        <div class="card-box ">
+      
         <?php echo form_open_multipart('index.php/Kebakaran/simpan_kebakaran_utama');?>
             <div class="form-horizontal">
                                     <div class="form-group">
@@ -25,27 +25,61 @@
                                         </div>
                                     </div>
 
+
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">Sumber potensi bahaya kebakaran</label>
-                                        <div class="col-md-10">
-                                            <select class="form-control" <?php if($edit!='1') echo 'disabled'; ?> required name="sumber_potensi" value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->sumber_potensi;}?>">
-                                                            <option>Bahan Kimia Berbahaya</option>
-                                                            <option>Limbah B3</option>
-                                                            <option>Peralatan Listrik</option>
-                                                            <option>Instalasi Listrik</option>
-                                                            <option>Material Mudah Terbakar</option>
-                                                            <option>Proses Produksi / Jasa</option>
-                                                            <option>Kegiatan Produksi dan Jasa</option>
-                                                            <option>Lingkungan</option>
-                                                            <option>Lainnya</option>
-                                                        </select>
-                                        </div>
-                                    </div>
+                                                <label class="col-md-2 control-label">Sumber Potensi Bahaya Kebakaran</label>
+                                                <div class="col-md-3">
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi1" id="hobby1" value="Bahan Kimia Berbahaya" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[0]=="Bahan Kimia Berbahaya") echo 'checked';}?>>
+                                                        <label for="peralatan">Bahan Kimia Berbahaya </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi2" id="hobby2" value="Limbah B3" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[1]=="Limbah B3") echo 'checked';}?>>
+                                                        <label for="metode"> Limbah B3 </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi3" id="hobby3" value="Peralatan Listrik" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[2]=="Peralatan Listrik") echo 'checked';}?>>
+                                                        <label for="lingkungan kerja"> Peralatan Listrik </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi4" id="hobby1" value="Instalasi Listrik"  <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[3]=="Instalasi Listrik") echo 'checked';}?>>
+                                                        <label for="peralatan"> Instalasi Listrik </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi5" id="hobby2" value="Material Mudah Terbakar" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[4]=="Material Mudah Terbakar") echo 'checked';}?>> 
+                                                        <label for="metode"> Material Mudah Terbakar</label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi6" id="hobby3" value="Proses Produksi" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[5]=="Proses Produksi") echo 'checked';}?>>
+                                                        <label for="lingkungan kerja"> Proses Produksi / Jasa </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi7" id="hobby1" value="Kegiatan Produksi dan Jasa"  <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[6]=="Kegiatan Produksi dan Jasa") echo 'checked';}?>>
+                                                        <label for="peralatan"> Kegiatan Produksi dan Jasa </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi8" id="hobby2" value="Lingkungan" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[7]=="Lingkungan") echo 'checked';}?>>
+                                                        <label for="metode"> Lingkungan </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sumber_potensi9" id="hobby3" value="Lainnya" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sumber[8]=="Lainnya") echo 'checked';}?>>
+                                                        <label for="lingkungan kerja"> Lainnya </label>
+                                                    </div>
+                                                </div>
+                                                  
+
+                                            </div>
+
 
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Klasifikasi tingkat potensi bahaya kebakaran</label>
                                         <div class="col-md-10">
-                                            <select class="form-control" required name="klasifikasi_potensi" <?php if($edit!='1') echo 'disabled'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->klasifikasi_potensi;}?>">
+                                            <select class="form-control" required name="klasifikasi_potensi" <?php if($edit!='1') echo 'disabled'; ?> >
+                                            <?php if($data_kebakaran!=null)echo "<option>".$data_kebakaran[0]->klasifikasi."</option>";?>
                                                             <option>Ringan</option>
                                                             <option>Sedang I</option>
                                                             <option>Sedang II</option>
@@ -58,25 +92,48 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Asal sumber potensi bahaya kebakaran</label>
                                         <div class="col-md-10">
-                                            <select class="form-control" required name="asal_sumber" <?php if($edit!='1') echo 'disabled'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->asal_sumber;}?>">
+                                            <select class="form-control" required name="asal_sumber" <?php if($edit!='1') echo 'disabled'; ?> >
+                                            <?php if($data_kebakaran!=null)echo "<option>".$data_kebakaran[0]->asal_sumber."</option>";?> 
                                                 <option>Internal</option>
                                                 <option>Eksternal</option>            
                                             </select>
                                         </div>
                                     </div>
 
+
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">Sistem pencegahan kebakaran</label>
-                                        <div class="col-md-10">
-                                            <select class="form-control" required name="sistem_pencegahan" <?php if($edit!='1') echo 'disabled'; ?> value="<?php if($data_kebakaran!=null){ echo $data_kebakaran[0]->sistem_pencegahan;}?>">
-                                                <option>Pemasangan APAR</option>
-                                                <option>Pemasangan Alarm</option>
-                                                <option>Pemasangan Sprinkler</option>
-                                                <option>Pemasangan Hydrant</option>
-                                                <option>Pemasangan Smoke Detector</option>
-                                           </select>
-                                        </div>
-                                    </div>
+                                                <label class="col-md-2 control-label">Sistem pencegahan kebakaran</label>
+                                                <div class="col-md-3">
+                                                    <div class="checkbox checkbox-pink">
+                                                    
+                                                        <input type="checkbox" name="sistem_pencegahan1" id="hobby1" value="Pemasangan APAR" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sistem[0]=="Pemasangan APAR") echo 'checked';}?>>
+                                                        <label for="peralatan">Pemasangan APAR </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sistem_pencegahan2" id="hobby2" value="Pemasangan Alarm" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sistem[1]=="Pemasangan Alarm") echo 'checked';}?>>
+                                                        <label for="metode"> Pemasangan Alarm </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sistem_pencegahan3" id="hobby3" value="Pemasangan Sprinkler" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sistem[2]=="Pemasangan Sprinkler") echo 'checked';}?>>
+                                                        <label for="lingkungan kerja"> Pemasangan Sprinkler </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sistem_pencegahan4" id="hobby1" value="Pemasangan Hydrant"  <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sistem[3]=="Pemasangan Hydrant") echo 'checked';}?>>
+                                                        <label for="peralatan"> Pemasangan Hydrant </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink">
+                                                        <input type="checkbox" name="sistem_pencegahan5" id="hobby2" value="Pemasangan Smoke Detector" <?php if($edit!='1') echo 'disabled'; ?> <?php if($data_kebakaran!=null){if($sistem[4]=="Pemasangan Smoke Detector") echo 'checked';}?>>
+                                                        <label for="metode"> Pemasangan Smoke Detector</label>
+                                                    </div>
+                                                  
+                                                </div>
+                                               
+                                                  
+
+                                            </div>
+
 
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Jumlah Petugas Kebakaran </label>
@@ -121,14 +178,14 @@
                                             <span class="help-block"><small>Regu penanggulangan kebakaran (Max 2MB)</small></span>
                                         </div>
 
-                                    </div>
+                                   
 
                                     <div class="col-sm-offset-10 col-sm-12">
                                                     <button type="submit" class="btn btn-success waves-effect waves-light">Simpan</button>
                                                     <a href="<?php echo base_url().'index.php/Kebakaran?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a>
                                                     <?php //echo form_close(); ?>
                                     </div>
-            </div>    
+                                    </div>
             </form>
         </div>
     </div>

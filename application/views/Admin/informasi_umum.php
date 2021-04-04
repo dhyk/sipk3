@@ -66,15 +66,15 @@
                                         <div class="form-group">
                                             <div class="p-20">
                                             <!-- <div class="form-group clearfix"> -->
-                                            <?php if($edit=='1'){ ?>
+                                            
                                             <label class="col-md-2 control-label">Upload Dokumen K3</label>
                                                 <div class="col-md-10">
                                            
-                                                <input type="file" required name="berkas" id="filer_input2" multiple="multiple">
+                                                <input type="file" <?php if($edit!='1') echo 'disabled'; ?> required name="berkas" id="filer_input2" multiple="multiple">
                                             
                                                 <br />
                                                 </div>
-                                            <?php } ?>
+                                            
                                             <!-- </div> -->
 
                                             </div>

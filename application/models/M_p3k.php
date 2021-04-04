@@ -6,7 +6,9 @@ class M_p3k extends CI_Model {
    // parent::__construct();
   //}
 
-	function simpan_p3k($data){
+	function simpan_p3k($data,$id){
+		$this->db->where('id_user', $id);
+		$this->db->delete('p3k');
 	$this->db->insert('p3k', $data);
 	}
 

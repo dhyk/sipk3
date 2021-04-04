@@ -18,7 +18,10 @@ class K3listrik extends CI_Controller {
     if($this->session->userdata('level')!='2'){
       redirect('index.php/Home');
     }
-  
+    $isi=$this->M_listrik->lihat_k3listrik($this->session->userdata('id_user'))->result();
+    $flag= $this->input->get('edit');
+    if($isi==null)$flag=1;
+
     $data = [
 
       'sidebar'=>'Admin/Layouts_admin/sidebarnew',
@@ -26,8 +29,8 @@ class K3listrik extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/K3_Listrik/a_k3listrik',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_k3listrik'=> $this->M_listrik->lihat_k3listrik($this->session->userdata('id_user'))->result(),
-     
+      'data_k3listrik'=> $isi,
+      'edit' => $flag
     ];
 
     $this->load->view('template', $data);
@@ -278,7 +281,7 @@ class K3listrik extends CI_Controller {
       'id_user'=>$this->session->userdata('id_user'),
 );
 // var_dump($data);
-$this->M_listrik->simpan_k3listrik($data);
+$this->M_listrik->simpan_k3listrik($data,$this->session->userdata('id_user'));
 $this->session->set_flashdata('flash','disimpan');
     redirect('index.php/K3listrik');
   }
