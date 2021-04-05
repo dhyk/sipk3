@@ -44,8 +44,8 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p1" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
-                                                <span class="help-block"><small> (Max 2MB)</small></span>                       
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <span class="help-block"><small> (Max 2MB)</small></span>                        -->
                                             </div>
                                             </td>
                                         </tr>
@@ -78,7 +78,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p2" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -127,7 +127,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p3" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -172,7 +172,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p4" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -205,7 +205,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p5" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -240,7 +240,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p6" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -266,7 +266,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p7" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -292,7 +292,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p8" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -328,7 +328,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p9" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -361,7 +361,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p10" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -398,7 +398,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p11" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -435,7 +435,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p12" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
@@ -479,7 +479,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="berkas_p13" required id="filer_input2" multiple="multiple"
                                                 value="<?php if($data_kebakaran!=null){ echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;}?>">
-                                                <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span>
+                                                <!-- <span class="help-block"><small><a target="_blank" href="<?php echo base_url().'upload/upload_berkas_kebakaran/'.$data_kebakaran[0]->file_kerja;?>">>>lihat dokumen disini<<</a></small></span> -->
                                                 <span class="help-block"><small> (Max 2MB)</small></span>                       
                                             </div>
                                             </td>
