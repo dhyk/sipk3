@@ -158,6 +158,27 @@ class Disnaker extends CI_Controller {
     $this->load->view('template', $data);
   }
 
+  public function daftar_laporan_p2covid()
+  {
+
+    if($this->session->userdata('level')!='1'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/laporan_p2covid',
+      'footer' => 'Admin/Layouts_admin/footer',
+      //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
 
 
 }
