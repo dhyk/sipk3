@@ -77,10 +77,10 @@
                                             <td><?php echo $key->bagian; ?></td>
                                             <td><?php echo $key->k_unsafe_action; ?></td>
                                             <td><?php echo $key->k_unsafe_condition; ?></td>
-                                            <td><?php //if($sumber[0]=="Peralatan/Pemesianan") echo "x"; ?></td>
-                                            <td><?php //if($sumber[1]=="Metode Kerja") echo "x"; ?></td>
-                                            <td><?php //if($sumber[2]=="Lingkungan Kerja") echo "x"; ?></td>
-                                            <td><?php //if($sumber[3]=="Proses") echo "x"; ?></td>
+                                            <td><?php if($sumber[0]=="Peralatan/Pemesianan") echo "x"; ?></td>
+                                            <td><?php if($sumber[1]=="Metode Kerja") echo "x"; ?></td>
+                                            <td><?php if($sumber[2]=="Lingkungan Kerja") echo "x"; ?></td>
+                                            <td><?php if($sumber[3]=="Proses") echo "x"; ?></td>
                                             <td><?php echo $key->pengendalian; ?></td>
                                             <td>
                                             <a href="<?php echo base_url() . "index.php/Laporan/hapus_kecelakaan?id=" . $key->id_kecelakaan; ?>"><i class="ion-trash-a"></i>Hapus</a>
