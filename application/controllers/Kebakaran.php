@@ -27,9 +27,12 @@ class Kebakaran extends CI_Controller
     $isi = $this->M_kebakaran->lihat_data_kebakaran($id)->result();
     if($isi==null)$flag=1;
     //------------------
+    $sumber_potensi=[1,1,1,1,1,1,1,1,1];
+    $sistem_pencegahan=[1,1,1,1,1];
+    if($isi!=null){
     $sumber_potensi=explode(";",$isi[0]->sumber_potensi);
     $sistem_pencegahan=explode(";",$isi[0]->sistem_pencegahan);
-    
+    }
     $data = [
 
       'sidebar' => 'Admin/Layouts_admin/sidebarnew',
@@ -43,7 +46,7 @@ class Kebakaran extends CI_Controller
       'sistem' =>$sistem_pencegahan,
       ];
 
-      $this->load->view('template', $data);
+    $this->load->view('template', $data);
 
   }
 

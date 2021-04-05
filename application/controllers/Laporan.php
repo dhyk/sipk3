@@ -18,7 +18,9 @@ public function index()
   }
 
   $isi=$this->M_admin->lihat_data_kecelakaan($this->session->userdata('id_user'))->result();
-  $sumber=explode(';',$isi[0]->sumber);
+  $sumber=[1,1,1,1];
+  if($isi!=null )$sumber=explode(';',$isi[0]->sumber);
+  
  
   $data = [
 
@@ -66,9 +68,9 @@ public function simpan_kecelakaan()
       'bagian' => $this->input->post('bagian'),
       'k_unsafe_action' => $this->input->post('unsafe_action'),
       'k_unsafe_condition' => $this->input->post('unsafe_condition'),
-      'sumber' => $this->input->post('peralatan/pemesinan').';'
-      .$this->input->post('metode kerja').';'
-      .$this->input->post('lingkungan kerja').';'
+      'sumber' => $this->input->post('peralatan').';'
+      .$this->input->post('metode').';'
+      .$this->input->post('lingkungan').';'
       .$this->input->post('proses'),
       'pengendalian' => $this->input->post('pengendalian'),
       'id_user' => $this->session->userdata('id_user'),
