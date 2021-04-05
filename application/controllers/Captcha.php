@@ -12,10 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	{
  		$options = array(
  			'img_path' => './captcha',
- 			'img_url' => base_url('captcha'),
+ 			//'img_url' => base_url('captcha'),
+			 'img_url' => base_url().'captcha/',
  			'img_width' => '150',
  			'img_height' => '60',
-			 'font_path' => FCPATH . 'captcha/font/captcha4.ttf',
+			 'font_size' => 5,
+			 'font_path' => FCPATH.'system/fonts/alpha_echo.ttf',
  			'expiration' => 7200
  		);
  		$cap = create_captcha($options);

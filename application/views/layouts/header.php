@@ -105,7 +105,7 @@
                                     <input class="form-control" type="number" value="" id="nama_perusahaan"  name="jumlah_karyawan" placeholder="Masukkan Jumlah Karyawan" required>
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <!-- <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Nama Tempat Usaha</label>
                                     <input type="text" name="nama_tempat_usaha" class="form-control" id="name" placeholder="Masukkan Nama Tempat Usaha" required>
@@ -115,7 +115,7 @@
                                    <label for="jenis_usaha">Jenis Usaha</label>
                                    <input type="text" name="jenis_usaha" class="form-control" id="jenis_usaha" placeholder="Masukkan Jenis usaha" value="" required>
                                </div>
-                           </div>
+                           </div> -->
                            <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="nomor_p2k3">Nomor P2K3</label>
@@ -162,17 +162,24 @@
                          </div>
                      </div>
                      <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label for="jenis_usaha" >Captcha</label>
-                                <?php echo $image_captcha;?>
+                                <label for="captcha" >Kode Captcha</label>
+                                <?php echo $image_captcha;?> 
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="captcha" >Captcha</label>
+                                
                                 <input type="text" name="captcha" id="captcha" class="form-control" placeholder="Masukkan Captca" required>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4">
-    <button type="submit" class="btn btn-sm">Daftar</button>
-    <button type="button" class="btn btn-secondary btn-sm">Batal</button>
+                    <div class="mt-4 text-center">
+                    <button type="submit" class="btn btn-sm">Daftar</button>
+                    <!-- <button type="button" class="btn btn-secondary btn-sm">Batal</button> -->
 </div>
                 </div>
 </div>

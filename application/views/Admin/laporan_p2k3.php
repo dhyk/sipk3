@@ -11,7 +11,13 @@
         <div class="card-box table-responsive">
                 <div class="table-responsive">
                         <table class="table m-0">
-                                <a href="<?=site_url ()?>Laporan/tambah_laporan_p2k3"><button class="btn btn-info">Tambah Data</button></a> 
+                        <div class="form-group m-b-0">
+ 												<div class="col-sm-offset-0 col-sm-12">
+                                                     <a target="_blank" href="<?php echo base_url()."upload/template_p2k3/template_laporan_p2k3.pdf" ?>"><button class="btn btn-orange waves-effect waves-light "><i class="glyphicon glyphicon-cloud-download"></i> Download Template Laporan</button></a>
+ 													<a href="<?=site_url ()?>Laporan/tambah_laporan_p2k3"><button class="btn btn-info">Tambah Data</button></a> 
+ 												</div>
+ 											</div>
+                                 
                                 <thead>
                                     <tr>
                                         <th>#</th>
