@@ -1,7 +1,3 @@
-<br>
-<br>
-<br>
-<br>
 <footer id="footer" >
             <div class="copyright-content text-light">
                 <div class="container">

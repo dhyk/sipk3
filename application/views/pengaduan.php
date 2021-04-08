@@ -9,26 +9,22 @@
                     <div id="logo"> <a href="index.html"><span class="logo-default">Halo K3 !</span><span class="logo-dark">POLO</span></a> </div>
                     <!--End: Logo-->
                     <!-- Search -->
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
                     <!-- end: search -->
                     <!--Header Extras-->
                     <div class="header-extras">
                         <ul>
-                            <li>
-                            <a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a>
-                            </li>
-                            <li>
-                            <div class="icon-holder">
-                                <i class="icon-user">
-                            <a href="<?php echo base_url().'index.php/Home/profil'; ?>" ><button > Profil</button></a>
-                            </i>
+                        <li>
+                            
+                            <div class="p-dropdown">
+                                <a href="#"><i class="fa fa-user btn-lg"></i></a>
+                                
+                                <ul class="p-dropdown-content">
+                                    <li><a href="<?php echo base_url().'index.php/Home/profil'; ?>" class="btn btn-user" >Profil</a></li>
+                                    <li><a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a></li>
+
+                                </ul>
                             </div>
-                            </li>
+                        </li>  
                         </ul>
                     </div>
                     <!--end: Header Extras-->

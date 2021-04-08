@@ -2773,7 +2773,7 @@ Main Menu: Responsive
   top: -8px;
   font-size: 9px;
   opacity: 1;
-  right: -2px;
+  right: -10px;
 }
 .header-extras > ul > li > a:not(.btn),
 .header-extras > ul > li .topbar-dropdown > .title {
@@ -8432,15 +8432,15 @@ td.fc-today {
 }
 
 .fc-event-success.fc-event {
-  background-color: #81c868;
-  border-color: #81c868;
+  background-color: #136c0e;
+  border-color: #136c0e;
   color: #ffffff;
 }
 .fc-event-success.fc-event span {
   color: #ffffff;
 }
 .fc-event-success .fc-event-dot {
-  background-color: #81c868;
+  background-color: #136c0e;
 }
 
 .simple-dropdown .title {
@@ -8496,6 +8496,7 @@ td.fc-today {
   position: absolute;
   z-index: 5;
   text-align: left;
+  margin-right: 40px;
   opacity: 0;
   transition: all 0.3s ease;
   visibility: hidden;
@@ -8940,7 +8941,7 @@ Helpers
 }
 
 .background-success {
-  background-color: #81c868 !important;
+  background-color: #136c0e !important;
 }
 
 .background-info {
@@ -11131,7 +11132,7 @@ input.dates:after {
   border-color: #4e555a;
 }
 .alert.alert-success {
-  background-color: #81c868;
+  background-color: #136c0e;
   border-color: #71c155;
 }
 .alert.alert-info {
@@ -11500,8 +11501,8 @@ a.btn:not([href]):not([tabindex]).btn-secondary:not(:disabled):not(.disabled).ac
 button.btn.btn-success,
 .btn:not(.close):not(.mfp-close).btn-success,
 a.btn:not([href]):not([tabindex]).btn-success {
-  background-color: #81c868;
-  border-color: #81c868;
+  background-color: #136c0e;
+  border-color: #136c0e;
 }
 button.btn.btn-success:hover, button.btn.btn-success:focus, button.btn.btn-success:not(:disabled):not(.disabled):active, button.btn.btn-success:not(:disabled):not(.disabled).active,
 .btn:not(.close):not(.mfp-close).btn-success:hover,

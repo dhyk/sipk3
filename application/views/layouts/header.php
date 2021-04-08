@@ -114,7 +114,8 @@
         <div class="card-header">
             <span class="h4">Form Pendaftaran</span>
             <p class="text-muted">Hallo.. Silahkan Daftar</p>
-            <div class="tabs">
+            
+            <div class="tabs tabs-clean text-center">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a
