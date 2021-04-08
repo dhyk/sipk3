@@ -8,7 +8,7 @@ class Disnaker extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('M_home');
-   $this->load->model('M_admin');
+   $this->load->model('M_disnaker');
     $this->load->helper('url');
   }
 
@@ -26,6 +26,9 @@ class Disnaker extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/dashboard0',
       'footer' => 'Admin/Layouts_admin/footer',
+      'perusahaan' => $this->M_disnaker->lihat_perusahaan()->result(),
+      'p2k3'=> $this->M_disnaker->hitung_p2k3()->result(),
+      'kecelakaan' => $this->M_disnaker->hitung_kecelakaan()->result(),
        ];
 
     $this->load->view('template', $data);

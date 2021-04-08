@@ -140,13 +140,13 @@
                             <a href="<?= site_url() ?>Disnaker/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
                         </li>
                         <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_alat" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar Sertifikat izin peralatan dan instalasi perusahaan yang kadaluwarsa </span></a>
+                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_alat" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Sertifikat izin peralatan dan instalasi perusahaan kadaluwarsa </span></a>
                         </li>
                         <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_personel" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar sertifikat personel yang kadaluwarsa</span></a>
+                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_personel" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Sertifikat personel kadaluwarsa</span></a>
                         </li>
                         <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_kecelakaan" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar Laporan Kecelakaan Kerja</span></a>
+                            <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_kecelakaan" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Laporan Kecelakaan kerja</span></a>
                         </li>
 
                         <!-- -------------------------------------------------------------------------------- -->
