@@ -171,7 +171,9 @@ public function register_pengguna(){
                 'email'=> $this->input->post('email'),
                 'username'=> $this->input->post('username'),
                 'password'=> $this->input->post('password'),
+                'level' => '4',
             ];
+            // var_dump($data_user);
             $this->M_home->register($data_user);
     
             $data_user_pegadu=[
@@ -184,13 +186,14 @@ public function register_pengguna(){
                 'email'=> $this->input->post('email'),
                 'id_user' => $this->M_home->get_id_masyarakat()->result()[0]->id_tb_user,
             ];
+            // var_dump($data_user_pegadu);
             $this->M_home->register_pengadu($data_user_pegadu);
           
             $this->session->set_flashdata('flash','Data Anda Berhasil Disimpan');
             redirect('index.php/Home');
         }else{
             //$this->session->set_flashdata('flash','Data Anda Berhasil Disimpan');
-            redirect('index.php/Home');
+           redirect('index.php/Home');
         }
 
     }

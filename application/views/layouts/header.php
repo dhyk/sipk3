@@ -149,7 +149,7 @@
                     role="tabpanel"
                     aria-labelledby="tab-profile">
                     <form
-                        action="<?php echo base_url(). 'index.php/Home/register_pengguna'; ?>"
+                        action="<?php echo base_url(). 'index.php/Home/register_masyarakat'; ?>"
                         method="post"
                         name="daftar">
                         <div class="tabs">
