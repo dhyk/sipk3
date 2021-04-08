@@ -132,6 +132,10 @@ public function register_pengguna(){
                 redirect('index.php/Pemerintah/dashboard','refresh');
                 echo "admin";
             }
+            else if($level== '4'){
+                redirect('index.php/Pengaduan/data_pengaduan','refresh');
+
+            }
             else{
                 // echo "user";
                 //var_dump($this->session->userdata('id_user'));

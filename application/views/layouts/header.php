@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/images/favicon22.png">   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>SIPK3</title>
+    <title>Halo K3!</title>
     <!-- Stylesheets & Fonts -->
     <link href="<?php echo base_url()?>assets/css/plugins.css" rel="stylesheet">
     <link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet">
@@ -19,6 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="<?php echo base_url()?>assets/js_new/sweetalert/dist/sweetalert2.all.min.js"></script>
     <link href='<?php echo base_url()?>assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
+
+    
 </head>
 <body>
     <div class="flash-data" data-flashdata="<?=$this->session->flashdata('flash'); ?>"></div>
@@ -28,13 +30,17 @@
     <section class="parallax fullscreen" style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
 
         <div class="container container-fullscreen text-center">
+            
             <div class="text-middle">
                 <h1 class="text-uppercase text-lg text-light">Halo K3!</h1>
                 <h3 class="lead text-light">Sistem Informasi Pelaporan K3 (SIPK3)</h3>
-                <a class="btn btn-light btn-outline" href="#modalShop" data-lightbox="inline">Masuk</a>
+                <a class="btn btn-success" href="#modalShop" data-lightbox="inline">Masuk</a>
                 <a class="btn btn-light btn-outline" href="#modalRegis" data-lightbox="inline">Daftar</a>
             </div>
         </div>
+    </div>
+    </div>
+        
     </section>
     <!-- end: SECTION IMAGE FULLSCREEN -->
 
@@ -67,6 +73,16 @@
         <div class="card-header">
             <span class="h4">Form Pendaftaran</span>
             <p class="text-muted">Hallo.. Silahkan Daftar</p>
+            <div class="tabs">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tabProfile" role="tab" aria-controls="home" aria-selected="true">Pengadu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tabBilling" role="tab" aria-controls="contact" aria-selected="false">Perusahaan</a>
+                            </li>
+                        </ul>
+            </div>
         </div>
             <div class="card-body">
          <!--  <p class="text-center"><h3>Form Pendaftaran</h3></p> -->
