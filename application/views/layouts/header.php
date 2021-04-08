@@ -224,7 +224,7 @@
                                                 type="date"
                                                 name="tanggal_lahir"
                                                 class="form-control"
-                                                id="tanggal_p2k3"
+                                                id="tanggal"
                                                 placeholder="Masukkan Tanggal lahir"
                                                 value=""
                                                 required="required">

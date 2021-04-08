@@ -157,6 +157,28 @@ public function register_pengguna(){
         redirect('index.php/Home');
     }
 
+    public function register_masyarakat(){
+
+        
+        $data_user=[
+            'email'=> $this->input->post('email'),
+            'username'=> $this->input->post('username'),
+            'password'=> $this->input->post('password'),
+        ];
+
+        $data_user_pegadu=[
+            'nik'=> $this->input->post('nik'),
+            'nama'=> $this->input->post('nama'),
+            'domisili'=> $this->input->post('domisili'),
+            'ttl'=> $this->input->post('tanggal_lahir'),
+            'jk'=> $this->input->post('jk'),
+            'no_telp' => $this->input->post('no_tlp'),
+            'email'=> $this->input->post('email'),
+            'id_user',
+        ];
+
+    }
+
 
 
 
