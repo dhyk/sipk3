@@ -39,14 +39,14 @@ class M_admin extends CI_Model {
 
 	}
 
-	function save_sertifikat_standard($nama,$tanggal,$masa,$foto,$id){
+	function save_sertifikat_standard($nama,$tanggal,$masa,$berkas,$id){
 		$this->db->where('id_user', $id);
 
 		$data1 = array(
 			'nama_sertifikat_standard' => $nama,
 			'tanggal_terbit' => $tanggal,
 			'masa_berlaku' => $masa,
-			'file_sertifikat' => $foto,
+			'file_sertifikat' => $berkas,
 			'id_user' => $id
 
 		);

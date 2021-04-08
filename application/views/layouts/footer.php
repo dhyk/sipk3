@@ -1,3 +1,7 @@
+<br>
+<br>
+<br>
+<br>
 <footer id="footer" >
             <div class="copyright-content text-light">
                 <div class="container">
@@ -35,6 +39,12 @@
     <script src="<?php echo base_url()?>assets/js/functions.js"></script>
      
       <script src='<?php echo base_url()?>assets/plugins/datatables/datatables.min.js'></script>
+
+    <script>
+        $('#datatable').DataTable({
+            responsive: true
+        });
+    </script>
 
       
    

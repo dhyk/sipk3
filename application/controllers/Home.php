@@ -18,9 +18,10 @@ class Home extends CI_Controller {
         $vals=array(
          'img_path' => './captcha/',
          'img_url' => base_url().'captcha/',
-         'img_width' => '200',
-         'img_height' => '60',
-         'font_path' => FCPATH . 'captcha/font/captcha4.ttf',
+         'img_width' => '400',
+         'img_height' => '40',
+         'font_size' => 20 ,
+         'font_path' => FCPATH . 'system/fonts/alpha_echo.ttf',
          'border' => 0,
          'expiration' => 3600
      );
@@ -56,12 +57,12 @@ public function register_pengguna(){
     $nama_perusahaan = $this->input->post('nama_perusahaan');
     $nomor_induk = $this->input->post('nomor_induk');
     $jumlah_karyawan = $this->input->post('jumlah_karyawan');
-    $nama_tempat_usaha = $this->input->post('nama_tempat_usaha');
+    //$nama_tempat_usaha = $this->input->post('nama_tempat_usaha');
     $alamat = $this->input->post('alamat');
     $nomor_penanggung_jawab = $this->input->post('nomor_penanggung_jawab');
     $email_penanggung_jawab = $this->input->post('email_penanggung_jawab');
     $nama_penanggung_jawab = $this->input->post('nama_penanggung_jawab');
-    $jenis_usaha = $this->input->post('jenis_usaha');
+    //$jenis_usaha = $this->input->post('jenis_usaha');
     $nomor = $this->input->post('nomor_p2k3');
     $tanggal = $this->input->post('tanggal_p2k3');
     $captcha = $this->input->post('captcha');
@@ -80,8 +81,8 @@ public function register_pengguna(){
                 'nomor_telepon_pj' => $nomor_penanggung_jawab,
                 'email' => $email_penanggung_jawab,
                 'nama_pj'  => $nama_penanggung_jawab,
-                'jenis_usaha' => $jenis_usaha,
-                'nama_tempat_usaha' => $nama_tempat_usaha,
+                //'jenis_usaha' => $jenis_usaha,
+                //'nama_tempat_usaha' => $nama_tempat_usaha,
                 'no_p2k3' => $nomor,
                 'tanggal_p2k3' => $tanggal,
                 'level' => '2',
@@ -130,6 +131,10 @@ public function register_pengguna(){
             else if($level== '3'){
                 redirect('index.php/Pemerintah/dashboard','refresh');
                 echo "admin";
+            }
+            else if($level== '4'){
+                redirect('index.php/Pengaduan/data_pengaduan','refresh');
+
             }
             else{
                 // echo "user";

@@ -12,8 +12,7 @@
                         <div class="card-box">
                              <h4 class="header-title m-t-0 m-b-30">Daftar Laporan Kecelakaan Kerja</h4>
                                 <div class="card-box table-responsive">
-                                    <div class="table-responsive">
-                                        <table class="table m-0">
+                                        <table id="datatable" class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
@@ -39,7 +38,6 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>

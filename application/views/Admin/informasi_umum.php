@@ -81,7 +81,7 @@
                                         </div>
 
                                         <div class="col-sm-offset-10 col-sm-12">
-                                            <button type="submit" class="btn btn-success waves-effect waves-light">Simpan</button>
+                                            <button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
                                             <a href="<?php echo base_url().'index.php/Admin/informasi_umum?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a>
                                         </div>
                                                         
@@ -128,7 +128,7 @@
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
                                                             <a href="<?= site_url() ?>Admin/tambah_sertifikat_standard">
-                                                                <button class="btn btn-info">Tambah Data</button></a>
+                                                                <button class="btn btn-success">Tambah Data</button></a>
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
@@ -172,7 +172,7 @@
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
                                                             <a href="<?= site_url() ?>Admin/tambah_sertifikat_produk">
-                                                                <button class="btn btn-info">Tambah Data</button></a>
+                                                                <button class="btn btn-success">Tambah Data</button></a>
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
@@ -215,7 +215,7 @@
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
                                                             <a href="<?= site_url() ?>Admin/tambah_izin_berusaha">
-                                                                <button class="btn btn-info">Tambah Data</button></a>
+                                                                <button class="btn btn-success">Tambah Data</button></a>
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
@@ -261,7 +261,7 @@
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
                                                             <a href="<?= site_url() ?>Admin/tambah_daftar_ahlik3">
-                                                                <button class="btn btn-info">Tambah Data</button></a>
+                                                                <button class="btn btn-success">Tambah Data</button></a>
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>

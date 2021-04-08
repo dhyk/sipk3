@@ -16,7 +16,7 @@
                     <h4 class="header-title m-t-0 m-b-30">Daftar Sertifikat izin peralatan dan instalasi perusahaan yang kadaluwarsa</h4>
                     <div class="card-box table-responsive">
                         <div class="table-responsive">
-                            <table class="table m-0">
+                            <table id="datatable" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th>#</th>

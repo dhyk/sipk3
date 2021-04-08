@@ -172,11 +172,15 @@
                                     </a>
                                 </li>
 
+                                
+
 
                             </ul>
                         </li>
                         <!-- -------------------------------------------------------------------------------- -->
-
+                        <li>
+                            <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_p2covid" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar P2 COVID Perusahaan</span></a>
+                        </li>
 
                         
                     </ul>

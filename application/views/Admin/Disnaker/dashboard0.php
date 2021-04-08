@@ -10,7 +10,7 @@
 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="card-box widget-box-two widget-two-primary">
-                        <i class="mdi mdi-chart-areaspline widget-two-icon"></i>
+                        
                         <div class="wigdet-two-content">
                             <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Total Pengisian K3 Perusahaan</p>
                             <h2><span data-plugin="counterup">34578</span> <small><i class="mdi mdi-arrow-up text-success"></i></small></h2>
@@ -21,7 +21,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="card-box widget-box-two widget-two-warning">
-                        <i class="mdi mdi-layers widget-two-icon"></i>
+                       
                         <div class="wigdet-two-content">
                             <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Total Pengisian P2 Covid</p>
                             <h2><span data-plugin="counterup">52410 </span> <small><i class="mdi mdi-arrow-up text-success"></i></small></h2>
@@ -32,7 +32,7 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="card-box widget-box-two widget-two-danger">
-                        <i class="mdi mdi-access-point-network widget-two-icon"></i>
+                        
                         <div class="wigdet-two-content">
                             <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Total Pengisian Laporan Kecelakaan</p>
                             <h2><span data-plugin="counterup">6352</span> <small><i class="mdi mdi-arrow-up text-success"></i></small></h2>
