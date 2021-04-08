@@ -31,13 +31,14 @@ function get_id_user($username){
 	
 
 	function get_id_masyarakat(){
+	echo "masook";	
 		
-		$this->db->select('id_tb_user');
-		$this->db->from('tb_user');
-		
+	$this->db->select('id_tb_user');
+	$this->db->from('tb_user');
 	$this->db->order_by('id_tb_user', 'DESC');
-		$query = $this->db->get()->result();
-
+	$this->db->limit(1);
+	// $this->db->where('username','dika');
+	$query = $this->db->get();
 		return $query;
 	}
 	// Produces: ORDER BY `title` DESC
