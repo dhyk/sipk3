@@ -67,13 +67,13 @@
                                             <div class="p-20">
                                             <!-- <div class="form-group clearfix"> -->
                                             
-                                            <label class="col-md-2 control-label">Upload Dokumen K3</label>
+                                            <!-- <label class="col-md-2 control-label">Upload Dokumen K3</label>
                                                 <div class="col-md-10">
                                            
                                                 <input type="file" <?php if($edit!='1') echo 'disabled'; ?> required name="berkas" id="filer_input2" multiple="multiple">
                                             
                                                 <br />
-                                                </div>
+                                                </div> -->
                                             
                                             <!-- </div> -->
 
@@ -81,9 +81,9 @@
                                         </div>
 
                                         <div class="col-sm-offset-10 col-sm-12">
-                                            <button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
+                                            <!-- <button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
                                             <a href="<?php echo base_url().'index.php/Admin/informasi_umum?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a>
-                                        </div>
+                                        </div> -->
                                                         
 
                                     </div>
@@ -127,8 +127,8 @@
 
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
-                                                            <a href="<?= site_url() ?>Admin/tambah_sertifikat_standard">
-                                                                <button class="btn btn-success">Tambah Data</button></a>
+                                                            <!-- <a href="<?= site_url() ?>Admin/tambah_sertifikat_standard">
+                                                                <button class="btn btn-success">Tambah Data</button></a> -->
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
@@ -149,8 +149,8 @@
                                                                         <td>
                                                                             <a href="<?php echo base_url() . 'upload/upload_sertifikat_standard/' . $key->file_sertifikat; ?>" target="_blank"><i class="ion-eye"></i>Lihat |</a>
 
-                                                                            <a href="<?php echo base_url() . 'index.php/Admin/hapus_sertifikat_standard?id=' . $key->id_sertifikat_standard; ?>"><i class="ion-trash-a"></i>Hapus</a>
-                                                                        </td>
+                                                                            <!-- <a href="<?php echo base_url() . 'index.php/Admin/hapus_sertifikat_standard?id=' . $key->id_sertifikat_standard; ?>"><i class="ion-trash-a"></i>Hapus</a>
+                                                                        </td> -->
 
                                                                     </tr>
                                                                 <?php $i++;
@@ -171,15 +171,15 @@
 
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
-                                                            <a href="<?= site_url() ?>Admin/tambah_sertifikat_produk">
-                                                                <button class="btn btn-success">Tambah Data</button></a>
+                                                            <!-- <a href="<?= site_url() ?>Admin/tambah_sertifikat_produk">
+                                                                <button class="btn btn-success">Tambah Data</button></a> -->
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
                                                                     <th>Nama Sertifikat</th>
                                                                     <th>Tanggal Terbit</th>
                                                                     <th>Masa Berlaku</th>
-                                                                    <th>Aksi</th>
+                                                                    <!-- <th>Aksi</th> -->
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -190,10 +190,10 @@
                                                                         <td><?php echo $key->nama_sertifikat_produk; ?></td>
                                                                         <td><?php echo $key->tanggal_terbit; ?></td>
                                                                         <td><?php echo $key->masa_berlaku; ?></td>
-                                                                        <td>
+                                                                        <!-- <td>
 
                                                                             <a href="<?php echo base_url() . 'index.php/Admin/hapus_sertifikat_produk?id=' . $key->id_sertifikat_produk; ?>"><i class="ion-trash-a"></i>Hapus</a>
-                                                                        </td>
+                                                                        </td> -->
 
                                                                     </tr>
                                                                 <?php $i++;
@@ -214,8 +214,8 @@
 
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
-                                                            <a href="<?= site_url() ?>Admin/tambah_izin_berusaha">
-                                                                <button class="btn btn-success">Tambah Data</button></a>
+                                                            <!-- <a href="<?= site_url() ?>Admin/tambah_izin_berusaha">
+                                                                <button class="btn btn-success">Tambah Data</button></a> -->
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
@@ -223,7 +223,7 @@
                                                                     <th>Nomor Izin</th>
                                                                     <th>Tanggal Terbit</th>
                                                                     <th>Masa Berlaku</th>
-                                                                    <th>Aksi</th>
+                                                                    <!-- <th>Aksi</th> -->
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -235,11 +235,11 @@
                                                                         <td><?php echo $key->nomor_izin; ?></td>
                                                                         <td><?php echo $key->tanggal_terbit; ?></td>
                                                                         <td><?php echo $key->masa_berlaku; ?></td>
-                                                                        <td>
+                                                                        <!-- <td>
 
                                                                             <a href="<?php echo base_url() . 'index.php/Admin/hapus_izin_berusaha?id=' . $key->id_izin_usaha; ?>">
                                                                                 <i class="ion-trash-a"></i>Hapus</a>
-                                                                        </td>
+                                                                        </td> -->
 
                                                                     </tr>
                                                                 <?php $i++;
@@ -260,8 +260,8 @@
 
                                                     <div class="table-responsive">
                                                         <table class="table m-0">
-                                                            <a href="<?= site_url() ?>Admin/tambah_daftar_ahlik3">
-                                                                <button class="btn btn-success">Tambah Data</button></a>
+                                                            <!-- <a href="<?= site_url() ?>Admin/tambah_daftar_ahlik3">
+                                                                <button class="btn btn-success">Tambah Data</button></a> -->
                                                             <thead>
                                                                 <tr>
                                                                     <th>#</th>
@@ -269,7 +269,7 @@
                                                                     <th>Nomor </th>
                                                                     <th>Tanggal Terbit</th>
                                                                     <th>Masa Berlaku</th>
-                                                                    <th>Aksi</th>
+                                                                    <!-- <th>Aksi</th> -->
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -281,11 +281,11 @@
                                                                         <td><?php echo $key->nomor; ?></td>
                                                                         <td><?php echo $key->tangggal_terbit; ?></td>
                                                                         <td><?php echo $key->masa_berlaku; ?></td>
-                                                                        <td>
+                                                                        <!-- <td>
 
                                                                             <a href="<?php echo base_url() . 'index.php/Admin/hapus_ahlik3?id=' . $key->id_ahlik3umum; ?>">
                                                                                 <i class="ion-trash-a"></i>Hapus</a>
-                                                                        </td>
+                                                                        </td> -->
 
                                                                     </tr>
                                                                 <?php $i++;

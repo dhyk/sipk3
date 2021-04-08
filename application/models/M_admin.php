@@ -16,6 +16,15 @@ class M_admin extends CI_Model {
 		return $query;
 	}
 
+	function lihat_data_id($username){
+		$this->db->select('*');
+		$this->db->from('tb_user');
+		$this->db->where('id_tb_user',$username);
+		$query = $this->db->get();
+
+		return $query;
+	}
+
 	function lihat_smk3($id){
 		$this->db->select('*');
 		$this->db->from('sertifikat_smk3');

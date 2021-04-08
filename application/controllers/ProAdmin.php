@@ -115,7 +115,7 @@ class ProAdmin extends CI_Controller
       'level' => $this->session->userdata('level'),
       'content' => 'Profile/informasi_umum',
       'footer' => 'Profile/Layouts_admin/footer',
-      'informasi_umum' => $this->M_admin->lihat_data_user($this->session->userdata('username'))->result(), //ambil data dari db tabel user
+      'informasi_umum' => $this->M_admin->lihat_data_id($this->session->userdata('id_perusahaan'))->result(), //ambil data dari db tabel user
       'sertifikat_smk' => $this->M_admin->lihat_smk3($this->session->userdata('id_perusahaan'))->result(), // ambil data dari db sertifikat smk
       'data_standard' => $this->M_admin->lihat_sertfikat_standard($this->session->userdata('id_perusahaan'))->result(), // ambil data dari db sertifikat standard
       'data_produk' => $this->M_admin->lihat_sertfikat_produk($this->session->userdata('id_perusahaan'))->result(), // ambil data dari db sertifikat produk

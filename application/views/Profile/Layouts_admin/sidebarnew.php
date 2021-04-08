@@ -125,7 +125,7 @@
                     <ul>
                         <li class="menu-title">Navigation</li>
                         <!-- <li>
-                            <a href="<?= site_url() ?>Admin/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
+                            <a href="<?= site_url() ?>ProAdmin/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
                         </li> -->
 
                         <!-- -------------------------------------------------------------------------------- -->
@@ -136,12 +136,12 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Admin/informasi_umum" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProAdmin/informasi_umum" class="sidebar-link">
                                         <span class="hide-menu">Informasi Umum K3</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Admin/laporan" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProAdmin/laporan" class="sidebar-link">
                                         <span class="hide-menu">Assesmen Mandiri</span>
                                     </a>
                                 </li>
@@ -160,12 +160,12 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Laporan/laporan_p2k3" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProLaporan/laporan_p2k3" class="sidebar-link">
                                         <span class="hide-menu">Laporan P2K3</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Laporan" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProLaporan" class="sidebar-link">
                                         <span class="hide-menu">Laporan Kecelakaan Kerja</span>
                                     </a>
                                 </li>

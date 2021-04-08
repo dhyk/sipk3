@@ -14,9 +14,9 @@
                         <div class="col-md-12">
                             <div class="card-box">
                                 <h4 class="m-t-0 header-title"><b>Laporan Kecelakaan</b></h4>
-                                <a href="<?=site_url ()?>Laporan/tambah_laporan">            
+                                <!-- <a href="<?=site_url ()?>Laporan/tambah_laporan">            
                                     <button class="btn btn-info">Buat Laporan Baru</button> </a>
-                                         <br>
+                                         <br> -->
                                          <br>
                                          <div class="table-responsive">
                             <table id="datatable-buttons-fixed-col" class="table table-striped table-bordered">
@@ -40,7 +40,7 @@
                                         
                                             <th colspan="4">Sumber bahaya potensial</th>
                                             <th rowspan="2">Pengendalian Terhadap sumber bahaya</th>
-                                            <th rowspan="2">Aksi</th>
+                                            <!-- <th rowspan="2">Aksi</th> -->
                                        </tr>
                                         <tr>
                                             <th>Ringan</th>
@@ -82,10 +82,10 @@
                                             <td><?php if($sumber[2]=="Lingkungan Kerja") echo "x"; ?></td>
                                             <td><?php if($sumber[3]=="Proses") echo "x"; ?></td>
                                             <td><?php echo $key->pengendalian; ?></td>
-                                            <td>
+                                            <!-- <td>
                                             <a href="<?php echo base_url() . "index.php/Laporan/hapus_kecelakaan?id=" . $key->id_kecelakaan; ?>"><i class="ion-trash-a"></i>Hapus</a>
                                                        
-                                            </td>
+                                            </td> -->
                                         </tr>
 <?php $i++;} ?>
                                         </tbody>

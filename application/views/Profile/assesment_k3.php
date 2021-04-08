@@ -324,9 +324,9 @@
                             </div>
                             <div class="form-group m-b-0">
  								<div class="col-sm-offset-10 col-sm-12">
- 									<button type="submit" class="btn btn-success waves-effect waves-light">Simpan</button>
+ 									<!-- <button type="submit" class="btn btn-success waves-effect waves-light">Simpan</button>
 
-<a href="<?php echo base_url().'index.php/Admin/laporan?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a>
+<a href="<?php echo base_url().'index.php/Admin/laporan?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a> -->
  								</div>
  							</div>
                              </form>

@@ -16,9 +16,7 @@ class ProP2covid extends CI_Controller {
 
   public function index()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    
   
    $data = [
   
@@ -35,9 +33,7 @@ class ProP2covid extends CI_Controller {
 
 public function pertanyaan_covid()
 {
-  if($this->session->userdata('level')!='2'){
-    redirect('index.php/Home');
-  }
+  
 
  $data = [
 
