@@ -177,7 +177,7 @@
                         <!-- -------------------------------------------------------------------------------- -->
 
                         <li>
-                            <a href="<?php echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> P2 COVID </span></a>
+                            <a href="<?php echo site_url() ?>ProP2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> P2 COVID </span></a>
                         </li>
 
                         
@@ -196,52 +196,52 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran" class="sidebar-link">
                                         <span class="hide-menu">Pencegahan dan Penanggulangan Kebakaran</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/petugas" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/petugas" class="sidebar-link">
                                         <span class="hide-menu">Petugas Kebakaran</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/koordinator" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/koordinator" class="sidebar-link">
                                         <span class="hide-menu">Koordinator Unit</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/ak3" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/ak3" class="sidebar-link">
                                         <span class="hide-menu">AK3 Spesialis</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/gladi" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/gladi" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pelaksanaan Latihan dan Gladi Penanggulangan Kebakaran</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/apar" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/apar" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan APAR</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/alarm" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/alarm" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan Instalasi Alarm</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/hydrant" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/hydrant" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan Instalasi Hydrant</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/sprinkler" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/sprinkler" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan Instalasi Sprinkler</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Kebakaran/instalasi" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProKebakaran/instalasi" class="sidebar-link">
                                         <span class="hide-menu">Sertifikat/Izin Pemakaian Instalasi Pemadam Kebakaran</span>
                                     </a>
                                 </li>
@@ -264,37 +264,37 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3listrik" class="sidebar-link">
                                         <span class="hide-menu">K3 Instalasi Kelistrikan</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/izin_listrik" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3listrik/izin_listrik" class="sidebar-link">
                                         <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Listrik</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/izin_petir" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3listrik/izin_petir" class="sidebar-link">
                                         <span class="hide-menu">Sertifikat Izin Pemakaian Kelayakan Instalasi Penyalur Petir</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/ak3" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3listrik/ak3" class="sidebar-link">
                                         <span class="hide-menu">Daftar AK3 Listrik</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_listrik" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3listrik/pemeriksaan_listrik" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Listrik</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/pemeriksaan_petir" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3listrik/pemeriksaan_petir" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan dan Pengujian Instalasi Penyalur Petir</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3listrik/teknisi" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3listrik/teknisi" class="sidebar-link">
                                         <span class="hide-menu">Daftar Teknisi Kelistrikan</span>
                                     </a>
                                 </li>
@@ -316,42 +316,42 @@
                                 
                             <?php if($this->session->userdata('p')[0]->p4=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3mekanik/bejana" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3mekanik/bejana" class="sidebar-link">
                                         <span class="hide-menu">Bejana Bertekanan dan Tangki Timbun</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p5=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3mekanik/ketel" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3mekanik/ketel" class="sidebar-link">
                                         <span class="hide-menu">Ketel Uap</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p6=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3mekanik/tenaga" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3mekanik/tenaga" class="sidebar-link">
                                         <span class="hide-menu">Mesin Tenaga dan Produksi</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p8=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3mekanik/elevator" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3mekanik/elevator" class="sidebar-link">
                                         <span class="hide-menu">Elevator dan Eskalator</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p9=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3mekanik/alatukur" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3mekanik/alatukur" class="sidebar-link">
                                         <span class="hide-menu">Alat Ukur</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p7=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3mekanik/alatangkat" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3mekanik/alatangkat" class="sidebar-link">
                                         <span class="hide-menu">Alat Angkat dan Angkut</span>
                                     </a>
                                 </li>
@@ -372,49 +372,49 @@
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                             <?php if($this->session->userdata('p')[0]->p10=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3lingker/jurulas" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3lingker/jurulas" class="sidebar-link">
                                         <span class="hide-menu">Juru Las</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p11=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3lingker/ketinggian" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3lingker/ketinggian" class="sidebar-link">
                                         <span class="hide-menu">Tenaga Kerja di Ketinggian</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p12=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3lingker/ruang" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3lingker/ruang" class="sidebar-link">
                                         <span class="hide-menu">Tenaga Kerja di Ruang Terbatas</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p13=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3lingker/ak3" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3lingker/ak3" class="sidebar-link">
                                         <span class="hide-menu">Ahli K3 Lingkungan Kerja</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p13=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3lingker/rekaman" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3lingker/rekaman" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pengukuran dan Pengendalian Lingkungan Kerja</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p13=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3lingker/higiene" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3lingker/higiene" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Penerapan Higiene dan Sanitasi</span>
                                     </a>
                                 </li>
                                 <?php } ?>
                                 <?php if($this->session->userdata('p')[0]->p14=='1'){?>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>K3lingker/pemeriksaan" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProK3lingker/pemeriksaan" class="sidebar-link">
                                         <span class="hide-menu">Rekaman Pemeriksaan dan atau Pengujian</span>
                                     </a>
                                 </li>
@@ -434,12 +434,12 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>P3K" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProP3K" class="sidebar-link">
                                         <span class="hide-menu">P3K</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>P3K/petugas" class="sidebar-link">
+                                    <a href="<?php echo site_url() ?>ProP3K/petugas" class="sidebar-link">
                                         <span class="hide-menu">Petugas P3K</span>
                                     </a>
                                 </li>

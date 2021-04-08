@@ -18,9 +18,7 @@ class ProKebakaran extends CI_Controller
   public function index()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
     $flag= $this->input->get('edit');
     $id = $this->session->userdata('id_perusahaan');
@@ -53,9 +51,7 @@ class ProKebakaran extends CI_Controller
   public function petugas()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -74,9 +70,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_petugas_kebakaran()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
 
@@ -93,9 +87,7 @@ class ProKebakaran extends CI_Controller
   public function koordinator()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -116,9 +108,7 @@ class ProKebakaran extends CI_Controller
   public function ak3()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -139,9 +129,7 @@ class ProKebakaran extends CI_Controller
   public function gladi()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -161,9 +149,7 @@ class ProKebakaran extends CI_Controller
   public function apar()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -184,9 +170,7 @@ class ProKebakaran extends CI_Controller
   public function alarm()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -207,9 +191,7 @@ class ProKebakaran extends CI_Controller
   public function hydrant()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -230,9 +212,7 @@ class ProKebakaran extends CI_Controller
   public function sprinkler()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -253,9 +233,7 @@ class ProKebakaran extends CI_Controller
   public function instalasi()
   {
 
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
     // echo 'masuk halaman admin';
 
     $id = $this->session->userdata('id_perusahaan');
@@ -276,9 +254,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_ak3_spesialis()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
 
@@ -295,9 +271,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_izin_instalasi_pemadam()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
 
@@ -314,9 +288,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_koordinator()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
       'sidebar' => 'Profile/Layouts_admin/sidebarnew',
@@ -331,9 +303,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_rekaman_apar()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
       'sidebar' => 'Profile/Layouts_admin/sidebarnew',
@@ -348,9 +318,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_rekaman_instalasi_alarm()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
       'sidebar' => 'Profile/Layouts_admin/sidebarnew',
@@ -365,9 +333,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_rekaman_instalasi_fire()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
       'sidebar' => 'Profile/Layouts_admin/sidebarnew',
@@ -382,9 +348,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_rekaman_instalasi_sprinkler()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
       'sidebar' => 'Profile/Layouts_admin/sidebarnew',
@@ -399,9 +363,7 @@ class ProKebakaran extends CI_Controller
 
   public function tambah_rekaman_latihan()
   {
-    if ($this->session->userdata('level') != '2') {
-      redirect('index.php/Home');
-    }
+    
 
     $data = [
       'sidebar' => 'Profile/Layouts_admin/sidebarnew',

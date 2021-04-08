@@ -30,6 +30,17 @@ function get_id_user($username){
 	}
 	
 
+	function get_id_masyarakat(){
+		
+		$this->db->select('id_tb_user');
+		$this->db->from('tb_user');
+		
+	$this->db->order_by('id_tb_user', 'DESC');
+		$query = $this->db->get()->result();
+
+		return $query;
+	}
+	// Produces: ORDER BY `title` DESC
 
 	function last_login($username){
 		
@@ -46,6 +57,12 @@ function get_id_user($username){
 //var_dump($data);
 		$this->db->insert('tb_user',$data);
 	}
+
+	function register_pengadu($data){
+		//var_dump($data);
+				$this->db->insert('tb_user_pengadu',$data);
+			}
+		
 
 	function get_level($username){
 		return $this->db->from('tb_user')->where('username',$username)->get('level')->result();
