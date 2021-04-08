@@ -64,7 +64,7 @@
                                         foreach($perusahaan as $key){ $i++;?>
                                       <tr>
                                           <td><?php echo $i;?></td>
-                                          <td><?php echo $key->nama_perusahaan; ?></td>
+                                          <td><a href="<?php echo base_url().'ProAdmin?id='.$key->id_tb_user ; ?>" target="_blank"><?php echo $key->nama_perusahaan; ?></a></td>
                                       </tr>
                                       <?php } ?>
                                     </tbody>
