@@ -22,14 +22,20 @@
                             <li>
                             <a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a>
                             </li>
-                            
+                            <li>
+                            <div class="icon-holder">
+                                <i class="icon-user">
+                            <a href="<?php echo base_url().'index.php/Home/profil'; ?>" ><button > Profil</button></a>
+                            </i>
+                            </div>
+                            </li>
                         </ul>
                     </div>
                     <!--end: Header Extras-->
                     <!--Navigation Resposnive Trigger-->
-                    <div id="mainMenu-trigger">
+                    <!-- <div id="mainMenu-trigger">
                         <a class="lines-button x"><span class="lines"></span></a>
-                    </div>
+                    </div> -->
                     <!--end: Navigation Resposnive Trigger-->
                     <!--Navigation-->
                     <div id="mainMenu">
@@ -47,10 +53,10 @@
         </header>
         <!-- end: Header -->
         <!-- Page title -->
-        <section id="page-title">
+        <section id="page-title" style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
             <div class="container">
                 <div class="page-title">
-                    <h1>Data Pengajuan</h1>
+                    <h1>Data Pengaduan</h1>
                     <span>Inspiration comes of working every day.</span>
                 </div>
                 
@@ -67,27 +73,10 @@
                 <div class="row mb-5">
                     <div class="col-lg-6">
                         <h4>Ajukan Pengaduan</h4>
-                        <p>Responsive will automatically optimise the table's layout for different screen sizes through the dynamic column visibility control, making your tables useful on desktop and mobile screens. <a target="_blank" href="https://datatables.net/extensions/responsive">Read more »</a>
-                        </p>
+                        <p>Harap melakukan proses pengaduan sesuai dengan prosedur</p>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <button type="button" class="btn btn-light"><i class="icon-plus"></i> Add Record</button>
-                        <div class="p-dropdown ml-3 float-right">
-                            <a class="title btn btn-light"><i class="icon-sliders"></i> Options</a>
-                            <div class="p-dropdown-content">
-                                <ul>
-                                    <li><a href="#"><i class="icon-refresh-cw"></i>Update Records</a></li>
-                                    <li><a href="#"><i class="icon-edit"></i>Edit</a></li>
-                                    <li><a href="#"><i class="icon-x"></i>Delete</a></li>
-                                    <li>
-                                        <hr>
-                                    </li>
-                                    <li><a href="#"><i class="icon-life-buoy"></i>Documentation</a></li>
-                                    <li><a href="#"><i class="icon-mail"></i>Email Support Team</a></li>
-                                    <li><a href="#"><i class="icon-alert-triangle"></i>Report an issue</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <a href="<?=site_url ()?>Pengaduan/tambah_pengaduan"><button type="button" class="btn btn-primary"><i class="icon-plus"></i> Tambah Pengaduan</button></a>
                     </div>
                 </div>
                 <div class="row">
@@ -95,14 +84,14 @@
                         <table id="datatable" class="table table-bordered table-hover" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Date</th>
-                                    <th>Salary</th>
+                                    <th>Nama</th>
+                                    <th>Judul Pengaduan</th>
+                                    <th>Jenis Pengaduan</th>
+                                    <th>Nama Pengawas</th>
+                                    <th>File Pendukung</th>
+                                    <th>Tanggal Pengaduan</th>
                                     <th>Status</th>
-                                    <th>Actions</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -110,26 +99,48 @@
                                     <td>Tiger Nixon</td>
                                     <td>System Architect</td>
                                     <td>Edinburgh</td>
+                                    <td>Deiyyy</td>
                                     <td>61</td>
                                     <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                    <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
-                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Settings"><i class="icon-settings"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
-                                    <td><span class="badge badge-pill badge-secondary">Inactive</span></td>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>Deiyyy</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
-                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Settings"><i class="icon-settings"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>Deiyyy</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
+                                    <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
+                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>Deiyyy</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td><span class="badge badge-pill badge-secondary">Selesai</span></td>
+                                    <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
+                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
                                     </td>
                                 </tr>
 
