@@ -60,6 +60,7 @@
             <div class="container">
             <br>
                 <br>
+                
                 <!-- DataTable -->
                 <!-- <div class="row mb-5">
                     <div class="col-lg-12 text-center">
@@ -70,6 +71,9 @@
                 <div class="col-lg-10 align-self-center offset-md-1">
                     <div class="card ">
                         <div class="card-body ">
+                            <br>
+                            <br>
+
                             <!--Wizard 7-->
                             <form class="needs-validation" novalidate>
                                 <div class=" form-row">
@@ -77,10 +81,7 @@
                                     <h3 class="form-group col-md-12 text-center"> <?= $data[0]->nama ?></h3>
                                     <!-- <div class="h5 mb-4">Please fill with your personal info</div> -->
                                 </div>
-                                <div class="row">
-                                    <div class=" col-md-2">
-                                        <img src="<?php echo base_url() ?>assets/images/team/6.jpg" class="avatar avatar-lg">
-                                    </div>
+                        
                                     <div class="row">
                                         <div class=" col-md-4 text-center">
                                         <img src="<?php echo base_url()?>assets/images/team/5.jpg" class="avatar avatar-lg border border-default">
@@ -135,6 +136,8 @@
                 <!-- end: DataTable -->
             </div>
             <br>
+   <br>
+   <br>
    <br>
    <br>
 </div>
