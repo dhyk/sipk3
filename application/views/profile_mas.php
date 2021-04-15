@@ -1,6 +1,6 @@
-<body >
+<body>
     <!-- Body Inner -->
-    <div class="body-inner"  style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
+    <div class="body-inner" style="background: url('<?php echo base_url() ?>assets/images/11.jpg')">
         <!-- Header -->
         <header id="header" data-fullwidth="true">
             <div class="header-inner">
@@ -19,18 +19,18 @@
                     <!--Header Extras-->
                     <div class="header-extras">
                         <ul>
-                        <li>
-                            
-                            <div class="p-dropdown">
-                                <a href="#"><i class="fa fa-user btn-lg"></i></a>
-                                
-                                <ul class="p-dropdown-content">
-                                    <li><a href="<?php echo base_url().'index.php/Home/profil'; ?>" class="btn btn-user" >Profil</a></li>
-                                    <li><a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a></li>
+                            <li>
 
-                                </ul>
-                            </div>
-                        </li>  
+                                <div class="p-dropdown">
+                                    <a href="#"><i class="fa fa-user btn-lg"></i></a>
+
+                                    <ul class="p-dropdown-content">
+                                        <li><a href="<?php echo base_url() . 'index.php/Home/profil'; ?>" class="btn btn-user">Profil</a></li>
+                                        <li><a href="<?php echo base_url() . 'index.php/Home/logout'; ?>" class="tombol-keluar"><button class="btn btn-danger"> keluar</button></a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <!--end: Header Extras-->
@@ -44,7 +44,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    
+
                                 </ul>
                             </nav>
                         </div>
@@ -68,14 +68,18 @@
                     </div>
                 </div> -->
                 <div class="col-lg-10 align-self-center offset-md-1">
-                <div class="card ">
-                            <div class="card-body ">
-                                <!--Wizard 7-->
-                                <form class="needs-validation" novalidate>
+                    <div class="card ">
+                        <div class="card-body ">
+                            <!--Wizard 7-->
+                            <form class="needs-validation" novalidate>
                                 <div class=" form-row">
                                    
                                     <h3 class="form-group col-md-12 text-center"> <?= $data[0]->nama ?></h3>
                                     <!-- <div class="h5 mb-4">Please fill with your personal info</div> -->
+                                </div>
+                                <div class="row">
+                                    <div class=" col-md-2">
+                                        <img src="<?php echo base_url() ?>assets/images/team/6.jpg" class="avatar avatar-lg">
                                     </div>
                                     <div class="row">
                                         <div class=" col-md-4 text-center">
@@ -120,13 +124,14 @@
                                             
                                         </div>
                                     </div>
-                                </div>                                   
-                                </form>
-                                <!-- <div class="line"></div> -->
-                                <!--end: Wizard 7-->
-
-                            </div>
+                                </div>
                         </div>
+                        </form>
+                        <!-- <div class="line"></div> -->
+                        <!--end: Wizard 7-->
+
+                    </div>
+                </div>
                 <!-- end: DataTable -->
             </div>
             <br>
