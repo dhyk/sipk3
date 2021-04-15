@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-class Pengaduan extends CI_Controller {
+class Pengawas extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('M_home');
@@ -12,59 +12,59 @@ class Pengaduan extends CI_Controller {
     $this->load->helper('url');
   }
 
-  public function data_pengaduan()
+  public function daftar_tugas()
   {
 		//echo "admiinnnn";
-    if($this->session->userdata('level')!='4'){
+    if($this->session->userdata('level')!='5'){
       redirect('index.php/Home');
     }
 
     $data = [
         
-      'header'=>'layouts/head',
+      'sidebar'=>'Admin/Layouts_admin/sidebar_was',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'pengaduan',
-      'footer' => 'layouts/footer',
+      'content' => 'Admin/Pengawas/daftar_tugas',
+      'footer' => 'Admin/Layouts_admin/footer',
+       ];
+
+    $this->load->view('template', $data);
+    
+  }
+  public function detail_tugas()
+  {
+		//echo "admiinnnn";
+    if($this->session->userdata('level')!='5'){
+      redirect('index.php/Home');
+    }
+
+    $data = [
+        
+      'sidebar'=>'Admin/Layouts_admin/sidebar_was',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Pengawas/detail_tugas',
+      'footer' => 'Admin/Layouts_admin/footer',
        ];
 
     $this->load->view('template', $data);
     
   }
 
-  public function tambah_pengaduan()
+  public function tambah_tindakan()
   {
 		//echo "admiinnnn";
-    if($this->session->userdata('level')!='4'){
+    if($this->session->userdata('level')!='5'){
       redirect('index.php/Home');
     }
 
     $data = [
         
-      'header'=>'layouts/head',
+      'sidebar'=>'Admin/Layouts_admin/sidebar_was',
       'akun' => $this->session->userdata('username'),
       'level' => $this->session->userdata('level'),
-      'content' => 'form_pengaduan',
-      'footer' => 'layouts/footer',
-       ];
-
-    $this->load->view('template', $data);
-    
-  }
-  public function profile_mas()
-  {
-		//echo "admiinnnn";
-    if($this->session->userdata('level')!='4'){
-      redirect('index.php/Home');
-    }
-
-    $data = [
-        
-      'header'=>'layouts/head',
-      'akun' => $this->session->userdata('username'),
-      'level' => $this->session->userdata('level'),
-      'content' => 'profile_mas',
-      'footer' => 'layouts/footer',
+      'content' => 'Admin/Pengawas/tambah_tindakan',
+      'footer' => 'Admin/Layouts_admin/footer',
        ];
 
     $this->load->view('template', $data);

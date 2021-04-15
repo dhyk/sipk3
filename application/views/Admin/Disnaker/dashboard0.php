@@ -47,12 +47,8 @@
             <div class="card-box table-responsive">
                                 <h4 class="m-t-0 header-title"><b>Daftar Perusahaan</b></h4>
                                 <table id="datatable" class="table table-striped table-bordered">
-
-                                   
-
                                     <br>
                                     <br>
-
                                     <thead>
                                         <tr>
                                             <th>No</th>

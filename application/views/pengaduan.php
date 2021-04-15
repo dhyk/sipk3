@@ -19,7 +19,7 @@
                                 <a href="#"><i class="fa fa-user btn-lg"></i></a>
                                 
                                 <ul class="p-dropdown-content">
-                                    <li><a href="<?php echo base_url().'index.php/Home/profil'; ?>" class="btn btn-user" >Profil</a></li>
+                                    <li><a href="<?php echo base_url().'index.php/Pengaduan/profile_mas'; ?>" class="btn btn-user" >Profile</a></li>
                                     <li><a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a></li>
 
                                 </ul>
@@ -53,7 +53,7 @@
             <div class="container">
                 <div class="page-title">
                     <h1>Data Pengaduan</h1>
-                    <span>Inspiration comes of working every day.</span>
+                    <!-- <span></span> -->
                 </div>
                 
             </div>
@@ -84,7 +84,7 @@
                                     <th>Judul Pengaduan</th>
                                     <th>Jenis Pengaduan</th>
                                     <th>Nama Pengawas</th>
-                                    <th>File Pendukung</th>
+                                    <th>No.SPT</th>
                                     <th>Tanggal Pengaduan</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
@@ -92,48 +92,48 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-secondary">Selesai</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>

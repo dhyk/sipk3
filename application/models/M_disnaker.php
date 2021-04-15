@@ -9,6 +9,7 @@ class M_disnaker extends CI_Model {
    function lihat_perusahaan(){
 	$this->db->select('*');
 	$this->db->from('tb_user');
+   $this->db->where('level','2');
     $query = $this->db->get();
 
     return $query;

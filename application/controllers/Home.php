@@ -136,6 +136,10 @@ public function register_pengguna(){
                 redirect('index.php/Pengaduan/data_pengaduan','refresh');
 
             }
+            else if($level== '5'){
+                redirect('index.php/Pengawas/daftar_tugas','refresh');
+
+            }
             else{
                 // echo "user";
                 //var_dump($this->session->userdata('id_user'));

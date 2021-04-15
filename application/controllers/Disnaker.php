@@ -182,6 +182,48 @@ class Disnaker extends CI_Controller {
     $this->load->view('template', $data);
   }
 
+  public function daftar_pengaduan()
+  {
+
+    if($this->session->userdata('level')!='1'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/daftar_pengaduan',
+      'footer' => 'Admin/Layouts_admin/footer',
+      //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function detail_pengaduan()
+  {
+
+    if($this->session->userdata('level')!='1'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/detail_pengaduan',
+      'footer' => 'Admin/Layouts_admin/footer',
+      //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
 
 
 }
