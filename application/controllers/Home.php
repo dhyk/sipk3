@@ -134,9 +134,22 @@ class Home extends CI_Controller
             } else if ($level == '3') {
                 redirect('index.php/Pemerintah/dashboard', 'refresh');
                 echo "admin";
+<<<<<<< HEAD
             } else if ($level == '4') {
                 redirect('index.php/Pengaduan/data_pengaduan', 'refresh');
             } else {
+=======
+            }
+            else if($level== '4'){
+                redirect('index.php/Pengaduan/data_pengaduan','refresh');
+
+            }
+            else if($level== '5'){
+                redirect('index.php/Pengawas/daftar_tugas','refresh');
+
+            }
+            else{
+>>>>>>> e7820baaeb4e4f60773a1b93522edcd2f0eb051c
                 // echo "user";
                 //var_dump($this->session->userdata('id_user'));
                 redirect('index.php/Admin/dashboard');

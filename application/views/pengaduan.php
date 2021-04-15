@@ -9,26 +9,22 @@
                     <div id="logo"> <a href="index.html"><span class="logo-default">Halo K3 !</span><span class="logo-dark">POLO</span></a> </div>
                     <!--End: Logo-->
                     <!-- Search -->
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
                     <!-- end: search -->
                     <!--Header Extras-->
                     <div class="header-extras">
                         <ul>
-                            <li>
-                            <a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a>
-                            </li>
-                            <li>
-                            <div class="icon-holder">
-                                <i class="icon-user">
-                            <a href="<?php echo base_url().'index.php/Home/profil'; ?>" ><button > Profil</button></a>
-                            </i>
+                        <li>
+                            
+                            <div class="p-dropdown">
+                                <a href="#"><i class="fa fa-user btn-lg"></i></a>
+                                
+                                <ul class="p-dropdown-content">
+                                    <li><a href="<?php echo base_url().'index.php/Pengaduan/profile_mas'; ?>" class="btn btn-user" >Profile</a></li>
+                                    <li><a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a></li>
+
+                                </ul>
                             </div>
-                            </li>
+                        </li>  
                         </ul>
                     </div>
                     <!--end: Header Extras-->
@@ -57,7 +53,7 @@
             <div class="container">
                 <div class="page-title">
                     <h1>Data Pengaduan</h1>
-                    <span>Inspiration comes of working every day.</span>
+                    <!-- <span></span> -->
                 </div>
                 
             </div>
@@ -88,7 +84,7 @@
                                     <th>Judul Pengaduan</th>
                                     <th>Jenis Pengaduan</th>
                                     <th>Nama Pengawas</th>
-                                    <th>File Pendukung</th>
+                                    <th>No.SPT</th>
                                     <th>Tanggal Pengaduan</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
@@ -96,48 +92,48 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>Deiyyy</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td>Roy Achmad</td>
+                                    <td>Pemutusan Kontrak Pegawai</td>
+                                    <td>Kelompok</td>
+                                    <td>Achmad</td>
+                                    <td>093725172-SPT</td>
+                                    <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-secondary">Selesai</span></td>
                                     <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
                                         <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>

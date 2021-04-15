@@ -70,6 +70,7 @@
             </form>
         </div>
     </div>
+<<<<<<< HEAD
 
     <div id="modalRegis" class="modal no-padding" data-delay="2000" style="max-width: 900px;">
         <div class="card">
@@ -86,6 +87,43 @@
                         </li>
                     </ul>
                 </div>
+=======
+</div>
+
+<div
+    id="modalRegis"
+    class="modal no-padding"
+    data-delay="2000"
+    style="max-width: 900px;">
+    <div class="card">
+        <div class="card-header">
+            <span class="h4">Form Pendaftaran</span>
+            <p class="text-muted">Hallo.. Silahkan Daftar</p>
+            
+            <div class="tabs tabs-clean text-center">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            id="home-tab2"
+                            data-toggle="tab"
+                            href="#tabProfile2"
+                            role="tab"
+                            aria-controls="home"
+                            aria-selected="true">Masyarakat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            id="contact-tab2"
+                            data-toggle="tab"
+                            href="#tabBilling2"
+                            role="tab"
+                            aria-controls="contact"
+                            aria-selected="false">Perusahaan</a>
+                    </li>
+                </ul>
+>>>>>>> e7820baaeb4e4f60773a1b93522edcd2f0eb051c
             </div>
             <div class="card-body">
                 <!-- <p class="text-center"><h3>Form Pendaftaran</h3></p> -->

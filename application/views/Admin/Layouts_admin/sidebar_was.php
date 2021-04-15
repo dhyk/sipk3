@@ -137,54 +137,8 @@
                     <ul>
                         <li class="menu-title">Navigation</li>
                         <li>
-                            <a href="<?= site_url() ?>Disnaker/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
+                            <a href="<?= site_url() ?>Pengawas/daftar_tugas" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Daftar Tugas </span></a>
                         </li>
-                        <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_pengaduan" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Aduan Norma Ketenagakerjaan</span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_alat" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Sert. izin peralatan dan instalasi perusahaan kadaluwarsa </span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_personel" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Sert. Personel kadaluwarsa</span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_kecelakaan" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Lap. Kecelakaan kerja</span></a>
-                        </li>
-
-                        <!-- -------------------------------------------------------------------------------- -->
-                        <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                                <i data-feather="file-text" class="ion ion-clipboard"></i>
-                                <span class="hide-menu">  Laporan K3 Belum Update</span><span class="menu-arrow"></span>
-                            </a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Disnaker/laporan_p2k3" class="sidebar-link">
-                                        <span class="hide-menu">Laporan P2K3</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Disnaker/laporan_pemeriksaan" class="sidebar-link">
-                                        <span class="hide-menu">Laporan pemeriksaan & pengujian peralatan & instalasi</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="<?php echo site_url() ?>Disnaker/laporan_kecelakaan" class="sidebar-link">
-                                        <span class="hide-menu">Laporan Penyelidikan Kecelakaan Kerja</span>
-                                    </a>
-                                </li>
-
-                                
-
-
-                            </ul>
-                        </li>
-                        <!-- -------------------------------------------------------------------------------- -->
-                        <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_p2covid" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar P2 COVID Perusahaan</span></a>
-                        </li>
-                        
 
                         
                     </ul>
