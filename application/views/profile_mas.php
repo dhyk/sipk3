@@ -58,9 +58,9 @@
         
         <section id="page-content" class="no-sidebar" style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
             <div class="container">
-            <br>
                 <br>
-                
+                <br>
+                <br>
                 <!-- DataTable -->
                 <!-- <div class="row mb-5">
                     <div class="col-lg-12 text-center">
@@ -68,61 +68,68 @@
                         <p>Harap melakukan proses pengaduan sesuai dengan prosedur</p>
                     </div>
                 </div> -->
-                <div class="col-lg-10 align-self-center offset-md-1">
+                <div class="col-lg-6 align-self-center offset-md-3">
                     <div class="card ">
                         <div class="card-body ">
-                            <br>
-                            <br>
 
                             <!--Wizard 7-->
                             <form class="needs-validation" novalidate>
-                                <div class=" form-row">
-                                   
+                                
+                                <div class="row align-self-center ">
+                                <div class="col-md-3 offset-md-5">
+                                        <img src="<?php echo base_url()?>assets/images/team/5.jpg" class="avatar avatar-lg border border-default">
+</div>
+</div>
+
                                     <h3 class="form-group col-md-12 text-center"> <?= $data[0]->nama ?></h3>
                                     <!-- <div class="h5 mb-4">Please fill with your personal info</div> -->
-                                </div>
+
+                              
                         
                                     <div class="row">
-                                        <div class=" col-md-4 text-center">
-                                        <img src="<?php echo base_url()?>assets/images/team/5.jpg" class="avatar avatar-lg border border-default">
-                                        </div>
-                                        <div class="col-md-6 text-left">
+                                        <div class="col-md-10 text-left offset-md-1">
                                             <table>
                                                 <tr>
                                                     <td>NIK</td>
-                                                    <td>&nbsp:</td>
-                                                    <td>&nbsp <?= $data[0]->nik ?></td>
-                                                </tr>
+                                                    <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
+                                                    <td> &nbsp <?= $data[0]->nik ?></td>
+                                                 </tr>
                                                 <tr>
                                                     <td>Email</td>
-                                                    <td>&nbsp:</td>
-                                                    <td>&nbsp <?= $data[0]->email ?></td>
-                                                </tr>
+                                                 <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
+                                                  <td>&nbsp  <?= $data[0]->email ?></td>
+                                                 </tr>
                                                 <tr>
                                                     <td>No.Telepon</td>
-                                                    <td>&nbsp:</td>
-                                                    <td>&nbsp <?= $data[0]->no_telp ?></td>
+                                                    <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
+                                                    <td>&nbsp  <?= $data[0]->no_telp ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Alamat Domisili</td>
-                                                    <td>&nbsp:</td>
-                                                    <td>&nbsp <?= $data[0]->domisili ?></td>
+                                                    <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
+                                                    <td>&nbsp  <?= $data[0]->domisili ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Tanggal Lahir</td>
-                                                    <td>&nbsp:</td>
-                                                    <td>&nbsp <?= $data[0]->ttl ?></td>
+                                                    <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
+                                                    <td>&nbsp  <?= $data[0]->ttl ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Username</td>
-                                                    <td>&nbsp:</td>
+                                                    <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
                                                     <td>&nbsp <?= $data[0]->username ?></td>
                                                 </tr>
                                                
 
                                             </table>
-                                            
-                                            
+                                            <br>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-3 offset-md-4">
+                                                    <a href="<?php echo site_url() ?>Pengaduan/data_pengaduan">
+                                                    <button type="button" class="btn btn-danger">Kembali</button></a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -133,13 +140,13 @@
 
                     </div>
                 </div>
+                <br>
+                <br>
+                <br>
+                <br><br>
+                <br>
                 <!-- end: DataTable -->
             </div>
-            <br>
-   <br>
-   <br>
-   <br>
-   <br>
 </div>
 
         </section>

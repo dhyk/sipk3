@@ -75,8 +75,8 @@
                 <div class="card">
                     <div class="card-body">
                         <!--Wizard 7-->
-                        <form class="needs-validation" novalidate>
-                            <div class=" form-row">
+                        <?php echo form_open_multipart('index.php/Pengaduan/simpan_pengaduan'); ?>                           
+                         <div class=" form-row">
                                 <h3 class="form-group col-md-6"> Form Pengaduan</h3>
                                 <div class="form-group col-md-6 text-right nopatrit">
                                     <button type="submit" class="btn btn-primary">Kirim</button>
@@ -100,7 +100,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="gender">Jenis Pengaduan</label>
-                                    <select class="form-control" name="gender">
+                                    <select class="form-control" name="jenis">
                                         <option>--Pilih--</option>
                                         <option>Individu</option>
                                         <option>Kelompok</option>
@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="gender">Tanggal Pengaduan</label>
-                                    <input class="form-control" type="date" name="Tanggal Pengaduan">
+                                    <input class="form-control" type="date" name="tanggal">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -117,74 +117,29 @@
                                     <textarea type="text" class="form-control" name="perihal"></textarea>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <!--File upload 3-->
-                                <div class="form-group">
-                                    <label for="upload">Upload Files</label>
-                                    <a class="dropzone-attach-files btn btn-sm mb-0">Lampirkan File</a>
-                                    <div class="d-none" id="fileUpload3" action="/file-upload" class="dropzone">
-                                        <div class="fallback">
-                                            <input name="file" type="file" multiple />
-                                        </div>
-                                    </div>
-                                    <!-- Preview -->
-                                    <div class="mt-3" id="formFiles3"></div>
-                                    <!-- File preview template -->
-                                    <div class="d-none" id="formTemplate3">
-                                        <div class="card mb-3">
-                                            <div class="p-2">
-                                                <div class="row align-items-start">
-                                                    <div class="col-auto">
-                                                        <img data-dz-thumbnail src="#" class="avatar border rounded">
-                                                    </div>
-                                                    <div class="col pl-0">
-                                                        <a href="#" class="text-muted font-weight-bold" data-dz-name></a>
-                                                        <p class="mb-0"><small data-dz-size></small> <small class="d-block text-danger" data-dz-errormessage></small></p>
-                                                    </div>
-                                                    <div class="col-auto pt-2">
-                                                        <a class="btn-lg text-danger" href="#" data-dz-remove><i class="icon-trash-2"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end: File preview template -->
-                                    <small id="dropzoneHelp" class="form-text text-muted">Max file size is 2MB</small>
+                             <div class="form-row">
+                                <div class="form-group col-md-12">
+                                <label >Masukkan File</label>
+ 										<div class="input-group">
+ 											<input type="file" class="filestyle" data-buttonname="btn-primary" name="berkas" required> <br> 											
+ 										</div>
+
                                 </div>
+                            </div>
                                 <!--end: File upload 3-->
 
-                            </div>
-                            <div class="form-row">
-                                <label class="">Apakah sudah melakukan dilakukan secara Bipartit ?</label>
-                                <div class="col-sm-10">
-                                    <div class="custom-controls-stacked">
-                                        <label class="custom-control custom-radio">
-                                            <input name="custom-radio-3" type="radio" class="custom-control-input" checked="">
-                                            <span class="custom-control-label">Sudah</span>
-                                        </label>
-                                        <label class="custom-control custom-radio">
-                                            <input name="custom-radio-3" type="radio" class="custom-control-input">
-                                            <span class="custom-control-label">Belum</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="name">Nama Pekerja</label>
-                                        <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Pekerja" required>
-                                    </div>
+                            
+  
                                     <div class="form-row">
                                         <label class="">Apakah sudah melakukan dilakukan secara Bipartit ?</label>
                                         <div class="col-sm-10">
                                             <div class="custom-controls-stacked">
                                                 <label class="custom-control custom-radio">
-                                                    <input name="custom-radio-3" type="radio" class="custom-control-input" id="sudah" checked="javascript:sudah">
+                                                    <input name="bipatrit" value="sudah" type="radio" class="custom-control-input" id="sudah" checked="javascript:sudah">
                                                     <span class="custom-control-label">Sudah</span>
                                                 </label>
                                                 <label class="custom-control custom-radio">
-                                                    <input name="custom-radio-3" type="radio" class="custom-control-input" id="belum">
+                                                    <input name="bipatrit" value="belum" type="radio" class="custom-control-input" id="belum">
                                                     <span class="custom-control-label">Belum</span>
                                                 </label>
                                             </div>
@@ -195,87 +150,67 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="name">Nama Pekerja</label>
-                                                <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Pekerja" required>
+                                                <input type="text" class="form-control" name="pekerja" placeholder="Masukkan Nama Pekerja" >
                                             </div>
 
                                             <div class="form-group col-md-6">
                                                 <label for="surname">Alamat Pekerja</label>
-                                                <input type="text" class="form-control" name="judul" placeholder="Masukkan Alamat Pekerja" required>
+                                                <input type="text" class="form-control" name="alamat" placeholder="Masukkan Alamat Pekerja" >
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="name">Nama Serikat / Organisasi Pekerja</label>
-                                                <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Serikat / Organisasi" required>
+                                                <input type="text" class="form-control" name="serikat" placeholder="Masukkan Nama Serikat / Organisasi">
                                             </div>
 
                                             <div class="form-group col-md-6">
                                                 <label for="surname">Alamat Serikat / Organisasi Pekerja</label>
-                                                <input type="text" class="form-control" name="judul" placeholder="Masukkan Alamat Serikat / Organisasi" required>
+                                                <input type="text" class="form-control" name="alamat_serikat" placeholder="Masukkan Alamat Serikat / Organisasi" >
                                             </div>
                                         </div>
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="name">Nama Perundingan</label>
-                                                <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Perundingan" required>
+                                                <input type="text" class="form-control" name="perundingan" placeholder="Masukkan Nama Perundingan" >
                                             </div>
 
                                             <div class="form-group col-md-6">
                                                 <label for="surname">Alamat Perundingan</label>
-                                                <input type="text" class="form-control" name="judul" placeholder="Masukkan Alamat Perundingan" required>
+                                                <input type="text" class="form-control" name="alamat_perundingan" placeholder="Masukkan Alamat Perundingan">
                                             </div>
                                         </div>
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="name">Alasan / Pokok Masalah Perselisihan</label>
-                                                <input type="text" class="form-control" name="nama" placeholder="Masukkan alasan masalah perselisihan" required>
+                                                <input type="text" class="form-control" name="alasan" placeholder="Masukkan alasan masalah perselisihan">
                                             </div>
 
                                             <div class="form-group col-md-6">
                                                 <label for="surname">Pendirian Para Pihak</label>
-                                                <input type="text" class="form-control" name="judul" placeholder="Masukkan Pendirian" required>
+                                                <input type="text" class="form-control" name="pendirian" placeholder="Masukkan Pendirian" >
                                             </div>
                                         </div>
 
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
                                                 <label for="name">Kesimpulan Para Pihak</label>
-                                                <textarea type="text" class="form-control" name="nama" placeholder="Kesimpulan dari para pihak" required></textarea>
+                                                <textarea type="text" class="form-control" name="kesimpulan" placeholder="Kesimpulan dari para pihak" ></textarea>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <!--File upload 3-->
                                             <div class="form-group">
                                                 <label for="upload">Upload Files</label>
-                                                <a class="dropzone-attach-files btn btn-sm mb-0">Lampirkan File</a>
-                                                <div class="d-none" id="fileUpload3" action="/file-upload" class="dropzone">
-                                                    <div class="fallback">
-                                                        <input name="file" type="file" multiple />
-                                                    </div>
-                                                </div>
+                                                
+                                                   
+                                                    <input type="file" class="filestyle" data-buttonname="btn-primary" name="file_bipatrit" > <br> 											
+ 										
+                                                  
                                                 <!-- Preview -->
-                                                <div class="mt-3" id="formFiles3"></div>
-                                                <!-- File preview template -->
-                                                <div class="d-none" id="formTemplate3">
-                                                    <div class="card mb-3">
-                                                        <div class="p-2">
-                                                            <div class="row align-items-start">
-                                                                <div class="col-auto">
-                                                                    <img data-dz-thumbnail src="#" class="avatar border rounded">
-                                                                </div>
-                                                                <div class="col pl-0">
-                                                                    <a href="#" class="text-muted font-weight-bold" data-dz-name></a>
-                                                                    <p class="mb-0"><small data-dz-size></small> <small class="d-block text-danger" data-dz-errormessage></small></p>
-                                                                </div>
-                                                                <div class="col-auto pt-2">
-                                                                    <a class="btn-lg text-danger" href="#" data-dz-remove><i class="icon-trash-2"></i></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                
                                                 <!-- end: File preview template -->
                                                 <small id="dropzoneHelp" class="form-text text-muted">Max file size is 2MB</small>
                                             </div>

@@ -83,62 +83,31 @@
                                     <th>Nama</th>
                                     <th>Judul Pengaduan</th>
                                     <th>Jenis Pengaduan</th>
-                                    <th>Nama Pengawas</th>
+                                    <!-- <th>Nama Pengawas</th>
                                     <th>No.SPT</th>
                                     <th>Tanggal Pengaduan</th>
-                                    <th>Status</th>
+                                    <th>Status</th> -->
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php foreach($data as $key){ ?>
                                 <tr>
-                                    <td>Roy Achmad</td>
-                                    <td>Pemutusan Kontrak Pegawai</td>
-                                    <td>Kelompok</td>
-                                    <td>Achmad</td>
+                                    <td><?= $key->nama?></td>
+                                    <td><?= $key->judul?></td>
+                                    <td><?= $key->tanggal ?></td>
+                                    <!-- <td>Achmad</td>
                                     <td>093725172-SPT</td>
                                     <td>19/03/2021</td>
-                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
-                                    <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
-                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
+                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td> -->
+                                    <td> 
+                                        <!-- <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a> -->
+                                        <a class="ml-2" href="<?= base_url().'index.php/Pengaduan/hapus_pengaduan?id='.$key->id_pengaduan?>" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2 tombol-hapus"></i></a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Roy Achmad</td>
-                                    <td>Pemutusan Kontrak Pegawai</td>
-                                    <td>Kelompok</td>
-                                    <td>Achmad</td>
-                                    <td>093725172-SPT</td>
-                                    <td>19/03/2021</td>
-                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
-                                    <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
-                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Roy Achmad</td>
-                                    <td>Pemutusan Kontrak Pegawai</td>
-                                    <td>Kelompok</td>
-                                    <td>Achmad</td>
-                                    <td>093725172-SPT</td>
-                                    <td>19/03/2021</td>
-                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
-                                    <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
-                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Roy Achmad</td>
-                                    <td>Pemutusan Kontrak Pegawai</td>
-                                    <td>Kelompok</td>
-                                    <td>Achmad</td>
-                                    <td>093725172-SPT</td>
-                                    <td>19/03/2021</td>
-                                    <td><span class="badge badge-pill badge-secondary">Selesai</span></td>
-                                    <td> <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a>
-                                        <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2"></i></a>
-                                    </td>
-                                </tr>
+                                <?php } ?>
+                                
+                                
 
                             </tbody>
                             
