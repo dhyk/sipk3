@@ -55,16 +55,11 @@
         </header>
         <!-- end: Header -->
         <!-- Page title -->
-        <section id="page-title" style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
+        
+        <section id="page-content" class="no-sidebar" style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
             <div class="container">
-                <div class="page-title">
-                    <h1 >PROFIL</h1>
-                    <!-- <span>Harap melakukan proses pengaduan sesuai dengan prosedur</span> -->
-                </div>
-            </div>
-        </section>
-        <section id="page-content" class="no-sidebar">
-            <div class="container">
+            <br>
+                <br>
                 <!-- DataTable -->
                 <!-- <div class="row mb-5">
                     <div class="col-lg-12 text-center">
@@ -78,17 +73,51 @@
                                 <!--Wizard 7-->
                                 <form class="needs-validation" novalidate>
                                 <div class=" form-row">
-                                    <h3 class="form-group col-md-12 text-center"> (Nama)</h3>
+                                   
+                                    <h3 class="form-group col-md-12 text-center"> <?= $data[0]->nama ?></h3>
                                     <!-- <div class="h5 mb-4">Please fill with your personal info</div> -->
                                     </div>
                                     <div class="row">
-                                        <div class=" col-md-2">
-                                        <img src="<?php echo base_url()?>assets/images/team/6.jpg" class="avatar avatar-lg">
+                                        <div class=" col-md-4 text-center">
+                                        <img src="<?php echo base_url()?>assets/images/team/5.jpg" class="avatar avatar-lg border border-default">
                                         </div>
-                                        <div class="col-md-4 text-left">
-                                            <label for="name">NIK</label> <br>
-                                            <label for="name">No.Telepon</label> <br>
-                                            <label for="name">Alamat Domisili</label> <br>  
+                                        <div class="col-md-6 text-left">
+                                            <table>
+                                                <tr>
+                                                    <td>NIK</td>
+                                                    <td>&nbsp:</td>
+                                                    <td>&nbsp <?= $data[0]->nik ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td>&nbsp:</td>
+                                                    <td>&nbsp <?= $data[0]->email ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>No.Telepon</td>
+                                                    <td>&nbsp:</td>
+                                                    <td>&nbsp <?= $data[0]->no_telp ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alamat Domisili</td>
+                                                    <td>&nbsp:</td>
+                                                    <td>&nbsp <?= $data[0]->domisili ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tanggal Lahir</td>
+                                                    <td>&nbsp:</td>
+                                                    <td>&nbsp <?= $data[0]->ttl ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Username</td>
+                                                    <td>&nbsp:</td>
+                                                    <td>&nbsp <?= $data[0]->username ?></td>
+                                                </tr>
+                                               
+
+                                            </table>
+                                            
+                                            
                                         </div>
                                     </div>
                                 </div>                                   
@@ -100,8 +129,15 @@
                         </div>
                 <!-- end: DataTable -->
             </div>
+            <br>
+   <br>
+   <br>
 </div>
+
         </section>
+
+  
+   
         <!-- end: Page Content -->
         
     </div> <!-- end: Body Inner -->
@@ -110,3 +146,4 @@
     <!--Popover plugin files-->
    
 </body>
+

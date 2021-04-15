@@ -8,7 +8,7 @@ class Pengaduan extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('M_home');
-   $this->load->model('M_admin');
+   $this->load->model('M_pengaduan');
     $this->load->helper('url');
   }
 
@@ -65,6 +65,7 @@ class Pengaduan extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'profile_mas',
       'footer' => 'layouts/footer',
+      'data' => $this->M_pengaduan->lihat_data_user($this->session->userdata('id_user'))->result(),
        ];
 
     $this->load->view('template', $data);

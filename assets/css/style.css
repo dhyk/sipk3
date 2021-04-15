@@ -11181,13 +11181,14 @@ input.dates:after {
 
 .avatar {
   flex-shrink: 0;
-  width: 2.7rem;
-  height: 2.7rem;
-  border-radius: 50%;
+  width: 5.7rem;
+  height: 5.7rem;
+  border-radius: 20%;
+
 }
 .avatar .avatar-lg {
-  width: 3rem;
-  height: 3rem;
+  width: 8rem;
+  height: 8rem;
 }
 .avatar .avatar-sm {
   width: 1.5rem;
@@ -11200,8 +11201,8 @@ input.dates:after {
 }
 
 .avatar-lg {
-  width: 3rem;
-  height: 3rem;
+  width: 8rem;
+  height: 8rem;
 }
 
 .avatar-sm {
