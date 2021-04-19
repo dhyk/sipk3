@@ -25,7 +25,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="stasiun" class="col-md-2 control-label">Stasiun</label>
+                                                <label for="stasiun" class="col-md-2 control-label">Tempat Kejadian</label>
                                                 <div class="col-md-10">
                                                     <input type="text" class="form-control" name="stasiun" required="">
                                                 </div>

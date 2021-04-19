@@ -28,6 +28,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="col-md-2 control-label">Nama Perusahaan</label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" name="nama_perusahaan"  value="PT. Petrokimia (Persero)" readonly="" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-md-2 control-label">Jenis Pengaduan</label>
                                             <div class="col-md-10">
                                                 <input type="text" class="form-control" name="jenis" value="Kelompok" readonly="">

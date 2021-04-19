@@ -139,9 +139,27 @@
                         <li>
                             <a href="<?= site_url() ?>Disnaker/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
                         </li>
-                        <li>
-                            <a href="<?php echo site_url() ?>Disnaker/daftar_pengaduan" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Aduan Norma Ketenagakerjaan</span></a>
+                       
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="file-text" class="ion ion-clipboard"></i>
+                                <span class="hide-menu"> Aduan Norma</span><span class="menu-arrow"></span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Disnaker/daftar_pengaduan" class="sidebar-link">
+                                        <span class="hide-menu">Aduan Norma Ketenagakerjaan</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Disnaker/daftar_pengawas" class="sidebar-link">
+                                        <span class="hide-menu">Daftar Pengawas</span>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </li>
+                        
                         <li>
                             <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_alat" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Sert. izin peralatan dan instalasi perusahaan kadaluwarsa </span></a>
                         </li>
@@ -174,9 +192,6 @@
                                         <span class="hide-menu">Laporan Penyelidikan Kecelakaan Kerja</span>
                                     </a>
                                 </li>
-
-                                
-
 
                             </ul>
                         </li>

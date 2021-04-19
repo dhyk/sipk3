@@ -33,6 +33,22 @@ class M_disnaker extends CI_Model
 
       return $query;
    }
+   function simpan_pengawas($data){
+		$this->db->insert('data_pengawas', $data);
+	}
+
+   function lihat_pengawas($id){
+		$this->db->select('*');
+		$this->db->from('data_pengawas')	;
+      $this->db->where('id_user',$id);
+      $query = $this->db->get();
+
+	   return $query;
+	}
+   function hapus_pengawas($data){
+		$this->db->where('id_pengawas', $data);
+		$this->db->delete('data_pengawas');
+	}
 
   //}
 

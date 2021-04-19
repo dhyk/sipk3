@@ -10,7 +10,7 @@
                                 <h4 class="header-title m-t-0 m-b-30">Rekaman pemeriksaaan instalasi fire hydrant<span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small></span></h4>
                                 <div class="card-box table-responsive">
                                     <div class="table-responsive">
-                                        <table class="table m-0">
+                                        <table  id="datatable" class="table table-striped table-bordered">
                                             <a href="<?= site_url() ?>Kebakaran/tambah_rekaman_instalasi_fire">
                                                 <button class="btn btn-info">Tambah Data</button></a>
                                             <thead>

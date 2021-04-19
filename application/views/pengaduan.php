@@ -82,11 +82,11 @@
                                 <tr>
                                     <th>Nama</th>
                                     <th>Judul Pengaduan</th>
-                                    <th>Jenis Pengaduan</th>
-                                    <!-- <th>Nama Pengawas</th>
+                                    <!-- <th>Jenis Pengaduan</th> -->
+                                    <th>Nama Pengawas</th>
                                     <th>No.SPT</th>
                                     <th>Tanggal Pengaduan</th>
-                                    <th>Status</th> -->
+                                    <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -96,7 +96,7 @@
                                     <td><?= $key->nama?></td>
                                     <td><?= $key->judul?></td>
                                     <td><?= $key->tanggal ?></td>
-                                    <!-- <td>Achmad</td>
+                                    <td>Achmad</td>
                                     <td>093725172-SPT</td>
                                     <td>19/03/2021</td>
                                     <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td> -->

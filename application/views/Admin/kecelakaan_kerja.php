@@ -25,7 +25,7 @@
                                         
                                             <th rowspan="2">No</th>
                                             <th rowspan="2">Waktu Kejadian</th>
-                                            <th rowspan="2">Statisun</th>
+                                            <th rowspan="2">Tempat Kejadian</th>
                                             <th rowspan="2">Jenis Kecelakaan</th>
                                             <th rowspan="2">Jumlah Korban</th>
                                             <th rowspan="2">Usia Korban</th>

@@ -224,6 +224,65 @@ class Disnaker extends CI_Controller {
     $this->load->view('template', $data);
   }
 
+  public function daftar_pengawas()
+  {
+
+    if($this->session->userdata('level')!='1'){
+      redirect('index.php/Home');
+    }
+  
+    $data = [
+
+      'sidebar'=>'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/daftar_pengawas',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_pengawas'=> $this->M_disnaker->lihat_pengawas($this->session->userdata('id_user'))->result(),
+      
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function tambah_pengawas()
+  {
+    if ($this->session->userdata('level') != '1') {
+      redirect('index.php/Home');
+    }
+
+    $data = [
+      'sidebar' => 'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/tambah_pengawas',
+      'footer' => 'Admin/Layouts_admin/footer',
+    ];
+
+    $this->load->view('template', $data);
+  }
+
+  public function simpan_pengawas()
+  {
+    $data = array(
+      'nama' => $this->input->post('nama'),
+      'jabatan' => $this->input->post('jabatan'),
+      'no_telp' => $this->input->post('no_telp'),
+      'email' => $this->input->post('email'),
+      'id_user' => $this->session->userdata('id_user'),
+    );
+    $this->M_disnaker->simpan_pengawas($data);
+    $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
+    redirect('index.php/Disnaker/daftar_pengawas');
+  }
+
+  public function hapus_pengawas()
+  {
+    $this->M_disnaker->hapus_pengawas($this->input->get('id'));
+    $this->session->set_flashdata('flash', 'Berhasil dihapus');
+    redirect('index.php/Disnaker/daftar_pengawas');
+  }
+
 
 
 }

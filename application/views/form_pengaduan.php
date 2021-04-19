@@ -172,12 +172,12 @@
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="name">Nama Perundingan</label>
+                                                <label for="name">Nama Perundingan / Perusahaan</label>
                                                 <input type="text" class="form-control" name="perundingan" placeholder="Masukkan Nama Perundingan" >
                                             </div>
 
                                             <div class="form-group col-md-6">
-                                                <label for="surname">Alamat Perundingan</label>
+                                                <label for="surname">Alamat Perundingan / Perusahaan</label>
                                                 <input type="text" class="form-control" name="alamat_perundingan" placeholder="Masukkan Alamat Perundingan">
                                             </div>
                                         </div>

@@ -139,10 +139,8 @@
                         <li>
                             <a href="<?= site_url() ?>Pemerintah/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span></a>
                         </li>
-<<<<<<< HEAD:application/views/Admin/Layouts_admin/sidebarpem.php
                         <!-- -------------------------------------------------------------------------------- -->
 
-=======
 
                         <li>
                             <a href="<?php //echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> Daftar Sertifikasi izin peralatan dan instalasi perusahaan yang kadaluwarsa </span></a>
@@ -153,7 +151,6 @@
                         <li>
                             <a href="<?php //echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> Daftar Laporan Kecelakaan Kerja </span></a>
                         </li>
->>>>>>> refs/remotes/origin/main:application/views/Admin/Disnaker/Layouts_disnaker/sidebar.php
 
                         
                     </ul>

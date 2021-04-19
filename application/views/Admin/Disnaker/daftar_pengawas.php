@@ -7,18 +7,18 @@
                         <div class="col-md-12">
                             <br />
                             <div class="card-box">
-                                <h4 class="header-title m-t-0 m-b-30">Rekaman Pemeriksaan dan Pengujian Instalasi Listrik<span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small></span></h4>
+                                <h4 class="header-title m-t-0 m-b-30">Daftar nama Pengawas</h4>
                                 <div class="card-box table-responsive">
                                     <div class="table-responsive">
                                         <table  id="datatable" class="table table-striped table-bordered">
-                                            <a href="<?= site_url() ?>K3listrik/tambah_rekaman_pemeriksaan_listrik">
-                                                <button class="btn btn-info">Tambah Data</button></a>
+                                            <a href="<?= site_url() ?>Disnaker/tambah_pengawas"><button class="btn btn-info">Tambah Data</button></a>
                                             <thead>
-
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Tanggal Pemeriksaan</th>
-                                                    <th>File Laporan Pemeriksaan & Pengujian</th>
+                                                    <th>Nama</th>
+                                                    <th>Jabatan</th>
+                                                    <th>Nomor Telepon / WA</th>
+                                                    <th>Email</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -26,22 +26,21 @@
                                                 <?php
 
                                                 $i = 1;
-                                                foreach ($data_pemeriksaan_listrik as $key) { ?>
+                                                foreach ($data_pengawas as $key) { ?>
                                                     <tr>
                                                         <th scope="row"><?php echo $i; ?></th>
-                                                        <td><?php echo $key->tanggal_pemeriksaan; ?></td>
-                                                        <td><a target="_blank" href="<?php echo base_url() . "upload/upload_berkas_listrik/" . $key->sertifikat; ?>">Lihat Laporan</a></td>
+                                                        <td><?php echo $key->nama; ?></td>
+                                                        <td><?php echo $key->jabatan; ?></td>
+                                                        <td><?php echo $key->no_telp; ?></td>
+                                                        <td><?php echo $key->email; ?></td>
                                                         <td>
-                                                            <a href="<?php echo base_url() . 'index.php/K3listrik/hapus_pemeriksaan_listrik?id=' . $key->id_pemeriksaan; ?>"><i class="ion-trash-a"></i>Hapus</a>
+                                                            <a href="<?php echo base_url() . "index.php/Disnaker/hapus_pengawas?id=" . $key->id_pengawas; ?>"><i class="ion-trash-a"></i>Hapus</a>
                                                         </td>
                                                     </tr>
                                                     <?php $i++;
                                                 } ?>
-                                                    
                                             </tbody>
                                         </table>
-
-
                                     </div>
 
                                 </div>

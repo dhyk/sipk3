@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="card-box">
-                                <h4 class="header-title m-t-0 m-b-30">Detail Tugas</h4>
+                                <h4 class="header-title m-t-0 m-b-30">Detail Pengaduan</h4>
                                 <?php echo form_open_multipart('index.php/Admin/aksi_upload_smk3'); ?>
                                     <div class="form-horizontal">
 
@@ -18,13 +18,18 @@
                                             <div class="col-md-10">
                                                 <input type="text" class="form-control" name="nama" value="Roy Achmad" readonly=""
                                                   >
-
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Judul Pengaduan</label>
                                             <div class="col-md-10">
                                                 <input type="text" class="form-control" name="judul"  value="Pemutusan Kontrak Pegawai" readonly="" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">Nama Perusahaan</label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" name="nama_perusahaan"  value="PT. Petrokimia (Persero)" readonly="" >
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -55,7 +60,15 @@
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nama Pengawas</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" name="nama_pengawas" value="" >
+                                            <select class="form-control" name="nama_pengawas" required>
+		                                                <option>--Pilih Pengawas--</option>
+                                                        <option>Achmad</option>
+		                                                <option>Supono</option>
+		                                                <option>Handi</option>
+                                                        <option>Tono</option>
+		                                                <option>Supriadi</option>
+		                                                <option>Hengky</option>
+                                            		</select>
                                             </div>
                                         </div>
                                         <div class="form-group">
