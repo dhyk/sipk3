@@ -30,16 +30,22 @@
                                 <tbody>
 
                                     <tr>
-                                        <th>1</th>
-                                        <td>Roy Achmad</td>
-                                        <td>Pemutusan Kontrak Pegawai</td>
-                                        <td><a href="<?php echo base_url()."upload/upload_file_pendukung/File Pendukung Pengaduan.pdf"?>" target="blank_"> File Pendukung</a></td>
-                                        <td>19/03/2021</td>
+                                    <?php 
+                                    $i=0;
+                                    foreach($data_pengaduan as $key){ 
+                                        $i++; 
+                                        ?>
+                                        <th><?= $i ?></th>
+                                        <td><?= $key->nama ?></td>
+                                        <td><?= $key->judul ?></td>
+                                        <td><a href="<?php echo base_url().'upload/upload_file_pendukung/'.$key->file_pengaduan; ?>" target="blank_"> File Pendukung</a></td>
+                                        <td><?= $key->tanggal ?></td>
                                         <td>
-                                        <a href="<?= site_url() ?>Disnaker/detail_pengaduan"><button class="btn btn-success">Lihat</button></a>
-                                        <button class="btn btn-danger">hapus</button>
+                                        <a href="<?= site_url().'Disnaker/detail_pengaduan?id='.$key->id_pengaduan?>"><button class="btn btn-success">Lihat</button></a>
+                                        <!-- <button class="btn btn-danger">hapus</button> -->
                                         </td>
                                     </tr>
+                                    <?php } ?>
 
                                 </tbody>
                             </table>

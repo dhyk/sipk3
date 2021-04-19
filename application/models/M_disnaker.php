@@ -73,7 +73,8 @@ class M_disnaker extends CI_Model
 
    function lihat_data_pengaduan(){
 		$this->db->select('*');
-		$this->db->from('pengaduan')	;
+		$this->db->from('pengaduan');
+      $this->db->join('tb_user_pengadu','pengaduan.id_user=tb_user_pengadu.id_user');
       $query = $this->db->get();
 
 	   return $query;
