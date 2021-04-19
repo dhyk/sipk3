@@ -29,6 +29,7 @@ class Disnaker extends CI_Controller {
       'perusahaan' => $this->M_disnaker->lihat_perusahaan()->result(),
       'p2k3'=> $this->M_disnaker->hitung_p2k3()->result(),
       'kecelakaan' => $this->M_disnaker->hitung_kecelakaan()->result(),
+      'perusahaan1' => $this->M_disnaker->hitung_perusahaan()->result(),
        ];
 
     $this->load->view('template', $data);
@@ -217,6 +218,8 @@ class Disnaker extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/detail_pengaduan',
       'footer' => 'Admin/Layouts_admin/footer',
+      'pengawas' => $this->M_disnaker->d_pengawas($this->session->userdata('id_user'))->result(),
+      'data_pengawas'=> $this->M_disnaker->lihat_pengawas($this->session->userdata('id_user'))->result(),
       //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
       
     ];

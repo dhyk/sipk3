@@ -17,6 +17,17 @@ class M_disnaker extends CI_Model
       return $query;
    }
 
+
+   function d_pengawas()
+   {
+      $this->db->select('*');
+      $this->db->from('data_pengawas');
+      $this->db->where('nama');
+      $query = $this->db->get();
+
+      return $query;
+   }
+
    function hitung_p2k3()
    {
       $this->db->select('count(*) as count');
@@ -29,6 +40,16 @@ class M_disnaker extends CI_Model
    {
       $this->db->select('count(*) as count');
       $this->db->from('tb_kecelakaan');
+      $query = $this->db->get();
+
+      return $query;
+   }
+
+   function hitung_perusahaan()
+   {
+      $this->db->select('count(*) as count');
+      $this->db->from('tb_user');
+      $this->db->where('level', '2');
       $query = $this->db->get();
 
       return $query;

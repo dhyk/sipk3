@@ -60,15 +60,13 @@
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nama Pengawas</label>
                                             <div class="col-md-10">
-                                            <select class="form-control" name="nama_pengawas" required>
-		                                                <option>--Pilih Pengawas--</option>
-                                                        <option>Achmad</option>
-		                                                <option>Supono</option>
-		                                                <option>Handi</option>
-                                                        <option>Tono</option>
-		                                                <option>Supriadi</option>
-		                                                <option>Hengky</option>
-                                            		</select>
+                                                <select class="form-control" name="nama_pengawas" required>
+		                                             <option>-</option>
+                                                     <?php foreach($data_pengawas as $key){?>
+                                                        <option value="<?php echo $key->id_pengawas;?>"><?php echo $key->nama;?></option>
+                                                        <?php }?>
+                                            	</select>
+
                                             </div>
                                         </div>
                                         <div class="form-group">

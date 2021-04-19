@@ -8,7 +8,7 @@
 
             <div class="row">
 <br>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="card-box widget-box-two widget-two-primary">
                         
                         <div class="wigdet-two-content">
@@ -19,7 +19,7 @@
                     </div>
                 </div><!-- end col -->
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="card-box widget-box-two widget-two-warning">
                        
                         <div class="wigdet-two-content">
@@ -30,7 +30,7 @@
                     </div>
                 </div><!-- end col -->
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="card-box widget-box-two widget-two-danger">
                         
                         <div class="wigdet-two-content">
@@ -40,6 +40,17 @@
                         </div>
                     </div>
                 </div><!-- end col -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card-box widget-box-two widget-two-success">
+                        
+                        <div class="wigdet-two-content">
+                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User Today">Jumlah Perusahaan</p>
+                            <h2><span data-plugin="counterup"><?php echo $perusahaan1[0]->count; ?></span> <small></small></h2>
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <!-- end row -->

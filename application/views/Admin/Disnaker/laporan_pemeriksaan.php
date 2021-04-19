@@ -23,6 +23,7 @@
                                         <th>Nama Perusahan</th>
                                         <th>Jenis Kadaluwarsa</th>
                                         <th>Tanggal Kadaluwarsa</th>
+                                        <th>File Laporan</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -30,6 +31,7 @@
 
                                     <tr>
                                         <th></th>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>

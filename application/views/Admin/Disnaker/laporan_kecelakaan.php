@@ -19,7 +19,7 @@
                                                     <th>#</th>
                                                     <th>Nama Perusahan</th>
                                                     <th>Jenis Kecelakaan</th>
-                                                    <th>File</th>
+                                                    <th>File Laporan</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
