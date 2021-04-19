@@ -71,6 +71,15 @@ class M_disnaker extends CI_Model
 		$this->db->delete('data_pengawas');
 	}
 
+   function lihat_data_pengaduan(){
+		$this->db->select('*');
+		$this->db->from('pengaduan')	;
+      $query = $this->db->get();
+
+	   return $query;
+	}
+
+
   //}
 
  

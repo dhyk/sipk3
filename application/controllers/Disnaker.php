@@ -197,7 +197,7 @@ class Disnaker extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/daftar_pengaduan',
       'footer' => 'Admin/Layouts_admin/footer',
-      //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
+      'data_pengaduan'=> $this->M_disnaker->lihat_data_pengaduan()->result(),
       
     ];
 
