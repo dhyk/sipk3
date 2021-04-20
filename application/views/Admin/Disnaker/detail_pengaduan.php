@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Nama Pengawas</label>
                                     <div class="col-md-10">
-                                        <select class="form-control" name="nama_pengawas" required>
+                                        <select class="form-control" name="id_pengawas" required>
                                             <option>-</option>
                                             <?php foreach ($data_pengawas as $key) { ?>
                                                 <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
@@ -92,7 +92,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-offset-4 col-sm-11">
                                         <input type="hidden" name="id_pengaduan" value="<?= $data_pengaduan[0]->id_pengaduan ?>">
-                                        <button type="submit" class="btn btn-danger waves-effect waves-light">Tolak Pengaduan</button>
+                                        <a href="<?= base_url().'Disnaker/aksi_pengaduan_ditolak?id='.$data_pengaduan[0]->id_pengaduan ?>" > <button class="btn btn-danger waves-effect waves-light">Tolak Pengaduan</button></a>
                                         <button type="submit" class="btn btn-success waves-effect waves-light">Terima Pengaduan</button>
                                         <a href="<?= site_url() ?>Disnaker/daftar_pengaduan" class="btn btn-warning waves-effect waves-light">Kembali</a>
                                     </div>

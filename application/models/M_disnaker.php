@@ -90,6 +90,12 @@ class M_disnaker extends CI_Model
 	   return $query;
 	}
 
+   function ubah_pengaduan($where,$data){
+
+      $this->db->where($where);
+		$this->db->update('pengaduan', $data);
+   }
+
 
   //}
 
