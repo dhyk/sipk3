@@ -78,7 +78,7 @@
                                     <label class="col-md-2 control-label">Masukkan File SPT</label>
                                     <div class="col-md-10">
                                         <div class="input-group">
-                                            <input type="file" class="filestyle" data-buttonname="btn-primary" name="berkas" required>
+                                            <input type="file" class="filestyle" data-buttonname="btn-primary" name="berkas">
                                             <span class="help-block"><small>File Surat Perintah Tugas .PDF </small></span>
                                         </div>
                                     </div>

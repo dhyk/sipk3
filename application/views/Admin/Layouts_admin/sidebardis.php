@@ -166,9 +166,9 @@
                         <li>
                             <a href="<?php echo site_url() ?>Disnaker/daftar_sertifikat_personel" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Sert. Personel kadaluwarsa</span></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_kecelakaan" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Lap. Kecelakaan kerja</span></a>
-                        </li>
+                        </li> -->
 
                         <!-- -------------------------------------------------------------------------------- -->
                         <li class="sidebar-item">
@@ -196,9 +196,9 @@
                             </ul>
                         </li>
                         <!-- -------------------------------------------------------------------------------- -->
-                        <li>
+                        <!-- <li>
                             <a href="<?php echo site_url() ?>Disnaker/daftar_laporan_p2covid" class="waves-effect"><i class=" fa fa-clipboard"></i><span>Daftar P2 COVID Perusahaan</span></a>
-                        </li>
+                        </li> -->
                         
 
                         

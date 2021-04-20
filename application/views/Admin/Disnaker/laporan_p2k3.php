@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-12">
                 <div class="card-box">
-                    <h4 class="header-title m-t-0 m-b-30">Daftar sertifikat personel yang kadaluwarsa</h4>
+                    <h4 class="header-title m-t-0 m-b-30">Daftar Laporan P2K3</h4>
                     <div class="card-box table-responsive">
                         <div class="table-responsive">
                             <table id="datatable" class="table table-striped table-bordered">

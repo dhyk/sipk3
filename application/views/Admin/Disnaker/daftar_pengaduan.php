@@ -24,6 +24,7 @@
                                         <th>Judul Pengaduan</th>
                                         <th>File Pendukung</th>
                                         <th>Tanggal </th>
+                                        <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -40,6 +41,7 @@
                                         <td><?= $key->judul ?></td>
                                         <td><a href="<?php echo base_url().'upload/upload_file_pendukung/'.$key->file_pengaduan; ?>" target="blank_"> File Pendukung</a></td>
                                         <td><?= $key->tanggal ?></td>
+                                        <td><?=  $key->status?></td>
                                         <td>
                                         <a href="<?= site_url().'Disnaker/detail_pengaduan?id='.$key->id_pengaduan?>"><button class="btn btn-success">Lihat</button></a>
                                         <!-- <button class="btn btn-danger">hapus</button> -->

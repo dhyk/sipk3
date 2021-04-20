@@ -12,7 +12,7 @@
                     <div class="card-box widget-box-two widget-two-primary">
                         
                         <div class="wigdet-two-content">
-                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Jumlah Aduan Norma Ketenagakerjaan</p>
+                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Jumlah Aduan Norma <br> Ketenagakerjaan</p>
                             <h2><span data-plugin="counterup"><?php echo '0'; ?></span> <small></small></h2>
                             <!-- <p class="text-muted m-0"><b>Last:</b> 30.4k</p> -->
                         </div>
@@ -23,8 +23,8 @@
                     <div class="card-box widget-box-two widget-two-warning">
                        
                         <div class="wigdet-two-content">
-                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Jumlah Laporan P2K3</p>
-                            <h2><span data-plugin="counterup"><?php echo $p2k3[0]->count; ?> </span> <small></small></h2>
+                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month">Jumlah Laporan P2K3 <br></p>
+                            <br><h2><span data-plugin="counterup"><?php echo $p2k3[0]->count; ?> </span> <small></small></h2>
                             <!-- <p class="text-muted m-0"><b>Last:</b> 40.33k</p> -->
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                     <div class="card-box widget-box-two widget-two-danger">
                         
                         <div class="wigdet-two-content">
-                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Jumlah Laporan Kecelakaan Kerja</p>
+                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Jumlah Laporan <br> Kecelakaan Kerja</p>
                             <h2><span data-plugin="counterup"><?php echo $kecelakaan[0]->count; ?></span> <small></small></h2>
                             <!-- <p class="text-muted m-0"><b>Last:</b> 30.4k</p> -->
                         </div>
@@ -45,8 +45,8 @@
                     <div class="card-box widget-box-two widget-two-success">
                         
                         <div class="wigdet-two-content">
-                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User Today">Jumlah Perusahaan</p>
-                            <h2><span data-plugin="counterup"><?php echo $perusahaan1[0]->count; ?></span> <small></small></h2>
+                            <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User Today">Jumlah Perusahaan </p>
+                            <br><h2><span data-plugin="counterup"><?php echo $perusahaan1[0]->count; ?></span> <small><br></small></h2>
 
                         </div>
                     </div>
