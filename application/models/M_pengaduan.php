@@ -36,6 +36,5 @@ class M_pengaduan extends CI_Model {
 	}
 
 	
-
 	
 }

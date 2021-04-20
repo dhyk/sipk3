@@ -16,7 +16,9 @@
  									<div class="col-md-12">
 
  										<!-- <form class="form-horizontal" enctype="multipart/form-data" action="<?php //echo base_url().'index.php/Admin/tambahberita'; ?>" method="post"> -->
- 											<?php echo form_open_multipart('index.php/Admin/aksi_upload_sertifikat_standard');?>
+ 											<?php echo form_open_multipart('index.php/Pengawas/simpan_tindakan');?>
+
+											 
  											<div class="form-group">
  												<label class="col-md-2 control-label">Nama Tindakan</label>
  												<div class="col-md-10">
@@ -69,6 +71,19 @@
 												</div>
 												
                                    			 </div>
+
+											<div class="form-group">
+											<label class="col-md-2 control-label"></label>
+												<div class="col-md-10">
+													<input type="hidden" name="id_pengawas" value="<?= $id_pengawas[0]->id_pengawas ?>">
+												</div>
+											</div>
+											<div class="form-group">
+											<label class="col-md-2 control-label"></label>
+												<div class="col-md-10">
+													<input type="hidden" name="id_pengaduan" value="<?= $data_pengaduan[0]->id_pengaduan?>">
+												</div>
+											</div>
 
  											
 											<br>

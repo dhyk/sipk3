@@ -188,9 +188,9 @@
                       
                         <!-- -------------------------------------------------------------------------------- -->
 
-                        <li>
+                        <!-- <li>
                             <a href="<?php echo site_url() ?>P2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> P2 COVID </span></a>
-                        </li>
+                        </li> -->
 
                         
 

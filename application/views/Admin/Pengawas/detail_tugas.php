@@ -107,48 +107,26 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                            <?php 
+                                                        
+                                                                $i=1;
+                                                                foreach($detail_tindakan as $key){ ?>
                                                                
                                                                     <tr>
-                                                                        <th scope="row">1</th>
-                                                                        <td>Diskusi dengan pelapor/pengadu</td>
-                                                                        <td>melakukan diskusi antara pelapor/pengadu dengan menjelaskan secara detail pokok masalah </td>
-                                                                        <td><a target="_blank" href="<?php echo base_url()."upload/upload_file_pendukung/File Pendukung Pengaduan.pdf"?>">Lihat Laporan</a></td>
-                                                                        <td>20/03/2021</td>
-                                                                        <th><span class="label label-primary">Tindak Lanjut</span></th>
+                                                                        <th scope="row"><?php echo $i; ?></th>
+                                                                        <td><?php echo $key->nama; ?></td>
+                                                                        <td><?php echo $key->detail; ?></td>
+                                                                        <td><a target="_blank" href="<?php echo base_url().'upload/upload_file_tindakan/' . $key->berkas; ?>">Lihat berkas</a></td>
+                                                                        <td><?php echo $key->tanggal_tindakan; ?></td>
+                                                                        <th><?php echo $key->status; ?></th>
                                                                         <td>
                                                                             <a href="" target="_blank"><i class="ion-eye"></i>Lihat |</a>
 
                                                                             <a href=""><i class="ion-trash-a"></i>Hapus</a>
                                                                         </td>
                                                                     </tr>
-
-                                                                    <tr>
-                                                                        <th scope="row">2</th>
-                                                                        <td>Diskusi dengan pelapor/pengadu</td>
-                                                                        <td>melakukan diskusi perusahaan dengan menjelaskan secara detail pokok masalah </td>
-                                                                        <td><a target="_blank" href="<?php echo base_url()."upload/upload_file_pendukung/File Pendukung Pengaduan.pdf"?>">Lihat Laporan</a></td>
-                                                                        <td>23/03/2021</td>
-                                                                        <th><span class="label label-primary">Tindak Lanjut</span></th>
-                                                                        <td>
-                                                                            <a href="" target="_blank"><i class="ion-eye"></i>Lihat |</a>
-
-                                                                            <a href=""><i class="ion-trash-a"></i>Hapus</a>
-                                                                        </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                        <th scope="row">3</th>
-                                                                        <td>Pengambilan Keputusan</td>
-                                                                        <td>kedua belah pihak selesai </td>
-                                                                        <td><a target="_blank" href="<?php echo base_url()."upload/upload_file_pendukung/File Pendukung Pengaduan.pdf"?>">Lihat Laporan</a></td>
-                                                                        <td>30/03/2021</td>
-                                                                        <th><span class="label label-inverse">Selesai</span></th>
-                                                                        <td>
-                                                                            <a href="" target="_blank"><i class="ion-eye"></i>Lihat |</a>
-
-                                                                            <a href=""><i class="ion-trash-a"></i>Hapus</a>
-                                                                        </td>
-                                                                    </tr>
+                                                                    <?php $i++;
+                                                                } ?>
 
                                                             </tbody>
                                                         </table>
