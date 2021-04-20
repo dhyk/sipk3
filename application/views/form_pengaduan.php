@@ -112,10 +112,15 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-12">
+                            <div class="form-group col-md-6">
+                                    <label for="name">Nama Perusahaan</label>
+                                    <input type="text" class="form-control" name="nama_perusahaan" placeholder="Masukkan Nama Perusahaan" required>
+                                </div>
+                                <div class="form-group col-md-6">
                                     <label for="perihal">Perihal Pengaduan</label>
                                     <textarea type="text" class="form-control" name="perihal"></textarea>
                                 </div>
+                                
                             </div>
                              <div class="form-row">
                                 <div class="form-group col-md-12">

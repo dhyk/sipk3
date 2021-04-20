@@ -110,6 +110,7 @@ class Pengaduan extends CI_Controller {
       'judul'=>$this->input->post('judul'),
       'jenis'=>$this->input->post('jenis'),
       'tanggal'=>$this->input->post('tanggal'),
+      'nama_perusahaan' => $this->input->post('nama_perusahaan'),
       'perihal'=>$this->input->post('perihal'),
       'file_pengaduan'=>$berkas,
       'bipatrit'=>$this->input->post('bipatrit'),

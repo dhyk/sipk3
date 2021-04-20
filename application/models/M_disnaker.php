@@ -36,6 +36,14 @@ class M_disnaker extends CI_Model
 
       return $query;
    }
+   function hitung_aduan()
+   {
+      $this->db->select('count(*) as count');
+      $this->db->from('pengaduan');
+      $query = $this->db->get();
+
+      return $query;
+   }
    function hitung_kecelakaan()
    {
       $this->db->select('count(*) as count');

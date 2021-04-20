@@ -32,6 +32,7 @@ class Disnaker extends CI_Controller
       'p2k3' => $this->M_disnaker->hitung_p2k3()->result(),
       'kecelakaan' => $this->M_disnaker->hitung_kecelakaan()->result(),
       'perusahaan1' => $this->M_disnaker->hitung_perusahaan()->result(),
+      'aduan' => $this->M_disnaker->hitung_aduan()->result(),
     ];
 
     $this->load->view('template', $data);

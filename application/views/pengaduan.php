@@ -72,7 +72,7 @@
                         <p>Harap melakukan proses pengaduan sesuai dengan prosedur</p>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <a href="<?=site_url ()?>Pengaduan/tambah_pengaduan"><button type="button" class="btn btn-primary"><i class="icon-plus"></i> Tambah Pengaduan</button></a>
+                        <a href="<?=site_url ()?>Pengaduan/tambah_pengaduan"><button type="button" class="btn btn-success"><i class="icon-plus"></i> Tambah Pengaduan</button></a>
                     </div>
                 </div>
                 <div class="row">
@@ -83,11 +83,12 @@
                                     <th>Nama</th>
                                     <th>Judul Pengaduan</th>
                                     <!-- <th>Jenis Pengaduan</th> -->
+                                    <th>Nama Perusahaan</th>
                                     <th>Nama Pengawas</th>
                                     <th>No.SPT</th>
                                     <th>Tanggal Pengaduan</th>
                                     <th>Status</th>
-                                    <th>Aksi</th>
+                                    <!-- <th>Aksi</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -95,15 +96,14 @@
                                 <tr>
                                     <td><?= $key->nama?></td>
                                     <td><?= $key->judul?></td>
-                                    <td><?= $key->tanggal ?></td>
+                                    <td><?= $key->nama_perusahaan?></td>
                                     <td>Achmad</td>
                                     <td>093725172-SPT</td>
-                                    <td>19/03/2021</td>
-                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td> -->
-                                    <td> 
-                                        <!-- <a class="ml-2" href="#" data-toggle="tooltip" data-original-title="Edit"><i class="icon-edit"></i></a> -->
+                                    <td><?= $key->tanggal ?></td>
+                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
+                                    <!-- <td> 
                                         <a class="ml-2" href="<?= base_url().'index.php/Pengaduan/hapus_pengaduan?id='.$key->id_pengaduan?>" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2 tombol-hapus"></i></a>
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 <?php } ?>
                                 

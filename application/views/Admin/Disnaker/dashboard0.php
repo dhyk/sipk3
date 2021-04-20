@@ -13,7 +13,7 @@
                         
                         <div class="wigdet-two-content">
                             <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="Statistics">Jumlah Aduan Norma <br> Ketenagakerjaan</p>
-                            <h2><span data-plugin="counterup"><?php echo '0'; ?></span> <small></small></h2>
+                            <h2><span data-plugin="counterup"><?php echo $aduan[0]->count; ?></span> <small></small></h2>
                             <!-- <p class="text-muted m-0"><b>Last:</b> 30.4k</p> -->
                         </div>
                     </div>
