@@ -25,12 +25,12 @@
                                         <input type="text" class="form-control" name="judul" value="<?= $data_pengaduan[0]->judul ?>" readonly="">
                                     </div>
                                 </div>
-                                <!-- <div class="form-group">
-                                            <label class="col-md-2 control-label">Nama Perusahaan</label>
-                                            <div class="col-md-10">
-                                                <input type="text" class="form-control" name="nama_perusahaan"  value="PT. Petrokimia (Persero)" readonly="" >
-                                            </div>
-                                        </div> -->
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Nama Perusahaan</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" name="nama_perusahaan" value="<?= $data_pengaduan[0]->nama_perusahaan ?>" readonly="">
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Jenis Pengaduan</label>
                                     <div class="col-md-10">
@@ -52,7 +52,8 @@
 
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Dokumen Pengaduan </label>
-                                    <div class="col-md-10"><a href="<?php echo base_url() . 'upload/upload_file_pendukung/' . $data_pengaduan[0]->file_pengaduan ?>" target="blank_"> >>klik disini<< </a>
+                                    <div class="col-md-10">
+                                        <a href="<?php echo base_url() . 'upload/upload_file_pendukung/' . $data_pengaduan[0]->file_pengaduan ?>" target="blank_"> >>klik disini<< </a>
                                     </div>
                                 </div>
                                 <br />
@@ -60,7 +61,12 @@
                                     <label class="col-md-2 control-label">Nama Pengawas</label>
                                     <div class="col-md-10">
                                         <select class="form-control" name="id_pengawas" required>
-                                       
+                                            <?php foreach ($data_pengawas as $key) {
+                                                if ($key->id_pengawas == $data_pengaduan[0]->id_pengawas) { ?>
+                                                    <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
+                                            <?php }
+                                            } ?>
+
                                             <?php foreach ($data_pengawas as $key) { ?>
                                                 <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
                                             <?php } ?>
@@ -71,7 +77,7 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Nomor SPT</label>
                                     <div class="col-md-10">
-                                        <input type="number" class="form-control" name="nomor_sah" value="<?= $data_pengaduan[0]->no_spt ?>">
+                                        <input type="text" class="form-control" name="nomor_spt" value="<?= $data_pengaduan[0]->no_spt ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -80,20 +86,25 @@
                                         <div class="input-group">
                                             <input type="file" class="filestyle" data-buttonname="btn-primary" name="berkas">
                                             <span class="help-block"><small>File Surat Perintah Tugas .PDF </small></span>
+                                            <div class="col-md-10">
+                                                <a href="<?php echo base_url() . 'upload/upload_file_spt/' . $data_pengaduan[0]->file_spt ?>" target="blank_"> >>klik disini<< </a>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Keterangan</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control" name="keterangan" value="<?= $data_pengaduan[0]->keterangan ?>>
+                                        <input type="text" class="form-control" name="keterangan" value="<?= $data_pengaduan[0]->keterangan ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-4 col-sm-11">
                                         <input type="hidden" name="id_pengaduan" value="<?= $data_pengaduan[0]->id_pengaduan ?>">
-                                        <a href="<?= base_url().'Disnaker/aksi_pengaduan_ditolak?id='.$data_pengaduan[0]->id_pengaduan ?>" > <button class="btn btn-danger waves-effect waves-light">Tolak Pengaduan</button></a>
                                         <button type="submit" class="btn btn-success waves-effect waves-light">Terima Pengaduan</button>
+                                        <a href="<?= base_url() . 'Disnaker/aksi_pengaduan_ditolak?id=' . $data_pengaduan[0]->id_pengaduan ?>" class="btn btn-danger waves-effect waves-light"> Tolak Pengaduan</a>
+
                                         <a href="<?= site_url() ?>Disnaker/daftar_pengaduan" class="btn btn-warning waves-effect waves-light">Kembali</a>
                                     </div>
                                 </div>

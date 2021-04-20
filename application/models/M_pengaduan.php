@@ -26,6 +26,13 @@ class M_pengaduan extends CI_Model {
 		return $query;
 	}
 
+	function lihat_data($id){
+		
+		$query=$this->db->query($id);
+		
+		return $query;
+	}
+
 	function simpan_pengaduan($data){
 		$this->db->insert('pengaduan', $data);
 	}
@@ -33,6 +40,16 @@ class M_pengaduan extends CI_Model {
 	function hapus_pengaduan($data){
 		$this->db->where('id_pengaduan',$data);
 		$this->db->delete('pengaduan');
+	}
+
+	function lihat_detail_pengaduan($id){
+		$this->db->select('*');
+		$this->db->from('pengaduan');
+      $this->db->join('tb_user_pengadu','pengaduan.id_user=tb_user_pengadu.id_user');
+    $this->db->where(['id_pengaduan'=>$id]);
+      $query = $this->db->get();
+
+	   return $query;
 	}
 
 	

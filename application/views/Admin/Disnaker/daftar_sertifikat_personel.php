@@ -17,24 +17,138 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Nama Perusahan</th>
-                                                <th>Jenis Kadaluwarsa</th>
+                                                <th>Nama</th>
+                                                <th>Jenis</th>
                                                 <th>Tanggal Kadaluwarsa</th>
-                                                <th>Aksi</th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th></th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
+                                            <?php $i = 0;
+                                            foreach ($kebakaran_ak3 as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Ahli K3 penanggulangan kebakaran</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($kebakaran_petugas as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Petugas peran kebakaran</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($kebakaran_penanggulangan as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Koordinator penanggulangan kebakaran</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($listrik_ak3 as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Ahli K3 Listrik</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($listrik_teknisi as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Teknisi listrik</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($lingker_k3 as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Ahli K3 lingkungan kerja</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($lingker_ketinggian as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Tenaga kerja di ketinggian</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($lingker_ruang as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Tenaga kerja di ruang terbatas</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($lingker_jurulas as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Juru las</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
+                                            <?php
+                                            foreach ($p3k as $key) {
+                                                $i++; ?>
+                                                <tr>
+                                                    <th><?= $i ?></th>
+                                                    <td><?= $key->nama_perusahaan ?></td>
+                                                    <td><?= $key->nama ?></td>
+                                                    <td>Petugas P3K</td>
+                                                    <td><?= $key->masa_berlaku ?></td>
+
+                                                </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                         </div>
+                        </div>
                     </div>
                 </div>
             </div>

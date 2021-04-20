@@ -41,7 +41,18 @@
                                         <td><?= $key->judul ?></td>
                                         <td><a href="<?php echo base_url().'upload/upload_file_pendukung/'.$key->file_pengaduan; ?>" target="blank_"> File Pendukung</a></td>
                                         <td><?= $key->tanggal ?></td>
-                                        <td><?=  $key->status?></td>
+                                        <td>
+                                           
+                                            <?php if($key->status==null){?>
+                                            <span class="badge badge-warning">Menunggu</span>
+                                            <?php } else if($key->status=="Diterima"){?>
+                                            <span class="badge badge-primary">Diterima</span>
+                                            <?php }else if($key->status=="Ditolak"){?>
+                                            <span class="badge badge-danger">Ditolak</span>
+                                            <?php } else{?>
+                                            <span class="badge badge-success">Selesai</span>
+                                            <?php }?>
+                                        </td>
                                         <td>
                                         <a href="<?= site_url().'Disnaker/detail_pengaduan?id='.$key->id_pengaduan?>"><button class="btn btn-success">Lihat</button></a>
                                         <!-- <button class="btn btn-danger">hapus</button> -->

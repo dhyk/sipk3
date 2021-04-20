@@ -13,18 +13,18 @@
                     <!--Header Extras-->
                     <div class="header-extras">
                         <ul>
-                        <li>
-                            
-                            <div class="p-dropdown">
-                                <a href="#"><i class="fa fa-user btn-lg"></i></a>
-                                
-                                <ul class="p-dropdown-content">
-                                    <li><a href="<?php echo base_url().'index.php/Pengaduan/profile_mas'; ?>" class="btn btn-user" >Profile</a></li>
-                                    <li><a href="<?php echo base_url().'index.php/Home/logout'; ?>" class="tombol-keluar" ><button class="btn btn-danger"> keluar</button></a></li>
+                            <li>
 
-                                </ul>
-                            </div>
-                        </li>  
+                                <div class="p-dropdown">
+                                    <a href="#"><i class="fa fa-user btn-lg"></i></a>
+
+                                    <ul class="p-dropdown-content">
+                                        <li><a href="<?php echo base_url() . 'index.php/Pengaduan/profile_mas'; ?>" class="btn btn-user">Profile</a></li>
+                                        <li><a href="<?php echo base_url() . 'index.php/Home/logout'; ?>" class="tombol-keluar"><button class="btn btn-danger"> keluar</button></a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <!--end: Header Extras-->
@@ -38,7 +38,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    
+
                                 </ul>
                             </nav>
                         </div>
@@ -49,18 +49,18 @@
         </header>
         <!-- end: Header -->
         <!-- Page title -->
-        <section id="page-title" style="background: url('<?php echo base_url()?>assets/images/11.jpg')">
+        <section id="page-title" style="background: url('<?php echo base_url() ?>assets/images/11.jpg')">
             <div class="container">
                 <div class="page-title">
                     <h1>Data Pengaduan</h1>
                     <!-- <span></span> -->
                 </div>
-                
+
             </div>
         </section>
         <!-- end: Page title -->
         <!-- Page Menu -->
-        
+
         <!-- end: Page Menu -->
         <!-- Page Content -->
         <section id="page-content" class="no-sidebar">
@@ -72,7 +72,7 @@
                         <p>Harap melakukan proses pengaduan sesuai dengan prosedur</p>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <a href="<?=site_url ()?>Pengaduan/tambah_pengaduan"><button type="button" class="btn btn-success"><i class="icon-plus"></i> Tambah Pengaduan</button></a>
+                        <a href="<?= site_url() ?>Pengaduan/tambah_pengaduan"><button type="button" class="btn btn-success"><i class="icon-plus"></i> Tambah Pengaduan</button></a>
                     </div>
                 </div>
                 <div class="row">
@@ -88,29 +88,41 @@
                                     <th>No.SPT</th>
                                     <th>Tanggal Pengaduan</th>
                                     <th>Status</th>
+                                    <th>Aksi</th>
                                     <!-- <th>Aksi</th> -->
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach($data as $key){ ?>
-                                <tr>
-                                    <td><?= $key->nama?></td>
-                                    <td><?= $key->judul?></td>
-                                    <td><?= $key->nama_perusahaan?></td>
-                                    <td>Achmad</td>
-                                    <td>093725172-SPT</td>
-                                    <td><?= $key->tanggal ?></td>
-                                    <td><span class="badge badge-pill badge-primary">Tindak Lanjut</span></td>
-                                    <!-- <td> 
-                                        <a class="ml-2" href="<?= base_url().'index.php/Pengaduan/hapus_pengaduan?id='.$key->id_pengaduan?>" data-toggle="tooltip" data-original-title="Delete"><i class="icon-trash-2 tombol-hapus"></i></a>
-                                    </td> -->
-                                </tr>
+                                <?php foreach ($data as $key) { ?>
+                                    <tr>
+                                        <td><?= $key->nama ?></td>
+                                        <td><?= $key->judul ?></td>
+                                        <td><?= $key->nama_perusahaan ?></td>
+                                        <td><?= $key->nama_pengawas ?></td>
+                                        <td><?= $key->no_spt ?></td>
+                                        <td><?= $key->tanggal ?></td>
+                                        <td>
+
+                                            <?php if ($key->status == null) { ?>
+                                                <span class="badge badge-warning">Menunggu</span>
+                                            <?php } else if ($key->status == "Diterima") { ?>
+                                                <span class="badge badge-primary">Diterima</span>
+                                            <?php } else if ($key->status == "Ditolak") { ?>
+                                                <span class="badge badge-danger">Ditolak</span>
+                                            <?php } else { ?>
+                                                <span class="badge badge-success">Selesai</span>
+                                            <?php } ?>
+                                        </td>
+                                         <td> 
+                                        <a class="btn btn-xs btn-info" href="<?= base_url() . 'index.php/Pengaduan/detail_pengaduan?id=' . $key->id_pengaduan ?>" ><i class="icon-eye"></i></a>
+                                    </td> 
+                                    </tr>
                                 <?php } ?>
-                                
-                                
+
+
 
                             </tbody>
-                            
+
                         </table>
                     </div>
                 </div>
@@ -118,10 +130,10 @@
             </div>
         </section>
         <!-- end: Page Content -->
-        
+
     </div> <!-- end: Body Inner -->
     <!-- Scroll top -->
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
     <!--Popover plugin files-->
-   
+
 </body>

@@ -45,6 +45,18 @@
  													<input type="text" class="form-control" placeholder="Masukkan Email" name="email" required><br><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
+											 <div class="form-group">
+ 												<label class="col-md-2 control-label">username</label>
+ 												<div class="col-md-10">
+ 													<input type="text" class="form-control" placeholder="Masukkan Email" name="username" required><br><?//php echo form_error('judul'); ?>
+ 												</div>
+ 											</div>
+											 <div class="form-group">
+ 												<label class="col-md-2 control-label">password</label>
+ 												<div class="col-md-10">
+ 													<input type="text" class="form-control" placeholder="Masukkan Email" name="password" required><br><?//php echo form_error('judul'); ?>
+ 												</div>
+ 											</div>
  											
  											<br>
  											<br>

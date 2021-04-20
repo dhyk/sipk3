@@ -16,7 +16,7 @@
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nama Pengadu</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" name="nama" value="Roy Achmad" readonly=""
+                                                <input type="text" class="form-control" name="nama" value="<?= $data_pengaduan[0]->nama?>" readonly=""
                                                   >
 
                                             </div>
@@ -24,50 +24,42 @@
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Judul Pengaduan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" name="judul"  value="Pemutusan Kontrak Pegawai" readonly="" >
+                                                <input type="text" class="form-control" name="judul"  value="<?= $data_pengaduan[0]->judul?>" readonly="" >
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nama Perusahaan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" name="nama_perusahaan"  value="PT. Petrokimia (Persero)" readonly="" >
+                                                <input type="text" class="form-control" name="nama_perusahaan"  value="<?= $data_pengaduan[0]->nama_perusahaan?>" readonly="" >
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Jenis Pengaduan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" name="jenis" value="Kelompok" readonly="">
+                                                <input type="text" class="form-control" name="jenis" value="<?= $data_pengaduan[0]->jenis?>" readonly="">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Tanggal Pengaduan</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" name="tanggal" value="19/03/2021" readonly="" >
+                                                <input type="text" class="form-control" name="tanggal" value="<?= $data_pengaduan[0]->tanggal?>" readonly="" >
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-md-2 control-label">Nama Pengawas</label>
-                                            <div class="col-md-10">
-                                                <input type="text" class="form-control" name="nama_pengawas" value="achmad" readonly="">
-                                            </div>
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Nomor SPT</label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" name="nomor_sah" value="093725172-SPT" readonly="" >
+                                                <input type="text" class="form-control" name="nomor_sah" value="<?= $data_pengaduan[0]->no_spt?>" readonly="" >
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">Dokumen Pengaduan </label>
-                                            <div class="col-md-10"><a href="" target="blank_"> >>klik disini<< </a>
+                                            <div class="col-md-10"><a href="<?= base_url().'upload/upload_berkas_pengaduan/'.$data_pengaduan[0]->file_pengaduan?>" target="blank_"> >>klik disini<< </a>
                                             </div>
                                         </div>
                                         <br />
                                        
-                                        <div class="col-sm-offset-9 col-sm-12">
-                                            <button type="submit" class="btn btn-info waves-effect waves-light">Simpan</button>
-                                            <a href="<?= site_url() ?>Pengawas/daftar_tugas" class="btn btn-danger waves-effect waves-light">Kembali</a>
-                                        </div>
+                
                                                         
 
                                     </div>
@@ -93,7 +85,7 @@
 
                                                     <div class="table-responsive">
                                                         <table  id="datatable" class="table table-striped table-bordered">
-                                                            <a href="<?= site_url() ?>Pengawas/tambah_tindakan">
+                                                            <a href="<?= site_url().'Pengawas/tambah_tindakan?id'.$data_pengaduan[0]->id_pengaduan?>">
                                                                 <button class="btn btn-success">Tambah Tindakan</button></a> <br>
                                                             <thead>
                                                                 <tr>
@@ -110,7 +102,7 @@
                                                             <?php 
                                                         
                                                                 $i=1;
-                                                                foreach($detail_tindakan as $key){ ?>
+                                                                foreach($data_tindakan as $key){ ?>
                                                                
                                                                     <tr>
                                                                         <th scope="row"><?php echo $i; ?></th>
@@ -120,9 +112,9 @@
                                                                         <td><?php echo $key->tanggal_tindakan; ?></td>
                                                                         <th><?php echo $key->status; ?></th>
                                                                         <td>
-                                                                            <a href="" target="_blank"><i class="ion-eye"></i>Lihat |</a>
+                                                                           
 
-                                                                            <a href=""><i class="ion-trash-a"></i>Hapus</a>
+                                                                            <a href="<?= base_url().'Pengawas/hapus_tindakan?id='.$key->id_tindakan?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                         </td>
                                                                     </tr>
                                                                     <?php $i++;

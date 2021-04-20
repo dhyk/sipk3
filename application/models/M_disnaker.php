@@ -104,6 +104,34 @@ class M_disnaker extends CI_Model
 		$this->db->update('pengaduan', $data);
    }
 
+   function lihat_data($table){
+
+		$query=$this->db->query($table);
+
+     
+      return $query;
+   }
+
+   function get_id_masyarakat()
+	{
+		
+
+		$this->db->select('id_tb_user');
+		$this->db->from('tb_user');
+		$this->db->order_by('id_tb_user', 'DESC');
+		$this->db->limit(1);
+		// $this->db->where('username','dika');
+		$query = $this->db->get();
+		return $query;
+	}
+	
+
+
+	function register($data)
+	{
+		//var_dump($data);
+		$this->db->insert('tb_user', $data);
+	}
 
   //}
 

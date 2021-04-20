@@ -37,5 +37,9 @@ class M_pengawas extends CI_Model {
 
 	   return $query;
 	}
+
+	function lihat_data($sql){
+		return $this->db->query($sql);
+	}
 	
 }

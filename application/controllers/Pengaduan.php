@@ -26,9 +26,9 @@ class Pengaduan extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'pengaduan',
       'footer' => 'layouts/footer',
-      'data' => $this->M_pengaduan->lihat_data_pengaduan($this->session->userdata('id_user'))->result(),
+      'data' => $this->M_pengaduan->lihat_data("SELECT p.*, w.nama as nama_pengawas FROM pengaduan p LEFT JOIN data_pengawas w ON p.id_pengawas=w.id_pengawas WHERE p.id_user=".$this->session->userdata('id_user'))->result(),
        ];
-
+//var_dump($data);
     $this->load->view('template', $data);
     
   }
@@ -125,12 +125,34 @@ class Pengaduan extends CI_Controller {
       'kesimpulan'=>$this->input->post('kesimpulan'),
       'file_bipatrit'=>$berkas2,
       'id_user'=> $this->session->userdata('id_user'),
+      
       );
 
+    //  var_dump($data);
     $this->M_pengaduan->simpan_pengaduan($data);
     $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
     redirect('index.php/Pengaduan/data_pengaduan');
 
+
+
+  }
+
+  public function detail_pengaduan(){
+    $data = [
+
+      'header'=>'layouts/head',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'detail_pengaduan_masyarakat',
+      'footer' => 'layouts/footer',
+      'data_pengaduan' => $this->M_pengaduan->lihat_data("SELECT p.*, w.nama as nama_pengawas FROM pengaduan p LEFT JOIN data_pengawas w ON p.id_pengawas=w.id_pengawas WHERE p.id_pengaduan=".$this->input->get('id'))->result(),
+      'data_tindakan' => $this->M_pengaduan->lihat_data("SELECT * FROM tb_tindakan WHERE id_pengaduan=".$this->input->get('id'))->result(),
+     
+
+
+    ];
+
+    $this->load->view('template', $data);
 
 
   }

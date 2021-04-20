@@ -52,8 +52,15 @@ class Disnaker extends CI_Controller
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/daftar_sertifikat_alat',
       'footer' => 'Admin/Layouts_admin/footer',
-      //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
-
+      'kebakaran_instalasi'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa_berlaku from tb_user u, tb_kebakaran_instalasi i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'listrik_listrik'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa_berlaku from tb_user u, listrik_ijin_listrik i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'listrik_petir'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa_berlaku from tb_user u, listrik_ijin_petir i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'mekanik_angkat'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_angkat i where i.id_user=u.id_tb_user and i.masa>sysdate() ')->result(),
+      'mekanik_bejana'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_bejana i where i.id_user=u.id_tb_user and i.masa>sysdate() ')->result(),
+      'mekanik_elevator'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_elevator i where i.id_user=u.id_tb_user and i.masa>sysdate() ')->result(),
+      'mekanik_ketel'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_ketel i where i.id_user=u.id_tb_user and i.masa>sysdate() ')->result(),
+      'mekanik_mesin'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_mesin i where i.id_user=u.id_tb_user and i.masa>sysdate() ')->result(),
+      'mekanik_ukur'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_ukur i where i.id_user=u.id_tb_user and i.masa>sysdate() ')->result(),
     ];
 
     $this->load->view('template', $data);
@@ -73,8 +80,17 @@ class Disnaker extends CI_Controller
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/daftar_sertifikat_personel',
       'footer' => 'Admin/Layouts_admin/footer',
-      //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
-
+      'kebakaran_ak3'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, tb_kebakaran_ak3 i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'kebakaran_petugas'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, tb_kebakaran_petugas i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'kebakaran_penanggulangan'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, tb_kebakaran_penanggulangan i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'listrik_ak3'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, listrik_ak3_listrik i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'listrik_teknisi'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, listrik_teknisi i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'lingker_k3'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_k3 i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'lingker_ketinggian'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_ketinggian i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'lingker_ruang'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_ruang i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+     'lingker_jurulas'=> $this->M_disnaker->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_jurulas i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+      'p3k'=> $this->M_disnaker->lihat_data('select nama_perusahaan, nama, masa from tb_user u, p3k_petugas i where i.id_user=u.id_tb_user and i.masa>sysdate() ')->result(),
+   
     ];
 
     $this->load->view('template', $data);
@@ -223,8 +239,9 @@ class Disnaker extends CI_Controller
       'content' => 'Admin/Disnaker/detail_pengaduan',
       'footer' => 'Admin/Layouts_admin/footer',
       'pengawas' => $this->M_disnaker->d_pengawas($this->session->userdata('id_user'))->result(),
-      'data_pengawas' => $this->M_disnaker->lihat_pengawas($this->session->userdata('id_user'))->result(),
+      //'data_pengawas' => $this->M_disnaker->lihat_pengawas($this->session->userdata('id_user'))->result(),
       'data_pengaduan' => $this->M_disnaker->lihat_detail_pengaduan($this->input->get('id'))->result(),
+      'data_pengawas' => $this->M_disnaker->lihat_data('Select * from data_pengawas')->result(),
 
     ];
 
@@ -245,7 +262,7 @@ class Disnaker extends CI_Controller
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/daftar_pengawas',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_pengawas' => $this->M_disnaker->lihat_pengawas($this->session->userdata('id_user'))->result(),
+      'data_pengawas' => $this->M_disnaker->lihat_data('Select * from data_pengawas')->result(),
 
     ];
 
@@ -271,14 +288,27 @@ class Disnaker extends CI_Controller
 
   public function simpan_pengawas()
   {
-    $data = array(
+    $data1 = array(
+      
+      'email' => $this->input->post('email'),
+      'username' => $this->input->post('username'),
+      'password' => $this->input->post('password'),
+      'level' => '5',
+
+    );
+    
+    $this->M_disnaker->register($data1);
+
+    $data2 = [
       'nama' => $this->input->post('nama'),
       'jabatan' => $this->input->post('jabatan'),
       'no_telp' => $this->input->post('no_telp'),
-      'email' => $this->input->post('email'),
-      'id_user' => $this->session->userdata('id_user'),
-    );
-    $this->M_disnaker->simpan_pengawas($data);
+      'email' => $this->input->post('email'),      
+      'id_user' =>  $this->M_disnaker->get_id_masyarakat()->result()[0]->id_tb_user,
+    ];
+    $this->M_disnaker->simpan_pengawas($data2);
+
+
     $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
     redirect('index.php/Disnaker/daftar_pengawas');
   }
@@ -300,7 +330,7 @@ class Disnaker extends CI_Controller
 
     //mail($to, $subject, $txt, $headers);
 
-    $config['upload_path']          = './upload/upload_file_pendukung';
+    $config['upload_path']          = './upload/upload_file_spt';
     $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
     $config['max_size']             = 10000;
     $config['max_width']            = 3000;
@@ -320,9 +350,9 @@ class Disnaker extends CI_Controller
 
     $data = [
       'status' => 'Diterima',
-      'keterangan' => $this->input->post('id_pengaduan'),
+      'keterangan' => $this->input->post('keterangan'),
       'file_spt' => $berkas,
-      'no_spt' => $this->input->post('id_pengaduan'),
+      'no_spt' => $this->input->post('nomor_spt'),
       'id_pengawas' => $this->input->post('id_pengawas'),
     ];
     $id_pengaduan = $this->input->post('id_pengaduan');
@@ -333,16 +363,14 @@ class Disnaker extends CI_Controller
 
   public function aksi_pengaduan_ditolak()
   {
-    
-
 
     $data = [
       'status' => 'Ditolak',
-      
     ];
     $id_pengaduan = $this->input->get('id');
+    var_dump($id_pengaduan);
     $this->M_disnaker->ubah_pengaduan(['id_pengaduan' => $id_pengaduan], $data);
     $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-    redirect('index.php/Disnaker/daftar_pengaduan');
+   redirect('index.php/Disnaker/daftar_pengaduan');
   }
 }

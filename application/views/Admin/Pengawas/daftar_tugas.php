@@ -16,43 +16,49 @@
                                 <h4 class="m-t-0 header-title"><b>Daftar Tugas</b></h4>
                                 <table id="datatable" class="table table-striped table-bordered">
                                 <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Judul Pengaduan</th>
+                                    <!-- <th>Jenis Pengaduan</th> -->
+                                    <th>Nama Perusahaan</th>
+                                   
+                                    <th>No.SPT</th>
+                                    <th>Tanggal Pengaduan</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                    <!-- <th>Aksi</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($data_tugas as $key) { ?>
                                     <tr>
-                                        <th>#</th>
-                                        <th>Nama Pengadu</th>
-                                        <th>Jenis</th>
-                                        <th>Tanggal</th>
-                                        <th>No.SPT</th>
-                                        <th>Status</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <th>1</th>
-                                        <th>Roy Achmad</th>
-                                        <td>Kelompok</td>
-                                        <td>19/03/2021</td>
-                                        <td>093725172-SPT</td>
-                                        <td><span class="label label-primary">Tindak Lanjut</span></td>
+                                        <td><?= $key->nama ?></td>
+                                        <td><?= $key->judul ?></td>
+                                        <td><?= $key->nama_perusahaan ?></td>
+                                        
+                                        <td><?= $key->no_spt ?></td>
+                                        <td><?= $key->tanggal ?></td>
                                         <td>
-                                        <a href="<?= site_url() ?>Pengawas/detail_tugas"><button class="btn btn-warning">Detail</button></a>
-                                        </td>
-                                    </tr>
 
-                                    <tr>
-                                        <th>2</th>
-                                        <th>Achmad Aziz</th>
-                                        <td>Individu</td>
-                                        <td>11/02/2021</td>
-                                        <td>09376632-SPT</td>
-                                        <td><span class="label label-inverse">Selesai</span></td>
-                                        <td>
-                                        <button class="btn btn-warning">Detail</button></a>
+                                            <?php if ($key->status == null) { ?>
+                                                <span class="badge badge-warning">Menunggu</span>
+                                            <?php } else if ($key->status == "Diterima") { ?>
+                                                <span class="badge badge-primary">Diterima</span>
+                                            <?php } else if ($key->status == "Ditolak") { ?>
+                                                <span class="badge badge-danger">Ditolak</span>
+                                            <?php } else { ?>
+                                                <span class="badge badge-success">Selesai</span>
+                                            <?php } ?>
                                         </td>
+                                         <td> 
+                                        <a class="btn btn-xs btn-info" href="<?= base_url() . 'index.php/Pengawas/detail_tugas?id=' . $key->id_pengaduan ?>" ><i class="icon-eye"></i>Detail Tugas</a>
+                                    </td> 
                                     </tr>
+                                <?php } ?>
 
-                                </tbody>
+
+
+                            </tbody>
                             </table>
                             </div>
 

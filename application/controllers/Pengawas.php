@@ -5,10 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Pengawas extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
-		$this->load->model('M_home');
-   $this->load->model('M_admin');
+	
    $this->load->model('M_pengawas');
-   $this->load->model('M_Disnaker');
+   
     $this->load->helper('url');
   }
 
@@ -26,6 +25,7 @@ class Pengawas extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Pengawas/daftar_tugas',
       'footer' => 'Admin/Layouts_admin/footer',
+      'data_tugas' =>$this->M_pengawas->lihat_data('select p.* from pengaduan p, data_pengawas w where p.id_pengawas=w.id_pengawas and w.id_user='.$this->session->userdata('id_user'))->result(),
       
        ];
 
@@ -46,8 +46,12 @@ class Pengawas extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Pengawas/detail_tugas',
       'footer' => 'Admin/Layouts_admin/footer',
-      'detail_tindakan' => $this->M_pengawas->lihat_tindakan()->result(),
-       ];
+//      'detail_tindakan' => $this->M_pengawas->lihat_tindakan()->result(),
+      'data_pengaduan' => $this->M_pengawas->lihat_data("SELECT p.*, w.nama as nama_pengawas FROM pengaduan p LEFT JOIN data_pengawas w ON p.id_pengawas=w.id_pengawas WHERE p.id_pengaduan=".$this->input->get('id'))->result(),
+      'data_tindakan' => $this->M_pengawas->lihat_data("SELECT * FROM tb_tindakan WHERE id_pengaduan=".$this->input->get('id'))->result(),
+     
+   
+    ];
 
     $this->load->view('template', $data);
     
