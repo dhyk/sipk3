@@ -80,6 +80,16 @@ class M_disnaker extends CI_Model
 	   return $query;
 	}
 
+   function lihat_detail_pengaduan($id){
+		$this->db->select('*');
+		$this->db->from('pengaduan');
+      $this->db->join('tb_user_pengadu','pengaduan.id_user=tb_user_pengadu.id_user');
+    $this->db->where(['id_pengaduan'=>$id]);
+      $query = $this->db->get();
+
+	   return $query;
+	}
+
 
   //}
 

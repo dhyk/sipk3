@@ -210,6 +210,8 @@ class Disnaker extends CI_Controller {
     if($this->session->userdata('level')!='1'){
       redirect('index.php/Home');
     }
+
+
   
     $data = [
 
@@ -220,7 +222,7 @@ class Disnaker extends CI_Controller {
       'footer' => 'Admin/Layouts_admin/footer',
       'pengawas' => $this->M_disnaker->d_pengawas($this->session->userdata('id_user'))->result(),
       'data_pengawas'=> $this->M_disnaker->lihat_pengawas($this->session->userdata('id_user'))->result(),
-      //'data_sertifikat'=> $this->M_disnaker->lihat_data_sertifikat($this->session->userdata('id_user'))->result(),
+      'data_pengaduan'=> $this->M_disnaker->lihat_detail_pengaduan($this->input->get('id'))->result(),
       
     ];
 
