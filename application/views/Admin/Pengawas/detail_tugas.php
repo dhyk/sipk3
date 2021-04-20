@@ -85,7 +85,7 @@
 
                                                     <div class="table-responsive">
                                                         <table  id="datatable" class="table table-striped table-bordered">
-                                                            <a href="<?= site_url().'Pengawas/tambah_tindakan?id'.$data_pengaduan[0]->id_pengaduan?>">
+                                                            <a href="<?= site_url().'Pengawas/tambah_tindakan?id='.$data_pengaduan[0]->id_pengaduan.'&pws='.$data_pengaduan[0]->id_pengawas?>">
                                                                 <button class="btn btn-success">Tambah Tindakan</button></a> <br>
                                                             <thead>
                                                                 <tr>
@@ -114,7 +114,7 @@
                                                                         <td>
                                                                            
 
-                                                                            <a href="<?= base_url().'Pengawas/hapus_tindakan?id='.$key->id_tindakan?>"><i class="ion-trash-a"></i>Hapus</a>
+                                                                            <a href="<?= base_url().'Pengawas/hapus_tindakan?id='.$key->id_tindakan.'&pd='.$data_pengaduan[0]->id_pengaduan?>"><i class="ion-trash-a"></i>Hapus</a>
                                                                         </td>
                                                                     </tr>
                                                                     <?php $i++;

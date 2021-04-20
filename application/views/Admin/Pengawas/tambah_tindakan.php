@@ -75,13 +75,13 @@
 											<div class="form-group">
 											<label class="col-md-2 control-label"></label>
 												<div class="col-md-10">
-													<input type="hidden" name="id_pengawas" value="<?= $id_pengawas[0]->id_pengawas ?>">
+													<input type="hidden" name="id_pengawas" value="<?= $id_pengawas ?>">
 												</div>
 											</div>
 											<div class="form-group">
 											<label class="col-md-2 control-label"></label>
 												<div class="col-md-10">
-													<input type="hidden" name="id_pengaduan" value="<?= $data_pengaduan[0]->id_pengaduan?>">
+													<input type="hidden" name="id_pengaduan" value="<?= $id_pengaduan?>">
 												</div>
 											</div>
 

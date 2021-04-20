@@ -71,6 +71,8 @@ class Pengawas extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Pengawas/tambah_tindakan',
       'footer' => 'Admin/Layouts_admin/footer',
+      'id_pengaduan' => $this->input->get('id'),
+      'id_pengawas' => $this->input->get('pws'),
        ];
 
     $this->load->view('template', $data);
@@ -109,8 +111,15 @@ class Pengawas extends CI_Controller {
       );
       $this->M_pengawas->simpan_tindakan($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
-      redirect('index.php/Pengawas/detail_tugas');
+      redirect('index.php/Pengawas/detail_tugas?id='.$this->input->post('id_pengaduan'));
     }
+  }
+
+  public function hapus_tindakan(){
+
+    $this->M_pengawas->hapus_tindakan($this->input->get('id'));
+    $this->session->set_flashdata('flash', 'Data Behasil Dihapus');
+    redirect('index.php/Pengawas/detail_tugas?id='.$this->input->get('pd'));
   }
 
   

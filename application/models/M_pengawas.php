@@ -41,5 +41,10 @@ class M_pengawas extends CI_Model {
 	function lihat_data($sql){
 		return $this->db->query($sql);
 	}
+
+	function hapus_tindakan($id){
+		$this->db->where('id_tindakan', $id);
+		$this->db->delete('tb_tindakan');
+	}
 	
 }
