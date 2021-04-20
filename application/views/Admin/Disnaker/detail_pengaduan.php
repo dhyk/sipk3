@@ -60,7 +60,7 @@
                                     <label class="col-md-2 control-label">Nama Pengawas</label>
                                     <div class="col-md-10">
                                         <select class="form-control" name="id_pengawas" required>
-                                            <option>-</option>
+                                       
                                             <?php foreach ($data_pengawas as $key) { ?>
                                                 <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
                                             <?php } ?>
@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Nomor SPT</label>
                                     <div class="col-md-10">
-                                        <input type="number" class="form-control" name="nomor_sah" value="">
+                                        <input type="number" class="form-control" name="nomor_sah" value="<?= $data_pengaduan[0]->no_spt ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -86,7 +86,7 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Keterangan</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control" name="keterangan" value="">
+                                        <input type="text" class="form-control" name="keterangan" value="<?= $data_pengaduan[0]->keterangan ?>>
                                     </div>
                                 </div>
                                 <div class="form-group">
