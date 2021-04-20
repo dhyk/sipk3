@@ -288,6 +288,17 @@ class Disnaker extends CI_Controller {
     redirect('index.php/Disnaker/daftar_pengawas');
   }
 
+  public function aksi_pengaduan_pengawas(){
+      $to = "somebody@example.com ";
+      $subject = "My subject";
+      $txt = "Hello world!";
+      $headers = "From: webmaster@example.com" . "\r\n" .
+      "CC: somebodyelse@example.com";
+
+mail($to,$subject,$txt,$headers);
+
+  }
+
 
 
 }

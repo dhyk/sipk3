@@ -10,7 +10,7 @@
                     <div class="row">
                         <div class="card-box">
                             <h4 class="header-title m-t-0 m-b-30">Detail Pengaduan</h4>
-                            <?php echo form_open_multipart('index.php/Admin/aksi_upload_smk3'); ?>
+                            <?php echo form_open_multipart('index.php/Disnaker/aksi_pengaduan_pengawas'); ?>
                             <div class="form-horizontal">
 
                                 <div class="form-group">
