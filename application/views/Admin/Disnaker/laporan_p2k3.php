@@ -21,25 +21,24 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nama Perusahan</th>
-                                        <th>Jenis Kadaluwarsa</th>
+                                        <th>Nama Laporan</th>
                                         <th>Tanggal Kadaluwarsa</th>
                                         <th>File Laporan</th>
-                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                                    <tr>
-                                        <th></th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-
-                                        </td>
+                                <?php $i = 0;
+                                            foreach ($data_laporan_p2k3 as $key) {
+                                                $i++; ?>
+                                    <tr>     
+                                        <th><?= $i ?></th>
+                                        <td><?= $key->nama_perusahaan ?></td>
+                                        <td><?= $key->nama ?></td>
+                                        <td><?= $key->tanggal_laporan ?></td>
+                                        <td> <a target="_blank" href="<?php echo base_url()."upload/upload_berkas_laporan_p2k3/".$key->file; ?>">Lihat Laporan</a></td>
+                                       
                                     </tr>
-
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>

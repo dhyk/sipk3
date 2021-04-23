@@ -11,9 +11,9 @@
                                 <div class="card-box table-responsive">
                                     <div class="table-responsive">
                                        
-                                    <table class="table m-0">
-                                                       <a href="<?=site_url ()?>K3mekanik/tambah_bejana">
-                                                        <button class="btn btn-info">Tambah Data</button></a> 
+                                    <table id="datatable" class="table table-striped table-bordered">
+                                                       <!-- <a href="<?=site_url ()?>K3mekanik/tambah_bejana">
+                                                        <button class="btn btn-info">Tambah Data</button></a>  -->
                                                         <thead>
                                                            <tr>
                                                             <th>#</th> 

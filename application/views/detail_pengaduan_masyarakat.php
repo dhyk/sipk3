@@ -116,14 +116,21 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label">Dokumen Pengaduan </label>
                         <div class="col-md-10">
-                            <a href="<?php echo base_url() . 'upload/upload_file_pendukung/' . $data_pengaduan[0]->file_pengaduan ?>" target="blank_"> >>klik disini<< </a>
+                            <a href="<?php echo base_url() . 'upload/upload_berkas_pengaduan/' . $data_pengaduan[0]->file_pengaduan ?>" target="blank_"> >>klik disini<< </a>
                         </div>
                     </div>
                     <br />
                     <div class="form-group">
                         <label class="col-md-2 control-label">Nama Pengawas</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="perihal" value="<?= $data_pengaduan[0]->nama_pengawas ?>" readonly="">
+                            <input type="text" class="form-control" name="nama_pengawas" value="<?= $data_pengaduan[0]->nama_pengawas ?>" readonly="">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Nama Pengawas 2</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="nama_pengawas2" value="<?= $data_pengaduan[0]->nama_pengawas2 ?>" readonly="">
 
                         </div>
                     </div>
@@ -148,7 +155,7 @@
                                 <tbody>
                                     <?php foreach ($data_tindakan as $key) { ?>
                                         <tr>
-                                            <td><?= $key->tangal_tindakan ?></td>
+                                            <td><?= $key->tanggal_tindakan ?></td>
                                             <td><?= $key->detail ?></td>
 
 

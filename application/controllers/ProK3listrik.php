@@ -15,9 +15,9 @@ class ProK3listrik extends CI_Controller {
   public function index()
   {
 
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   rdirect('index.php/Home');
+    // }
     $isi=$this->M_listrik->lihat_k3listrik($this->session->userdata('id_perusahaan'))->result();
     $flag= $this->input->get('edit');
     if($isi==null)$flag=1;
@@ -39,9 +39,9 @@ class ProK3listrik extends CI_Controller {
   public function izin_listrik()
   {
 
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
 
@@ -60,9 +60,9 @@ class ProK3listrik extends CI_Controller {
   public function izin_petir()
   {
 
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
 
@@ -81,9 +81,9 @@ class ProK3listrik extends CI_Controller {
   public function ak3()
   {
 
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
 
@@ -102,9 +102,9 @@ class ProK3listrik extends CI_Controller {
   public function pemeriksaan_listrik()
   {
 
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
 
@@ -123,9 +123,9 @@ class ProK3listrik extends CI_Controller {
   public function pemeriksaan_petir()
   {
 
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
 
@@ -144,9 +144,9 @@ class ProK3listrik extends CI_Controller {
   public function teknisi()
   {
 
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
 
@@ -165,9 +165,9 @@ class ProK3listrik extends CI_Controller {
 
   public function tambah_teknisi()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
           
@@ -183,9 +183,9 @@ class ProK3listrik extends CI_Controller {
 
   public function tambah_ak3_listrik()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -200,9 +200,9 @@ class ProK3listrik extends CI_Controller {
 
   public function tambah_kelayakan_listrik()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
            
@@ -218,9 +218,9 @@ class ProK3listrik extends CI_Controller {
 
   public function tambah_kelayakan_petir()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -235,9 +235,9 @@ class ProK3listrik extends CI_Controller {
 
   public function tambah_rekaman_pemeriksaan_listrik()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
 
@@ -253,9 +253,9 @@ class ProK3listrik extends CI_Controller {
 
   public function tambah_rekaman_pemeriksaan_petir()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
            

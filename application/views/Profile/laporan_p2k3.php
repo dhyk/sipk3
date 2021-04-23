@@ -7,10 +7,10 @@
 <div class="col-md-12">
     <br />
     <div class="card-box">
-        <h4 class="header-title m-t-0 m-b-30">Laporan P2K3<span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small></span></h4>
+        <h4 class="header-title m-t-0 m-b-30">Laporan P2K3 </h4>
         <div class="card-box table-responsive">
                 <div class="table-responsive">
-                        <table class="table m-0">
+                        <table id="datatable" class="table table-striped table-bordered">
                         <div class="form-group m-b-0">
  												<!-- <div class="col-sm-offset-0 col-sm-12">
                                                      <a target="_blank" href="<?php echo base_url()."upload/template_p2k3/template_lap_p2k3.pdf" ?>"><button class="btn btn-orange waves-effect waves-light "><i class="glyphicon glyphicon-cloud-download"></i> Download Template Laporan</button></a>

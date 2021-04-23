@@ -15,9 +15,9 @@ class ProK3lingker extends CI_Controller {
   public function index()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -42,9 +42,9 @@ class ProK3lingker extends CI_Controller {
   public function jurulas()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -63,9 +63,9 @@ class ProK3lingker extends CI_Controller {
   public function ketinggian()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -84,9 +84,9 @@ class ProK3lingker extends CI_Controller {
   public function ruang()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -105,9 +105,9 @@ class ProK3lingker extends CI_Controller {
   public function ak3()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -126,9 +126,9 @@ class ProK3lingker extends CI_Controller {
   public function rekaman()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -147,9 +147,9 @@ class ProK3lingker extends CI_Controller {
   public function higiene()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -168,9 +168,9 @@ class ProK3lingker extends CI_Controller {
   public function pemeriksaan()
   {
 	
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
     
     $data = [
            
@@ -189,9 +189,9 @@ class ProK3lingker extends CI_Controller {
 
   public function tambah_juru_las()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
            
@@ -208,9 +208,9 @@ class ProK3lingker extends CI_Controller {
 
   public function tambah_ak3_lingker()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
           
@@ -227,9 +227,9 @@ class ProK3lingker extends CI_Controller {
 
   public function tambah_pemeriksaan()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
        
@@ -245,9 +245,9 @@ class ProK3lingker extends CI_Controller {
 
   public function tambah_pengukuran_lingker()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
          

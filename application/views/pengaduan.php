@@ -84,7 +84,8 @@
                                     <th>Judul Pengaduan</th>
                                     <!-- <th>Jenis Pengaduan</th> -->
                                     <th>Nama Perusahaan</th>
-                                    <th>Nama Pengawas</th>
+                                    <th>Nama Pengawas 1</th>
+                                    <th>Nama Pengawas 2</th>
                                     <th>No.SPT</th>
                                     <th>Tanggal Pengaduan</th>
                                     <th>Status</th>
@@ -99,6 +100,7 @@
                                         <td><?= $key->judul ?></td>
                                         <td><?= $key->nama_perusahaan ?></td>
                                         <td><?= $key->nama_pengawas ?></td>
+                                        <td><?= $key->nama_pengawas2 ?></td>
                                         <td><?= $key->no_spt ?></td>
                                         <td><?= $key->tanggal ?></td>
                                         <td>

@@ -26,8 +26,9 @@ class Pengaduan extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'pengaduan',
       'footer' => 'layouts/footer',
-      'data' => $this->M_pengaduan->lihat_data("SELECT p.*, w.nama as nama_pengawas FROM pengaduan p LEFT JOIN data_pengawas w ON p.id_pengawas=w.id_pengawas WHERE p.id_user=".$this->session->userdata('id_user'))->result(),
-       ];
+      'data' => $this->M_pengaduan->lihat_data("SELECT p.*, w.nama as nama_pengawas,w2.nama as nama_pengawas2 FROM pengaduan p LEFT JOIN data_pengawas w ON p.id_pengawas=w.id_pengawas LEFT JOIN data_pengawas w2 ON p.id_pengawas2=w2.id_pengawas WHERE p.id_user=".$this->session->userdata('id_user'))->result(),
+  
+    ];
 //var_dump($data);
     $this->load->view('template', $data);
     
@@ -145,7 +146,7 @@ class Pengaduan extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'detail_pengaduan_masyarakat',
       'footer' => 'layouts/footer',
-      'data_pengaduan' => $this->M_pengaduan->lihat_data("SELECT p.*, w.nama as nama_pengawas FROM pengaduan p LEFT JOIN data_pengawas w ON p.id_pengawas=w.id_pengawas WHERE p.id_pengaduan=".$this->input->get('id'))->result(),
+      'data_pengaduan' => $this->M_pengaduan->lihat_data("SELECT p.*, w.nama as nama_pengawas, w2.nama as nama_pengawas2, d.no_hp FROM pengaduan p LEFT JOIN data_pengawas w ON p.id_pengawas=w.id_pengawas LEFT JOIN data_pengawas w2 ON p.id_pengawas2=w2.id_pengawas LEFT JOIN data_pengawas w2 ON p.id_pengawas2=w2.id_pengawas JOIN pengadu d on p.id_user=d.id_user  WHERE p.id_pengaduan t.no_telp=".$this->input->get('id'))->result(),
       'data_tindakan' => $this->M_pengaduan->lihat_data("SELECT * FROM tb_tindakan WHERE id_pengaduan=".$this->input->get('id'))->result(),
      
 

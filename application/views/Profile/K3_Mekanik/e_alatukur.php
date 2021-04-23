@@ -10,9 +10,9 @@
                                 <h4 class="header-title m-t-0 m-b-30">Daftar Alat Ukur<span class="help-block"><small>*Pastikan Data yang anda masukkan benar</small></span></h4>
                                 <div class="card-box table-responsive">
                                     <div class="table-responsive">
-                                    <table class="table m-0">
-                                        <a href="<?=site_url ()?>K3mekanik/tambah_alat_ukur">
-                                            <button class="btn btn-info">Tambah Data</button></a> 
+                                    <table id="datatable" class="table table-striped table-bordered">
+                                        <!-- <a href="<?=site_url ()?>K3mekanik/tambah_alat_ukur">
+                                            <button class="btn btn-info">Tambah Data</button></a>  -->
                                             <thead>
                                                 <tr>
                                                    <th>#</th>

@@ -20,7 +20,14 @@
                                  <div class="form-group">
  												<label class="col-md-2 control-label">Nama Pengawas</label>
  												<div class="col-md-10">
- 													<input type="text" class="form-control" placeholder="Masukkan Nama Pengawas" name="nama" required><br><?//php echo form_error('judul'); ?>
+ 													<input type="text" class="form-control" placeholder="Masukkan Nama Pengawas" name="nama" required><?//php echo form_error('judul'); ?>
+ 												</div>
+ 											</div>
+
+											 <div class="form-group">
+ 												<label class="col-md-2 control-label">NIP</label>
+ 												<div class="col-md-10">
+ 													<input type="number" class="form-control" placeholder="Masukkan NIP" name="nip" required><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
 
@@ -28,33 +35,33 @@
  											<div class="form-group">
  												<label class="col-md-2 control-label">Jabatan</label>
  												<div class="col-md-10">
- 													<input type="text" class="form-control" placeholder="Masukkan Jabatan" name="jabatan" required><br><?//php echo form_error('judul'); ?>
+ 													<input type="text" class="form-control" placeholder="Masukkan Jabatan" name="jabatan" required><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
 
  											<div class="form-group">
  												<label class="col-md-2 control-label">Nomor Telepon / WA</label>
  												<div class="col-md-10">
- 													<input type="number" class="form-control" placeholder="Masukkan Nomor" name="no_telp" required><br><?//php echo form_error('judul'); ?>
+ 													<input type="number" class="form-control" placeholder="Masukkan Nomor" name="no_telp" required><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
 
  											<div class="form-group">
  												<label class="col-md-2 control-label">Email</label>
  												<div class="col-md-10">
- 													<input type="text" class="form-control" placeholder="Masukkan Email" name="email" required><br><?//php echo form_error('judul'); ?>
+ 													<input type="text" class="form-control" placeholder="Masukkan Email" name="email" required><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
 											 <div class="form-group">
  												<label class="col-md-2 control-label">username</label>
  												<div class="col-md-10">
- 													<input type="text" class="form-control" placeholder="Masukkan Email" name="username" required><br><?//php echo form_error('judul'); ?>
+ 													<input type="text" class="form-control" placeholder="Masukkan Email" name="username" required><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
 											 <div class="form-group">
  												<label class="col-md-2 control-label">password</label>
  												<div class="col-md-10">
- 													<input type="text" class="form-control" placeholder="Masukkan Email" name="password" required><br><?//php echo form_error('judul'); ?>
+ 													<input type="password" class="form-control" placeholder="Masukkan Password" name="password" required><?//php echo form_error('judul'); ?>
  												</div>
  											</div>
  											

@@ -16,9 +16,9 @@ class ProP3K extends CI_Controller {
   public function index()
   {
 		
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $isi=$this->M_p3k->lihat_p3k($this->session->userdata('id_perusahaan'))->result();
     
@@ -44,9 +44,9 @@ class ProP3K extends CI_Controller {
   public function petugas()
   {
 		
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
    
     $data = [
          
@@ -66,9 +66,9 @@ class ProP3K extends CI_Controller {
 
   public function tambah_petugas()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
             // 'username'= $session_data'username',

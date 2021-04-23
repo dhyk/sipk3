@@ -16,6 +16,7 @@
                                                 <tr>
                                                     <th>#</th>
                                                     <th>Nama</th>
+                                                    <th>NIP</th>
                                                     <th>Jabatan</th>
                                                     <th>Nomor Telepon / WA</th>
                                                     <th>Email</th>
@@ -30,6 +31,7 @@
                                                     <tr>
                                                         <th scope="row"><?php echo $i; ?></th>
                                                         <td><?php echo $key->nama; ?></td>
+                                                        <td><?php echo $key->nip; ?></td>
                                                         <td><?php echo $key->jabatan; ?></td>
                                                         <td><?php echo $key->no_telp; ?></td>
                                                         <td><?php echo $key->email; ?></td>

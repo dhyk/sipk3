@@ -104,11 +104,7 @@
                     </ul>
 
                     <!-- Right(Notification) -->
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <button class="btn btn-danger">Kembali</button>
-
-                    </ul> <!-- end navbar-right -->
+                    <!--  end navbar-right -->
 
                 </div><!-- end container -->
             </div><!-- end navbar -->
@@ -176,9 +172,9 @@
                       
                         <!-- -------------------------------------------------------------------------------- -->
 
-                        <li>
+                        <!-- <li>
                             <a href="<?php echo site_url() ?>ProP2covid" class="waves-effect"><i class=" ti ti-joomla"></i><span> P2 COVID </span></a>
-                        </li>
+                        </li> -->
 
                         
 
@@ -250,11 +246,11 @@
                         </li>
                         <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
-                        <?php if($this->session->userdata('p')[0]->p2=='1'){?>
+                        <!-- <?php if($this->session->userdata('p')[0]->p2=='1'){?>
                         <li>
                             <a href="https://jatim.chemsi.id/" class="waves-effect" target="_blank"><i class=" ion ion-earth "></i><span> Jatim Chemsi </span></a>
                         </li>
-                           <?php } ?>
+                           <?php } ?> -->
                         <!-- -------------------------------------------------------------------------------- -->
                         <?php if($this->session->userdata('p')[0]->p3=='1'){?>
                         <li class="sidebar-item">
@@ -305,8 +301,7 @@
                         <?php } ?>
                         <!-- -------------------------------------------------------------------------------- -->
                         <!-- -------------------------------------------------------------------------------- -->
-                        <?php if(($this->session->userdata('p')[0]->p4=='1')||($this->session->userdata('p')[0]->p5=='1')||($this->session->userdata('p')[0]->p9=='1')
-                        ||($this->session->userdata('p')[0]->p6=='1')||($this->session->userdata('p')[0]->p7=='1')||($this->session->userdata('p')[0]->p8=='1')){?>
+                        <?php if($this->session->userdata('p')[0]->p4=='1'){?>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                                 <i data-feather="file-text" class="mdi mdi-engine-outline"></i>
@@ -314,48 +309,42 @@
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 
-                            <?php if($this->session->userdata('p')[0]->p4=='1'){?>
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>ProK3mekanik/bejana" class="sidebar-link">
                                         <span class="hide-menu">Bejana Bertekanan dan Tangki Timbun</span>
                                     </a>
                                 </li>
-                                <?php } ?>
-                                <?php if($this->session->userdata('p')[0]->p5=='1'){?>
+                               
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>ProK3mekanik/ketel" class="sidebar-link">
                                         <span class="hide-menu">Ketel Uap</span>
                                     </a>
                                 </li>
-                                <?php } ?>
-                                <?php if($this->session->userdata('p')[0]->p6=='1'){?>
+                               
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>ProK3mekanik/tenaga" class="sidebar-link">
                                         <span class="hide-menu">Mesin Tenaga dan Produksi</span>
                                     </a>
                                 </li>
-                                <?php } ?>
-                                <?php if($this->session->userdata('p')[0]->p8=='1'){?>
+                                
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>ProK3mekanik/elevator" class="sidebar-link">
                                         <span class="hide-menu">Elevator dan Eskalator</span>
                                     </a>
                                 </li>
-                                <?php } ?>
-                                <?php if($this->session->userdata('p')[0]->p9=='1'){?>
+                                
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>ProK3mekanik/alatukur" class="sidebar-link">
                                         <span class="hide-menu">Alat Ukur</span>
                                     </a>
                                 </li>
-                                <?php } ?>
-                                <?php if($this->session->userdata('p')[0]->p7=='1'){?>
+                               
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>ProK3mekanik/alatangkat" class="sidebar-link">
                                         <span class="hide-menu">Alat Angkat dan Angkut</span>
                                     </a>
                                 </li>
-                                <?php } ?>
+                              
 
                             </ul>
                         </li>

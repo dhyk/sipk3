@@ -56,11 +56,18 @@
                                         <a href="<?php echo base_url() . 'upload/upload_file_pendukung/' . $data_pengaduan[0]->file_pengaduan ?>" target="blank_"> >>klik disini<< </a>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Nomor Telepon</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" name="nomor_telp" value="<?= $data_pengaduan[0]->no_telp ?>" readonly="">
+                                    </div>
+                                </div>
                                 <br />
                                 <div class="form-group">
-                                    <label class="col-md-2 control-label">Nama Pengawas</label>
+                                    <label class="col-md-2 control-label">Nama Pengawas1</label>
                                     <div class="col-md-10">
                                         <select class="form-control" name="id_pengawas" required>
+                                        <option>---Pilih Pengawas---</option>
                                             <?php foreach ($data_pengawas as $key) {
                                                 if ($key->id_pengawas == $data_pengaduan[0]->id_pengawas) { ?>
                                                     <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
@@ -69,6 +76,24 @@
 
                                             <?php foreach ($data_pengawas as $key) { ?>
                                                 <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
+                                            <?php } ?>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Nama Pengawas2</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" name="id_pengawas2" required>
+                                        <option>---Pilih Pengawas---</option>
+                                            <?php foreach ($data_pengawas as $key) {
+                                                if ($key->id_pengawas == $data_pengaduan[0]->id_pengawas2) { ?>
+                                                    <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
+                                            <?php }
+                                            } ?>
+
+                                            <?php foreach ($data_pengawas as $key) { ?>
+                                                <option value="<?php echo $key->id_pengawas2; ?>"><?php echo $key->nama; ?></option>
                                             <?php } ?>
                                         </select>
 

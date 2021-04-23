@@ -16,9 +16,9 @@ class ProK3mekanik extends CI_Controller {
 
   public function bejana()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -35,9 +35,9 @@ class ProK3mekanik extends CI_Controller {
 
   public function ketel()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -54,9 +54,9 @@ class ProK3mekanik extends CI_Controller {
 
   public function tenaga()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -73,9 +73,9 @@ class ProK3mekanik extends CI_Controller {
 
   public function elevator()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -92,9 +92,9 @@ class ProK3mekanik extends CI_Controller {
 
   public function alatukur()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -111,9 +111,9 @@ class ProK3mekanik extends CI_Controller {
 
   public function alatangkat()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
   
     $data = [
       'sidebar'=>'Profile/Layouts_admin/sidebarnew',
@@ -136,9 +136,9 @@ class ProK3mekanik extends CI_Controller {
 
   public function tambah_mesin()
   {
-    if($this->session->userdata('level')!='2'){
-      redirect('index.php/Home');
-    }
+    // if($this->session->userdata('level')!='2'){
+    //   redirect('index.php/Home');
+    // }
 
     $data = [
             // 'username'= $session_data'username',

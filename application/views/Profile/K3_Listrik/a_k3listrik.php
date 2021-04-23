@@ -84,14 +84,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-sm-offset-10 ">
-                                               
-                                                    <input type="submit" value="Simpan" class="btn btn-success">
-                                               
-                                                    <a href="<?php echo base_url().'index.php/K3listrik?edit=1'; ?>" class="btn btn-warning waves-effect waves-light">Ubah</a>
-                                                    
-                                               
-                                            </div>
+                                           
 
 
                                         </form>

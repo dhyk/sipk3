@@ -39,7 +39,7 @@
                                         <th><?= $i ?></th>
                                         <td><?= $key->nama ?></td>
                                         <td><?= $key->judul ?></td>
-                                        <td><a href="<?php echo base_url().'upload/upload_file_pendukung/'.$key->file_pengaduan; ?>" target="blank_"> File Pendukung</a></td>
+                                        <td><a href="<?php echo base_url().'upload/upload_berkas_pengaduan/'.$key->file_pengaduan; ?>" target="blank_"> File Pendukung</a></td>
                                         <td><?= $key->tanggal ?></td>
                                         <td>
                                            
