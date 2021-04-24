@@ -25,7 +25,7 @@ class Pengawas extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Pengawas/daftar_tugas',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_tugas' =>$this->M_pengawas->lihat_data('select p.* from pengaduan p, data_pengawas w where p.id_pengawas=w.id_pengawas and w.id_user='.$this->session->userdata('id_user'))->result(),
+      'data_tugas' =>$this->M_pengawas->lihat_data('select p.* from pengaduan p, data_pengawas w where p.id_pengawas=w.id_pengawas or p.id_pengawas2=w.id_pengawas and w.id_user='.$this->session->userdata('id_user'))->result(),
       
        ];
 
