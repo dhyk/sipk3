@@ -492,6 +492,9 @@ a:focus {
 .bg-teal {
   background-color: #26a69a !important;
 }
+.bg-green {
+  background-color: #0f510a !important;
+}
 .bg-white {
   background-color: #ffffff !important;
 }
@@ -541,6 +544,9 @@ a:focus {
 .text-teal {
   color: #26a69a !important;
 }
+.text-green {
+  color: #0f510a  !important;
+}
 .text-dark {
   color: #313a46 !important;
 }
@@ -587,6 +593,9 @@ a:focus {
 }
 .label-teal {
   background-color: #26a69a;
+}
+.label-green {
+  background-color: #0f510a;
 }
 .label-inverse {
   background-color: #3b3e47;
@@ -642,6 +651,9 @@ a:focus {
 }
 .badge-teal {
   background-color: #26a69a;
+}
+.badge-green {
+  background-color: #0f510a;
 }
 .badge-inverse {
   background-color: #3b3e47;

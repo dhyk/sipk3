@@ -20,6 +20,8 @@
                                                     <th>Jabatan</th>
                                                     <th>Nomor Telepon / WA</th>
                                                     <th>Email</th>
+                                                    <th>Username</th>
+                                                    <th>Password</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -35,6 +37,8 @@
                                                         <td><?php echo $key->jabatan; ?></td>
                                                         <td><?php echo $key->no_telp; ?></td>
                                                         <td><?php echo $key->email; ?></td>
+                                                        <td><?php echo $key->username;?></td>
+                                                        <td><?php echo $key->password;?></td>
                                                         <td>
                                                             <a href="<?php echo base_url() . "index.php/Disnaker/hapus_pengawas?id=" . $key->id_pengawas; ?>"><i class="ion-trash-a"></i>Hapus</a>
                                                         </td>

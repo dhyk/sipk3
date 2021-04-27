@@ -32,7 +32,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Ahli K3 penanggulangan kebakaran</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -44,7 +44,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Petugas peran kebakaran</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -56,7 +56,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Koordinator penanggulangan kebakaran</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -68,7 +68,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Ahli K3 Listrik</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -80,7 +80,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Teknisi listrik</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -92,7 +92,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Ahli K3 lingkungan kerja</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -104,7 +104,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Tenaga kerja di ketinggian</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -116,7 +116,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Tenaga kerja di ruang terbatas</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -128,7 +128,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Juru las</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>
@@ -140,7 +140,7 @@
                                                     <td><?= $key->nama_perusahaan ?></td>
                                                     <td><?= $key->nama ?></td>
                                                     <td>Petugas P3K</td>
-                                                    <td><?= $key->masa_berlaku ?></td>
+                                                    <td class="text-danger"><?= $key->masa_berlaku ?></td>
 
                                                 </tr>
                                             <?php } ?>

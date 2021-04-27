@@ -62,6 +62,8 @@ class M_disnaker extends CI_Model
 
       return $query;
    }
+
+  
    function simpan_pengawas($data){
 		$this->db->insert('data_pengawas', $data);
 	}
@@ -111,6 +113,10 @@ class M_disnaker extends CI_Model
      
       return $query;
    }
+
+   function lihat_data_aduan($sql){
+		return $this->db->query($sql);
+	}
 
    function get_id_masyarakat()
 	{

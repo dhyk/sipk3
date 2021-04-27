@@ -33,7 +33,32 @@ class Disnaker extends CI_Controller
       'kecelakaan' => $this->M_disnaker->hitung_kecelakaan()->result(),
       'perusahaan1' => $this->M_disnaker->hitung_perusahaan()->result(),
       'aduan' => $this->M_disnaker->hitung_aduan()->result(),
+        //sertifikat izin kadaluwarsa
+      'kebakaran_instalasi'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_kebakaran_instalasi i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+     'listrik_listrik'=> $this->M_disnaker->lihat_data('select count(*) as count  from tb_user u, listrik_ijin_listrik i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+     'listrik_petir'=> $this->M_disnaker->lihat_data('select count(*) as count  from tb_user u, listrik_ijin_petir i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+     'mekanik_angkat'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_mekanik_angkat i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_bejana'=> $this->M_disnaker->lihat_data('select count(*) as count  from tb_user u, tb_mekanik_bejana i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_elevator'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_mekanik_elevator i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_ketel'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_mekanik_ketel i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_mesin'=> $this->M_disnaker->lihat_data('select count(*) as count  from tb_user u, tb_mekanik_mesin i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_ukur'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_mekanik_ukur i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+       // sertifikat personel kadaluwarsa
+       'kebakaran_ak3'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_kebakaran_ak3 i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'kebakaran_petugas'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_kebakaran_petugas i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'kebakaran_penanggulangan'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, tb_kebakaran_penanggulangan i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'listrik_ak3'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, listrik_ak3_listrik i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'listrik_teknisi'=> $this->M_disnaker->lihat_data('select  count(*) as count from tb_user u, listrik_teknisi i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'lingker_k3'=> $this->M_disnaker->lihat_data('select  count(*) as count from tb_user u, lingker_k3 i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'lingker_ketinggian'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, lingker_ketinggian i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'lingker_ruang'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, lingker_ruang i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+      'lingker_jurulas'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, lingker_jurulas i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+       'p3k'=> $this->M_disnaker->lihat_data('select count(*) as count from tb_user u, p3k_petugas i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+
+       'status_progres'=> $this->M_disnaker->lihat_data('select count(*) as count from pengaduan WHERE status="Diterima"')->result(),
+       'status_selesai'=> $this->M_disnaker->lihat_data('select count(*) as count from pengaduan WHERE status="Selesai"')->result(),
     ];
+    //var_dump ($data);
 
     $this->load->view('template', $data);
   }
@@ -61,6 +86,7 @@ class Disnaker extends CI_Controller
       'mekanik_ketel'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_ketel i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
       'mekanik_mesin'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_mesin i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
       'mekanik_ukur'=> $this->M_disnaker->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_ukur i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     
     ];
 
     $this->load->view('template', $data);
@@ -264,7 +290,7 @@ class Disnaker extends CI_Controller
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/Disnaker/daftar_pengawas',
       'footer' => 'Admin/Layouts_admin/footer',
-      'data_pengawas' => $this->M_disnaker->lihat_data('Select * from data_pengawas')->result(),
+      'data_pengawas' => $this->M_disnaker->lihat_data('Select * from data_pengawas Join tb_user on tb_user.id_tb_user= data_pengawas.id_user')->result(),
 
     ];
 
@@ -377,4 +403,78 @@ class Disnaker extends CI_Controller
     $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
    redirect('index.php/Disnaker/daftar_pengaduan');
   }
+
+  public function hitung_izin_kadaluwarsa()
+  {
+    if ($this->session->userdata('level') != '1') {
+      redirect('index.php/Home');
+    }
+
+
+    $data = [
+     'sidebar' => 'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/dashboard0',
+      'footer' => 'Admin/Layouts_admin/footer',
+     'kebakaran_instalasi'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa_berlaku from tb_user u, tb_kebakaran_instalasi i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+     'listrik_listrik'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa_berlaku from tb_user u, listrik_ijin_listrik i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() ')->result(),
+     'listrik_petir'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa_berlaku from tb_user u, listrik_ijin_petir i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() ')->result(),
+     'mekanik_angkat'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa from tb_user u, tb_mekanik_angkat i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_bejana'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa from tb_user u, tb_mekanik_bejana i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_elevator'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa from tb_user u, tb_mekanik_elevator i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_ketel'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa from tb_user u, tb_mekanik_ketel i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_mesin'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa from tb_user u, tb_mekanik_mesin i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+     'mekanik_ukur'=> $this->M_disnaker->lihat_data('select count(*) nama_perusahaan, masa from tb_user u, tb_mekanik_ukur i where i.id_user=u.id_tb_user and i.masa<sysdate() ')->result(),
+    ];
+    $this->load->view('template', $data);
+  }
+
+  public function aduan_progres()
+  {
+		//echo "admiinnnn";
+    if($this->session->userdata('level')!='1'){
+      redirect('index.php/Home');
+    }
+
+    $data = [
+        
+      'sidebar'=>'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/daftar_aduan_progres',
+      'footer' => 'Admin/Layouts_admin/footer',
+      'data_tugas' =>$this->M_disnaker->lihat_data_aduan(' SELECT p.*,w.nama as nama_pengawas, u.nama as nama_pengawas2 from pengaduan p, data_pengawas w, data_pengawas u WHERE p.id_pengawas =w.id_pengawas and p.id_pengawas2=u.id_pengawas and p.status="Diterima"')->result(),
+      
+       ];
+
+    $this->load->view('template', $data);
+    
+  }
+
+  public function detail_progres()
+  {
+		//echo "admiinnnn";
+    if($this->session->userdata('level')!='1'){
+      redirect('index.php/Home');
+    }
+
+    $data = [
+        
+      'sidebar'=>'Admin/Layouts_admin/sidebardis',
+      'akun' => $this->session->userdata('username'),
+      'level' => $this->session->userdata('level'),
+      'content' => 'Admin/Disnaker/detail_aduan_progres',
+      'footer' => 'Admin/Layouts_admin/footer',
+//      'detail_tindakan' => $this->M_pengawas->lihat_tindakan()->result(),
+      'data_pengaduan' => $this->M_disnaker->lihat_data(" SELECT p.*,w.nama as nama_pengawas, u.nama as nama_pengawas2 from pengaduan p, data_pengawas w, data_pengawas u WHERE p.id_pengawas =w.id_pengawas and p.id_pengawas2=u.id_pengawas and p.id_pengaduan=".$this->input->get('id'))->result(),
+      'data_tindakan' => $this->M_disnaker->lihat_data("SELECT * FROM tb_tindakan WHERE id_pengaduan=".$this->input->get('id'))->result(),
+     
+   
+    ];
+
+    $this->load->view('template', $data);
+    
+  }
+
 }

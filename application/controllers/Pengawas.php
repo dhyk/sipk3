@@ -109,6 +109,12 @@ class Pengawas extends CI_Controller {
         'id_pengaduan'=> $this->input->post('id_pengaduan'),
         
       );
+      if($this->input->post('status')=='Selesai'){
+        $status = array( 
+          'status' => $this->input->post('status')
+        );
+        $this->M_pengawas->ubah_status($this->input->post('id_pengaduan'),$status);
+      }
       $this->M_pengawas->simpan_tindakan($data);
       $this->session->set_flashdata('flash', 'Data Behasil Disimpan');
       redirect('index.php/Pengawas/detail_tugas?id='.$this->input->post('id_pengaduan'));

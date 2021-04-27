@@ -78,7 +78,7 @@
 
             <!-- LOGO -->
             <div class="topbar-left">
-                <a href="index.html" class="logo"><span>SI<span>PK3</span></span><i class="mdi mdi-layers"></i></a>
+                <a href="#" class="logo"><span>Halo<span class="text-success">K3!</span></span><i class="mdi mdi-layers"></i></a>
                 <!-- Image logo -->
                 <!--<a href="index.html" class="logo">-->
                 <!--<span>-->
@@ -148,9 +148,16 @@
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>Disnaker/daftar_pengaduan" class="sidebar-link">
-                                        <span class="hide-menu">Aduan Norma Ketenagakerjaan</span>
+                                        <span class="hide-menu">Aduan Baru</span>
                                     </a>
                                 </li>
+                               
+                                <li class="sidebar-item">
+                                    <a href="<?php echo site_url() ?>Disnaker/aduan_progres" class="sidebar-link">
+                                        <span class="hide-menu">Aduan Progress</span>
+                                    </a>
+                                </li>
+
                                 <li class="sidebar-item">
                                     <a href="<?php echo site_url() ?>Disnaker/daftar_pengawas" class="sidebar-link">
                                         <span class="hide-menu">Daftar Pengawas</span>

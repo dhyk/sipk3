@@ -78,7 +78,7 @@
 
             <!-- LOGO -->
             <div class="topbar-left">
-                <a href="index.html" class="logo"><span>SI<span>PK3</span></span><i class="mdi mdi-layers"></i></a>
+                <a href="index.html" class="logo"><span>Halo<span class="text-success">K3!</span></span><i class="mdi mdi-layers"></i></a>
                 <!-- Image logo -->
                 <!--<a href="index.html" class="logo">-->
                 <!--<span>-->
@@ -105,7 +105,7 @@
 
                     <!-- Right(Notification) -->
                     <ul class="nav navbar-nav navbar-right">
-
+                            
                         <li class="dropdown user-box">
                             <a href="" class="dropdown-toggle waves-effect user-link" data-toggle="dropdown" aria-expanded="true">
                                 <img src="<?php echo base_url() ?>assets/images/favicon11-0.png" alt="user-img" class="img-circle user-img">

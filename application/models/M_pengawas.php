@@ -46,5 +46,14 @@ class M_pengawas extends CI_Model {
 		$this->db->where('id_tindakan', $id);
 		$this->db->delete('tb_tindakan');
 	}
+
+	function ubah_status($id,$data){
+		
+		$where=array('id_pengaduan' => $id);
+		$table='pengaduan';
+//var_dump($data);
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
 	
 }

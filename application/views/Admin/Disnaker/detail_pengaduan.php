@@ -67,16 +67,19 @@
                                     <label class="col-md-2 control-label">Nama Pengawas1</label>
                                     <div class="col-md-10">
                                         <select class="form-control" name="id_pengawas" required>
-                                        <option>---Pilih Pengawas---</option>
+                                        <!-- <option>---Pilih Pengawas---</option> -->
                                             <?php foreach ($data_pengawas as $key) {
                                                 if ($key->id_pengawas == $data_pengaduan[0]->id_pengawas) { ?>
                                                     <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
                                             <?php }
                                             } ?>
 
-                                            <?php foreach ($data_pengawas as $key) { ?>
+                                            <?php foreach ($data_pengawas as $key)
+                                             {  if ($key->id_pengawas == $data_pengaduan[0]->id_pengawas);
+                                             else{ ?>
+
                                                 <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
-                                            <?php } ?>
+                                            <?php }} ?>
                                         </select>
 
                                     </div>
@@ -85,16 +88,18 @@
                                     <label class="col-md-2 control-label">Nama Pengawas2</label>
                                     <div class="col-md-10">
                                         <select class="form-control" name="id_pengawas2" required>
-                                        <option>---Pilih Pengawas---</option>
+                                        <!-- <option>---Pilih Pengawas---</option> -->
                                             <?php foreach ($data_pengawas as $key) {
                                                 if ($key->id_pengawas == $data_pengaduan[0]->id_pengawas2) { ?>
                                                     <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
                                             <?php }
                                             } ?>
 
-                                            <?php foreach ($data_pengawas as $key) { ?>
-                                                <option value="<?php echo $key->id_pengawas2; ?>"><?php echo $key->nama; ?></option>
-                                            <?php } ?>
+                                            <?php foreach ($data_pengawas as $key) {
+                                                if ($key->id_pengawas == $data_pengaduan[0]->id_pengawas2);
+                                                else{ ?>
+                                                <option value="<?php echo $key->id_pengawas; ?>"><?php echo $key->nama; ?></option>
+                                            <?php }} ?>
                                         </select>
 
                                     </div>
@@ -126,10 +131,11 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-4 col-sm-11">
+                                        <?php if($data_pengaduan[0]->status == null) { ?>
                                         <input type="hidden" name="id_pengaduan" value="<?= $data_pengaduan[0]->id_pengaduan ?>">
                                         <button type="submit" class="btn btn-success waves-effect waves-light">Terima Pengaduan</button>
                                         <a href="<?= base_url() . 'Disnaker/aksi_pengaduan_ditolak?id=' . $data_pengaduan[0]->id_pengaduan ?>" class="btn btn-danger waves-effect waves-light"> Tolak Pengaduan</a>
-
+                                        <?php }?>
                                         <a href="<?= site_url() ?>Disnaker/daftar_pengaduan" class="btn btn-warning waves-effect waves-light">Kembali</a>
                                     </div>
                                 </div>

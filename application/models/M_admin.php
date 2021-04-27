@@ -324,5 +324,13 @@ function lihat_ahlik3($id){
 			$this->db->delete('tb_kecelakaan');
 		}
 
+		function lihat_data($table){
+
+			$query=$this->db->query($table);
+	
+		 
+		  return $query;
+	   }
+
 	
 }

@@ -87,12 +87,12 @@
                             <!-- <div class="h5 mb-4">Please fill with your personal info</div> -->
 
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="name">Nama Pengaduan</label>
+                                <!-- <div class="form-group col-md-6">
+                                    <label for="name">Nama Pengadu</label>
                                     <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama" required>
-                                </div>
-
-                                <div class="form-group col-md-6">
+                                </div> -->
+                                <input type="hidden" class="form-control" name="nama" value="<?= $akun?>" placeholder="Masukkan Nama" required>
+                                <div class="form-group col-md-12">
                                     <label for="surname">Judul Pengaduan</label>
                                     <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul" required>
                                 </div>

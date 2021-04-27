@@ -36,7 +36,26 @@ class Admin extends CI_Controller {
       'level' => $this->session->userdata('level'),
       'content' => 'Admin/dashboard',
       'footer' => 'Admin/Layouts_admin/footer',
-      
+      'kebakaran_instalasi'=> $this->M_admin->lihat_data('select nama_perusahaan, masa_berlaku from tb_user u, tb_kebakaran_instalasi i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'listrik_listrik'=> $this->M_admin->lihat_data('select nama_perusahaan, masa_berlaku from tb_user u, listrik_ijin_listrik i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'listrik_petir'=> $this->M_admin->lihat_data('select nama_perusahaan, masa_berlaku from tb_user u, listrik_ijin_petir i where i.id_user=u.id_tb_user and i.masa_berlaku>sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'mekanik_angkat'=> $this->M_admin->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_angkat i where i.id_user=u.id_tb_user and i.masa<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'mekanik_bejana'=> $this->M_admin->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_bejana i where i.id_user=u.id_tb_user and i.masa<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'mekanik_elevator'=> $this->M_admin->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_elevator i where i.id_user=u.id_tb_user and i.masa<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'mekanik_ketel'=> $this->M_admin->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_ketel i where i.id_user=u.id_tb_user and i.masa<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'mekanik_mesin'=> $this->M_admin->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_mesin i where i.id_user=u.id_tb_user and i.masa<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'mekanik_ukur'=> $this->M_admin->lihat_data('select nama_perusahaan, masa from tb_user u, tb_mekanik_ukur i where i.id_user=u.id_tb_user and i.masa<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      //personel
+      'kebakaran_ak3'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, tb_kebakaran_ak3 i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'kebakaran_petugas'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, tb_kebakaran_petugas i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'kebakaran_penanggulangan'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, tb_kebakaran_penanggulangan i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'listrik_ak3'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, listrik_ak3_listrik i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'listrik_teknisi'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, listrik_teknisi i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'lingker_k3'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_k3 i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'lingker_ketinggian'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_ketinggian i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'lingker_ruang'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_ruang i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+     'lingker_jurulas'=> $this->M_admin->lihat_data('select nama_perusahaan,nama, masa_berlaku from tb_user u, lingker_jurulas i where i.id_user=u.id_tb_user and i.masa_berlaku<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
+      'p3k'=> $this->M_admin->lihat_data('select nama_perusahaan, nama, masa from tb_user u, p3k_petugas i where i.id_user=u.id_tb_user and i.masa<sysdate() and u.id_tb_user='.$this->session->userdata('id_user'))->result(),
     ];
 
     $this->load->view('template', $data);
