@@ -3,6 +3,9 @@
 if(isset($header)) :
 	$this->load->view($header);
 endif;
+if(isset($head)) :
+	$this->load->view($head);
+endif;
 if(isset($sidebar)) :
 	$this->load->view($sidebar);
 endif;

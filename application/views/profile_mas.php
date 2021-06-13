@@ -94,15 +94,10 @@
                                                     <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
                                                     <td> &nbsp <?= $data[0]->nik ?></td>
                                                  </tr>
-                                                <tr>
-                                                    <td>Email</td>
-                                                 <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
-                                                  <td>&nbsp  <?= $data[0]->email ?></td>
-                                                 </tr>
-                                                <tr>
-                                                    <td>No.Telepon</td>
+                                                 <tr>
+                                                    <td>Tanggal Lahir</td>
                                                     <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
-                                                    <td>&nbsp  <?= $data[0]->no_telp ?></td>
+                                                    <td>&nbsp  <?= $data[0]->ttl ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Alamat Domisili</td>
@@ -110,15 +105,21 @@
                                                     <td>&nbsp  <?= $data[0]->domisili ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tanggal Lahir</td>
+                                                    <td>No.Telepon</td>
                                                     <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
-                                                    <td>&nbsp  <?= $data[0]->ttl ?></td>
+                                                    <td>&nbsp  <?= $data[0]->no_telp ?></td>
                                                 </tr>
                                                 <tr>
+                                                    <td>Email</td>
+                                                    <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
+                                                    <td>&nbsp  <?= $data[0]->email ?></td>
+                                                </tr>
+                                                
+                                                <!-- <tr>
                                                     <td>Username</td>
                                                     <td>&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp:</td>
                                                     <td>&nbsp <?= $data[0]->username ?></td>
-                                                </tr>
+                                                </tr> -->
                                                
 
                                             </table>

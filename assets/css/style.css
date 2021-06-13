@@ -239,7 +239,7 @@ section.dark,
      Content
 ---------------------------------------------------------*/
 #page-content:not(.no-sidebar) {
-  padding: 40px 0 40px 0;
+  padding: 40px 0 115px 0;
 }
 #page-content:not(.no-sidebar).sidebar-left > .container > .row,
 #page-content:not(.no-sidebar).sidebar-left > .container-wide > .row,
@@ -1257,7 +1257,7 @@ Topbar
 #header .header-inner,
 #header #header-wrap {
   height: 80px;
-  background-color: #fff;
+  background-color: rgb(245, 245, 245);
   /*         backface-visibility: hidden;
   -webkit-backface-visibility: hidden; */
   left: 0;
@@ -1506,17 +1506,20 @@ Topbar
   body.boxed #header .header-inner {
     max-width: 1200px;
     margin: auto;
+   
   }
 
   body.modern #header .header-inner > .container {
     max-width: 1500px;
     padding: 0 15px;
+  
   }
 
   body.frame #header.header-sticky.sticky-active .header-inner {
     left: 20px;
     right: 20px;
     top: 20px;
+   
   }
 }
 /* ----------------------------------------------------------------
@@ -3882,12 +3885,10 @@ body {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 .h1,
 .h2,
-.h3,
 .h4,
 .h5,
 .h6 {
@@ -3895,6 +3896,13 @@ h6,
   color: #1f1f1f;
   margin: 0;
   letter-spacing: 0.5px;
+}
+h3,
+.h3{
+  font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif;
+  color: #1f1f1f;
+  margin: 0;
+  letter-spacing: 0.6px;
 }
 h1 small,
 h2 small,
@@ -3934,13 +3942,13 @@ h2:not(:last-child),
 
 h3,
 .h3 {
-  font-size: 1.78571429em;
+  font-size: 1.7em;
   line-height: 1.5em;
   font-weight: 500;
 }
 h3:not(:last-child),
 .h3:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 h4,
@@ -6767,7 +6775,7 @@ Portfolio
 #footer .copyright-content {
   min-height: 0px;
   padding: 10px 0;
-  background-color: #e6e8eb;
+  background-color: #000000;
   font-size: 13px;
 }
 #footer .logo {
@@ -12146,7 +12154,7 @@ a.btn:not([href]):not([tabindex]).disabled {
 .card {
   border: 1px solid #e6e8eb;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #ffffffed;
   margin-bottom: 20px;
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
 }
@@ -18573,6 +18581,27 @@ body[data-bg-image] {
   /* The width is the width of the web page */
 }
 
+.table_baru{
+  border: 3px solid #e6e8eb;
+  padding: 1em;
+}
+.table_baru1{
+  border: 3px solid #e6e8eb;
+  padding: 1em;
+}
+.table_baru2{
+  border: 3px solid #e6e8eb;
+  padding: 1em;
+  margin-left: 1em;
+}
+.tab {
+  tab-size: 4;
+}
+
+td{
+  padding:5px;
+  /* word-break: break-all; */
+}
 
 
 

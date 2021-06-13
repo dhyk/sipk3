@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/images/favicon22.png">   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>Halo K3!</title>
+    <title>SIDIGO</title>
     <!-- Stylesheets & Fonts -->
     <link href="<?php echo base_url()?>assets/css/plugins.css" rel="stylesheet">
     <link href="<?php echo base_url()?>assets/css/style.css" rel="stylesheet">
